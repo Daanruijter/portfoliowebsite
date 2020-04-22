@@ -1,0 +1,28 @@
+body {
+  height: 100vh;
+
+}
+
+.App {
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 10% 80% 10%;
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.main {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 100%;
+  width: 100%;
+
+
+}

@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-
+  background-color: lightblue;
 }
 
 .App {
@@ -12,8 +12,12 @@ body {
 }
 
 nav {
+  grid-column-start: 2;
+  grid-column-end: 3;
+
   grid-row-start: 1;
   grid-row-end: 2;
+
 }
 
 .main {
@@ -23,6 +27,7 @@ nav {
   grid-column-end: 3;
   height: 100%;
   width: 100%;
+
 
 
 }

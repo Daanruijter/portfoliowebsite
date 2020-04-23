@@ -14,35 +14,41 @@ export default class ITProjects extends Component {
         id: "mytineraries",
         image: mytinerery,
         description: "Travel application that shows favourite touristy cities.",
-        tech: "Node, Express, MongoDB, React,js, Redux, CSS, Materialize",
+        tech:
+          "Node, Express, MongoDB, Redux, React,js, Redux, CSS, Materialize, HTML",
       },
       {
         url: "https://daanruijter.github.io/WeatherApp",
         id: "weatherapp",
         image: weatherapp,
-        description: "",
-        tech: "",
+        description:
+          "Weather app that displays the current weather for a particular city. Users can select different weather data to generate forecast charts",
+        tech: "Vue.js, Chart.js, CSS, HTML",
+      },
+      {
+        url: "https://daanruijter.github.io/tgifVUEtodeploy/index.html",
+        image: tgif,
+        id: "tgif",
+        description:
+          "TGIF: Transparent Government In Fact app that dynamically shows API data of the US Congress and Senate. After making the app in Vanilla JavaScript I repeated it with Vue.js.",
+        tech: "Vue.js, JavaScript, CSS, Bootstrap",
+      },
+
+      {
+        url: "https://daanruijter.github.io/soccerproject",
+        image: nysl,
+        id: "nysl",
+        description:
+          "Youth soccer information website with HTML and CSS, using FlexBox and Grid to position elements. Also applied CSS media queries for responsiveness.",
+        tech: "CSS, HTML",
       },
       {
         url: "https://daanruijter.github.io/BookstoreTechnicalChallenge",
         id: "bookstore",
-        image: tgif,
-        description: "",
-        tech: "",
-      },
-      {
-        url: "https://daanruijter.github.io/tgifVUEtodeploy/index.html",
-        image: nysl,
-        id: "tgif",
-        description: "",
-        tech: "",
-      },
-      {
-        url: "https://daanruijter.github.io/soccerproject",
         image: bookstore,
-        id: "nysl",
-        description: "",
-        tech: "",
+        description:
+          "Used an API to dynamically display an array of books with additional information and an image gallery using Vue.js.",
+        tech: "Vue.js, FancyBox, CSS, HTML",
       },
     ],
   };
@@ -57,11 +63,14 @@ export default class ITProjects extends Component {
               <img src={project.image} />
             </a>
           </div>
-          <div className="flip-box-back">
-            {project.description}
-            <p className="tech-used">Tech used:</p>
-            {project.tech}
-          </div>
+          <a href={project.url}>
+            <div className="flip-box-back">
+              {" "}
+              {project.description}
+              <p className="tech-used">Tech used:</p>
+              {project.tech}
+            </div>
+          </a>
         </div>
       </div>
     ));

@@ -1,0 +1,22 @@
+.navbar li {
+    list-style-type: none;
+    padding-right: 5%;
+    height: 100px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-start;
+
+    background-color: black;
+
+    color: white;
+
+}
+
+.navbar a {
+    font-size: 175%;
+    color: red;
+
+    text-decoration: none;
+}

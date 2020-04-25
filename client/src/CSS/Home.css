@@ -1,5 +1,34 @@
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-5%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .home-wrapper {
     background-color: white;
     padding: 3%;
     height: 1000px;
+
+
+
+}
+
+/* .home-wrapper:hover {
+   
+} */
+
+.welcome {
+    font-weight: bold;
+
+}
+
+.home-introduction {
+    background-color: tomato;
+    padding: 2%;
+    animation: 0.2s ease-in 0s 1 slideInFromLeft;
+
 }

@@ -1,15 +1,17 @@
 body {
-  height: 100vh;
+  height: 1200px;
   background-color: lightblue;
 }
 
 .App {
-  grid-template-rows: 5% 96%;
+  grid-template-rows: 4% 96%;
   grid-template-columns: 10% 80% 10%;
   display: grid;
   height: 100%;
   width: 100%;
 }
+
+
 
 nav {
   grid-column-start: 2;
@@ -17,6 +19,7 @@ nav {
 
   grid-row-start: 1;
   grid-row-end: 2;
+  background-color: black;
 
 }
 

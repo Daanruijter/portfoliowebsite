@@ -8,7 +8,7 @@ export default class Home extends Component {
       <div className="home-wrapper">
         <div className="home-introduction">
           <span class="welcome">
-            WELCOME ON THE WEB PAGE OF THE FULL STACK MERN WEB DEVELOPER DAAN
+            WELCOME ON THE WEB PAGE OF FULL STACK MERN WEB DEVELOPER DAAN
             RUIJTER
           </span>
           <p>

@@ -1,11 +1,13 @@
 .resume-wrapper {
-    margin-top: 0%;
+
 
     background-color: white;
     grid-template-columns: 32% 67.9% 0.1%;
+
     grid-template-rows: 5% 90% 5%;
-    height: 100%;
+
     width: 100%;
+    height: 1800px;
 
 
 
@@ -40,6 +42,7 @@
     grid-column-start: 2;
     grid-column-end: 3;
     padding: 2%;
+
 }
 
 .resume-bottom {
@@ -80,7 +83,7 @@
 }
 
 .resume-daanfoto {
-    width: 30%;
+    width: 20%;
     border-radius: 100%;
 
 
@@ -90,7 +93,7 @@
 
 .resume-introduction {
     margin-left: 2%;
-    margin-top: 2%;
+    /* margin-top: 2%; */
     color: navy;
 }
 
@@ -106,23 +109,41 @@
 .resume-jobinfo-wrapper {
     display: flex;
 
+
+
 }
 
-.resume-jobdate {
+.resume-bold {
     width: 32%;
-    color: navy;
+    font-weight: bold;
 
+
+}
+
+.resume-italic {
+    font-style: italic;
 }
 
 .resume-jobinfo {
     width: 70%;
-    color: navy;
+
 
 }
 
 .resume-coding-projects {
     text-align: center;
-    color: navy;
+
     font-weight: bold;
     font-size: 1.4em;
+}
+
+
+.resume-project-links {
+    color: pink;
+}
+
+.resume-career-summary-wrapper {
+    color: navy;
+
+
 }

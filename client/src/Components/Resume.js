@@ -270,12 +270,19 @@ export default class Resume extends Component {
             <br /> <br />
             <div className="resume-green-header">EDUCATION</div>
             <br />
-            <br /> 12/2019-03/2020 Full Stack MERN Web development at Ubiqum
-            Code Academy 09/2008-11/2011 Master of Journalism at the Vrije
-            Universiteit in Amsterdam 09/2005-07/2007 Master of Economics at the
-            Universiteit van Amsterdam 09/2002-09/2005 Bachelor of Economics at
-            the Universiteit van Amsterdam 08/1996-06/2002 Gymnasium with Latin
-            and Greek at Het Zaanlands Lyceum
+            <ResumeJobinfoTemplate
+              jobdate={"12/2019-03/2020 "}
+              organisation={"Ubiqum Code Academy"}
+              jobtitle={``}
+              description=""
+            />
+            <br />
+            <br /> Full Stack MERN Web development at Ubiqum Code Academy
+            09/2008-11/2011 Master of Journalism at the Vrije Universiteit in
+            Amsterdam 09/2005-07/2007 Master of Economics at the Universiteit
+            van Amsterdam 09/2002-09/2005 Bachelor of Economics at the
+            Universiteit van Amsterdam 08/1996-06/2002 Gymnasium with Latin and
+            Greek at Het Zaanlands Lyceum
             <br />
             <br /> <div className="resume-green-header">ACHIEVEMENTS</div>
             <br />

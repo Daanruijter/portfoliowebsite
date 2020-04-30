@@ -1,0 +1,27 @@
+.resume-jobinfo-wrapper {
+    display: flex;
+
+
+
+}
+
+.resume-bold {
+
+    font-weight: bold;
+
+
+}
+
+.resume-margin {
+    width: 32%;
+}
+
+.resume-italic {
+    font-style: italic;
+}
+
+.resume-jobinfo {
+    width: 70%;
+
+
+}

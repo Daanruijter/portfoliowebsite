@@ -5,13 +5,20 @@ import ResumeJobinfoTemplate from "./ResumeJobinfoTemplate";
 import daanfoto from "../pictures/daanfoto.jpeg";
 
 export default class Resume extends Component {
-  state = { moreExperienceOpen: false };
+  state = { moreExperienceOpen: false, studyType: false };
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
   };
   closeMoreExperience = () => {
     this.setState({ moreExperienceOpen: false });
   };
+  setStudyType = (studyType) => {
+    this.setState({ studyType: studyType });
+  };
+  clearStudyType = () => {
+    this.setState({ studyType: false });
+  };
+
   render() {
     return (
       <div
@@ -105,7 +112,7 @@ export default class Resume extends Component {
             <br />
             <a
               className="resume-project-links"
-              href="https://daanruijter.github.io/WeatherApp/"
+              href="https://daanruijter.github.io/soccerproject"
             >
               <br />
               NYSL: North Youth League Soccer website
@@ -272,24 +279,107 @@ export default class Resume extends Component {
             <br />
             <ResumeJobinfoTemplate
               jobdate={"12/2019-03/2020 "}
-              organisation={"Ubiqum Code Academy"}
-              jobtitle={``}
-              description=""
+              organisation={
+                "Full Stack MERN Web development at Ubiqum Code Academy"
+              }
             />
             <br />
-            <br /> Full Stack MERN Web development at Ubiqum Code Academy
-            09/2008-11/2011 Master of Journalism at the Vrije Universiteit in
-            Amsterdam 09/2005-07/2007 Master of Economics at the Universiteit
-            van Amsterdam 09/2002-09/2005 Bachelor of Economics at the
-            Universiteit van Amsterdam 08/1996-06/2002 Gymnasium with Latin and
-            Greek at Het Zaanlands Lyceum
-            <br />
+            {/* MASTER OF JOURNALISM PART */}
+            <div
+              className="resume-master-journalism"
+              onMouseEnter={() => this.setStudyType("masterJournalism")}
+              onMouseLeave={this.clearStudyType}
+            >
+              <ResumeJobinfoTemplate
+                jobdate={"09/2008-11/2011"}
+                organisation={
+                  "Master of Journalism at the Vrije Universiteit in Amsterdam"
+                }
+              />
+              <br />
+            </div>
+            {/* MASTER OF JOURNALISM MORE INFO PART */}
+            {this.state.studyType === "masterJournalism" ? (
+              <div
+                onMouseEnter={() => this.setStudyType("masterJournalism")}
+                className="resume-master-economics-more-info "
+              >
+                <div className="resume-master-journalism-thesis">
+                  For my master of journalism
+                  <br />
+                  <br />
+                  You can open the thesis by clicking{" "}
+                  <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Maar-beantwoordt-u-nu-toch-eens-de-vraag-Masterscriptie-Journalistiek-Daan-Ruijter.pdf">
+                    here
+                  </a>
+                </div>
+                <br />{" "}
+                <img src="http://daanruijter.eu/wp-content/uploads/2015/04/VoorkantMasterscriptiejournalistiek.jpg"></img>
+              </div>
+            ) : null}
+            <div
+              className="resume-master-journalism"
+              onMouseEnter={() => this.setStudyType("masterEconomics")}
+            >
+              <ResumeJobinfoTemplate
+                jobdate={"09/2005-07/2007"}
+                organisation={
+                  "Master of Economics at the Universiteit van Amsterdam"
+                }
+              />
+
+              <br />
+            </div>
+            {this.state.studyType === "masterEconomics" ? (
+              <div
+                onMouseEnter={() => this.setStudyType("masterEconomics")}
+                className="resume-master-economics-more-info"
+              >
+                <img src="http://daanruijter.eu/wp-content/uploads/2015/04/Daanontvangtmasterbuleconomie.jpg"></img>
+                <div className="resume-master-economics-thesis">
+                  For my economics master I wrote a thesis about the research
+                  question whether the United Kingdom was ready to introduce the
+                  Euro. To answer that question I used the optimum currency area
+                  theory. If you can read Dutch, feel free to see my thesis.
+                  <br />
+                  <br />
+                  You can open the thesis by clicking{" "}
+                  <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Is-het-Verenigd-Koninkrijk-klaar-om-de-Euro-te-introduceren-Masterscriptie-Algemene-Economie-Daan-Ruijter.pdf">
+                    here
+                  </a>
+                </div>
+                <br />{" "}
+              </div>
+            ) : null}
+            <div
+              className="resume-bachelor-economics"
+              onMouseEnter={() => this.setStudyType("bachelorEconomics")}
+              onMouseLeave={this.clearStudyType}
+            >
+              <ResumeJobinfoTemplate
+                jobdate={"09/2002-09/2005"}
+                organisation={
+                  "Bachelor of Economics at the Universiteit van Amsterdam"
+                }
+              />
+              <br />
+            </div>
+            <ResumeJobinfoTemplate
+              jobdate={"08/1996-06/2002"}
+              organisation={
+                "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
+              }
+            />
             <br /> <div className="resume-green-header">ACHIEVEMENTS</div>
             <br />
-            11/2011-03/2014 Camping de Duinvoet, Schoorl Wrote a book about
-            Camping de Duinvoet, a small campsite on the foothills of the
-            Schoorl dunes
-            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"11/2011-03/2014"}
+              organisation={"Camping de Duinvoet, Schoorl "}
+              jobtitle={`Author`}
+              description={[
+                "Wrote a book about Camping de Duinvoet, a small campsite on the foothills of the Schoorl dunes",
+              ]}
+            />
             <br /> <div className="resume-green-header">LANGUAGE COURSES</div>
             <br />
             From 2009 I followed Spanish language courses in Barcelona, Valencia
@@ -302,9 +392,17 @@ export default class Resume extends Component {
             <br />
             <br /> <div className="resume-green-header">OTHER COURSES</div>
             <br />
-            01/2017-04/2017 Course in literary non fiction with the author
-            Judith Koelemeijer 04/2018-07/2018 Photography course Speer
-            Fotografie Amsterdam
+            <ResumeJobinfoTemplate
+              jobdate={"01/2017-04/2017"}
+              organisation={
+                "Course in literary non fiction with the author Judith Koelemeijer"
+              }
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"04/2018-07/2018"}
+              organisation={"Photography course Speer Fotografie Amsterdam"}
+            />
             <br />
             <br />
           </div>

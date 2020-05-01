@@ -187,3 +187,39 @@
     color: red;
     font-weight: bold;
 }
+
+.resume-master-journalism:hover {
+    background-color: khaki;
+
+}
+
+.resume-master-economics-more-info,
+.resume-master-journalism-more-info {
+    display: flex;
+    background-color: red;
+    width: 100%;
+    margin-bottom: 2.5%;
+
+}
+
+.resume-master-economics-more-info img,
+.resume-master-journalism-more-info img {
+    width: 50%;
+
+    /* border-radius: 10%; */
+}
+
+.resume-master-economics-thesis,
+.resume-master-journalism-thesis {
+    background-color: darkred;
+    color: white;
+    width: 100%;
+    padding: 2%;
+
+}
+
+.resume-master-economics-thesis a,
+.resume-master-journalism-thesis a {
+    color: white;
+    font-weight: bold;
+}

@@ -414,9 +414,9 @@ export default class Resume extends Component {
               <div
                 onMouseEnter={() => this.setStudyType("bachelorEconomics")}
                 onMouseLeave={() => this.clearStudyType()}
-                className="resume-master-economics-more-info"
+                className="resume-bachelor-economics-more-info"
               >
-                <div className="resume-master-economics-thesis">
+                <div className="resume-bachelor-economics-thesis">
                   <h3>Bachelor Thesis</h3>
                   For my economics bachelor I wrote a thesis about the economic
                   growth in China. The main question was: ‘What made it possible
@@ -455,31 +455,35 @@ export default class Resume extends Component {
               ]}
             />
             <br />
+            {/*FLIPPING BOOK */}
             <div className="resume-book-wrapper">
               <div className="resume-flip-box">
                 <div className="resume-flip-box-inner">
-                  <div className="resume-flip-box-front resume-book-front">
+                  <div className="resume-book-front resume-flip-box-front">
                     <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
                       alt="book-front"
-                    ></img>
+                      src={
+                        "http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
+                      }
+                    />
                   </div>
+
                   <div className="resume-flip-box-back">
-                    <div className="resume-book-presentation">
-                      <iframe
-                        title="book-presentation"
-                        width="100%"
-                        height="100%"
-                        src="https://www.youtube.com/embed/SkPVuBUbFeE"
-                        // frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        // allowfullscreen
-                      ></iframe>
-                    </div>
+                    {" "}
+                    <iframe
+                      title="book-presentation"
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/SkPVuBUbFeE"
+                      // frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      // allowfullscreen
+                    ></iframe>
                   </div>
                 </div>
               </div>
             </div>
+            <br />
             <div className="resume-green-header">LANGUAGE COURSES</div>
             <br />
             From 2009 I followed Spanish language courses in Barcelona, Valencia

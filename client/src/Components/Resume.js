@@ -482,6 +482,11 @@ export default class Resume extends Component {
                   </div>
                 </div>
               </div>
+
+              <div className="resume-book-more-info">
+                ssssssssssssssssssssss sssssssssss sssssssssss ss ss ss ss ss
+                ssssssssssssssssssssss
+              </div>
             </div>
             <br />
             <div className="resume-green-header">LANGUAGE COURSES</div>

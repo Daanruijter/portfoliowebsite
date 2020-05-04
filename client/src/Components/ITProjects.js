@@ -60,7 +60,7 @@ export default class ITProjects extends Component {
         <div className="flip-box-inner">
           <div className="projects flip-box-front" key={project.id}>
             <a href={project.url}>
-              <img src={project.image} />
+              <img alt="projectimage" src={project.image} />
             </a>
           </div>
           <a href={project.url}>

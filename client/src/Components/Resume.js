@@ -34,7 +34,7 @@ export default class Resume extends Component {
           <div className="resume-name">DAAN LAURENTIUS RUIJTER</div>
           <div className="resume-profession"> FULL STACK WEB DEVELOPER </div>
           <div className="resume-daanfoto-wrapper">
-            <img className="resume-daanfoto" src={daanfoto} />
+            <img className="resume-daanfoto" src={daanfoto} alt="daanphoto" />
             <div className="resume-introduction">
               Web development makes me very enthusiastic. The combination of
               analytical challenges, creativity and the international orien-
@@ -290,13 +290,21 @@ export default class Resume extends Component {
               onMouseEnter={() => this.setStudyType("masterJournalism")}
               onMouseLeave={this.clearStudyType}
             >
-              <ResumeJobinfoTemplate
-                jobdate={"09/2008-11/2011"}
-                organisation={
-                  "Master of Journalism at the Vrije Universiteit in Amsterdam"
+              <div
+                style={
+                  this.state.studyType === "masterJournalism"
+                    ? { backgroundColor: "khaki" }
+                    : null
                 }
-              />
-              <br />
+              >
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2008-11/2011"}
+                  organisation={
+                    "Master of Journalism at the Vrije Universiteit in Amsterdam"
+                  }
+                />
+                <br />
+              </div>
             </div>
             {/* MASTER OF JOURNALISM MORE INFO PART */}
             {this.state.studyType === "masterJournalism" ? (
@@ -305,7 +313,14 @@ export default class Resume extends Component {
                 className="resume-master-economics-more-info "
               >
                 <div className="resume-master-journalism-thesis">
-                  For my master of journalism
+                  <h3>Master Thesis</h3>
+                  For my journalism master I wrote a master thesis ‘But just
+                  answer the question…!’ -a conversation analytical study
+                  concerning question evasion tactics of the Dutch Prime
+                  Ministers Ruud Lubbers, Wim Kok, Jan-Peter Balkenende and Mark
+                  Rutte
+                  <br />
+                  If you can read Dutch, feel free to see my thesis.
                   <br />
                   <br />
                   You can open the thesis by clicking{" "}
@@ -314,33 +329,54 @@ export default class Resume extends Component {
                   </a>
                 </div>
                 <br />{" "}
-                <img src="http://daanruijter.eu/wp-content/uploads/2015/04/VoorkantMasterscriptiejournalistiek.jpg"></img>
+                <img
+                  src="http://daanruijter.eu/wp-content/uploads/2015/04/VoorkantMasterscriptiejournalistiek.jpg"
+                  alt="front-master-thesis-journalism"
+                ></img>
               </div>
             ) : null}
             <div
               className="resume-master-journalism"
               onMouseEnter={() => this.setStudyType("masterEconomics")}
             >
-              <ResumeJobinfoTemplate
-                jobdate={"09/2005-07/2007"}
-                organisation={
-                  "Master of Economics at the Universiteit van Amsterdam"
+              {/* MASTER OF ECONOMICS PART */}
+              <div
+                style={
+                  this.state.studyType === "masterEconomics"
+                    ? { backgroundColor: "khaki" }
+                    : null
                 }
-              />
+              >
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2005-07/2007"}
+                  organisation={
+                    "Master of Economics at the Universiteit van Amsterdam"
+                  }
+                />
 
-              <br />
+                <br />
+              </div>
+              {/* MASTER OF ECONOMICS MORE INFO PART */}
             </div>
             {this.state.studyType === "masterEconomics" ? (
               <div
                 onMouseEnter={() => this.setStudyType("masterEconomics")}
                 className="resume-master-economics-more-info"
               >
-                <img src="http://daanruijter.eu/wp-content/uploads/2015/04/Daanontvangtmasterbuleconomie.jpg"></img>
+                <img
+                  src="http://daanruijter.eu/wp-content/uploads/2015/04/Daanontvangtmasterbuleconomie.jpg"
+                  alt="receiving-economics-masters-degree"
+                ></img>
                 <div className="resume-master-economics-thesis">
+                  <h3>Master Thesis</h3>
                   For my economics master I wrote a thesis about the research
-                  question whether the United Kingdom was ready to introduce the
-                  Euro. To answer that question I used the optimum currency area
-                  theory. If you can read Dutch, feel free to see my thesis.
+                  question: ‘Is the United Kingdom ready to introduce the Euro?’
+                  To answer that question I used the{" "}
+                  <a href="https://en.wikipedia.org/wiki/Optimum_currency_area">
+                    optimum currency area theory.
+                  </a>{" "}
+                  <br />
+                  If you can read Dutch, feel free to see my thesis.
                   <br />
                   <br />
                   You can open the thesis by clicking{" "}
@@ -351,19 +387,56 @@ export default class Resume extends Component {
                 <br />{" "}
               </div>
             ) : null}
+            {/* BACHELOR OF ECONOMICS PART */}
             <div
-              className="resume-bachelor-economics"
-              onMouseEnter={() => this.setStudyType("bachelorEconomics")}
-              onMouseLeave={this.clearStudyType}
+              style={
+                this.state.studyType === "bachelorEconomics"
+                  ? { backgroundColor: "khaki" }
+                  : null
+              }
             >
-              <ResumeJobinfoTemplate
-                jobdate={"09/2002-09/2005"}
-                organisation={
-                  "Bachelor of Economics at the Universiteit van Amsterdam"
-                }
-              />
-              <br />
+              <div
+                className="resume-bachelor-economics"
+                onMouseEnter={() => this.setStudyType("bachelorEconomics")}
+                onMouseLeave={this.clearStudyType}
+              >
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2002-09/2005"}
+                  organisation={
+                    "Bachelor of Economics at the Universiteit van Amsterdam"
+                  }
+                />
+                <br />
+              </div>
             </div>
+            {/* BACHELOR OF ECONOMICS MORE INFO PART */}
+            {this.state.studyType === "bachelorEconomics" ? (
+              <div
+                onMouseEnter={() => this.setStudyType("bachelorEconomics")}
+                onMouseLeave={() => this.clearStudyType()}
+                className="resume-master-economics-more-info"
+              >
+                <div className="resume-master-economics-thesis">
+                  <h3>Bachelor Thesis</h3>
+                  For my economics bachelor I wrote a thesis about the economic
+                  growth in China. The main question was: ‘What made it possible
+                  that China’s economy grew so rapidly over the last decades?’
+                  <br />
+                  If you can read Dutch, feel free to see my thesis.
+                  <br />
+                  <br />
+                  You can open the thesis by clicking{" "}
+                  <a href="http://daanruijter.eu/wp-content/uploads/2020/05/China’s-economische-groei-Bachelorscriptie-Algemene-Economie-Daan-Ruijter.pdf">
+                    here
+                  </a>
+                </div>
+                <img
+                  src="http://daanruijter.eu/wp-content/uploads/2015/04/Hoge-gebouwen-China.jpg"
+                  alt="receiving-economics-masters-degree"
+                ></img>
+                <br />{" "}
+              </div>
+            ) : null}
             <ResumeJobinfoTemplate
               jobdate={"08/1996-06/2002"}
               organisation={
@@ -372,6 +445,7 @@ export default class Resume extends Component {
             />
             <br /> <div className="resume-green-header">ACHIEVEMENTS</div>
             <br />
+            {/* BOOK INFO PART */}
             <ResumeJobinfoTemplate
               jobdate={"11/2011-03/2014"}
               organisation={"Camping de Duinvoet, Schoorl "}
@@ -380,7 +454,33 @@ export default class Resume extends Component {
                 "Wrote a book about Camping de Duinvoet, a small campsite on the foothills of the Schoorl dunes",
               ]}
             />
-            <br /> <div className="resume-green-header">LANGUAGE COURSES</div>
+            <br />
+            <div className="resume-book-wrapper">
+              <div className="resume-flip-box">
+                <div className="resume-flip-box-inner">
+                  <div className="resume-flip-box-front resume-book-front">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
+                      alt="book-front"
+                    ></img>
+                  </div>
+                  <div className="resume-flip-box-back">
+                    <div className="resume-book-presentation">
+                      <iframe
+                        title="book-presentation"
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/SkPVuBUbFeE"
+                        // frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        // allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="resume-green-header">LANGUAGE COURSES</div>
             <br />
             From 2009 I followed Spanish language courses in Barcelona, Valencia
             and Málaga and Italian courses in Amsterdam. In addition I often

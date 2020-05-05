@@ -68,10 +68,83 @@
 
 .resume-left {
     background-color: green;
+    color: white;
+
+    padding-left: 5%;
+
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+}
+
+.resume-leftside-header {
+    color: orange;
+
+}
+
+.resume-contact-wrapper,
+.resume-computer-knowledge-wrapper {
+    font-size: 120%;
+
+}
+
+
+.resume-contact-icon {
+    width: 6%;
+    margin-right: 5%;
+}
+
+.resume-contact-wrapper img {
+    width: 100%;
+}
+
+.resume-contact-flexer {
+    display: flex;
+
+}
+
+.resume-tech-wrapper {
+    font-size: 120%;
+
+}
+
+.resume-tech-flexer {
+    display: flex;
+
+}
+
+.resume-tech {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.resume-soft-skills-wrapper {
+    font-size: 125%;
+}
+
+.resume-courses-wrapper {
+    font-size: 125%;
+}
+
+.resume-hobbies-interests-wrapper {
+    font-size: 120%;
+
+}
+
+
+.resume-hobbies-interests-icon {
+    width: 6%;
+    margin-right: 5%;
+}
+
+.resume-hobbies-interests-wrapper img {
+    width: 100%;
+}
+
+.resume-hobbies-interests-flexer {
+    display: flex;
+
 }
 
 .resume-right {

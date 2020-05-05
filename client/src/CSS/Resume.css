@@ -181,12 +181,15 @@
 
 }
 
-.resume-more-past-experience {
+.resume-more-past-experience,
+.resume-language-courses {
     text-align: center;
     font-size: 125%;
     color: red;
     font-weight: bold;
 }
+
+
 
 .resume-master-economics-more-info,
 .resume-master-journalism-more-info,
@@ -296,6 +299,19 @@
     grid-column-start: 3;
     grid-column-end: 4;
     color: maroon;
+    padding: 5%;
     margin-left: 3%;
-    margin-top: 1%;
+    margin-top: 2%;
+    background-color: #FFD9B2;
+    border-radius: 10%;
+    font-size: 90%;
+
+}
+
+.resume-book-more-info a {
+    text-decoration: none;
+}
+
+.resume-language-level-flag img {
+    width: 18%;
 }

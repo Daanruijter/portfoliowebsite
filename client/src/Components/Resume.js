@@ -5,7 +5,11 @@ import ResumeJobinfoTemplate from "./ResumeJobinfoTemplate";
 import daanfoto from "../pictures/daanfoto.jpeg";
 
 export default class Resume extends Component {
-  state = { moreExperienceOpen: false, studyType: false };
+  state = {
+    moreExperienceOpen: false,
+    studyType: false,
+    languageCoursesOpen: false,
+  };
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
   };
@@ -17,6 +21,12 @@ export default class Resume extends Component {
   };
   clearStudyType = () => {
     this.setState({ studyType: false });
+  };
+  showLanguageCourses = () => {
+    this.setState({ languageCoursesOpen: !this.state.languageCoursesOpen });
+  };
+  closeLanguageCourses = () => {
+    this.setState({ languageCoursesOpen: false });
   };
 
   render() {
@@ -484,8 +494,30 @@ export default class Resume extends Component {
               </div>
 
               <div className="resume-book-more-info">
-                ssssssssssssssssssssss sssssssssss sssssssssss ss ss ss ss ss
-                ssssssssssssssssssssss
+                When I was a little child, my parents went to a small campsite
+                'Camping de Duinvoet', which means 'campsite on the foothills of
+                the dunes'. They liked the place, kept coming and got a good
+                friendship with the owners Hans and Ria. I've enjoyed a part of
+                my youth at this nice little campsite. Hans and Ria got older
+                and in 2011 they got the chance to sell Camping de Duinvoet.{" "}
+                <br />
+                <br />
+                They held a big goodbye party in a tent, on one of the fields.
+                Then Hans came to me and to my surprise asked me to write a
+                book. That was a honor and just done with my journalism study, I
+                definitly wanted to do that.
+                <br />
+                <br />I wrote about the big decisions Hans and Ria needed to
+                make to run Camping de Duinvoet, the anecdotes and good times of
+                the campsite and the goodbye. I published the book in 2014.
+                Hover over the book at the left side and click to see the book
+                presentation.
+                <br />
+                <br />
+                You can find pictures, stories and more information on the{" "}
+                <a href="https://www.facebook.com/Heeftunogplek">
+                  Facebook page of the book.
+                </a>
               </div>
             </div>
             <br />
@@ -493,12 +525,124 @@ export default class Resume extends Component {
             <br />
             From 2009 I followed Spanish language courses in Barcelona, Valencia
             and Málaga and Italian courses in Amsterdam. In addition I often
-            visit language meetups to practice lan- guages and to meet new
-            people. Being able to communicate with people, to read, write and
-            listen in other languages is very stimulating for me. The IT world
-            is internationally ori- ented, so I think my knowledge of foreign
+            visit language meetups to practice languages and to meet new people.
+            Being able to communicate with people, to read, write and listen in
+            other languages is very stimulating for me. The IT world is
+            internationally oriented, so I think my knowledge of foreign
             languages and interest in other cultures could be valuable.
-            <br />
+            <div
+              onClick={this.showLanguageCourses}
+              className="resume-language-courses"
+            >
+              <br />
+              CLICK TO SEE MY LANGUAGE COURSES <br /> <br />
+            </div>
+            {this.state.languageCoursesOpen ? (
+              <div className="resume-language-courses-list">
+                <ResumeJobinfoTemplate
+                  jobdate={"08/2009"}
+                  organisation={
+                    "Spanish course in Barcelona, B1 level at CaminoBarcelona (2 weeks);"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2010-06/2011"}
+                  organisation={
+                    "Italian course A2 level at Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2011-06/2012"}
+                  organisation={
+                    "Italian course B1 level at Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"01/2012-02/2012"}
+                  organisation={
+                    "Italian translation course at Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2012-06-2013"}
+                  organisation={
+                    "Italian course B1+ level at Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2013-04/2014"}
+                  organisation={
+                    "Italian course B2 level at Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2014-03/2015"}
+                  organisation={
+                    "Italian course B2+ level at Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2015-03/2016"}
+                  organisation={
+                    "Italian course C1 level at Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"11/2016"}
+                  organisation={
+                    "Spanish course in Valencia, B1 and B2 level at Costa de Valencia (2 weeks);"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"10/2017-11/2017"}
+                  organisation={
+                    "Spanish course in Málaga, B2 level at Cile (3 weeks);"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"11/2018"}
+                  organisation={
+                    "Spanish course in Málaga, B2 level at Instituto Picasso (3 weken)"
+                  }
+                />{" "}
+                <div
+                  onClick={this.closeLanguageCourses}
+                  className="resume-language-courses"
+                >
+                  <div className="resume-language-level-wrapper">
+                    <div className="resume-language-level-flag">
+                      <img
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                        alt="dutch"
+                      ></img>
+                      <img
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                        alt="english"
+                      ></img>
+                      <img
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/french-flag-large.jpg"
+                        alt="french"
+                      ></img>
+                      <img
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/italian-flag-large.jpg"
+                        alt="italian"
+                      ></img>
+                      <img
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/spanish-flag-large.jpg"
+                        alt="spanish"
+                      ></img>
+                      <img
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/german-flag-large.png"
+                        alt="german"
+                      ></img>
+                    </div>
+                    <div className="language-level-star"></div>
+                  </div>
+                  <br /> CLICK TO CLOSE MY LANGUAGE COURSES
+                </div>
+              </div>
+            ) : null}
+            {/* OTHER COURSES */}
             <br /> <div className="resume-green-header">OTHER COURSES</div>
             <br />
             <ResumeJobinfoTemplate
@@ -517,6 +661,7 @@ export default class Resume extends Component {
           </div>
         </div>
         <div className="resume-bottom"></div>
+
         <div className="resume-right-line"></div>
       </div>
     );

@@ -5,7 +5,7 @@ body {
 
 
 .App {
-  grid-template-rows: 2% 98%;
+  grid-template-rows: 1.5% 98.5%;
   grid-template-columns: 10% 80% 10%;
   display: grid;
   height: 100%;
@@ -21,6 +21,7 @@ nav {
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: black;
+
 
 }
 

@@ -1,4 +1,4 @@
-.resume-wrapper-large {
+.resume-wrapper-extralarge {
 
 
     background-color: white;
@@ -6,7 +6,7 @@
 
     grid-template-rows: 2% 96% 2%;
 
-    min-height: 5000px;
+    min-height: 6000px;
     font-size: 120%;
 
 
@@ -16,6 +16,25 @@
 
 }
 
+.resume-wrapper-large {
+
+
+    background-color: white;
+    grid-template-columns: 32% 67.9% 0.1%;
+
+    grid-template-rows: 2% 96% 2%;
+
+    min-height: 5200px;
+    font-size: 120%;
+
+
+
+
+    display: grid;
+
+}
+
+
 .resume-wrapper-small {
 
 
@@ -24,9 +43,9 @@
 
     grid-template-rows: 2% 96% 2%;
 
-    min-height: 4500px;
 
 
+    min-height: 4000px;
     font-size: 120%;
 
 

@@ -33,7 +33,11 @@ export default class Resume extends Component {
     return (
       <div
         className={
-          this.state.moreExperienceOpen
+          this.state.moreExperienceOpen && this.state.languageCoursesOpen
+            ? "resume-wrapper-extralarge"
+            : this.state.moreExperienceOpen
+            ? "resume-wrapper-large"
+            : this.state.languageCoursesOpen
             ? "resume-wrapper-large"
             : "resume-wrapper-small"
         }

@@ -340,6 +340,18 @@ export default class Resume extends Component {
             <br />
             <a
               className="resume-project-links"
+              href="https://ruijterbookstoreapp.herokuapp.com/"
+            >
+              Bookstore app
+            </a>
+            <br />
+            App die informatie over meerdere boeken vertoont met behulp van mijn
+            eigen RESTful API en een boekendataset in de database MongoDB. De
+            app heeft een zoekfunctie die de boeken filtert.
+            <br />
+            <br />
+            <a
+              className="resume-project-links"
               href="https://daanruijter.github.io/tgifVUEtodeploy/index.html"
             >
               TGIF: Transparent Government In Fact

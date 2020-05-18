@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import bookstore from "../pictures/bookstore.jpeg";
+import bookstore from "../pictures/bookstoreapp-large.jpeg";
 import mytinerery from "../pictures/mytinerary.jpeg";
 import nysl from "../pictures/nysl.jpeg";
 import tgif from "../pictures/tgif.jpeg";
@@ -43,7 +43,7 @@ export default class ITProjects extends Component {
         tech: "CSS, HTML",
       },
       {
-        url: "https://daanruijter.github.io/BookstoreTechnicalChallenge",
+        url: "https://ruijterbookstoreapp.herokuapp.com",
         id: "bookstore",
         image: bookstore,
         description:

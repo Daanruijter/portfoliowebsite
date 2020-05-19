@@ -54,7 +54,8 @@ export default class LocalArticles extends Component {
         chapeau: `Oud-burgemeester aanwezig      `,
         photoDescription: `Foto: Daan Ruijter      `,
         picture: `http://daanruijter.eu/wp-content/uploads/2019/06/Pagina1-7Turks-international-%C3%B6zyakup-opent-kunstgrasveld-in-geboortewijk-Poelenburg1.jpg`,
-        articleLink: "https://www.rodi.nl/regio/zaanstad/nieuws/15393/p-",
+        articleLink:
+          "http://daanruijter.eu/wp-content/uploads/2016/09/14-%E2%80%98Veldje-kan-echt-een-functie-hebben%E2%80%99-Jonge-Purmerender-onderzoekt-aanpassing-%E2%80%98Narcissenveldje%E2%80%99.pdf",
       },
       {
         title: `Vermakelijke middag met Jacco Eltingh bij TV Elckerlyc     `,
@@ -99,7 +100,7 @@ export default class LocalArticles extends Component {
         photoDescription: `Foto: Vincent de Vries/Rodi Media       `,
         picture: `http://daanruijter.eu/wp-content/uploads/2016/09/1-Binnen-beginnen-om-buiten-te-blijven-Koning-opent-Justitieel-Complex-Zaanstad.jpg`,
         articleLink:
-          "http://daanruijter.eu/wp-content/uploads/2016/09/2-%E2%80%98Alles-bij-elkaar-onder-%C3%A9%C3%A9n-dak%E2%80%99-Van-Gaal-opent-AFAS-Trainingscomplex-AZ.pdf",
+          "http://daanruijter.eu/wp-content/uploads/2016/09/1-Binnen-beginnen-om-buiten-te-blijven-Koning-opent-Justitieel-Complex-Zaanstad.pdf",
       },
       {
         title: `‘Alles bij elkaar onder één dak’      `,
@@ -279,7 +280,7 @@ export default class LocalArticles extends Component {
         chapeau: `‘Altijd beter willen zijn dan dag van gisteren’      `,
         photoDescription: `Foto: Daan Ruijter        `,
         picture: `http://daanruijter.eu/wp-content/uploads/2016/09/13-FC-Volendam-mikt-op-play-offs-%E2%80%98Altijd-beter-willen-zijn-dan-dag-van-gisteren%E2%80%99.jpg`,
-        articleLink: `http://daanruijter.eu/wp-content/uploads/2016/09/13-FC-Volendam-mikt-op-play-offs-%E2%80%99Altijd-beter-willen-zijn-dan-dag-van-gisteren%E2%80%99.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2016/09/13-FC-Volendam-mikt-op-play-offs-‘Altijd-beter-willen-zijn-dan-dag-van-gisteren’.pdf`,
       },
       {
         title: `‘Veldje kan echt een functie hebben’      `,
@@ -382,7 +383,7 @@ export default class LocalArticles extends Component {
         photoDescription: `Foto:Daan Ruijter`,
         picture: `http://daanruijter.eu/wp-content/uploads/2015/10/S%C3%BCleyman-%C3%96zt%C3%BCrk.jpg`,
         articleLink:
-          "http://daanruijter.eu/wp-content/uploads/2015/03/%C3%96zt%C3%BCrk-VI-Wie-betaalt-bepaalt-en-regeert-Hoofd-of-Topklassevoetbal-mogelijk-in-de-Zaanstreek.pdf",
+          "http://daanruijter.eu/wp-content/uploads/2020/05/Öztürk-VI-Wie-betaalt-bepaalt-en-regeert-Hoofd-of-Topklassevoetbal-mogelijk-in-de-Zaanstreek.pdf",
       },
       {
         title: `‘Ik dacht dat het een grapje was’        `,

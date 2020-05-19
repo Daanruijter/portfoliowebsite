@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../CSS/TennisNL.css";
 
 export default class TennisNL extends Component {
   state = {
@@ -191,8 +192,24 @@ export default class TennisNL extends Component {
   };
   render() {
     let tennisNLArticlesDisplay = this.state.tennisNLArticles.map((article) => {
-      return <div key={article.title}>{article.title}</div>;
+      return (
+        <div key={article.title}>
+          <div className="tennisNL-cards">
+            <div className="tennisNL-header">{article.title}</div>
+            <div className="tennisNL-chapeau">{article.chapeau}</div>
+            <a href={article.articleLink}>
+              <img alt={article.title} src={article.picture} />
+            </a>
+          </div>
+        </div>
+      );
     });
-    return <div>{tennisNLArticlesDisplay}</div>;
+    return (
+      <div className="tennisNL-wrapper">
+        <div className="tennisNL-articles-flexer">
+          {tennisNLArticlesDisplay}
+        </div>
+      </div>
+    );
   }
 }

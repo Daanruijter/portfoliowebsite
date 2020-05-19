@@ -1,0 +1,70 @@
+.tennisNL-articles-flexer {
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.localArticles-searchbar {
+    background-color: maroon;
+    height: 50px;
+    width: 76%;
+    text-align: center;
+    margin: 0 auto;
+
+    padding-top: 2%;
+    color: white;
+    font-size: 125%;
+
+
+}
+
+.localArticles-searchbar input {
+    margin-left: 1%;
+}
+
+.tennisNL-cards {
+    padding: 1%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: seagreen;
+}
+
+.tennisNL-header {
+    width: 100%;
+    height: 100%;
+
+    height: auto;
+    padding: 1%;
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+
+
+}
+
+.tennisNL-chapeau {
+    width: 100%;
+    height: 100%;
+
+
+    height: auto;
+    padding: 1%;
+    text-align: center;
+
+    font-style: italic;
+
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    height: auto;
+    padding: 1%;
+
+}

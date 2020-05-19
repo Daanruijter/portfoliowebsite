@@ -40,7 +40,7 @@ export default class About extends Component {
         speech, officially presenting the book. Introduction video Below you can
         find an introduction video of myself. Be sure to speak Dutch...
         <div>
-          <ul>
+          {/* <ul>
             <li>Rodi</li>
             <li>sport</li>
             <ul>
@@ -55,9 +55,10 @@ export default class About extends Component {
                 <li>Fczsw</li>
               </ul>
             </ul>
-          </ul>
+          </ul> */}
         </div>{" "}
         <br />
+        {/* <TennisNL /> */}
         <TennisNL />
       </div>
     );

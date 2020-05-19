@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../CSS//LocalArticles.css";
 
 export default class LocalArticles extends Component {
   state = {
@@ -50,7 +51,7 @@ export default class LocalArticles extends Component {
         articleLink: "https://www.rodi.nl/regio/zaanstad/nieuws/17223/p-",
       },
       {
-        title: `Turks international özyakup opent kunstgrasveld in geboortewijk Poelenburg     `,
+        title: `Turks international özyakup opent kunstgrasveld      `,
         chapeau: `Oud-burgemeester aanwezig      `,
         photoDescription: `Foto: Daan Ruijter      `,
         picture: `http://daanruijter.eu/wp-content/uploads/2019/06/Pagina1-7Turks-international-%C3%B6zyakup-opent-kunstgrasveld-in-geboortewijk-Poelenburg1.jpg`,
@@ -209,7 +210,7 @@ export default class LocalArticles extends Component {
         title: `'Dit is het hoogst haalbare'      `,
         chapeau: `Zaandammer Edwin debuteert op 55e bij Australian Open      `,
         photoDescription: `Foto: Daan Ruijter      `,
-        picture: `Foto: Daan Ruijter        `,
+        picture: `http://daanruijter.eu/wp-content/uploads/2019/06/Pagina2-3Dit-is-het-hoogst-haalbare.jpg  `,
         articleLink: `https://www.rodi.nl/regio/zaanstad/nieuws/58639/p-`,
       },
       {
@@ -467,8 +468,26 @@ export default class LocalArticles extends Component {
   };
   render() {
     let localArticlesDisplay = this.state.localArticles.map((article) => {
-      return <div key={article.title}>{article.title}</div>;
+      return (
+        <div key={article.title}>
+          <div className="localArticles-cards">
+            <div className="localArticles-header">{article.title}</div>
+            <div className="localArticles-chapeau">{article.chapeau}</div>
+            <a href={article.articleLink}>
+              <img alt={article.title} src={article.picture} />
+            </a>
+          </div>
+        </div>
+      );
     });
-    return <div>{localArticlesDisplay}</div>;
+    return (
+      <div className="localArticles-wrapper">
+        <div className="localArticles-searchbar">
+          Search
+          <input />
+        </div>
+        <div className="localArticles-flexer">{localArticlesDisplay}</div>
+      </div>
+    );
   }
 }

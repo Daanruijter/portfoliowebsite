@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../CSS/About.css";
 import LocalArticles from "./LocalArticles";
 import TennisNL from "./TennisNL";
+import DeGouw from "./DeGouw";
 
 export default class About extends Component {
   render() {
@@ -63,7 +64,7 @@ export default class About extends Component {
         <br />
         {/* <TennisNL /> */}
         {/* <LocalArticles /> */}
-        <TennisNL />
+        {<DeGouw />}
       </div>
     );
   }

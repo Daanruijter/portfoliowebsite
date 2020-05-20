@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../CSS/DeGouw.css";
 
 export default class TennisNL extends Component {
   state = {
@@ -106,18 +107,70 @@ export default class TennisNL extends Component {
   render() {
     let tennisverenigingDeGouwArticlesChampionshipDisplay = this.state.tennisverenigingDeGouwArticlesChampionship.map(
       (article) => {
-        return <div key={article.title}>{article.title}</div>;
+        return (
+          <div className="DeGouw-championship-cards" key={article.title}>
+            <a href={article.article}>{article.title}</a>
+          </div>
+        );
       }
     );
     let tennisverenigingDeGouwArticlesOtherDisplay = this.state.tennisverenigingDeGouwArticlesOther.map(
       (article) => {
-        return <div key={article.title}>{article.title}</div>;
+        return (
+          <div className="DeGouw-other-cards" key={article.title}>
+            <a href={article.article}>{article.title}</a>
+          </div>
+        );
       }
     );
     return (
-      <div>
-        {tennisverenigingDeGouwArticlesChampionshipDisplay}{" "}
-        <div>{tennisverenigingDeGouwArticlesOtherDisplay}</div>
+      <div className="DeGouw-wrapper">
+        <div className="DeGouw-information">
+          Since September 2014 I'm a member of Tennis Club De Gouw in Zaandam, a
+          city to the north of Amsterdam. Now and then I hit some balls there.
+          When I joined the club I offered to write or edit articles. Here and
+          there I published some, for example about the road to the championship
+          of the mixteam, back then playing at a high level in the Dutch "Eerste
+          Klasse". That's the third best level in that discipline.
+        </div>
+        <div className="DeGouw-clubhouse">
+          <img
+            alt="Clubhouse"
+            src="        http://daanruijter.eu/wp-content/uploads/2015/04/Sponsor-en-medewerkerstoernooi.jpg
+"
+          />
+        </div>
+        <div className="DeGouw-championship-articles-header">
+          Articles about the championship
+        </div>
+        <div className="DeGouw-tennisverenigingDeGouwArticlesChampionshipDisplay">
+          {tennisverenigingDeGouwArticlesChampionshipDisplay}
+        </div>
+
+        <div className="DeGouw-competition">
+          <img
+            alt="Competition"
+            src="http://daanruijter.eu/wp-content/uploads/2015/06/TV-De-Gouw-zegeviert.jpg"
+          />
+        </div>
+        <div className="DeGouw-NienkeDeJong-action">
+          <img
+            alt="Action photo Nienke de Jong"
+            src="http://daanruijter.eu/wp-content/uploads/2015/06/Actiefoto-Nienke-de-Jong.jpg"
+          />
+        </div>
+        <div className="DeGouw-other-articles-header">
+          Other Articles about Tennis Club De Gouw
+        </div>
+        <div className="DeGouw-tennisverenigingDeGouwArticlesOtherDisplay">
+          {tennisverenigingDeGouwArticlesOtherDisplay}
+        </div>
+        <div className="DeGouw-scoreboards">
+          <img
+            alt="Scoreboards"
+            src="http://daanruijter.eu/wp-content/uploads/2015/06/Scoreborden-bij-TV-De-Gouw.jpg"
+          />
+        </div>
       </div>
     );
   }

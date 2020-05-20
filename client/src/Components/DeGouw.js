@@ -109,7 +109,9 @@ export default class TennisNL extends Component {
       (article) => {
         return (
           <div className="DeGouw-championship-cards" key={article.title}>
-            <a href={article.article}>{article.title}</a>
+            <a href={article.article}>
+              {article.title} ({<i>{article.date}</i>})
+            </a>
           </div>
         );
       }
@@ -118,7 +120,9 @@ export default class TennisNL extends Component {
       (article) => {
         return (
           <div className="DeGouw-other-cards" key={article.title}>
-            <a href={article.article}>{article.title}</a>
+            <a href={article.article}>
+              {article.title} ({<i>{article.date}</i>})
+            </a>
           </div>
         );
       }
@@ -155,7 +159,7 @@ export default class TennisNL extends Component {
         </div>
         <div className="DeGouw-NienkeDeJong-action">
           <img
-            alt="Action photo Nienke de Jong"
+            alt="Action Nienke de Jong"
             src="http://daanruijter.eu/wp-content/uploads/2015/06/Actiefoto-Nienke-de-Jong.jpg"
           />
         </div>

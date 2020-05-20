@@ -3,6 +3,7 @@ import "../CSS/About.css";
 import LocalArticles from "./LocalArticles";
 import TennisNL from "./TennisNL";
 import DeGouw from "./DeGouw";
+import FCZSW from "./FCZSW";
 
 export default class About extends Component {
   render() {
@@ -64,7 +65,8 @@ export default class About extends Component {
         <br />
         {/* <TennisNL /> */}
         {/* <LocalArticles /> */}
-        {<DeGouw />}
+        {/* {<DeGouw />} */}
+        <FCZSW />
       </div>
     );
   }

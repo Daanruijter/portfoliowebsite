@@ -1,6 +1,46 @@
+.tennisNL-wrapper {
+    background: url("../pictures/grass.jpg");
+    clear: both;
+
+
+}
+
+.tennisNL-information {
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 1%;
+
+
+}
+
+.tennisNL-Daan-picture {
+    width: 18%;
+
+    float: left;
+    position: relative;
+    margin-right: 2%;
+
+}
+
+
+
+.tennisNL-text {
+
+    display: block;
+    font-size: 125%;
+
+
+
+}
+
+
+
+.tennisNL-Daan-picture img {
+    border-radius: 10%;
+}
+
 .tennisNL-articles-flexer {
     display: flex;
-
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -31,6 +71,7 @@
     border-width: 2px;
     border-style: solid;
     border-color: seagreen;
+    background-color: white;
 }
 
 .tennisNL-header {
@@ -67,4 +108,38 @@ img {
     height: auto;
     padding: 1%;
 
+}
+
+.tennisNL-only-text-cards {
+
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: seagreen;
+    background-color: blue;
+    margin-left: 11%;
+    margin-right: 11%;
+
+}
+
+.tennisNL-only-text-cards a {
+    text-decoration: none;
+    color: white;
+}
+
+.tennisNL-only-text-wrapper {
+
+    padding-bottom: 2%
+}
+
+.tennisNL-other-articles {
+    background-color: white;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    margin-left: 11%;
+    margin-right: 11%;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }

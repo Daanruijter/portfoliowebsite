@@ -1,4 +1,10 @@
 .about-wrapper {
     height: auto;
     background-color: white;
+
+}
+
+.about-information {
+    font-size: 125%;
+    padding: 1%;
 }

@@ -134,59 +134,59 @@ export default class TennisNL extends Component {
     tennisNLArticlesOnlyText: [
       {
         title: `Williams blikt vooruit op revancheduel tegen Muguruza    `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Williams-blikt-vooruit-op-revancheduel-tegen-Muguruza.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Williams-blikt-vooruit-op-revancheduel-tegen-Muguruza.pdf`,
       },
       {
         title: `Van der Duim ontsnapt en wint future Dominicaanse Republiek`,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Van-der-Duim-ontsnapt-en-wint-future-Dominicaanse-Republiek.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Van-der-Duim-ontsnapt-en-wint-future-Dominicaanse-Republiek.pdf`,
       },
       {
         title: `Tweede ATP-finale van 2014 voor Murray        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Tweede-ATP-finale-van-2014-voor-Murray.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Tweede-ATP-finale-van-2014-voor-Murray.pdf`,
       },
       {
         title: `Huta Galung bereikt vierde finale in Alphen       `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Huta-Galung-bereikt-vierde-finale-in-Alphen.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Huta-Galung-bereikt-vierde-finale-in-Alphen.pdf`,
       },
       {
         title: `Hogenkamp en Burger verder in Alphen aan den Rijn        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Hogenkamp-en-Burger-verder-in-Alphen-aan-den-Rijn.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Hogenkamp-en-Burger-verder-in-Alphen-aan-den-Rijn.pdf`,
       },
       {
         title: `Lemoine deklasseert Versteeg in Nederlandse finale        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Lemoine-deklasseert-Versteeg-in-Nederlandse-finale.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Lemoine-deklasseert-Versteeg-in-Nederlandse-finale.pdf`,
       },
       {
         title: `Federer soepel langs Robredo naar kwartfinale        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Federer-soepel-langs-Robredo-naar-kwartfinale.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Federer-soepel-langs-Robredo-naar-kwartfinale.pdf`,
       },
       {
         title: `Kyrgios boekt mooiste overwinning uit zijn carrière        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Kyrgios-boekt-mooiste-overwinning-uit-zijn-carri%C3%A8re.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Kyrgios-boekt-mooiste-overwinning-uit-zijn-carri%C3%A8re.pdf`,
       },
       {
         title: `Nadal blijft zonder setverlies in Parijs        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Nadal-blijft-zonder-setverlies-in-Parijs.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Nadal-blijft-zonder-setverlies-in-Parijs.pdf`,
       },
       {
         title: `Djokovic verslaat rivaal Nadal in finale Rome        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Djokovic-verslaat-rivaal-Nadal-in-finale-Rome.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Djokovic-verslaat-rivaal-Nadal-in-finale-Rome.pdf`,
       },
       {
         title: `Errani zorgt in Rome voor langverwacht Italiaans succes        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Errani-zorgt-in-Rome-voor-langverwacht-Italiaans-succes.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Errani-zorgt-in-Rome-voor-langverwacht-Italiaans-succes.pdf`,
       },
       {
         title: `Bertens niet naar enkelspelfinale in Frankrijk        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Bertens-niet-naar-enkelspelfinale-in-Frankrijk.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Bertens-niet-naar-enkelspelfinale-in-Frankrijk.pdf`,
       },
       {
         title: `Bertens brengt Nederland naast Japan in Fed Cup        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Bertens-brengt-Nederland-naast-Japan-in-Fed-Cup.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Bertens-brengt-Nederland-naast-Japan-in-Fed-Cup.pdf`,
       },
       {
         title: `Nederland op achterstand in Fed Cup        `,
-        article: `http://daanruijter.eu/wp-content/uploads/2015/05/Nederland-op-achterstand-in-Fed-Cup.pdf`,
+        articleLink: `http://daanruijter.eu/wp-content/uploads/2015/05/Nederland-op-achterstand-in-Fed-Cup.pdf`,
       },
     ],
   };
@@ -204,10 +204,62 @@ export default class TennisNL extends Component {
         </div>
       );
     });
+    let tennisNLArticlesOnlyTextDisplay = this.state.tennisNLArticlesOnlyText.map(
+      (article) => {
+        return (
+          <div key={article.title}>
+            <div className="tennisNL-only-text-cards">
+              <a href={article.articleLink}>
+                <div className="tennisNL-header">{article.title}</div>
+              </a>
+            </div>
+          </div>
+        );
+      }
+    );
     return (
       <div className="tennisNL-wrapper">
+        <div className="tennisNL-information">
+          <div className="tennisNL-Daan-picture">
+            <img
+              alt="daan"
+              src="http://daanruijter.eu/wp-content/uploads/2015/04/Daantennis.jpg"
+            />
+          </div>
+          <div className="tennisNL-text">
+            <p>
+              I've been a tennis lover for many years now. The sport got me for
+              the first time during a marathon match that Sjeng Schalken played
+              in 2000. The Dutchman, also called "the wall", because he hit so
+              many balls back, fought out a tough battle against Mark
+              Philippoussis. It was the third round of Wimbledon and the big
+              serving Australian came out as the winner, beating Schalken after
+              five thrilling sets and in five hours and five minutes. The final
+              set score: 20-18. Philippoussis ended up losing in his quarter
+              final match against good old American Andre Agassi.
+            </p>
+            Since then I started to follow national and international tennis.
+            With the rise of Roger Federer at the end of the nineties my
+            interest only got bigger. Unfortunately in 2013 Schalken got beaten
+            again at the quarter finals of Wimbledon, but now by an unleashed
+            Swiss maestro. After this match the probably best male tennis player
+            ever went on to win the tournement, his maiden Grand Slam. I had the
+            honour to see him in action at the Rotterdam ATP World Tournement
+            three times.
+            <p>
+              In 2004 I picked up a racket and discovered how nice it also is to
+              play the game by myself. Ten years later, January 2014, I started
+              to write for the Dutch tennis website www.tennis.nl, doing that
+              for about 1,5 years.
+            </p>
+          </div>
+        </div>
         <div className="tennisNL-articles-flexer">
           {tennisNLArticlesDisplay}
+        </div>
+        <div className="tennisNL-other-articles">Other articles</div>
+        <div className="tennisNL-only-text-wrapper">
+          {tennisNLArticlesOnlyTextDisplay}
         </div>
       </div>
     );

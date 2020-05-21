@@ -66,7 +66,7 @@ export default class About extends Component {
         {/* <TennisNL /> */}
         {/* <LocalArticles /> */}
         {/* {<DeGouw />} */}
-        <FCZSW />
+        {/* <FCZSW /> */}
       </div>
     );
   }

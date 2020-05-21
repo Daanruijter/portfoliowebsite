@@ -3,18 +3,20 @@ import "../CSS/FCZSW.css";
 
 export default class FCZSW extends Component {
   componentDidMount() {
-    this.test();
+    this.setMagazineCounter();
   }
-  test() {
-    console.log("hi");
-    let that = this;
-    // setTimeout(that.test(), 20000);
-    // return {
-    //   image: this.state.magaZineArray[0].image,
-    //   magaZineLink: this.state.magaZineArray[0].magazineLink,
-    // };
-    // console.log(this.state.magaZineArray[0].image);
-    // console.log(this.state.magaZineArray[0].magazineLink);
+  setMagazineCounter() {
+    let magazineCounter = this.state.magazineCounter;
+
+    if (this.state.magazineCounter === this.state.magazineArray.length - 1) {
+      magazineCounter = 0;
+    } else {
+      magazineCounter++;
+    }
+
+    this.setState({ magazineCounter: magazineCounter });
+
+    setTimeout(() => this.setMagazineCounter(), 5000);
   }
 
   state = {
@@ -35,7 +37,7 @@ export default class FCZSW extends Component {
         date: `21-10-2014`,
       },
       {
-        title: `http://daanruijter.eu/wp-content/uploads/2020/05/15-10-2014-Persbericht-Shirtactie-Lekkervroeg.nl_.pdf`,
+        title: `Voorspel uitslag RKC - Telstar en win een Telstar-uitshirt`,
         article: `http://daanruijter.eu/wp-content/uploads/2020/05/15-10-2014-Persbericht-Shirtactie-Lekkervroeg.nl_.pdf`,
         date: `15-10-2014`,
       },
@@ -50,47 +52,49 @@ export default class FCZSW extends Component {
         date: `06-02-2014`,
       },
     ],
-    magaZineArray: [
+    magazineArray: [
       {
-        image:
+        magazineImage:
           "http://daanruijter.eu/wp-content/uploads/2019/06/FCZSW-Magazine-2019.jpg",
         magazineLink:
           "http://daanruijter.eu/wp-content/uploads/2019/06/FCZSW-Magazine-2019.pdf",
       },
       {
-        image:
+        magazineImage:
           "http://daanruijter.eu/wp-content/uploads/2019/06/FCZSW-Magazine-2018.jpg",
         magazineLink:
           "http://daanruijter.eu/wp-content/uploads/2019/06/FCZSW-Magazine-2018.pdf",
       },
       {
-        image:
+        magazineImage:
           "http://daanruijter.eu/wp-content/uploads/2016/10/FCZSW-2016.jpg",
         magazineLink:
           "http://daanruijter.eu/wp-content/uploads/2016/10/FCZSW-Magazine-2016.pdf",
       },
       {
-        image:
+        magazineImage:
           "http://daanruijter.eu/wp-content/uploads/2015/04/FCZSW-Magazine.jpg",
         magazineLink:
           "http://daanruijter.eu/wp-content/uploads/2015/04/FCZSW-Magazine.pdf",
       },
     ],
+    magazineCounter: 0,
   };
   render() {
-    // let magaZineImage = this.test().image;
-    // let magaZineLink = this.test().magaZineLink;
-
-    // let FCZSWMagazinesDisplay = this.state.magaZineArray.map((article) => {
-    //   return (
-    //     <div key={article.image}>
-    //       <img src={article.image} />
-    //     </div>
-    //   );
-    // });
+    let magazinesImageDisplay = this.state.magazineArray[
+      this.state.magazineCounter
+    ].magazineImage;
+    let magazinesDisplay = this.state.magazineArray[this.state.magazineCounter]
+      .magazineLink;
 
     let FCZSWArticlesDisplay = this.state.FCZSWArticles.map((article) => {
-      return <div key={article.title}>{article.title}</div>;
+      return (
+        <div className="FCZSW-article-cards" key={article.title}>
+          <a href={article.article}>
+            {article.title} ({article.date})
+          </a>
+        </div>
+      );
     });
 
     return (
@@ -102,13 +106,20 @@ export default class FCZSW extends Component {
           enthusiastic. I wrote several articles and published multiple club
           magazines in collaboration with my former collegue.
         </div>
-        <div className="FCZSW-magazines">
-          {/* <a href={magaZineLink}>
-            <img src={magaZineImage} />
-          </a> */}
+        <div className="FCZSW-magazines-and-hall-of-fame">
+          <div className="FCZSW-magazines">
+            <a href={magazinesDisplay}>
+              <img src={magazinesImageDisplay} />
+            </a>
+          </div>
+          <div className="FCZSW-hall-of-fame">
+            <img src="http://daanruijter.eu/wp-content/uploads/2015/04/7.-De-thuishallen.jpg" />
+          </div>{" "}
         </div>
-        <div className="FCZWS-articles">{FCZSWArticlesDisplay}</div>
-        <div className="FCZSW-fall-of-fame"></div>
+        <div className="FCZSW-articles-header">
+          Some articles I wrote for FCZSW{" "}
+        </div>
+        <div className="FCZSW-articles">{FCZSWArticlesDisplay} </div>
       </div>
     );
   }

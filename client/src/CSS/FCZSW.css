@@ -1,129 +1,91 @@
-.DeGouw-wrapper img {
+.FCZSW-wrapper img {
     width: 100%;
 
 }
 
 .FCZSW-wrapper {
-    display: grid;
-    grid-template-columns: 1% 65% 35% 1%;
-    grid-template-rows: 5% 40% 55%;
+
     overflow: hidden;
 
 }
 
-.DeGouw-information {
+.FCZSW-information {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    font-size: 150%;
+
+
+
+
+}
+
+.FCZSW-articles {
+
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+
+
+
+
+
+}
+
+.FCZSW-magazines-and-hall-of-fame {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: wheat;
+    border-radius: 5%;
+    ;
+}
+
+.FCZSW-magazines {
     padding: 2%;
     margin-left: 1%;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
+
+    width: 26.5%;
+
+}
+
+.FCZSW-hall-of-fame {
+    padding: 2%;
+    margin-left: 1%;
+
     font-size: 150%;
+    width: 50%;
 
 }
 
 
 
+.FCZSW-articles-header {
+    background-color: white;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
 
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
 
-.DeGouw-championship-cards,
-.DeGouw-other-cards {
+.FCZSW-article-cards {
     padding: 1%;
     font-size: 150%;
+    background-color: red;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+
 }
 
 
-.DeGouw-championship-cards a,
-.DeGouw-other-cards a {
+.FCZSW-article-cards a {
     color: white;
     text-decoration: none;
 
-}
-
-.DeGouw-championship-articles-header {
-    background-color: black;
-    padding: 2%;
-    margin-left: 1%;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    font-size: 175%;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-}
-
-.DeGouw-tennisverenigingDeGouwArticlesChampionshipDisplay {
-
-    background-color: blue;
-    color: white;
-    padding: 2%;
-    margin-left: 1%;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-
-
-}
-
-.DeGouw-competition {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.DeGouw-NienkeDeJong-action {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 5;
-
-}
-
-.DeGouw-other-articles-header {
-    background-color: black;
-    padding: 2%;
-    margin-left: 1%;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 6;
-    font-size: 175%;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-}
-
-.DeGouw-tennisverenigingDeGouwArticlesOtherDisplay {
-    background-color: blue;
-    color: white;
-    padding: 2%;
-
-    margin-left: 1%;
-
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    overflow: hidden;
-
-
-}
-
-.DeGouw-clubhouse {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 7;
-    grid-row-end: 8;
-}
-
-
-.DeGouw-scoreboards {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 7;
-    grid-row-end: 8;
 }

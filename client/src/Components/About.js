@@ -4,6 +4,7 @@ import LocalArticles from "./LocalArticles";
 import TennisNL from "./TennisNL";
 import DeGouw from "./DeGouw";
 import FCZSW from "./FCZSW";
+import Ajax from "./Ajax";
 
 export default class About extends Component {
   render() {
@@ -65,8 +66,9 @@ export default class About extends Component {
         <br />
         {/* <TennisNL /> */}
         {/* <LocalArticles /> */}
-        {/* {<DeGouw />} */}
+        {/* <DeGouw /> */}
         {/* <FCZSW /> */}
+        <Ajax />
       </div>
     );
   }

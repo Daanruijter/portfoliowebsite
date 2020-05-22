@@ -109,11 +109,14 @@ export default class FCZSW extends Component {
         <div className="FCZSW-magazines-and-hall-of-fame">
           <div className="FCZSW-magazines">
             <a href={magazinesDisplay}>
-              <img src={magazinesImageDisplay} />
+              <img alt="magazines" src={magazinesImageDisplay} />
             </a>
           </div>
           <div className="FCZSW-hall-of-fame">
-            <img src="http://daanruijter.eu/wp-content/uploads/2015/04/7.-De-thuishallen.jpg" />
+            <img
+              alt="halloffame"
+              src="http://daanruijter.eu/wp-content/uploads/2015/04/7.-De-thuishallen.jpg"
+            />
           </div>{" "}
         </div>
         <div className="FCZSW-articles-header">

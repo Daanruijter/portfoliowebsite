@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../CSS/Ajax.css";
 
 export default class Ajax extends Component {
   state = {
@@ -52,9 +53,30 @@ export default class Ajax extends Component {
   };
   render() {
     let AjaxArticlesDisplay = this.state.AjaxArticles.map((article) => {
-      return <div key={article.title}>{article.title}</div>;
+      return (
+        <div className="Ajax-article-cards" key={article.title}>
+          <a href={article.article}>
+            {article.title} ({article.date})
+          </a>
+        </div>
+      );
     });
 
-    return <div>{AjaxArticlesDisplay} </div>;
+    return (
+      <div className="Ajax-wrapper">
+        <div className="Ajax-information">
+          For several months I worked as an editor at the editorial office of
+          Ajax Showtime. I edited and wrote various articles about the Ajax
+          news. Below an impression.
+        </div>
+        <div className="Ajax-ArenA">
+          <img
+            alt="Amsterdam-ArenA"
+            src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF2496.jpg"
+          ></img>
+        </div>{" "}
+        <div className="Ajax-articles"> {AjaxArticlesDisplay} </div>
+      </div>
+    );
   }
 }

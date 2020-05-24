@@ -56,7 +56,7 @@ export default class ITProjects extends Component {
     let projects = this.state.projects;
     console.log(projects);
     let projectsToDisplay = projects.map((project) => (
-      <div className="flip-box">
+      <div key={project.description} className="flip-box">
         <div className="flip-box-inner">
           <div className="projects flip-box-front" key={project.id}>
             <a href={project.url}>

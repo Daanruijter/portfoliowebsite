@@ -1,67 +1,104 @@
-/* .navbar {
-    overflow: hidden;
-} */
-
-.navbar-dropdown-div {
-  color: black;
-  padding-left: 15%;
-  background-color: white;
-  position: absolute;
-}
-
 .navbar li {
-  list-style-type: none;
-  padding-right: 5%;
-  /* height: 100%; */
+    list-style-type: none;
+    padding-right: 5%;
+    /* height: 100%; */
 }
 
 .navbar ul {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
 
-  background-color: black;
+    background-color: black;
 
-  color: white;
+    color: white;
 }
 
 .navbar a {
-  font-size: 175%;
-  color: red;
+    font-size: 175%;
+    color: red;
 
-  text-decoration: none;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: white;
 }
 
 .dropdown a {
-  font-size: 100%;
-  color: black;
+    font-size: 100%;
+    color: black;
 }
 
 .dropdown {
-  background-color: black;
+    background-color: black;
 }
 
 .dropdown-content {
-  margin-top: 16px;
-  position: absolute;
-  background-color: white;
+    display: flex;
+    margin-top: 16px;
+    position: absolute;
+    background-color: white;
+    font-size: 120%;
+    width: 40%;
+    padding-top: 2%;
+    padding-left: 2%;
+
+    height: auto;
+    color: black;
+    justify-content: left;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}
+
+
+
+.dropdown-content a:hover {
+    color: red;
 }
 
 .fa {
-  color: white;
+    color: white;
 }
 
 .about-grid {
-  grid-template-columns: 80% 20%;
-  display: grid;
+    grid-template-columns: 80% 20%;
+    display: grid;
 }
 
 .about-position {
-  grid-column-start: 1;
-  grid-column-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
+
 .arrow-position {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  color: red;
-  margin-top: 20%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: red;
+    margin-top: 20%;
+}
+
+.local-articles-header,
+.sport-articles-header {
+    color: chocolate;
+}
+
+.local-articles-header:hover,
+.sport-articles-header:hover {
+    background-color: navajowhite;
+}
+
+.sport-articles-wrapper,
+.local-articles-wrapper {
+    margin-left: 5%;
+}
+
+.sport-articles-wrapper {
+    margin-top: 0%;
+}
+
+.sport-articles-header div {
+    color: black;
+    text-decoration: solid;
 }

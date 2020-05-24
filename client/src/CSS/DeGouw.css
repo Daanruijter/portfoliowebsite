@@ -7,18 +7,21 @@
     display: grid;
     grid-template-columns: 1% 49% 49% 1%;
     grid-template-rows: 8% 2% 23% 23 2% 23% 23%;
-    overflow: hidden;
+
+    width: 100%;
 
 }
 
 .DeGouw-information {
+    width: 96%;
     padding: 2%;
-    margin-left: 1%;
+
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
-    font-size: 150%;
+    font-size: 125%;
+    background-color: white;
 
 }
 
@@ -29,7 +32,7 @@
 .DeGouw-championship-cards,
 .DeGouw-other-cards {
     padding: 1%;
-    font-size: 150%;
+    font-size: 125%;
 }
 
 
@@ -43,9 +46,9 @@
 .DeGouw-championship-articles-header {
     background-color: black;
     padding: 2%;
-    margin-left: 1%;
+
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
     font-size: 175%;
@@ -59,9 +62,9 @@
     background-color: blue;
     color: white;
     padding: 2%;
-    margin-left: 1%;
+
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
 
@@ -70,13 +73,13 @@
 
 .DeGouw-competition {
     grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 5;
 }
 
 .DeGouw-NienkeDeJong-action {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
@@ -86,9 +89,9 @@
 .DeGouw-other-articles-header {
     background-color: black;
     padding: 2%;
-    margin-left: 1%;
+
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 5;
     grid-row-end: 6;
     font-size: 175%;
@@ -102,10 +105,10 @@
     color: white;
     padding: 2%;
 
-    margin-left: 1%;
+
 
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 6;
     grid-row-end: 7;
     overflow: hidden;
@@ -114,7 +117,7 @@
 }
 
 .DeGouw-clubhouse {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 7;
     grid-row-end: 8;
@@ -123,7 +126,7 @@
 
 .DeGouw-scoreboards {
     grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 7;
     grid-row-end: 8;
 }

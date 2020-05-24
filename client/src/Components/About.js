@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import "../CSS/About.css";
-import LocalArticles from "./LocalArticles";
-import TennisNL from "./TennisNL";
-import DeGouw from "./DeGouw";
-import FCZSW from "./FCZSW";
-import Ajax from "./Ajax";
 
 export default class About extends Component {
   render() {
@@ -45,30 +40,7 @@ export default class About extends Component {
           speech, officially presenting the book. Introduction video Below you
           can find an introduction video of myself. Be sure to speak Dutch...
         </div>
-        <div>
-          {/* <ul>
-            <li>Rodi</li>
-            <li>sport</li>
-            <ul>
-              <li>tennis</li>
-              <ul>
-                <li>De Gouw</li>
-                <li>Tennis.nl</li>
-              </ul>
-              <li>voetbal</li>
-              <ul>
-                <li>Ajax</li>
-                <li>Fczsw</li>
-              </ul>
-            </ul>
-          </ul> */}
-        </div>{" "}
-        <br />
-        {/* <TennisNL /> */}
-        {/* <LocalArticles /> */}
-        {/* <DeGouw /> */}
-        {/* <FCZSW /> */}
-        <Ajax />
+        <div></div> <br />
       </div>
     );
   }

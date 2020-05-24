@@ -10,6 +10,7 @@
     margin-bottom: 2%;
     padding: 1%;
     overflow: auto;
+    font-size: 100%;
 
 
 }
@@ -49,24 +50,6 @@
     justify-content: center;
 
 
-}
-
-.localArticles-searchbar {
-    background-color: maroon;
-    height: 50px;
-    width: 76%;
-    text-align: center;
-    margin: 0 auto;
-
-    padding-top: 2%;
-    color: white;
-    font-size: 125%;
-
-
-}
-
-.localArticles-searchbar input {
-    margin-left: 1%;
 }
 
 .tennisNL-cards {

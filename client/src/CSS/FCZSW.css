@@ -4,17 +4,19 @@
 }
 
 .FCZSW-wrapper {
-
-    overflow: hidden;
-
+    width: 100%;
 }
 
 .FCZSW-information {
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 1%;
-    font-size: 150%;
+
+
+
+    font-size: 125%;
+    background-color: white;
+    padding: 2%;
+
+
+    width: 96%;
 
 
 
@@ -23,8 +25,7 @@
 
 .FCZSW-articles {
 
-    margin-left: 2%;
-    margin-right: 2%;
+
     margin-bottom: 2%;
 
 
@@ -36,11 +37,10 @@
 .FCZSW-magazines-and-hall-of-fame {
     display: flex;
     justify-content: center;
-    margin-left: 2%;
-    margin-right: 2%;
+
     background-color: wheat;
-    border-radius: 5%;
-    ;
+
+
 }
 
 .FCZSW-magazines {
@@ -68,9 +68,9 @@
     font-size: 200%;
     font-weight: bold;
 
-    margin-top: 2%;
     padding-top: 1%;
     padding-bottom: 1%;
+    width: 100%;
 }
 
 .FCZSW-article-cards {

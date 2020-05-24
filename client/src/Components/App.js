@@ -7,28 +7,17 @@ import Navbar from "./Navbar";
 import About from "./About";
 import Resume from "./Resume";
 import ResumeDutch from "./ResumeDutch";
+import LocalArticles from "./LocalArticles";
+import DeGouw from "./DeGouw";
+import TennisNL from "./TennisNL";
+import Ajax from "./Ajax";
+import FCZSW from "./FCZSW";
 
 function App() {
   return (
     <div className="App">
       <nav>
         <Navbar />
-        {/* <div className="navbar-dropdown-div">
-          haha
-          <br />
-          haha
-          <br />
-          haha
-          <br />
-          haha
-          <br />
-          haha
-          <br />
-          haha
-          <br />
-          haha
-          <br />
-        </div> */}
       </nav>
 
       <main className="main">
@@ -49,6 +38,27 @@ function App() {
               exact
               path="/resume/dutch"
               render={(props) => <ResumeDutch {...props} />}
+            />
+            <Route
+              exact
+              path="/localarticles"
+              render={(props) => <LocalArticles {...props} />}
+            />
+            <Route
+              exact
+              path="/internationaltennis"
+              render={(props) => <TennisNL {...props} />}
+            />
+            <Route
+              exact
+              path="/localtennis"
+              render={(props) => <DeGouw {...props} />}
+            />
+            <Route exact path="/ajax" render={(props) => <Ajax {...props} />} />
+            <Route
+              exact
+              path="/localsoccer"
+              render={(props) => <FCZSW {...props} />}
             />
           </Switch>
         </BrowserRouter>

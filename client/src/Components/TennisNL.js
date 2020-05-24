@@ -220,37 +220,18 @@ export default class TennisNL extends Component {
     return (
       <div className="tennisNL-wrapper">
         <div className="tennisNL-information">
-          <div className="tennisNL-Daan-picture">
+          {/* <div className="tennisNL-Daan-picture">
             <img
               alt="daan"
               src="http://daanruijter.eu/wp-content/uploads/2015/04/Daantennis.jpg"
             />
-          </div>
+          </div> */}
           <div className="tennisNL-text">
             <p>
-              I've been a tennis lover for many years now. The sport got me for
-              the first time during a marathon match that Sjeng Schalken played
-              in 2000. The Dutchman, also called "the wall", because he hit so
-              many balls back, fought out a tough battle against Mark
-              Philippoussis. It was the third round of Wimbledon and the big
-              serving Australian came out as the winner, beating Schalken after
-              five thrilling sets and in five hours and five minutes. The final
-              set score: 20-18. Philippoussis ended up losing in his quarter
-              final match against good old American Andre Agassi.
-            </p>
-            Since then I started to follow national and international tennis.
-            With the rise of Roger Federer at the end of the nineties my
-            interest only got bigger. Unfortunately in 2013 Schalken got beaten
-            again at the quarter finals of Wimbledon, but now by an unleashed
-            Swiss maestro. After this match the probably best male tennis player
-            ever went on to win the tournement, his maiden Grand Slam. I had the
-            honour to see him in action at the Rotterdam ATP World Tournement
-            three times.
-            <p>
-              In 2004 I picked up a racket and discovered how nice it also is to
-              play the game by myself. Ten years later, January 2014, I started
-              to write for the Dutch tennis website www.tennis.nl, doing that
-              for about 1,5 years.
+              In January 2014, I started to write for the Dutch tennis website
+              www.tennis.nl, the then national website about the tennis sport.
+              For about 1,5 year I wrote articles about women's and men's
+              national and international professional tennis.
             </p>
           </div>
         </div>

@@ -8,3 +8,33 @@
     font-size: 125%;
     padding: 1%;
 }
+
+.about-tennis-information {
+    background-color: white;
+    margin-bottom: 2%;
+    padding: 1%;
+
+    font-size: 100%;
+
+
+}
+
+.about-tennis-Daan-picture img {
+    width: 18%;
+
+    float: left;
+    position: relative;
+    margin-right: 2%;
+
+}
+
+
+
+.about-tennis-text {
+
+    display: block;
+    font-size: 125%;
+
+
+
+}

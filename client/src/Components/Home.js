@@ -27,7 +27,7 @@ export default class Home extends Component {
             </div>
           </Element>
         </React.Fragment> */}
-        )
+
         <div className="home-introduction">
           <div className="welcome">
             Welcome to the website of Full Stack Webdeveloper Daan Ruijter

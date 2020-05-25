@@ -15,11 +15,12 @@ export default class Navbar extends Component {
       redirect: true,
     });
   };
-  renderRedirect = () => {
-    if (this.state.redirect) {
-      return <Redirect to="#" />;
-    }
-  };
+  // renderRedirect = () => {
+  //   if (this.state.redirect) {
+  //     console.log("hsssi");
+  //     return <Redirect to="/resume" />;
+  //   }
+  // };
   expandDropDown = () => {
     this.setState({ dropDownOpen: !this.state.dropDownOpen });
   };
@@ -28,9 +29,13 @@ export default class Navbar extends Component {
   };
 
   render() {
+    if (this.state.redirect) {
+      console.log("hsssi");
+      return <Redirect to="/about" />;
+    }
     return (
       <div className="navbar">
-        {this.renderRedirect()}
+        {/* {this.renderRedirect()} */}
         <ul>
           <li>
             <a href="/">Home</a>

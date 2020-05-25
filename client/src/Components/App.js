@@ -36,6 +36,11 @@ function App() {
             />
             <Route
               exact
+              path="/contact"
+              render={(props) => <Home {...props} />}
+            />
+            <Route
+              exact
               path="/resume/dutch"
               render={(props) => <ResumeDutch {...props} />}
             />

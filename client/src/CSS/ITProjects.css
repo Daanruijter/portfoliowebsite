@@ -4,12 +4,13 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     height: auto;
-    width: 100%;
+
     border-style: solid;
     border-width: 2px;
     border-color: teal;
     background-color: white;
-
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 
@@ -33,6 +34,10 @@
     background-color: cadetblue;
     border-radius: 10%;
 
+}
+
+.project-title {
+    font-size: 125%;
 }
 
 .flip-box:hover .project-title {

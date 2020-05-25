@@ -10,6 +10,7 @@ export default class ITProjects extends Component {
   state = {
     projects: [
       {
+        title: "Mytinararies travel app",
         url: "https://myitinerariestravelapp.herokuapp.com",
         id: "mytineraries",
         image: mytinerery,
@@ -18,6 +19,7 @@ export default class ITProjects extends Component {
           "Node, Express, MongoDB, Redux, React,js, Redux, CSS, Materialize, HTML",
       },
       {
+        title: "Weather app",
         url: "https://daanruijter.github.io/WeatherApp",
         id: "weatherapp",
         image: weatherapp,
@@ -26,6 +28,7 @@ export default class ITProjects extends Component {
         tech: "Vue.js, Chart.js, CSS, HTML",
       },
       {
+        title: "Transparent Government in Fact app",
         url: "https://daanruijter.github.io/tgifVUEtodeploy/index.html",
         image: tgif,
         id: "tgif",
@@ -35,6 +38,7 @@ export default class ITProjects extends Component {
       },
 
       {
+        title: "Soccer project",
         url: "https://daanruijter.github.io/soccerproject",
         image: nysl,
         id: "nysl",
@@ -43,6 +47,7 @@ export default class ITProjects extends Component {
         tech: "CSS, HTML",
       },
       {
+        title: "Bookstore app",
         url: "https://ruijterbookstoreapp.herokuapp.com",
         id: "bookstore",
         image: bookstore,
@@ -58,6 +63,9 @@ export default class ITProjects extends Component {
     let projectsToDisplay = projects.map((project) => (
       <div key={project.description} className="flip-box">
         <div className="flip-box-inner">
+          <div className="project-title">
+            <b>{project.title}</b>
+          </div>
           <div className="projects flip-box-front" key={project.id}>
             <a href={project.url}>
               <img alt="projectimage" src={project.image} />

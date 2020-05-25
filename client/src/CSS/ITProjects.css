@@ -1,13 +1,14 @@
 .projects-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    height: 27em;
-
+    height: auto;
     width: 100%;
-
-    overflow-x: scroll;
+    border-style: solid;
+    border-width: 2px;
+    border-color: teal;
+    background-color: white;
 
 }
 
@@ -34,12 +35,15 @@
 
 }
 
+.flip-box:hover .project-title {
+    display: none
+}
 
 .flip-box {
     background-color: transparent;
-    width: 440px;
+    width: 400px;
     height: 300px;
-    border: 1px solid #f1f1f1;
+    /* border: 1px solid #f1f1f1; */
     perspective: 1000px;
 }
 
@@ -54,6 +58,7 @@
 
 .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
+
 }
 
 .flip-box-front,
@@ -66,6 +71,7 @@
     backface-visibility: hidden;
     text-align: left;
 }
+
 
 
 .tech-used {

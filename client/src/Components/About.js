@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../CSS/About.css";
 import ResumeJobinfoTemplate from "./ResumeJobinfoTemplate";
+
 export default class About extends Component {
   render() {
     return (

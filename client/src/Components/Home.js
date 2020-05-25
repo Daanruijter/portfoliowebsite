@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ITProjects from "./ITProjects";
-
+import daanfoto from "../pictures/daanfoto.jpeg";
 import "../CSS/Home.css";
 
 export default class Home extends Component {
@@ -9,10 +9,10 @@ export default class Home extends Component {
       <div className="home-wrapper">
         <div className="home-introduction">
           <span className="welcome">
-            WELCOME TO THE WEB PAGE OF FULL STACK MERN WEB DEVELOPER DAAN
-            RUIJTER
+            Welcome to the website of Full Stack Webdeveloper Daan Ruijter
           </span>
           <p>
+            <img alt="daan" src={daanfoto} />
             I'm a certified Full Stack MERN web developer. I have built frontend
             and backend applications with React.js, Vue.js, Vanilla JavaScript,
             HTML and CSS. <br />

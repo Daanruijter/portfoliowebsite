@@ -4,11 +4,30 @@ import daanfoto from "../pictures/daanfoto.jpeg";
 import "../CSS/Home.css";
 import telephone from "../pictures/telephone.jpg";
 import email from "../pictures/email.png";
+// import { Element } from "react-scroll";
 
 export default class Home extends Component {
+  // componentDidMount() {
+  //   const myId = window.location.hash.slice(1);
+  //   console.log(myId);
+  //   const elem = document.getElementById(myId);
+  //   // console.log(elem);
+  //   if (elem) {
+  //     elem.scrollIntoView();
+  //   }
+  // }
+
   render() {
     return (
       <div className="home-wrapper">
+        {/* <React.Fragment>
+          <Element id="home-contact-id" name="example-destination">
+            <div className="home-contact" id="home-contact-id">
+              sss
+            </div>
+          </Element>
+        </React.Fragment> */}
+        )
         <div className="home-introduction">
           <div className="welcome">
             Welcome to the website of Full Stack Webdeveloper Daan Ruijter
@@ -34,10 +53,10 @@ export default class Home extends Component {
         <div className="home-IT-projects">
           <ITProjects />
         </div>
-        <div className="home-contact">
+        <div className="home-contact" id="home-contact-id">
           <div className="home-contact-form-wrapper">
             <div className="home-contact-form-header">
-              Contact me using the form
+              Contact me using the form below
             </div>
             <div className="home-contact-form">
               <form>

@@ -2,9 +2,24 @@ import React, { Component } from "react";
 import "../CSS/Navbar.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import { Link } from "react-scroll";
+import { Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+// const ScrollLink = Scroll.ScrollLink;
 
 export default class Navbar extends Component {
-  state = { dropDownOpen: false, sportArticlesOpen: false };
+  state = { dropDownOpen: false, sportArticlesOpen: false, redirect: false };
+  setRedirect = () => {
+    console.log("hi");
+    this.setState({
+      redirect: true,
+    });
+  };
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="#" />;
+    }
+  };
   expandDropDown = () => {
     this.setState({ dropDownOpen: !this.state.dropDownOpen });
   };
@@ -15,6 +30,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
+        {this.renderRedirect()}
         <ul>
           <li>
             <a href="/">Home</a>
@@ -90,7 +106,23 @@ export default class Navbar extends Component {
             <a href="/resume">Resume</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            {/* onClick={this.setRedirect()} */}
+            {/* <Route> */}
+            <div>
+              <Link
+                onClick={() => this.setRedirect()}
+                to="home-contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className=""
+                activeClass="active"
+              >
+                {" "}
+                Contact
+              </Link>
+            </div>
+            {/* </Route> */}
           </li>
           {/* <li>
             <a href="about.asp">Blog</a>

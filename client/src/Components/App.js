@@ -14,16 +14,37 @@ import Ajax from "./Ajax";
 import FCZSW from "./FCZSW";
 
 function App() {
+  function redirecter() {
+    console.log("handleClick");
+    alert();
+    console.log("testestet");
+    this.handleOnClick();
+    // this.child.handleOnClick();
+  }
+
+  // function handleOnClick(event) {
+  //   console.log("hihihih");
+  // }
   return (
     <div className="App">
+      {/* <Home ref={(cd) => (this.child = cd)} /> */}
       <nav>
-        <Navbar />
+        <Navbar redirecter={redirecter} />
       </nav>
 
       <main className="main">
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" render={(props) => <Home {...props} />} />
+            <Route
+              exact
+              path="/"
+              render={(props) => (
+                <Home
+                  {...props}
+                  // test={handleOnClick}
+                />
+              )}
+            />
             <Route
               exact
               path="/about"

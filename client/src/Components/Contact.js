@@ -4,31 +4,30 @@ import daanfoto from "../pictures/daanfoto.jpeg";
 import "../CSS/Home.css";
 import telephone from "../pictures/telephone.jpg";
 import email from "../pictures/email.png";
-import { Link } from "react-scroll";
+// import { Element } from "react-scroll";
 
 export default class Home extends Component {
-  state = { myDivToFocus: React.createRef() };
-  componentDidMount() {
-    // this.props.test();
-  }
-
-  handleOnClick = (event) => {
-    // event.preventDefault();
-    console.log("hihihih");
-    //.current is verification that your element has rendered
-    if (this.state.myDivToFocus.current) {
-      this.state.myDivToFocus.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
-    }
-  };
+  // componentDidMount() {
+  //   const myId = window.location.hash.slice(1);
+  //   console.log(myId);
+  //   const elem = document.getElementById(myId);
+  //   // console.log(elem);
+  //   if (elem) {
+  //     elem.scrollIntoView();
+  //   }
+  // }
 
   render() {
-    // this.handleOnClick();
     return (
       <div className="home-wrapper">
-        <div onClick={this.handleOnClick}>contact</div>
+        {/* <React.Fragment>
+          <Element id="home-contact-id" name="example-destination">
+            <div className="home-contact" id="home-contact-id">
+              sss
+            </div>
+          </Element>
+        </React.Fragment> */}
+
         <div className="home-introduction">
           <div className="welcome">
             Welcome to the website of Full Stack Webdeveloper Daan Ruijter
@@ -54,11 +53,7 @@ export default class Home extends Component {
         <div className="home-IT-projects">
           <ITProjects />
         </div>
-        <div
-          className="home-contact"
-          ref={this.state.myDivToFocus}
-          id="home-contact-id"
-        >
+        <div className="home-contact" id="home-contact-id">
           <div className="home-contact-form-wrapper">
             <div className="home-contact-form-header">
               Contact me using the form below

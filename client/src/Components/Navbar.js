@@ -2,13 +2,23 @@ import React, { Component } from "react";
 import "../CSS/Navbar.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
-import { Link } from "react-scroll";
+import Home from "./Home";
+import { Link } from "react-router-dom";
+// import { Link } from "react-scroll";
 import { Redirect } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Scroll from "react-scroll";
+const ScrollLink = Scroll.ScrollLink;
+
 // const ScrollLink = Scroll.ScrollLink;
 
 export default class Navbar extends Component {
   state = { dropDownOpen: false, sportArticlesOpen: false, redirect: false };
+
+  handleClick = () => {
+    this.props.redirecter();
+  };
   setRedirect = () => {
     console.log("hi");
     this.setState({
@@ -29,10 +39,10 @@ export default class Navbar extends Component {
   };
 
   render() {
-    if (this.state.redirect) {
-      console.log("hsssi");
-      return <Redirect to="/about" />;
-    }
+    // if (this.state.redirect) {
+    //   console.log("hsssi");
+    //   return <Redirect to="#" />;
+    // }
     return (
       <div className="navbar">
         {/* {this.renderRedirect()} */}
@@ -113,22 +123,44 @@ export default class Navbar extends Component {
           <li>
             {/* onClick={this.setRedirect()} */}
             {/* <Route> */}
-            <div>
-              <Link
-                onClick={() => this.setRedirect()}
-                to="home-contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className=""
-                activeClass="active"
-              >
-                {" "}
-                Contact
-              </Link>
-            </div>
+            {/* <div> */}
+
+            {/* <Link to="/"> */}
+            <a
+              // onClick={this.handleClick}
+              href="/"
+            >
+              Contact
+            </a>
+            <ScrollLink
+              to="example-destination"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="some-class"
+              activeClass="some-active-class"
+            >
+              Link Text Goes Here
+            </ScrollLink>
+
+            {/* <Link
+                  onClick={() => this.setRedirect()}
+                  to="home-contact"
+                  // spy={true}
+                  // smooth={true}
+                  // duration={500}
+                  // className=""
+                  // activeClass="active"
+                  // component="Home"
+                >
+                  {" "}
+                  // Contact
+                </Link> */}
+            {/* </Link> */}
+            {/* </div> */}
             {/* </Route> */}
           </li>
+
           {/* <li>
             <a href="about.asp">Blog</a>
           </li> */}

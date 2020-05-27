@@ -1,64 +1,19 @@
 import React, { Component } from "react";
-import ITProjects from "./ITProjects";
-import daanfoto from "../pictures/daanfoto.jpeg";
-import "../CSS/Home.css";
+import "../CSS/Contact.css";
 import telephone from "../pictures/telephone.jpg";
 import email from "../pictures/email.png";
-// import { Element } from "react-scroll";
 
-export default class Home extends Component {
-  // componentDidMount() {
-  //   const myId = window.location.hash.slice(1);
-  //   console.log(myId);
-  //   const elem = document.getElementById(myId);
-  //   // console.log(elem);
-  //   if (elem) {
-  //     elem.scrollIntoView();
-  //   }
-  // }
-
+export default class Contact extends Component {
   render() {
     return (
-      <div className="home-wrapper">
-        {/* <React.Fragment>
-          <Element id="home-contact-id" name="example-destination">
-            <div className="home-contact" id="home-contact-id">
-              sss
-            </div>
-          </Element>
-        </React.Fragment> */}
-
-        <div className="home-introduction">
-          <div className="welcome">
-            Welcome to the website of Full Stack Webdeveloper Daan Ruijter
-          </div>
-          <div className="home-introduction-content">
-            <img alt="daan" src={daanfoto} />
-            I'm a certified Full Stack MERN web developer open to new
-            opportunities. I have built frontend and backend applications with
-            React.js, Vue.js, Vanilla JavaScript, HTML and CSS and I'm thrilled
-            to learn more techniques. <br />
-            <br />
-            The creative process in coding, combined with the analytical
-            thinking and having many opportunities to develop myself is what
-            attracts me a lot in web development. I also like the fact that the
-            industry is internationally oriented, because I'm interested in
-            other cultures and languages.
-            <br />
-            <br />
-            Below you can see the projects I worked on. Hover over them for more
-            information and click to go to the project.
-          </div>
-        </div>
-        <div className="home-IT-projects">
-          <ITProjects />
-        </div>
-        <div className="home-contact" id="home-contact-id">
-          <div className="home-contact-form-wrapper">
-            <div className="home-contact-form-header">
+      <div className="contact-wrapper">
+        <div className="contact-introduction"></div>
+        <div className="contact" id="contact-id">
+          <div className="contact-form-wrapper">
+            <div className="contact-form-header">
               Contact me using the form below
             </div>
-            <div className="home-contact-form">
+            <div className="contact-form">
               <form>
                 Name:
                 <label htmlFor="name">
@@ -89,37 +44,36 @@ export default class Home extends Component {
                 </label>
                 <br />
                 <input
-                  className="home-submit-button"
+                  className="contact-submit-button"
                   type="submit"
                   value="Submit"
                 />
               </form>
             </div>
           </div>
-          <div className="home-contact-direct-wrapper">
-            <div className="home-contact-direct-header">
-              Contact me directly
-            </div>
-            <div className="home-contact-direct">
-              <div className="home-contact-direct-phone">
-                <div className="home-contact-direct-phone-width">
+          <div className="contact-direct-wrapper">
+            <div className="contact-direct-header">Contact me directly</div>
+            <div className="contact-direct">
+              <div className="contact-direct-phone">
+                <div className="contact-direct-phone-width">
                   <img alt="telephone" src={telephone} />
                 </div>
 
-                <div className="home-contact-direct-phone-text">0615178860</div>
+                <div className="contact-direct-phone-text">0615178860</div>
               </div>
-              <div className="home-contact-direct-email">
-                <div className="home-contact-direct-email-width">
+              <div className="contact-direct-email">
+                <div className="contact-direct-email-width">
                   <img alt="email" src={email} />
                 </div>
-                <div className="home-contact-direct-email-text">
+                <div className="contact-direct-email-text">
                   {" "}
                   daan_ruijter@hotmail.com
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div>{" "}
+        <div className="contact-background-below"></div>
       </div>
     );
   }

@@ -2,33 +2,13 @@ import React, { Component } from "react";
 import ITProjects from "./ITProjects";
 import daanfoto from "../pictures/daanfoto.jpeg";
 import "../CSS/Home.css";
-import telephone from "../pictures/telephone.jpg";
-import email from "../pictures/email.png";
-import { Link } from "react-scroll";
 
 export default class Home extends Component {
   state = { myDivToFocus: React.createRef() };
-  componentDidMount() {
-    // this.props.test();
-  }
-
-  handleOnClick = (event) => {
-    // event.preventDefault();
-    console.log("hihihih");
-    //.current is verification that your element has rendered
-    if (this.state.myDivToFocus.current) {
-      this.state.myDivToFocus.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
-    }
-  };
 
   render() {
-    // this.handleOnClick();
     return (
       <div className="home-wrapper">
-        <div onClick={this.handleOnClick}>contact</div>
         <div className="home-introduction">
           <div className="welcome">
             Welcome to the website of Full Stack Webdeveloper Daan Ruijter
@@ -53,77 +33,6 @@ export default class Home extends Component {
         </div>
         <div className="home-IT-projects">
           <ITProjects />
-        </div>
-        <div
-          className="home-contact"
-          ref={this.state.myDivToFocus}
-          id="home-contact-id"
-        >
-          <div className="home-contact-form-wrapper">
-            <div className="home-contact-form-header">
-              Contact me using the form below
-            </div>
-            <div className="home-contact-form">
-              <form>
-                Name:
-                <label htmlFor="name">
-                  <input type="text" id="name" placeholder="name"></input>
-                </label>
-                <br />
-                Phone number:
-                <label htmlFor="phone">
-                  <input type="text" id="hone" placeholder="phone"></input>
-                </label>
-                <br />
-                Company:
-                <label htmlFor="company">
-                  <input
-                    type="company"
-                    id="company"
-                    placeholder="company"
-                  ></input>
-                </label>
-                <br />
-                Message:
-                <label htmlFor="message">
-                  <textarea
-                    type="message"
-                    id="message"
-                    placeholder="message"
-                  ></textarea>
-                </label>
-                <br />
-                <input
-                  className="home-submit-button"
-                  type="submit"
-                  value="Submit"
-                />
-              </form>
-            </div>
-          </div>
-          <div className="home-contact-direct-wrapper">
-            <div className="home-contact-direct-header">
-              Contact me directly
-            </div>
-            <div className="home-contact-direct">
-              <div className="home-contact-direct-phone">
-                <div className="home-contact-direct-phone-width">
-                  <img alt="telephone" src={telephone} />
-                </div>
-
-                <div className="home-contact-direct-phone-text">0615178860</div>
-              </div>
-              <div className="home-contact-direct-email">
-                <div className="home-contact-direct-email-width">
-                  <img alt="email" src={email} />
-                </div>
-                <div className="home-contact-direct-email-text">
-                  {" "}
-                  daan_ruijter@hotmail.com
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );

@@ -4,6 +4,46 @@ import telephone from "../pictures/telephone.jpg";
 import email from "../pictures/email.png";
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      phoneNumber: "",
+      email: "",
+      company: "",
+      message: "",
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    console.log(event.target);
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  }
+
+  handleSubmit(event) {
+    // alert("A name was submitted: " + this.state.name);
+    event.preventDefault();
+    let formData = {
+      name: this.state.name,
+      phoneNumber: this.state.phoneNumber,
+      email: this.state.email,
+      company: this.state.company,
+      message: this.state.message,
+    };
+    console.log(formData);
+    this.setState({
+      name: "",
+      phoneNumber: "",
+      email: "",
+      company: "",
+      message: "",
+    });
+  }
   render() {
     return (
       <div className="contact-wrapper">
@@ -14,20 +54,52 @@ export default class Contact extends Component {
               Contact me using the form below
             </div>
             <div className="contact-form">
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 Name:
                 <label htmlFor="name">
-                  <input type="text" id="name" placeholder="name"></input>
+                  <input
+                    required
+                    name="name"
+                    type="text"
+                    value={this.state.name}
+                    onChange={(e) => this.handleChange(e)}
+                    id="name"
+                    placeholder="name"
+                  ></input>
                 </label>
                 <br />
                 Phone number:
                 <label htmlFor="phone">
-                  <input type="text" id="hone" placeholder="phone"></input>
+                  <input
+                    required
+                    name="phoneNumber"
+                    value={this.state.phoneNumber}
+                    onChange={(e) => this.handleChange(e)}
+                    type="text"
+                    id="hone"
+                    placeholder="phone"
+                  ></input>
+                </label>
+                <br /> Email:
+                <label htmlFor="phone">
+                  <input
+                    required
+                    name="email"
+                    value={this.state.email}
+                    onChange={(e) => this.handleChange(e)}
+                    type="text"
+                    id="email"
+                    placeholder="email"
+                  ></input>
                 </label>
                 <br />
                 Company:
                 <label htmlFor="company">
                   <input
+                    required
+                    name="company"
+                    value={this.state.company}
+                    onChange={(e) => this.handleChange(e)}
                     type="company"
                     id="company"
                     placeholder="company"
@@ -37,6 +109,9 @@ export default class Contact extends Component {
                 Message:
                 <label htmlFor="message">
                   <textarea
+                    name="message"
+                    value={this.state.message}
+                    onChange={(e) => this.handleChange(e)}
                     type="message"
                     id="message"
                     placeholder="message"

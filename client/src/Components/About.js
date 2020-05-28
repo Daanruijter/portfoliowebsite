@@ -7,7 +7,7 @@ export default class About extends Component {
       <div className="about-wrapper">
         <div className="about-information">
           <p>
-            I started writing and working with computers being a child. At the
+            I started working with computers and writing being a child. At the
             age of 2,5 I got behind a precursor of the modern computer, a Texas
             Instruments, to put my first little words on the digital screen.
             When I got older, I kept writing, especially diaries. After
@@ -23,10 +23,10 @@ export default class About extends Component {
             experience as a journalist. Among others on the marketing and
             communication department of BaanStede, at Ajaxshowtime.com and{" "}
             {/* <a href="#about-rodi-media"> */}
-            Rodi Media
-            {/* </a>  */}I learned the finer points of the editor profession. I
-            worked for Rodi several years as an editor and text writer and the
-            job gave me the opportunity to do many rewarding interviews.
+            Rodi Media {/* </a>  */}I learned the finer points of the editor
+            profession. I worked for Rodi several years as an editor and text
+            writer and the job gave me the opportunity to do many rewarding
+            interviews.
           </p>
           <p>
             Unfortunately the write and editorial market is in decline. This
@@ -45,8 +45,8 @@ export default class About extends Component {
         <div className="about-rodi-media">
           <h2>Rodi Media</h2>
           {/* <a id="about-rodi-media"> */}
-          As an editor at Rodi Media, a company that publishes 23 weekly local
-          newspapers in the province of Noord-Holland, I wrote and edited
+          As an editor at Rodi Media, a company that publishes around 23 weekly
+          local newspapers in the province of Noord-Holland, I wrote and edited
           various front page and shorter articles. I also edited many texts. The
           subjects varied from music and concerts to politics, art/culture,
           local activities or sport. Besides, I wrote multiple articles for
@@ -92,7 +92,8 @@ export default class About extends Component {
               In 2004 I picked up a racket and discovered how nice it also is to
               play the game by myself. Ten years later, January 2014, I started
               to write for the Dutch tennis website www.tennis.nl, doing that
-              for about 1,5 years.
+              for about 1,5 years. In 2015 I became member of my current tennis
+              club De Gouw and wrote and edited some articles for them.
             </p>
           </div>
         </div>{" "}
@@ -102,7 +103,8 @@ export default class About extends Component {
             Read some international and national tennis articles I wrote <br />
           </a>
           <a href="http://localhost:3000/localtennis">
-            Read some local tennis articles I wrote <br />
+            Read some tennis articles I wrote and edited for my tennis club{" "}
+            <br />
           </a>
         </div>
         <div className="about-soccer">
@@ -121,8 +123,9 @@ export default class About extends Component {
               <p>
                 During my student time I exchanged the play square for the hall.
                 I started to play indoor soccer. Every sunday morning I still
-                play with a nice group in Amsterdam. Besides that, many weekends
-                I watch the matches of Ajax with a group of friends.
+                play with a nice group in Amsterdam. Besides that, many times I
+                watch the matches of Ajax or the Dutch national team with a
+                group of friends.
               </p>
               <p>
                 After finishing my journalism degree I wanted to get extra
@@ -196,8 +199,8 @@ export default class About extends Component {
               <p>
                 <strong>
                   {" "}
-                  Hover over the book cover to watch the book presentation.{" "}
-                  <br />
+                  Hover over the book cover to watch the book presentation (in
+                  Dutch). <br />
                   <br />
                   You can find pictures, stories and more information on the{" "}
                   <br />

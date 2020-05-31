@@ -10,6 +10,7 @@ export default class Contact extends Component {
       name: "",
       phoneNumber: "",
       email: "",
+      country: "",
       company: "",
       message: "",
     };
@@ -26,20 +27,43 @@ export default class Contact extends Component {
   }
 
   handleSubmit(event) {
+    let data = "sdsds";
     // alert("A name was submitted: " + this.state.name);
     event.preventDefault();
     let formData = {
       name: this.state.name,
       phoneNumber: this.state.phoneNumber,
       email: this.state.email,
+      country: this.state.country,
       company: this.state.company,
       message: this.state.message,
     };
+
+    fetch("http://localhost:5000/contactdata", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      // .then((data) => {
+      //   const favourites = data;
+      //   console.log(favourites);
+      // })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+
     console.log(formData);
     this.setState({
       name: "",
       phoneNumber: "",
       email: "",
+      country: "",
       company: "",
       message: "",
     });
@@ -59,6 +83,7 @@ export default class Contact extends Component {
                 <label htmlFor="name">
                   <input
                     required
+                    pattern="[A-Za-z]{1,40}"
                     name="name"
                     type="text"
                     value={this.state.name}
@@ -75,9 +100,10 @@ export default class Contact extends Component {
                     name="phoneNumber"
                     value={this.state.phoneNumber}
                     onChange={(e) => this.handleChange(e)}
-                    type="text"
+                    type="tel"
+                    pattern="[0-9]{10,}"
                     id="hone"
-                    placeholder="phone"
+                    placeholder="phone number without spaces"
                   ></input>
                 </label>
                 <br /> Email:
@@ -87,9 +113,23 @@ export default class Contact extends Component {
                     name="email"
                     value={this.state.email}
                     onChange={(e) => this.handleChange(e)}
-                    type="text"
+                    type="email"
+                    pattern=".+@foo.com"
                     id="email"
                     placeholder="email"
+                  ></input>
+                </label>
+                <br />
+                Country:
+                <label htmlFor="country">
+                  <input
+                    required
+                    name="country"
+                    value={this.state.country}
+                    onChange={(e) => this.handleChange(e)}
+                    type="country"
+                    id="country"
+                    placeholder="country"
                   ></input>
                 </label>
                 <br />
@@ -109,6 +149,7 @@ export default class Contact extends Component {
                 Message:
                 <label htmlFor="message">
                   <textarea
+                    required
                     name="message"
                     value={this.state.message}
                     onChange={(e) => this.handleChange(e)}

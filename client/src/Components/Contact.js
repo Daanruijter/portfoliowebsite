@@ -114,7 +114,7 @@ export default class Contact extends Component {
                     value={this.state.email}
                     onChange={(e) => this.handleChange(e)}
                     type="email"
-                    pattern=".+@foo.com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
                     id="email"
                     placeholder="email"
                   ></input>

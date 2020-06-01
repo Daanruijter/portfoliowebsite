@@ -74,3 +74,18 @@
     padding: 1%;
 
 }
+
+.localarticles-no-articles {
+    height: 100vh;
+    background-color: teal;
+    width: 100%;
+
+}
+
+.localarticles-no-articles-text {
+    text-align: center;
+    color: white;
+    font-size: 300%;
+    margin-top: 20%;
+    font-weight: bold;
+}

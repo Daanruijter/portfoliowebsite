@@ -465,26 +465,69 @@ export default class LocalArticles extends Component {
           "http://daanruijter.eu/wp-content/uploads/2016/09/%E2%80%98Voedsel-verbindt-en-verbroedert%E2%80%99.pdf",
       },
     ],
+    searchInput: "",
+  };
+  handleChange = (e) => {
+    console.log("handlechange");
+    console.log(e.target.value);
+    this.setState({ searchInput: e.target.value });
   };
   render() {
+    let searchKey = this.state.searchInput;
+
+    console.log(searchKey);
+
     let localArticlesDisplay = this.state.localArticles.map((article) => {
-      return (
-        <div key={article.title}>
-          <div className="localArticles-cards">
-            <div className="localArticles-header">{article.title}</div>
-            <div className="localArticles-chapeau">{article.chapeau}</div>
-            <a href={article.articleLink}>
-              <img alt={article.title} src={article.picture} />
-            </a>
+      if (
+        article.title.toLowerCase().includes(searchKey.toLowerCase()) ||
+        article.chapeau.toLowerCase().includes(searchKey.toLowerCase())
+      ) {
+        console.log(article.title, "includes");
+        console.log(article.chapeau, "includes");
+        return (
+          <div key={article.title}>
+            <div className="localArticles-cards">
+              <div className="localArticles-header">{article.title}</div>
+              <div className="localArticles-chapeau">{article.chapeau}</div>
+              <a href={article.articleLink}>
+                <img alt={article.title} src={article.picture} />
+              </a>
+            </div>
+          </div>
+        );
+      }
+    });
+    let i = 0;
+    let j = 0;
+    for (i = 0; i < localArticlesDisplay.length; i++) {
+      if (localArticlesDisplay[i] == undefined) {
+        j = j + 1;
+        console.log("undefined");
+      }
+    }
+    console.log(j);
+    if (j === 60) {
+      localArticlesDisplay = (
+        <div className="localarticles-no-articles">
+          <div className="localarticles-no-articles-text">
+            No articles found!
           </div>
         </div>
       );
-    });
+    }
+
+    console.log(localArticlesDisplay);
     return (
       <div className="localArticles-wrapper">
         <div className="localArticles-searchbar">
           Search
-          <input />
+          <label htmlFor="searchfield">
+            <input
+              onChange={(e) => this.handleChange(e)}
+              name="searchfield"
+              value={this.state.searchInput}
+            />
+          </label>
         </div>
         <div className="localArticles-flexer">{localArticlesDisplay}</div>
       </div>

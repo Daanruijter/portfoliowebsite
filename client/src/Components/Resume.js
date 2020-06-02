@@ -24,6 +24,51 @@ export default class Resume extends Component {
     moreExperienceOpen: false,
     studyType: false,
     languageCoursesOpen: false,
+    contact: [
+      {
+        image: telephone,
+        text: "0615178860",
+        link: null,
+      },
+      { image: email, text: "daan_ruijter@hotmail.com", link: null },
+      {
+        image: Linkedin,
+        text: "in/daan-ruijter-b7514620",
+        link: "https://www.linkedin.com/in/daan-ruijter-b7514620",
+      },
+      {
+        image: GitHub,
+        text: "Daanruijter",
+        link: "https://github.com/Daanruijter",
+      },
+      {
+        image: residence,
+        text: "Amsterdam",
+        link: null,
+      },
+    ],
+    techSkils: [
+      { technologyLeft: "HTML 5", technologyRight: "Vue.js" },
+      { technologyLeft: "CSS 3", technologyRight: "Chart.js" },
+      { technologyLeft: "Bootstrap", technologyRight: "MongoDB" },
+      { technologyLeft: "Materialize", technologyRight: "Git & GitHub" },
+      { technologyLeft: "JavaScript", technologyRight: "Express" },
+      { technologyLeft: "React.js", technologyRight: "Node" },
+      { technologyLeft: "Redux", technologyRight: null },
+    ],
+    hobbysAndInterests: [
+      { image: tennis, text: "Tennis" },
+      { image: tabletennis, text: "Table tennis" },
+      { image: soccer, text: "Soccer" },
+      { image: programming, text: "Programming" },
+      { image: writing, text: "Writing" },
+      { image: languages, text: "Language (exchanges)" },
+      { image: photography, text: "Photography" },
+      { image: music, text: "Music" },
+      { image: travelling, text: "Travelling" },
+      { image: journalism, text: "Journalism/Media" },
+      { image: nature, text: "Nature" },
+    ],
   };
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
@@ -45,6 +90,43 @@ export default class Resume extends Component {
   };
 
   render() {
+    let contact = this.state.contact.map((contactItem) => {
+      return (
+        <div className="resume-contact-flexer">
+          <div className="resume-contact-icon">
+            <img src={contactItem.image} alt={contactItem.text} />
+          </div>
+          <div>
+            <a href={contactItem.link}>{contactItem.text}</a>
+          </div>
+        </div>
+      );
+    });
+
+    let technologies = this.state.techSkils.map((technologyItem) => {
+      return (
+        <div className="resume-tech-flexer">
+          <div className="resume-tech">{technologyItem.technologyLeft}</div>
+          <div>{technologyItem.technologyRight}</div>
+        </div>
+      );
+    });
+
+    let hobbysAndInterests = this.state.hobbysAndInterests.map(
+      (hobbyAndInterestItem) => {
+        return (
+          <div className="resume-hobbies-interests-flexer">
+            <div className="resume-hobbies-interests-icon">
+              <img
+                src={hobbyAndInterestItem.image}
+                alt={hobbyAndInterestItem.text}
+              />
+            </div>
+            <div>{hobbyAndInterestItem.text}</div>
+          </div>
+        );
+      }
+    );
     return (
       <div
         className={
@@ -67,78 +149,18 @@ export default class Resume extends Component {
         </div>
         {/* left side */}
         <div className="resume-left">
-          {/* contact */}
           <h1 className="resume-leftside-header">Contact</h1>
           <div className="resume-contact-wrapper">
-            <div className="resume-contact-flexer">
-              <div className="resume-contact-icon">
-                <img src={telephone} alt="telephone" />
-              </div>
-              <div>0615178860</div>
-            </div>
-            <div className="resume-contact-flexer">
-              <div className="resume-contact-icon">
-                <img src={email} alt="email" />
-              </div>
-              <div>daan_ruijter@hotmail.com</div>{" "}
-            </div>
-            <div className="resume-contact-flexer">
-              <div className="resume-contact-icon">
-                <img src={Linkedin} alt="LinkedIn" />
-              </div>
-              <div>
-                <a href="https://www.linkedin.com/in/daan-ruijter-b7514620">
-                  in/daan-ruijter-b7514620
-                </a>
-              </div>
-            </div>
-            <div className="resume-contact-flexer">
-              <div className="resume-contact-icon">
-                <img src={GitHub} alt="GitHub" />
-              </div>
-
-              <a href="https://github.com/Daanruijter">
-                <div>Daanruijter</div>
-              </a>
-            </div>
-            <div className="resume-contact-flexer">
-              <div className="resume-contact-icon">
-                <img src={residence} alt="residence" />
-              </div>
-              <div> Amsterdam</div>
-            </div>
+            {/* RESUME CONTACT FLEXER */} {contact}
+            {/* RESUME CONTACT FLEXER */}
           </div>{" "}
           {/* tech skills */}
           <h1 className="resume-leftside-header">Tech skills</h1>
           <div className="resume-tech-wrapper">
-            <div className="resume-tech-flexer">
-              <div className="resume-tech">HTML 5</div>
-              <div>Vue.js</div>
-            </div>
-            <div className="resume-tech-flexer">
-              <div className="resume-tech">CSS 3</div>
-              <div>Chart.js</div>{" "}
-            </div>
-            <div className="resume-tech-flexer">
-              <div className="resume-tech">Bootstrap</div>
-              <div>MongoDB</div>
-            </div>
-            <div className="resume-tech-flexer">
-              <div className="resume-tech">Materialize</div>
+            {/* RESUME TECH FLEXER */}
+            {technologies}
 
-              <div>Git & GitHub</div>
-            </div>
-            <div className="resume-tech-flexer">
-              <div className="resume-tech">JavaScript</div>
-              <div> Express</div>
-            </div>
-            <div className="resume-tech-flexer">
-              <div className="resume-tech">React.js</div>
-              <div> Node</div>
-            </div>
-            <div className="resume-tech-flexer">
-              <div className="resume-tech">Redux</div>
-            </div>
+            {/* RESUME TECH FLEXER */}
           </div>
           {/* soft skills */}
           <h1 className="resume-leftside-header">Soft skills</h1>
@@ -193,79 +215,10 @@ export default class Resume extends Component {
           {/* Hobbies/interests */}
           <h1 className="resume-leftside-header">Hobbies/interests</h1>
           <div className="resume-hobbies-interests-wrapper">
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={tennis} alt="tennis" />
-              </div>
-              <div>Tennis</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={tabletennis} alt="tabletennis" />
-              </div>
-              <div>Table tennis</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={soccer} alt="soccer" />
-              </div>
-              <div>Soccer</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={programming} alt="programming" />
-              </div>
-
-              <div>Programming</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={writing} alt="writing" />
-              </div>
-
-              <div>Writing</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={languages} alt="languages" />
-              </div>
-
-              <div>Language (exchanges)</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={photography} alt="photography" />
-              </div>
-              <div>Photography</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={music} alt="music" />
-              </div>
-
-              <div>Music</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={travelling} alt="travelling" />
-              </div>
-
-              <div>Travelling</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={journalism} alt="journalism" />
-              </div>
-
-              <div>Journalism/Media</div>
-            </div>
-            <div className="resume-hobbies-interests-flexer">
-              <div className="resume-hobbies-interests-icon">
-                <img src={nature} alt="nature" />
-              </div>
-
-              <div>Nature</div>
-            </div>
+            {" "}
+            {/* RESUME HOBBIES INTERESTS WRAPPER */}
+            {hobbysAndInterests}
+            {/* RESUME HOBBIES INTERESTS WRAPPER */}
           </div>
         </div>
 
@@ -376,6 +329,7 @@ export default class Resume extends Component {
             responsiveness.
             <br />
             <br />
+            {/* RESUME JOB  */}
             <ResumeJobinfoTemplate
               jobdate={"09/2013-06/2019"}
               organisation={"Rodi Media, Purmerend"}

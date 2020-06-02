@@ -69,6 +69,122 @@ export default class Resume extends Component {
       { image: journalism, text: "Journalism/Media" },
       { image: nature, text: "Nature" },
     ],
+    workExperience: [
+      {
+        jobdate: "09/2013-06/2019",
+        organisation: "Rodi Media, Purmerend",
+        jobtitle: "Editor",
+        description: `Edited 
+    and published various local news and web articles with a high degree of accuracy. The interviews I did with advertisers and other stakeholders required good listening and communication               
+      skills.`,
+      },
+      {
+        jobdate: "01/2014-09/2015",
+        organisation: "TENNiS.nl, Sassenheim",
+        jobtitle: `Web editor (voluntary):`,
+        description: `Wrote and published different news articles about professional,
+      national and international tennis matches.`,
+      },
+      {
+        jobdate: "12/2012-04/2013",
+        organisation: "Valkering Media, Amsterdam",
+        jobtitle: `Internship as an editor,
+      for the website Ajax Showtime:`,
+        description: `(Re)wrote articles about Ajax and
+      soccer in general 07/2012-11/2012 Internet company User.nl,
+      Purmerend Internship marketing department: Developed a media plan to
+      create more company visibility
+      `,
+      },
+      {
+        jobdate: "07/2012-11/2012",
+        organisation: "Internet company User.nl, Purmerend",
+        jobtitle: `Internship marketing department:`,
+        description: `Developed a media plan to create more company visibility
+      `,
+      },
+      {
+        jobdate: "12/2014-03/2019",
+        organisation: "InDutch/Flowently, Amsterdam",
+        jobtitle: `Tutor/Language coach:`,
+        description: [
+          "Practiced the Dutch language with expats, immigrants, students and tourists.",
+          <br />,
+          "Developed a special practice session: practicing Dutch during a visit to the Zaanse Schans (Zaandam).",
+        ],
+      },
+      {
+        jobdate: "05/2012-04/2013",
+        organisation: "Hilton Meats, Zaandam",
+        jobtitle: `Project assistent`,
+        description: [
+          "Checked manuals and protocols on content and language errors;",
+          <br />,
+          "Introduced protocols regarding health and safety at work;",
+          <br />,
+          "   Produced a new scene for the Hilton Safety Film which is made for new personnel;",
+          <br />,
+          "Processed data with the database/data processing program Ultimo;",
+          <br />,
+          "  Advised colleagues about their theses for their ‘Middelbaar Veiligheidskundige’(a safety class) course and edited those theses",
+        ],
+      },
+      {
+        jobdate: "03/2012-05/2012",
+        organisation: "BaanStede",
+        jobtitle: `Internship Communication & Marketing department BaanStede, Purmerend`,
+        description: [
+          "Activities concerning communication and marketing of BaanStede.;",
+          <br />,
+          "Edited the new website (correcting textual, language and layout errors, finding dead links and looking for missing content);",
+          <br />,
+          "Made a plan for a continuous delivery of (missing) content;",
+          <br />,
+          "Made a plan to reclassify and improve the intranet environment;",
+          <br />,
+          "Wrote an instruction for the project ‘Alfacheque’ (help in housekeeping);",
+          <br />,
+          "Did interviews and wrote articles for the internal magazine BaanStedeling;",
+          <br />,
+          "With the team and the external internet company User.nl assisted in setting up Social Media for BaanStede;",
+        ],
+      },
+      {
+        jobdate: "09/2009-01/2010",
+        organisation: "Zaanradio, Koog aan de Zaan",
+        jobtitle: `Editor/Interviewer`,
+        description: [
+          "Editor/Interviewer for a program about local sports in 'the Zaanstreek', called 'Saensport Live'.",
+        ],
+      },
+      {
+        jobdate: "06/2009-07/2009",
+        organisation: "Hilton Meats, Zaandam",
+        jobtitle: `Translator`,
+        description: ["Translated machine protocols from Dutch to English"],
+      },
+      {
+        jobdate: "09/2007-03/2008",
+        organisation: "Sandd, Zaandam",
+        jobtitle: `Mail carrier`,
+        description: ["Carried mail"],
+      },
+      {
+        jobdate: "07/2006-08/2006",
+        organisation:
+          "Technical and Tactical Soccer Clinics, Loveland, Ohio, USA",
+        jobtitle: `Soccer clinics assistant`,
+        description: [
+          "Assisted with soccer clinics for children in the age of 6-14",
+        ],
+      },
+      {
+        jobdate: "02/2002-12/2002",
+        organisation: "Kaasboerderij Catharina Hoeve, Zaandam",
+        jobtitle: `Shop assistant`,
+        description: ["Worked the register", <br />, "Restocked the shelves"],
+      },
+    ],
   };
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
@@ -125,6 +241,43 @@ export default class Resume extends Component {
             <div>{hobbyAndInterestItem.text}</div>
           </div>
         );
+      }
+    );
+
+    let workExperiencePart1 = this.state.workExperience.map(
+      (workExperienceItem, index) => {
+        if (index < 4) {
+          return (
+            <div>
+              {" "}
+              <ResumeJobinfoTemplate
+                jobdate={workExperienceItem.jobdate}
+                organisation={workExperienceItem.organisation}
+                jobtitle={workExperienceItem.jobtitle}
+                description={workExperienceItem.description}
+              />
+              <br />
+            </div>
+          );
+        }
+      }
+    );
+    let workExperiencePart2 = this.state.workExperience.map(
+      (workExperienceItem, index) => {
+        if (index > 3) {
+          return (
+            <div>
+              {" "}
+              <ResumeJobinfoTemplate
+                jobdate={workExperienceItem.jobdate}
+                organisation={workExperienceItem.organisation}
+                jobtitle={workExperienceItem.jobtitle}
+                description={workExperienceItem.description}
+              />
+              <br />
+            </div>
+          );
+        }
       }
     );
     return (
@@ -330,148 +483,18 @@ export default class Resume extends Component {
             <br />
             <br />
             {/* RESUME JOB  */}
-            <ResumeJobinfoTemplate
-              jobdate={"09/2013-06/2019"}
-              organisation={"Rodi Media, Purmerend"}
-              jobtitle={"Editor"}
-              description={`Edited 
-              and published various local news and web articles with a high degree of accuracy. The interviews I did with advertisers and other stakeholders required good listening and communication               
-                skills.`}
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"01/2014-09/2015"}
-              organisation={"TENNiS.nl, Sassenheim"}
-              jobtitle={`Web editor (voluntary):`}
-              description={`Wrote and published different news articles about professional
-              national and international tennis matches.              `}
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"12/2012-04/2013"}
-              organisation={"Valkering Media, Amsterdam"}
-              jobtitle={`Internship as an editor
-              for the website Ajax Showtime:`}
-              description={`(Re)wrote articles about Ajax and
-              soccer in general 07/2012-11/2012 Internet company User.nl,
-              Purmerend Internship marketing department: Developed a media plan to
-              create more company visibility
-              `}
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"07/2012-11/2012"}
-              organisation={"Internet company User.nl, Purmerend"}
-              jobtitle={`Internship marketing department:`}
-              description={`Developed a media plan to create more company visibility
-              `}
-            />
-            <br></br>
+            {workExperiencePart1}
             <div
               onClick={this.showMoreExperience}
               className="resume-more-past-experience"
             >
               CLICK TO SEE MORE PAST EXPERIENCE
-            </div>
+            </div>{" "}
+            <br />
             {this.state.moreExperienceOpen ? (
               <div>
-                <br />{" "}
-                <ResumeJobinfoTemplate
-                  jobdate={"12/2014-03/2019"}
-                  organisation={"InDutch/Flowently, Amsterdam"}
-                  jobtitle={`Tutor/Language coach:`}
-                  description={[
-                    "Practiced the Dutch language with expats, immigrants, students and tourists.",
-                    <br />,
-                    "Developed a special practice session: practicing Dutch during a visit to the Zaanse Schans (Zaandam).",
-                  ]}
-                />
-                <br />
-                <ResumeJobinfoTemplate
-                  jobdate={"05/2012-04/2013"}
-                  organisation={"Hilton Meats, Zaandam"}
-                  jobtitle={`Project assistent`}
-                  description={[
-                    "Checked manuals and protocols on content and language errors;",
-                    <br />,
-                    "Introduced protocols regarding health and safety at work;",
-                    <br />,
-                    "   Produced a new scene for the Hilton Safety Film which is made for new personnel;",
-                    <br />,
-                    "Processed data with the database/data processing program Ultimo;",
-                    <br />,
-                    "  Advised colleagues about their theses for their ‘Middelbaar Veiligheidskundige’(a safety class) course and edited those theses",
-                  ]}
-                />
-                <br />
-                <ResumeJobinfoTemplate
-                  jobdate={"03/2012-05/2012"}
-                  organisation={"BaanStede"}
-                  jobtitle={`Internship Communication & Marketing department BaanStede, Purmerend`}
-                  description={[
-                    "Activities concerning communication and marketing of BaanStede.;",
-                    <br />,
-                    "Edited the new website (correcting textual, language and layout errors, finding dead links and looking for missing content);",
-                    <br />,
-                    "Made a plan for a continuous delivery of (missing) content;",
-                    <br />,
-                    "Made a plan to reclassify and improve the intranet environment;",
-                    <br />,
-                    "Wrote an instruction for the project ‘Alfacheque’ (help in housekeeping);",
-                    <br />,
-                    "Did interviews and wrote articles for the internal magazine BaanStedeling;",
-                    <br />,
-                    "With the team and the external internet company User.nl assisted in setting up Social Media for BaanStede;",
-                  ]}
-                />
-                <br />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2009-01/2010"}
-                  organisation={"Zaanradio, Koog aan de Zaan"}
-                  jobtitle={`Editor/Interviewer`}
-                  description={[
-                    "Editor/Interviewer for a program about local sports in 'the Zaanstreek', called 'Saensport Live'.",
-                  ]}
-                />
-                <br />
-                <ResumeJobinfoTemplate
-                  jobdate={"06/2009-07/2009"}
-                  organisation={"Hilton Meats, Zaandam"}
-                  jobtitle={`Translator`}
-                  description={[
-                    "Translated machine protocols from Dutch to English",
-                  ]}
-                />
-                <br />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2007-03/2008"}
-                  organisation={"Sandd, Zaandam"}
-                  jobtitle={`Mail carrier`}
-                  description={["Carried mail"]}
-                />
-                <br />
-                <ResumeJobinfoTemplate
-                  jobdate={"07/2006-08/2006"}
-                  organisation={
-                    "Technical and Tactical Soccer Clinics, Loveland, Ohio, USA"
-                  }
-                  jobtitle={`Soccer clinics assistant`}
-                  description={[
-                    "Assisted with soccer clinics for children in the age of 6-14",
-                  ]}
-                />
-                <br />
-                <ResumeJobinfoTemplate
-                  jobdate={"02/2002-12/2002"}
-                  organisation={"Kaasboerderij Catharina Hoeve, Zaandam"}
-                  jobtitle={`Shop assistant`}
-                  description={[
-                    "Worked the register",
-                    <br />,
-                    "Restocked the shelves",
-                  ]}
-                />
-                <br />
+                {workExperiencePart2}
+                <br /> {}
                 <div
                   onClick={this.closeMoreExperience}
                   className="resume-more-past-experience"
@@ -734,6 +757,7 @@ export default class Resume extends Component {
               <br />
               CLICK TO SEE MY LANGUAGE COURSES <br /> <br />
             </div>
+            {/* HIER GEBLEVEN */}
             {this.state.languageCoursesOpen ? (
               <div className="resume-language-courses-list">
                 <ResumeJobinfoTemplate

@@ -89,3 +89,14 @@
     margin-top: 20%;
     font-weight: bold;
 }
+
+
+
+.localArticles-selectbar {
+    display: inline;
+    margin-left: 2%;
+}
+
+.localArticles-selectbar select {
+    margin-left: 0.5%;
+}

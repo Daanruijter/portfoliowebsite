@@ -185,6 +185,148 @@ export default class Resume extends Component {
         description: ["Worked the register", <br />, "Restocked the shelves"],
       },
     ],
+    languageCourses: [
+      {
+        jobdate: "08/2009",
+        organisation:
+          "Spanish course in Barcelona, B1 level at CaminoBarcelona (2 weeks);",
+      },
+      {
+        jobdate: "09/2010-06/2011",
+        organisation: "Italian course A2 level at Studiolingua, Amsterdam;",
+      },
+      {
+        jobdate: "09/2011-06/2012",
+        organisation: "Italian course B1 level at Studiolingua, Amsterdam;",
+      },
+      {
+        jobdate: "01/2012-02/2012",
+        organisation: "Italian translation course at Studiolingua, Amsterdam;",
+      },
+      {
+        jobdate: "09/2012-06-2013",
+        organisation: "Italian course B1+ level at Studiolingua, Amsterdam;",
+      },
+      {
+        jobdate: "09/2013-04/2014",
+        organisation: "Italian course B2 level at Studiolingua, Amsterdam;",
+      },
+      {
+        jobdate: "09/2014-03/2015",
+        organisation: "Italian course B2+ level at Studiolingua, Amsterdam;",
+      },
+      {
+        jobdate: "09/2015-03/2016",
+        organisation: "Italian course C1 level at Studiolingua, Amsterdam;",
+      },
+      {
+        jobdate: "11/2016",
+        organisation:
+          "Spanish course in Valencia, B1 and B2 level at Costa de Valencia (2 weeks);",
+      },
+      {
+        jobdate: "10/2017-11/2017",
+        organisation: "Spanish course in Málaga, B2 level at Cile (3 weeks);",
+      },
+      {
+        jobdate: "11/2018",
+        organisation:
+          "Spanish course in Málaga, B2 level at Instituto Picasso (3 weken)",
+      },
+    ],
+    languageLevel: [
+      {
+        languageFlag:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg",
+        languageFlagClass: "resume-dutch-flag",
+        languageStar:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/Vijf-sterren.gif",
+        languageStarClass: "resume-dutch-star",
+      },
+
+      {
+        languageFlag:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg",
+        languageFlagClass: "resume-british-flag",
+        languageStar:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
+        languageStarClass: "resume-british-star",
+      },
+      {
+        languageFlag:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/french-flag-large.jpg",
+        languageFlagClass: "resume-french-flag",
+
+        languageStar:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
+        languageStarClass: "resume-french-star",
+      },
+      {
+        languageFlag:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/italian-flag-large.jpg",
+        languageFlagClass: "resume-italian-flag",
+        languageStar:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
+        languageStarClass: "resume-italian-star",
+      },
+      {
+        languageFlag:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/spanish-flag-large.jpg",
+        languageFlagClass: "resume-spanish-flag",
+        languageStar:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
+        languageStarClass: "resume-spanish-star",
+      },
+      {
+        languageFlag:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/german-flag-large.png",
+        languageFlagClass: "resume-german-flag",
+        languageStar:
+          "http://daanruijter.eu/wp-content/uploads/2015/04/Drie-sterren.gif",
+        languageStarClass: "resume-german-star",
+      },
+    ],
+    otherActivities: [
+      {
+        jobdate:"08/2007-06/2008"
+        organisation:"Tennisvereniging De Balk, Zaandam"
+        description:{
+          "Editor of the club magazine at Tennis Club de Balk, Zaandam;"
+
+        
+      },
+      {   jobdate:"10/2009-01/2010"}
+      organisation:"Zaanradio, Koog aan de Zaan"}
+      description:
+        "Every two weeks active as an editor/interviewer with the sports program Saensport Life from the local broadcasterZaanradio (Zaandam & region);"},
+      {             jobdate:"04/2012-12/2013"}
+      organisation:"Tennisplanet"}
+      description:
+        "Writing different articles and news items about the sport of tennis for the web sites www.tennishome.nl andwww.tennisinfo.be of Tennisplanet;"},
+      {   jobdate:"01/2014-present"}
+      organisation:"FCZSW, Krommenie and Tennis club De Gouw, Zaandam"}
+      description:
+        "Active as an editor for the ‘Zaanse’ futsal club FCZSW (among other things publishing a club magazine) and the ‘Zaanse’ Tennis club De Gouw"
+      }},
+      { <ResumeJobinfoTemplate
+        jobdate:"10/2014-present"}
+        organisation:"Myself"}
+        description:"Editing of master theses"}
+      />},
+      { jobdate:"05/2017"}
+      organisation:"Gemeentearchief Zaanstad"}
+      description:
+        "Course 'Zelf geschiedenis schrijven Gemeentearchief Zaanstad' (writing about history at the community archive) with Mirjam Janssen"
+      }},
+      {         jobdate:"2006"}
+      organisation:"GroenLinks Zaanstad"}
+      description:`Volunteer work: in anticipation of the council elections in 2006
+      I’ve participated in the “Working Group Quality of Lives in
+      Quarters” for Groenlinks Zaanstad, the regional department of this
+      political party. Goal of the working group was to come into contact
+      with the citizen in order to notive problems in quarters in Zaanstad
+      and to report them to the council.`}}
+    ],
   };
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
@@ -246,40 +388,71 @@ export default class Resume extends Component {
 
     let workExperiencePart1 = this.state.workExperience.map(
       (workExperienceItem, index) => {
-        if (index < 4) {
-          return (
-            <div>
-              {" "}
-              <ResumeJobinfoTemplate
-                jobdate={workExperienceItem.jobdate}
-                organisation={workExperienceItem.organisation}
-                jobtitle={workExperienceItem.jobtitle}
-                description={workExperienceItem.description}
-              />
-              <br />
-            </div>
-          );
-        }
+        return index < 4 ? (
+          <div>
+            {" "}
+            <ResumeJobinfoTemplate
+              jobdate={workExperienceItem.jobdate}
+              organisation={workExperienceItem.organisation}
+              jobtitle={workExperienceItem.jobtitle}
+              description={workExperienceItem.description}
+            />
+            <br />
+          </div>
+        ) : null;
       }
     );
     let workExperiencePart2 = this.state.workExperience.map(
       (workExperienceItem, index) => {
-        if (index > 3) {
-          return (
-            <div>
-              {" "}
-              <ResumeJobinfoTemplate
-                jobdate={workExperienceItem.jobdate}
-                organisation={workExperienceItem.organisation}
-                jobtitle={workExperienceItem.jobtitle}
-                description={workExperienceItem.description}
-              />
-              <br />
-            </div>
-          );
-        }
+        return index > 3 ? (
+          <div>
+            {" "}
+            <ResumeJobinfoTemplate
+              jobdate={workExperienceItem.jobdate}
+              organisation={workExperienceItem.organisation}
+              jobtitle={workExperienceItem.jobtitle}
+              description={workExperienceItem.description}
+            />
+            <br />
+          </div>
+        ) : null;
       }
     );
+
+    let languageCourses = this.state.languageCourses.map((language) => {
+      return (
+        <div>
+          {" "}
+          <ResumeJobinfoTemplate
+            jobdate={language.jobdate}
+            organisation={language.organisation}
+          />
+        </div>
+      );
+    });
+
+    let languageLevelFlag = this.state.languageLevel.map((languageItem) => {
+      return (
+        <div className={languageItem.languageFlagClass}>
+          <img
+            src={languageItem.languageFlag}
+            alt={languageItem.languageFlagClass}
+          />
+        </div>
+      );
+    });
+
+    let languageLevelStar = this.state.languageLevel.map((languageItem) => {
+      return (
+        <div className={languageItem.languageStarClass}>
+          <img
+            src={languageItem.languageStar}
+            alt={languageItem.languageStarClass}
+          />
+        </div>
+      );
+    });
+
     return (
       <div
         className={
@@ -760,146 +933,12 @@ export default class Resume extends Component {
             {/* HIER GEBLEVEN */}
             {this.state.languageCoursesOpen ? (
               <div className="resume-language-courses-list">
-                <ResumeJobinfoTemplate
-                  jobdate={"08/2009"}
-                  organisation={
-                    "Spanish course in Barcelona, B1 level at CaminoBarcelona (2 weeks);"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2010-06/2011"}
-                  organisation={
-                    "Italian course A2 level at Studiolingua, Amsterdam;"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2011-06/2012"}
-                  organisation={
-                    "Italian course B1 level at Studiolingua, Amsterdam;"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"01/2012-02/2012"}
-                  organisation={
-                    "Italian translation course at Studiolingua, Amsterdam;"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2012-06-2013"}
-                  organisation={
-                    "Italian course B1+ level at Studiolingua, Amsterdam;"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2013-04/2014"}
-                  organisation={
-                    "Italian course B2 level at Studiolingua, Amsterdam;"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2014-03/2015"}
-                  organisation={
-                    "Italian course B2+ level at Studiolingua, Amsterdam;"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2015-03/2016"}
-                  organisation={
-                    "Italian course C1 level at Studiolingua, Amsterdam;"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"11/2016"}
-                  organisation={
-                    "Spanish course in Valencia, B1 and B2 level at Costa de Valencia (2 weeks);"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"10/2017-11/2017"}
-                  organisation={
-                    "Spanish course in Málaga, B2 level at Cile (3 weeks);"
-                  }
-                />
-                <ResumeJobinfoTemplate
-                  jobdate={"11/2018"}
-                  organisation={
-                    "Spanish course in Málaga, B2 level at Instituto Picasso (3 weken)"
-                  }
-                />{" "}
-                <div className="resume-language-level-wrapper">
-                  <div className="resume-dutch-flag">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
-                      alt="dutch"
-                    />
-                  </div>
-                  <div className="resume-british-flag">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
-                      alt="english"
-                    ></img>
-                  </div>
-                  <div className="resume-french-flag">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/french-flag-large.jpg"
-                      alt="french"
-                    ></img>
-                  </div>
-                  <div className="resume-italian-flag">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/italian-flag-large.jpg"
-                      alt="italian"
-                    ></img>
-                  </div>
-                  <div className="resume-spanish-flag">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/spanish-flag-large.jpg"
-                      alt="spanish"
-                    ></img>
-                  </div>
-                  <div className="resume-german-flag">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/german-flag-large.png"
-                      alt="german"
-                    ></img>
-                  </div>
+                {languageCourses}
 
-                  <div className="resume-dutch-star">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vijf-sterren.gif"
-                      alt="dutch"
-                    ></img>{" "}
-                  </div>
-                  <div className="resume-british-star">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
-                      alt="english"
-                    ></img>{" "}
-                  </div>
-                  <div className="resume-french-star">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
-                      alt="french"
-                    ></img>{" "}
-                  </div>
-                  <div className="resume-italian-star">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
-                      alt="italian"
-                    ></img>{" "}
-                  </div>
-                  <div className="resume-spanish-star">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
-                      alt="spanish"
-                    ></img>{" "}
-                  </div>
-                  <div className="resume-german-star">
-                    <img
-                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Drie-sterren.gif"
-                      alt="german"
-                    ></img>{" "}
-                  </div>
+                <div className="resume-language-level-wrapper">
+                  {" "}
+                  {languageLevelFlag}
+                  {languageLevelStar}
                 </div>
                 <div
                   onClick={this.closeLanguageCourses}
@@ -931,6 +970,7 @@ export default class Resume extends Component {
           </div>
 
           {/* OTHER ACTIVITIES PART */}
+          {/* {stayed here} */}
           <div className="resume-green-header">OTHER ACTIVITIES</div>
           <div className="resume-other-activities">
             <br />

@@ -27,7 +27,6 @@ export default class Contact extends Component {
   }
 
   handleSubmit(event) {
-    let data = "sdsds";
     // alert("A name was submitted: " + this.state.name);
     event.preventDefault();
     let formData = {

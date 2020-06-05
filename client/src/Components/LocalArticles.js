@@ -564,7 +564,7 @@ export default class LocalArticles extends Component {
     let i = 0;
     let j = 0;
     for (i = 0; i < localArticlesDisplay.length; i++) {
-      if (localArticlesDisplay[i] == undefined) {
+      if (localArticlesDisplay[i] === undefined) {
         j = j + 1;
       }
     }

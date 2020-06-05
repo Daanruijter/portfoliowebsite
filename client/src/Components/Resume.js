@@ -288,44 +288,50 @@ export default class Resume extends Component {
     ],
     otherActivities: [
       {
-        jobdate:"08/2007-06/2008"
-        organisation:"Tennisvereniging De Balk, Zaandam"
-        description:{
-          "Editor of the club magazine at Tennis Club de Balk, Zaandam;"
-
-        
+        jobdate: "08/2007-06/2008",
+        organisation: "Tennisvereniging De Balk, Zaandam",
+        description:
+          "Editor of the club magazine at Tennis Club de Balk, Zaandam;",
       },
-      {   jobdate:"10/2009-01/2010"}
-      organisation:"Zaanradio, Koog aan de Zaan"}
-      description:
-        "Every two weeks active as an editor/interviewer with the sports program Saensport Life from the local broadcasterZaanradio (Zaandam & region);"},
-      {             jobdate:"04/2012-12/2013"}
-      organisation:"Tennisplanet"}
-      description:
-        "Writing different articles and news items about the sport of tennis for the web sites www.tennishome.nl andwww.tennisinfo.be of Tennisplanet;"},
-      {   jobdate:"01/2014-present"}
-      organisation:"FCZSW, Krommenie and Tennis club De Gouw, Zaandam"}
-      description:
-        "Active as an editor for the ‘Zaanse’ futsal club FCZSW (among other things publishing a club magazine) and the ‘Zaanse’ Tennis club De Gouw"
-      }},
-      { <ResumeJobinfoTemplate
-        jobdate:"10/2014-present"}
-        organisation:"Myself"}
-        description:"Editing of master theses"}
-      />},
-      { jobdate:"05/2017"}
-      organisation:"Gemeentearchief Zaanstad"}
-      description:
-        "Course 'Zelf geschiedenis schrijven Gemeentearchief Zaanstad' (writing about history at the community archive) with Mirjam Janssen"
-      }},
-      {         jobdate:"2006"}
-      organisation:"GroenLinks Zaanstad"}
-      description:`Volunteer work: in anticipation of the council elections in 2006
+      {
+        jobdate: "10/2009-01/2010",
+        organisation: "Zaanradio, Koog aan de Zaan",
+        description:
+          "Every two weeks active as an editor/interviewer with the sports program Saensport Life from the local broadcasterZaanradio (Zaandam & region);",
+      },
+      {
+        jobdate: "04/2012-12/2013",
+        organisation: "Tennisplanet",
+        description:
+          "Writing different articles and news items about the sport of tennis for the web sites www.tennishome.nl andwww.tennisinfo.be of Tennisplanet;",
+      },
+      {
+        jobdate: "01/2014-present",
+        organisation: "FCZSW, Krommenie and Tennis club De Gouw, Zaandam",
+        description:
+          "Active as an editor for the ‘Zaanse’ futsal club FCZSW (among other things publishing a club magazine) and the ‘Zaanse’ Tennis club De Gouw",
+      },
+      {
+        jobdate: "10/2014-present",
+        organisation: "Myself",
+        description: "Editing of master theses",
+      },
+      {
+        jobdate: "05/2017",
+        organisation: "Gemeentearchief Zaanstad",
+        description:
+          "Course 'Zelf geschiedenis schrijven Gemeentearchief Zaanstad' (writing about history at the community archive) with Mirjam Janssen",
+      },
+      {
+        jobdate: "2006",
+        organisation: "GroenLinks Zaanstad",
+        description: `Volunteer work: in anticipation of the council elections in 2006
       I’ve participated in the “Working Group Quality of Lives in
       Quarters” for Groenlinks Zaanstad, the regional department of this
       political party. Goal of the working group was to come into contact
-      with the citizen in order to notive problems in quarters in Zaanstad
-      and to report them to the council.`}}
+      with the citizen in order to notice problems in quarters in Zaanstad
+      and to report them to the council.`,
+      },
     ],
   };
   showMoreExperience = () => {
@@ -452,6 +458,23 @@ export default class Resume extends Component {
         </div>
       );
     });
+
+    let otherActivities = this.state.otherActivities.map(
+      (otherActivitiesItem) => {
+        return (
+          <div>
+            {" "}
+            <ResumeJobinfoTemplate
+              jobdate={otherActivitiesItem.jobdate}
+              organisation={otherActivitiesItem.organisation}
+              jobtitle={null}
+              description={otherActivitiesItem.description}
+            />
+            <br />
+          </div>
+        );
+      }
+    );
 
     return (
       <div
@@ -970,67 +993,9 @@ export default class Resume extends Component {
           </div>
 
           {/* OTHER ACTIVITIES PART */}
-          {/* {stayed here} */}
+
           <div className="resume-green-header">OTHER ACTIVITIES</div>
-          <div className="resume-other-activities">
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"08/2007-06/2008"}
-              organisation={"Tennisvereniging De Balk, Zaandam"}
-              description={
-                "Editor of the club magazine at Tennis Club de Balk, Zaandam;"
-              }
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"10/2009-01/2010"}
-              organisation={"Zaanradio, Koog aan de Zaan"}
-              description={
-                "Every two weeks active as an editor/interviewer with the sports program Saensport Life from the local broadcasterZaanradio (Zaandam & region);"
-              }
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"04/2012-12/2013"}
-              organisation={"Tennisplanet"}
-              description={
-                "Writing different articles and news items about the sport of tennis for the web sites www.tennishome.nl andwww.tennisinfo.be of Tennisplanet;"
-              }
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"01/2014-present"}
-              organisation={"FCZSW, Krommenie and Tennis club De Gouw, Zaandam"}
-              description={
-                "Active as an editor for the ‘Zaanse’ futsal club FCZSW (among other things publishing a club magazine) and the ‘Zaanse’ Tennis club De Gouw"
-              }
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"10/2014-present"}
-              organisation={"Myself"}
-              description={"Editing of master theses"}
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"05/2017"}
-              organisation={"Gemeentearchief Zaanstad"}
-              description={
-                "Course 'Zelf geschiedenis schrijven Gemeentearchief Zaanstad' (writing about history at the community archive) with Mirjam Janssen"
-              }
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"2006"}
-              organisation={"GroenLinks Zaanstad"}
-              description={`Volunteer work: in anticipation of the council elections in 2006
-              I’ve participated in the “Working Group Quality of Lives in
-              Quarters” for Groenlinks Zaanstad, the regional department of this
-              political party. Goal of the working group was to come into contact
-              with the citizen in order to notive problems in quarters in Zaanstad
-              and to report them to the council.`}
-            />
-          </div>
+          <div className="resume-other-activities">{otherActivities}</div>
         </div>
         <div className="resume-bottom"></div>
 

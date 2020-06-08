@@ -6,7 +6,7 @@ import Home from "./Home";
 import Navbar from "./Navbar";
 import About from "./About";
 import Resume from "./Resume";
-import ResumeDutch from "./ResumeDutch";
+import ResumeDutch from "./ResumeDutchOld";
 import LocalArticles from "./LocalArticles";
 import DeGouw from "./DeGouw";
 import TennisNL from "./TennisNL";

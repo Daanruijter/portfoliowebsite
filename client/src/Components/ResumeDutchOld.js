@@ -24,311 +24,6 @@ export default class Resume extends Component {
     moreExperienceOpen: false,
     studyType: false,
     languageCoursesOpen: false,
-    contact: [
-      {
-        image: telephone,
-        text: "0615178860",
-        link: null,
-      },
-      { image: email, text: "daan_ruijter@hotmail.com", link: null },
-      {
-        image: Linkedin,
-        text: "in/daan-ruijter-b7514620",
-        link: "https://www.linkedin.com/in/daan-ruijter-b7514620",
-      },
-      {
-        image: GitHub,
-        text: "Daanruijter",
-        link: "https://github.com/Daanruijter",
-      },
-      {
-        image: residence,
-        text: "Amsterdam",
-        link: null,
-      },
-    ],
-    techSkils: [
-      { technologyLeft: "HTML 5", technologyRight: "Vue.js" },
-      { technologyLeft: "CSS 3", technologyRight: "Chart.js" },
-      { technologyLeft: "Bootstrap", technologyRight: "MongoDB" },
-      { technologyLeft: "Materialize", technologyRight: "Git & GitHub" },
-      { technologyLeft: "JavaScript", technologyRight: "Express" },
-      { technologyLeft: "React.js", technologyRight: "Node" },
-      { technologyLeft: "Redux", technologyRight: null },
-    ],
-    hobbysAndInterests: [
-      { image: tennis, text: "Tennis" },
-      { image: tabletennis, text: "Tafeltennis" },
-      { image: soccer, text: "Voetbal" },
-      { image: programming, text: "Programmeren" },
-      { image: writing, text: "Schrijven" },
-      { image: languages, text: "Taal(uitwisselingen)" },
-      { image: photography, text: "Fotografie" },
-      { image: music, text: "Muziek" },
-      { image: travelling, text: "Reizen" },
-      { image: journalism, text: "Journalistiek/Media" },
-      { image: nature, text: "Natuur" },
-    ],
-    workExperience: [
-      {
-        jobdate: "09/2013-06/2019",
-        organisation: "Rodi Media, Purmerend",
-        jobtitle: "Redacteur",
-        description: `Redigeren en publiceren van diverse lokale nieuws- en webartikelen, waarbij nauwkeurigheid vereist was. Voor de interviews die ik hield met adverteerders en nieuwswaardige personen was het nodig om te beschikken over goede luister- en communicatiecapaciteiten.`,
-      },
-      {
-        jobdate: "01/2014-09/2015",
-        organisation: "TENNiS.nl, Sassenheim",
-        jobtitle: `Webredacteur (vrijwillig):`,
-        description: `Schrijven en publiceren van verschillende nieuwsartikelen over professionele nationale en internationale tenniswedstrijden.`,
-      },
-      {
-        jobdate: "12/2012-04/2013",
-        organisation: "Valkering Media, Amsterdam",
-        jobtitle: `Stage als webredacteur bij de website Ajax Showtime:`,
-        description: `(Her)schrijven van artikelen over Ajax en voetbal in het algemeen
-        `,
-      },
-      {
-        jobdate: "07/2012-11/2012",
-        organisation: "Internetonderneming User.nl, Purmerend",
-        jobtitle: `Stage marketingafdeling:        `,
-        description: `Ontwikkelen van een mediaplan om meer zichtbaarheid voor het bedrijf te genereren`,
-      },
-      {
-        jobdate: "12/2014-03/2019",
-        organisation: "InDutch/Flowently, Amsterdam",
-        jobtitle: `Tutor/Taalcoach:`,
-        description: [
-          `Met expats, immigranten, studenten en toeristen de Nederlandse taal oefenen tijdens verschillende typen oefensessies, bijvoorbeeld in een café;`,
-          <br />,
-          `Ontwikkelen van de speciale sessie ‘Met Daan naar de Zaan’:Nederlands oefenen tijdens een bezoek op de Zaanse Schans (Zaandam)`,
-        ],
-      },
-      {
-        jobdate: "05/2012-04/2013",
-        organisation: "Hilton Meats, Zaandam",
-        jobtitle: `Projectassistent`,
-        description: [
-          "Redigeren en aanvullen van het personeelshandboek;",
-          <br />,
-          "Schrijven van procedures en werkvoorschriften op het gebied van veiligheid en Arbo;",
-          <br />,
-          "Schrijven filmscript over veiligheid en hygiëne voor nieuwkomers op het werk;",
-          <br />,
-          "Verwerken van gegevens met het database-/gegevensverwerkingsprogramma Ultimo;",
-          <br />,
-          "Adviseren van collega’s over hun scripties voor hun cursus Middelbaar Veiligheidskundige en redigeren van deze scripties",
-        ],
-      },
-      {
-        jobdate: "03/2012-05/2012",
-        organisation: "BaanStede",
-        jobtitle: `Stagiair afdeling marketing & communicatie, Purmerend
-        `,
-        description: [
-          `Allerlei zaken die te maken hebben met de marketing en communicatie:
-          ;`,
-          <br />,
-          `Redigeren van de nieuwe website en (missende) content documenteren en aanvragen bij bedrijfsleiders;
-          ;`,
-          <br />,
-          `Plan voor continu aanleveren van content maken;
-          ;`,
-          <br />,
-          `Plan voor herindelen en verbetering intranet maken
-          ;`,
-          <br />,
-          `Instructiemap schrijven voor het project Alfacheque (=hulp bij Huishouden);
-          ;`,
-          <br />,
-          `Artikelen schrijven en redigeren voor interne blad ‘De BaanStedeling’;
-          ;`,
-          <br />,
-          `Betrokken bij introductie sociale media voor BaanStede;
-          ;`,
-        ],
-      },
-      {
-        jobdate: "06/2009-07/2009",
-        organisation: "Hilton Meats, Zaandam",
-        jobtitle: `Vertaler
-        `,
-        description: ["Machineprotocollen van Nederlands naar Engels vertalen"],
-      },
-      {
-        jobdate: "09/2007-03/2008",
-        organisation: "Sandd, Zaandam",
-        jobtitle: `Postbezorger`,
-        description: ["Bezorgen van post"],
-      },
-      {
-        jobdate: "07/2006-08/2006",
-        organisation:
-          "Technical and Tactical Soccer Clinics, Loveland, Ohio, USA",
-        jobtitle: `Assistent bij voetbalclinics
-        `,
-        description: [
-          "Assisteren bij het geven van voetbalclinics aan jongeren in de leeftijd van 6-16",
-        ],
-      },
-      {
-        jobdate: "02/2002-12/2002",
-        organisation: "Kaasboerderij Catharina Hoeve, Zaandam",
-        jobtitle: `Verkoopmedewerker
-        `,
-        description: [
-          "Kassawerkzaamheden",
-          <br />,
-          "Aanvullen van de schappen",
-        ],
-      },
-    ],
-    languageCourses: [
-      {
-        jobdate: "08/2009",
-        organisation:
-          "Spaanse taalcursus in Barcelona, B1-niveau bij CaminoBarcelona (2 weken);",
-      },
-      {
-        jobdate: "09/2010-06/2011",
-        organisation: "Cursus Italiaans A2-niveau bij Studiolingua, Amsterdam;",
-      },
-      {
-        jobdate: "09/2011-06/2012",
-        organisation: "Cursus Italiaans B1-niveau bij Studiolingua, Amsterdam;",
-      },
-      {
-        jobdate: "01/2012-02/2012",
-        organisation: "Cursus vertalen Italiaans bij Studiolingua, Amsterdam",
-      },
-      {
-        jobdate: "09/2012-06-2013",
-        organisation: "Cursus Italiaans B1+-niveau bij Studiolingua, Amsterdam",
-      },
-      {
-        jobdate: "09/2013-04/2014",
-        organisation: "Cursus Italiaans B2-niveau bij Studiolingua, Amsterdam;",
-      },
-      {
-        jobdate: "09/2014-03/2015",
-        organisation:
-          "Cursus Italiaans B2+-niveau bij Studiolingua, Amsterdam;",
-      },
-      {
-        jobdate: "09/2015-03/2016",
-        organisation: "Cursus Italiaans C1-niveau bij Studiolingua, Amsterdam;",
-      },
-      {
-        jobdate: "11/2016",
-        organisation:
-          "Cursus Spaans in Valencia, B1 en B2-niveau bij Costa de Valencia (2 weken)",
-      },
-      {
-        jobdate: "10/2017-11/2017",
-        organisation: "Cursus Spaans in Málaga, B2-niveau bij Cile (3 weken);",
-      },
-      {
-        jobdate: "11/2018",
-        organisation:
-          "Cursus Spaans in Málaga, B2-niveau bij Instituto Picasso (3 weken).",
-      },
-    ],
-    languageLevel: [
-      {
-        languageFlag:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg",
-        languageFlagClass: "resume-dutch-flag",
-        languageStar:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/Vijf-sterren.gif",
-        languageStarClass: "resume-dutch-star",
-      },
-
-      {
-        languageFlag:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg",
-        languageFlagClass: "resume-british-flag",
-        languageStar:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
-        languageStarClass: "resume-british-star",
-      },
-      {
-        languageFlag:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/french-flag-large.jpg",
-        languageFlagClass: "resume-french-flag",
-
-        languageStar:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
-        languageStarClass: "resume-french-star",
-      },
-      {
-        languageFlag:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/italian-flag-large.jpg",
-        languageFlagClass: "resume-italian-flag",
-        languageStar:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
-        languageStarClass: "resume-italian-star",
-      },
-      {
-        languageFlag:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/spanish-flag-large.jpg",
-        languageFlagClass: "resume-spanish-flag",
-        languageStar:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif",
-        languageStarClass: "resume-spanish-star",
-      },
-      {
-        languageFlag:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/german-flag-large.png",
-        languageFlagClass: "resume-german-flag",
-        languageStar:
-          "http://daanruijter.eu/wp-content/uploads/2015/04/Drie-sterren.gif",
-        languageStarClass: "resume-german-star",
-      },
-    ],
-    otherActivities: [
-      {
-        jobdate: "08/2007-06/2008",
-        organisation: "Tennisvereniging De Balk, Zaandam",
-        description:
-          "Redacteur van het clubblad bij Tennisvereniging de Balk, Zaandam;",
-      },
-      {
-        jobdate: "10/2009-01/2010",
-        organisation: "Zaanradio, Koog aan de Zaan",
-        description:
-          "Redacteur/interviewer bij het sportprogramma Saensport Life van lokale zender Zaanradio (Zaandam & omstreken);",
-      },
-      {
-        jobdate: "04/2012-12/2013",
-        organisation: "Tennisplanet",
-        description:
-          "Schrijven van uiteenlopende artikelen en nieuwsberichten over de tennissport voor de websites www.tennishome.nl en www.tennisinfo.be van Tennisplanet;",
-      },
-      {
-        jobdate: "01/2014-heden",
-        organisation: "FCZSW, Krommenie en Tennisvereniging De Gouw, Zaandam",
-        description:
-          "Verrichten van redactionele activiteiten voor de Zaanse zaalvoetbalvereniging FCZSW/Lekkervroeg.nl (onder meer publiceren van een magazine voor de club) en de Zaanse Tennisvereniging De Gouw",
-      },
-      {
-        jobdate: "10/2014-heden",
-        organisation: "Mijzelf",
-        description: "Redigeren van masterscripties",
-      },
-      {
-        jobdate: "05/2017",
-        organisation: "Gemeentearchief Zaanstad",
-        description:
-          "Cursus Zelf geschiedenis schrijven Gemeentearchief Zaanstad o.l.v. Mirjam Janssen",
-      },
-      {
-        jobdate: "2006",
-        organisation: "GroenLinks Zaanstad",
-        description: `Vrijwilligerswerk: in de periode rondom de gemeenteraadsverkiezingen van 2006 heb ik voor GroenLinks Zaanstad in de ‘Werkgroep Leefbare Wijken’ gezeten. Doel van deze werkgroep was het contact met de burger te leggen om problemen in Zaanse wijken aan te kaarten bij de gemeenteraad
-        `,
-      },
-    ],
   };
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
@@ -350,128 +45,6 @@ export default class Resume extends Component {
   };
 
   render() {
-    let contact = this.state.contact.map((contactItem) => {
-      return (
-        <div className="resume-contact-flexer">
-          <div className="resume-contact-icon">
-            <img src={contactItem.image} alt={contactItem.text} />
-          </div>
-          <div>
-            <a href={contactItem.link}>{contactItem.text}</a>
-          </div>
-        </div>
-      );
-    });
-
-    let technologies = this.state.techSkils.map((technologyItem) => {
-      return (
-        <div className="resume-tech-flexer">
-          <div className="resume-tech">{technologyItem.technologyLeft}</div>
-          <div>{technologyItem.technologyRight}</div>
-        </div>
-      );
-    });
-
-    let hobbysAndInterests = this.state.hobbysAndInterests.map(
-      (hobbyAndInterestItem) => {
-        return (
-          <div className="resume-hobbies-interests-flexer">
-            <div className="resume-hobbies-interests-icon">
-              <img
-                src={hobbyAndInterestItem.image}
-                alt={hobbyAndInterestItem.text}
-              />
-            </div>
-            <div>{hobbyAndInterestItem.text}</div>
-          </div>
-        );
-      }
-    );
-
-    let workExperiencePart1 = this.state.workExperience.map(
-      (workExperienceItem, index) => {
-        return index < 4 ? (
-          <div>
-            {" "}
-            <ResumeJobinfoTemplate
-              jobdate={workExperienceItem.jobdate}
-              organisation={workExperienceItem.organisation}
-              jobtitle={workExperienceItem.jobtitle}
-              description={workExperienceItem.description}
-            />
-            <br />
-          </div>
-        ) : null;
-      }
-    );
-    let workExperiencePart2 = this.state.workExperience.map(
-      (workExperienceItem, index) => {
-        return index > 3 ? (
-          <div>
-            {" "}
-            <ResumeJobinfoTemplate
-              jobdate={workExperienceItem.jobdate}
-              organisation={workExperienceItem.organisation}
-              jobtitle={workExperienceItem.jobtitle}
-              description={workExperienceItem.description}
-            />
-            <br />
-          </div>
-        ) : null;
-      }
-    );
-
-    let languageCourses = this.state.languageCourses.map((language) => {
-      return (
-        <div>
-          {" "}
-          <ResumeJobinfoTemplate
-            jobdate={language.jobdate}
-            organisation={language.organisation}
-          />
-        </div>
-      );
-    });
-
-    let languageLevelFlag = this.state.languageLevel.map((languageItem) => {
-      return (
-        <div className={languageItem.languageFlagClass}>
-          <img
-            src={languageItem.languageFlag}
-            alt={languageItem.languageFlagClass}
-          />
-        </div>
-      );
-    });
-
-    let languageLevelStar = this.state.languageLevel.map((languageItem) => {
-      return (
-        <div className={languageItem.languageStarClass}>
-          <img
-            src={languageItem.languageStar}
-            alt={languageItem.languageStarClass}
-          />
-        </div>
-      );
-    });
-
-    let otherActivities = this.state.otherActivities.map(
-      (otherActivitiesItem) => {
-        return (
-          <div>
-            {" "}
-            <ResumeJobinfoTemplate
-              jobdate={otherActivitiesItem.jobdate}
-              organisation={otherActivitiesItem.organisation}
-              jobtitle={null}
-              description={otherActivitiesItem.description}
-            />
-            <br />
-          </div>
-        );
-      }
-    );
-
     return (
       <div
         className={
@@ -486,29 +59,86 @@ export default class Resume extends Component {
       >
         <div className="resume-top">
           <div className="resume-english">
-            {/* Hier gebleven */}
-            {/* Hier gebleven */}
-            {/* Hier gebleven */}
-            <a href="http://localhost:3000/resume">Engels</a>
+            <a href="http://localhost:3000/resume">English</a>
           </div>
           <div className="resume-dutch">
-            <a href="http://localhost:3000/resume/dutch">Nederlands</a>
+            <a href="http://localhost:3000/resume/dutch">Dutch</a>
           </div>
         </div>
         {/* left side */}
         <div className="resume-left">
+          {/* contact */}
           <h1 className="resume-leftside-header">Contact</h1>
           <div className="resume-contact-wrapper">
-            {/* RESUME CONTACT FLEXER */} {contact}
-            {/* RESUME CONTACT FLEXER */}
+            <div className="resume-contact-flexer">
+              <div className="resume-contact-icon">
+                <img src={telephone} alt="telephone" />
+              </div>
+              <div>0615178860</div>
+            </div>
+            <div className="resume-contact-flexer">
+              <div className="resume-contact-icon">
+                <img src={email} alt="email" />
+              </div>
+              <div>daan_ruijter@hotmail.com</div>{" "}
+            </div>
+            <div className="resume-contact-flexer">
+              <div className="resume-contact-icon">
+                <img src={Linkedin} alt="LinkedIn" />
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/daan-ruijter-b7514620">
+                  in/daan-ruijter-b7514620
+                </a>
+              </div>
+            </div>
+            <div className="resume-contact-flexer">
+              <div className="resume-contact-icon">
+                <img src={GitHub} alt="GitHub" />
+              </div>
+
+              <a href="https://github.com/Daanruijter">
+                <div>Daanruijter</div>
+              </a>
+            </div>
+            <div className="resume-contact-flexer">
+              <div className="resume-contact-icon">
+                <img src={residence} alt="residence" />
+              </div>
+              <div> Amsterdam</div>
+            </div>
           </div>{" "}
           {/* tech skills */}
           <h1 className="resume-leftside-header">Tech skills</h1>
           <div className="resume-tech-wrapper">
-            {/* RESUME TECH FLEXER */}
-            {technologies}
+            <div className="resume-tech-flexer">
+              <div className="resume-tech">HTML 5</div>
+              <div>Vue.js</div>
+            </div>
+            <div className="resume-tech-flexer">
+              <div className="resume-tech">CSS 3</div>
+              <div>Chart.js</div>{" "}
+            </div>
+            <div className="resume-tech-flexer">
+              <div className="resume-tech">Bootstrap</div>
+              <div>MongoDB</div>
+            </div>
+            <div className="resume-tech-flexer">
+              <div className="resume-tech">Materialize</div>
 
-            {/* RESUME TECH FLEXER */}
+              <div>Git & GitHub</div>
+            </div>
+            <div className="resume-tech-flexer">
+              <div className="resume-tech">JavaScript</div>
+              <div> Express</div>
+            </div>
+            <div className="resume-tech-flexer">
+              <div className="resume-tech">React.js</div>
+              <div> Node</div>
+            </div>
+            <div className="resume-tech-flexer">
+              <div className="resume-tech">Redux</div>
+            </div>
           </div>
           {/* soft skills */}
           <h1 className="resume-leftside-header">Soft skills</h1>
@@ -528,7 +158,7 @@ export default class Resume extends Component {
             <u>2019</u>
             <br />
             <strong>
-              Online zelfstudie JavaScript via Code Academy and Scrimba: :
+              Online zelfstudie JavaScript via Code Academy and Scrimba:
             </strong>
             <ul>
               <li>
@@ -557,16 +187,85 @@ export default class Resume extends Component {
           <div className="resume-computer-knowledge-wrapper">
             <ul>
               <li>Microsoft Office Suite</li>
-              <li>Verschillende contentmanagementsystemen</li>
+              <li>Verschillende contentmanage- mentsystemen</li>
             </ul>
           </div>
           {/* Hobbies/interests */}
           <h1 className="resume-leftside-header">Hobby's/interesses</h1>
           <div className="resume-hobbies-interests-wrapper">
-            {" "}
-            {/* RESUME HOBBIES INTERESTS WRAPPER */}
-            {hobbysAndInterests}
-            {/* RESUME HOBBIES INTERESTS WRAPPER */}
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={tennis} alt="tennis" />
+              </div>
+              <div>Tennis</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={tabletennis} alt="tabletennis" />
+              </div>
+              <div>Tafeltennis</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={soccer} alt="soccer" />
+              </div>
+              <div>Voetbal</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={programming} alt="programming" />
+              </div>
+
+              <div>Programmeren</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={writing} alt="writing" />
+              </div>
+
+              <div>Schrijven</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={languages} alt="languages" />
+              </div>
+
+              <div>Taal(uitwisselingen)</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={photography} alt="photography" />
+              </div>
+              <div>Fotografie</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={music} alt="music" />
+              </div>
+
+              <div>Muziek</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={travelling} alt="travelling" />
+              </div>
+
+              <div>Reizen</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={journalism} alt="journalism" />
+              </div>
+
+              <div>Journalistiek/Media</div>
+            </div>
+            <div className="resume-hobbies-interests-flexer">
+              <div className="resume-hobbies-interests-icon">
+                <img src={nature} alt="nature" />
+              </div>
+
+              <div>Natuur</div>
+            </div>
           </div>
         </div>
 
@@ -580,7 +279,7 @@ export default class Resume extends Component {
               Webdevelopment maakt mij erg enthousiast. De combinatie van
               analytische uitdagingen, creativiteit en de internationale
               oriëntatie van het beroep spreken mij sterk aan. Het vak geeft me
-              bovendien de mogelijkheid om me continu te ontwikkelen. Gezien
+              bovendien de mogelijkheid om me continu te on- twikkelen. Gezien
               mijn achtergrond als (web)redacteur en interesse in de structuur
               van vreemde talen is het een logische ontwikkeling in mijn
               carrière om me nu toe te leg- gen op programmeren. Ik begin dan
@@ -643,26 +342,26 @@ export default class Resume extends Component {
               className="resume-project-links"
               href="https://ruijterbookstoreapp.herokuapp.com/"
             >
-              Boekenwinkelapp
+              Bookstore app
             </a>
             <br />
             App die informatie over meerdere boeken vertoont met behulp van mijn
             eigen RESTful API en een boekendataset in de database MongoDB. De
             app heeft een zoekfunctie die de boeken filtert.
             <br />
+            <br />
             <a
               className="resume-project-links"
               href="https://daanruijter.github.io/tgifVUEtodeploy/index.html"
             >
-              <br />
               TGIF: Transparent Government In Fact
             </a>
             <br />
-            Created a website using Vanilla JavaScript that dynamically shows
-            API data of the US Congress and Senate. The data come from an API
-            and are processed to display them dy- namically. The project helped
-            to improve my capacities to refactor code and to adhere to industry
-            convention.
+            Webapplicatie in Vue.js die data rond vertegenwoordigers van het
+            Amerikaanse parle- ment en de senaat vertoont. De gegevens komen van
+            een API en zijn bewerkt om ze op dynamische wijze te kunnen tonen.
+            Dit project hielp mij om mijn code efficiënter en vol- gens de
+            standaard van de sector te schrijven.
             <br />
             <a
               className="resume-project-links"
@@ -678,24 +377,141 @@ export default class Resume extends Component {
             ik CSS-mediaregels toe om de website responsive te maken.
             <br />
             <br />
-            {/* RESUME JOB  */}
-            {workExperiencePart1}
+            <ResumeJobinfoTemplate
+              jobdate={"09/2013-06/2019"}
+              organisation={"Rodi Media, Purmerend"}
+              jobtitle={"Redacteur"}
+              description={`Redigeren en publiceren van diverse lokale nieuws- en webartikelen,
+              waarbij nauwkeurigheid vereist was. Voor de interviews die ik hield
+              met adverteerders en nieuwswaardige personen was het nodig om te
+              beschikken over goede luister- en communicatiecapaciteiten.`}
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"01/2014-09/2015"}
+              organisation={"TENNiS.nl, Sassenheim"}
+              jobtitle={`Webredacteur (vrijwillig):`}
+              description={`Schrijven en publiceren van verschillende nieuwsartikelen over
+              professionele nationale en internationale tenniswedstrijden.              `}
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"12/2012-04/2013"}
+              organisation={"Valkering Media, Amsterdam"}
+              jobtitle={`Stage als webredacteur bij de website Ajax Showtime:`}
+              description={`(Her)schrijven van artikelen over Ajax en voetbal in het algemeen               `}
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"07/2012-11/2012"}
+              organisation={"Internetonderneming User.nl, Purmerend"}
+              jobtitle={`Stage marketingafdeling:`}
+              description={`Ontwikkelen van een mediaplan om meer zichtbaarheid voor het
+              bedrijf te genereren
+              `}
+            />
+            <br></br>
             <div
               onClick={this.showMoreExperience}
               className="resume-more-past-experience"
             >
               KLIK HIER OM MEER EERDERE ERVARINGEN TE ZIEN
-            </div>{" "}
-            <br />
+            </div>
             {this.state.moreExperienceOpen ? (
               <div>
-                {workExperiencePart2}
-                <br /> {}
+                <br />{" "}
+                <ResumeJobinfoTemplate
+                  jobdate={"12/2014-03/2019"}
+                  organisation={"InDutch/Flowently, Amsterdam"}
+                  jobtitle={`Tutor/Taalcoach:`}
+                  description={[
+                    "Met expats, immigranten, studenten en toeristen de Nederlandse taal oefenen tijdens verschillende typen oefensessies, bijvoorbeeld in een café;",
+                    <br />,
+                    "Ontwikkelen van de speciale sessie ‘Met Daan naar de Zaan’:Nederlands oefenen tijdens een bezoek op de Zaanse Schans (Zaandam)",
+                  ]}
+                />
+                <br />
+                <ResumeJobinfoTemplate
+                  jobdate={"05/2012-04/2013"}
+                  organisation={"Hilton Meats, Zaandam"}
+                  jobtitle={`Projectassistent`}
+                  description={[
+                    "Schrijven van procedures en werkvoorschriften op het gebied van veiligheid en Arbo;",
+                    <br />,
+                    "Schrijven filmscript over veiligheid en hygiëne voor nieuwkomers op het werk;",
+                    <br />,
+                    "Redigeren en aanvullen van het personeelshandboek;",
+                    <br />,
+                    "Verwerken van gegevens met het database-/gegevensverwerkingsprogramma Ultimo;",
+                    <br />,
+                    "Adviseren van collega’s over hun scripties voor hun cursus Middelbaar Veiligheidskundige en redigeren van deze scripties",
+                  ]}
+                />
+                <br />
+                <ResumeJobinfoTemplate
+                  jobdate={"03/2012-05/2012"}
+                  organisation={"BaanStede"}
+                  jobtitle={`Stagiair afdeling marketing & communicatie, Purmerend`}
+                  description={[
+                    "Allerlei zaken die te maken hebben met de marketing en communicatie:",
+                    <br />,
+                    "Redigeren van de nieuwe website en (missende) content documenteren en aanvragen bij bedrijfsleiders;",
+                    <br />,
+                    "Plan voor continu aanleveren van content maken;",
+                    <br />,
+                    "Plan voor herindelen en verbetering intranet maken",
+                    <br />,
+                    "Instructiemap schrijven voor het project Alfacheque (=hulp bij Huishouden);",
+                    <br />,
+                    "Artikelen schrijven en redigeren voor interne blad ‘De BaanStedeling’;",
+                    <br />,
+                    "Betrokken bij introductie sociale media voor BaanStede;",
+                  ]}
+                />
+                <br />
+                <ResumeJobinfoTemplate
+                  jobdate={"06/2009-07/2009"}
+                  organisation={"Hilton Meats, Zaandam"}
+                  jobtitle={`Vertaler`}
+                  description={[
+                    "Machineprotocollen van Nederlands naar Engels vertalen",
+                  ]}
+                />
+                <br />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2007-03/2008"}
+                  organisation={"Sandd, Zaandam"}
+                  jobtitle={`Mail carrier`}
+                  description={["Carried mail"]}
+                />
+                <br />
+                <ResumeJobinfoTemplate
+                  jobdate={"07/2006-08/2006"}
+                  organisation={
+                    "Technical and Tactical Soccer Clinics, Loveland, Ohio, USA"
+                  }
+                  jobtitle={`Assistent bij voetbalclinics`}
+                  description={[
+                    "Assisteren bij het geven van voetbalclinics aan jongeren in de leeftijd van 6-16",
+                  ]}
+                />
+                <br />
+                <ResumeJobinfoTemplate
+                  jobdate={"02/2002-12/2002"}
+                  organisation={"Kaasboerderij Catharina Hoeve, Zaandam"}
+                  jobtitle={`Verkoopmedewerker`}
+                  description={[
+                    "Kassawerkzaamheden",
+                    <br />,
+                    "Aanvullen van de schappen",
+                  ]}
+                />
+                <br />
                 <div
                   onClick={this.closeMoreExperience}
                   className="resume-more-past-experience"
                 >
-                  KLIK HIER OM MEER EERDERE ERVARINGEN TE ZIEN
+                  KLIK HIER OM EERDERE ERVARINGEN TE SLUITEN
                 </div>
               </div>
             ) : null}
@@ -725,7 +541,7 @@ export default class Resume extends Component {
                 <ResumeJobinfoTemplate
                   jobdate={"09/2008-11/2011"}
                   organisation={
-                    "Master Journalism aan de Vrije Universiteit in Amsterdam"
+                    "Master Journalistiek aan de Vrije Universiteit in Amsterdam"
                   }
                 />
                 <br />
@@ -750,7 +566,7 @@ export default class Resume extends Component {
                   De scriptie is te openen door{" "}
                   <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Maar-beantwoordt-u-nu-toch-eens-de-vraag-Masterscriptie-Journalistiek-Daan-Ruijter.pdf">
                     hier
-                  </a>
+                  </a>{" "}
                   te klikken
                 </div>
                 <br />{" "}
@@ -806,7 +622,7 @@ export default class Resume extends Component {
                   De scriptie is te openen door{" "}
                   <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Is-het-Verenigd-Koninkrijk-klaar-om-de-Euro-te-introduceren-Masterscriptie-Algemene-Economie-Daan-Ruijter.pdf">
                     hier
-                  </a>
+                  </a>{" "}
                   te klikken
                 </div>
                 <br />{" "}
@@ -852,7 +668,7 @@ export default class Resume extends Component {
                   De scriptie is te openen door{" "}
                   <a href="http://daanruijter.eu/wp-content/uploads/2020/05/China’s-economische-groei-Bachelorscriptie-Algemene-Economie-Daan-Ruijter.pdf">
                     hier
-                  </a>
+                  </a>{" "}
                   te klikken
                 </div>
                 <img
@@ -865,7 +681,7 @@ export default class Resume extends Component {
             <ResumeJobinfoTemplate
               jobdate={"08/1996-06/2002"}
               organisation={
-                "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
+                "Gymnasium met Latijn en Grieks aan Het Zaanlands Lyceum"
               }
             />
             <br />{" "}
@@ -915,7 +731,8 @@ export default class Resume extends Component {
                 vriendschap op met de eigenaars Hans en Ria. Ik bracht een deel
                 van mijn jeugd op de kleine, gezellige camping door. Hans en Ria
                 werden ouder en in 2011 kregen ze de kans om Camping de Duinvoet
-                te verkopen. <br />
+                te verkopen.
+                <br />
                 <br />
                 Ze hielden een groot afscheidsfeest in een tent op een van de
                 terreinen van de camping. Ineens kwam Hans naar me toe met een
@@ -946,24 +763,158 @@ export default class Resume extends Component {
             ontmoeten. Kunnen communiceren met mensen en in staat zijn om te
             lezen, schrijven en luisteren in andere talen motiveert mij enorm om
             te blijven schaven aan mijn talenkennis. De IT-wereld is
-            internationaal georiënteerd, dus ik denk dat deze vaardigheden en
+            internationaal georiënteerd, dus ik denk dat deze vaar- digheden en
             mijn interesse in andere culturen van waarde kunnen zijn.
             <div
               onClick={this.showLanguageCourses}
               className="resume-language-courses"
             >
               <br />
-              KLIK OM MIJN TAALCURSUSSEN TE ZIEN <br /> <br />
+              KLIK OM MIJN TAALCURSUSSEN TE ZIEN
+              <br /> <br />
             </div>
-            {/* HIER GEBLEVEN */}
             {this.state.languageCoursesOpen ? (
               <div className="resume-language-courses-list">
-                {languageCourses}
-
+                <ResumeJobinfoTemplate
+                  jobdate={"08/2009"}
+                  organisation={
+                    "Spaanse taalcursus in Barcelona, B1-niveau bij CaminoBarcelona (2 weken);"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2010-06/2011"}
+                  organisation={
+                    "Cursus Italiaans A2-niveau bij Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2011-06/2012"}
+                  organisation={
+                    "Cursus Italiaans B1-niveau bij Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"01/2012-02/2012"}
+                  organisation={
+                    "Cursus vertalen Italiaans bij Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2012-06-2013"}
+                  organisation={
+                    "Cursus Italiaans B1+-niveau bij Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2013-04/2014"}
+                  organisation={
+                    "Cursus Italiaans B2-niveau bij Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2014-03/2015"}
+                  organisation={
+                    "Cursus Italiaans B2+-niveau bij Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"09/2015-03/2016"}
+                  organisation={
+                    "Cursus Italiaans C1-niveau bij Studiolingua, Amsterdam;"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"11/2016"}
+                  organisation={
+                    "Cursus Spaans in Valencia, B1 en B2-niveau bij Costa de Valencia (2 weken)"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"10/2017-11/2017"}
+                  organisation={
+                    "Cursus Spaans in Málaga, B2-niveau bij Cile (3 weken);"
+                  }
+                />
+                <ResumeJobinfoTemplate
+                  jobdate={"11/2018"}
+                  organisation={
+                    "Cursus Spaans in Málaga, B2-niveau bij Instituto Picasso (3 weken)."
+                  }
+                />{" "}
                 <div className="resume-language-level-wrapper">
-                  {" "}
-                  {languageLevelFlag}
-                  {languageLevelStar}
+                  <div className="resume-dutch-flag">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                      alt="dutch"
+                    />
+                  </div>
+                  <div className="resume-british-flag">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                      alt="english"
+                    ></img>
+                  </div>
+                  <div className="resume-french-flag">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/french-flag-large.jpg"
+                      alt="french"
+                    ></img>
+                  </div>
+                  <div className="resume-italian-flag">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/italian-flag-large.jpg"
+                      alt="italian"
+                    ></img>
+                  </div>
+                  <div className="resume-spanish-flag">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/spanish-flag-large.jpg"
+                      alt="spanish"
+                    ></img>
+                  </div>
+                  <div className="resume-german-flag">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/german-flag-large.png"
+                      alt="german"
+                    ></img>
+                  </div>
+
+                  <div className="resume-dutch-star">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vijf-sterren.gif"
+                      alt="dutch"
+                    ></img>{" "}
+                  </div>
+                  <div className="resume-british-star">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
+                      alt="english"
+                    ></img>{" "}
+                  </div>
+                  <div className="resume-french-star">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
+                      alt="french"
+                    ></img>{" "}
+                  </div>
+                  <div className="resume-italian-star">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
+                      alt="italian"
+                    ></img>{" "}
+                  </div>
+                  <div className="resume-spanish-star">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Vier-sterren.gif"
+                      alt="spanish"
+                    ></img>{" "}
+                  </div>
+                  <div className="resume-german-star">
+                    <img
+                      src="http://daanruijter.eu/wp-content/uploads/2015/04/Drie-sterren.gif"
+                      alt="german"
+                    ></img>{" "}
+                  </div>
                 </div>
                 <div
                   onClick={this.closeLanguageCourses}
@@ -995,9 +946,63 @@ export default class Resume extends Component {
           </div>
 
           {/* OTHER ACTIVITIES PART */}
-
           <div className="resume-green-header">ANDERE ACTIVITEITEN</div>
-          <div className="resume-other-activities">{otherActivities}</div>
+          <div className="resume-other-activities">
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"08/2007-06/2008"}
+              organisation={"Tennisvereniging De Balk, Zaandam"}
+              description={
+                "Redacteur van het clubblad bij Tennisvereniging de Balk, Zaandam;"
+              }
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"10/2009-01/2010"}
+              organisation={"Zaanradio, Koog aan de Zaan"}
+              description={
+                "Redacteur/interviewer bij het sportprogramma Saensport Life van lokale zender Zaanradio (Zaandam & omstreken);"
+              }
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"04/2012-12/2013"}
+              organisation={"Tennisplanet"}
+              description={
+                "Schrijven van uiteenlopende artikelen en nieuwsberichten over de tennissport voor de websites www.tennishome.nl en www.tennisinfo.be van Tennisplanet;"
+              }
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"01/2014-present"}
+              organisation={
+                "FCZSW, Krommenie en Tennisvereniging De Gouw, Zaandam"
+              }
+              description={
+                "Verrichten van redactionele activiteiten voor de Zaanse zaalvoetbalvereniging FCZSW/Lekkervroeg.nl (onder meer publiceren van een magazine voor de club) en de Zaanse Tennisvereniging De Gouw"
+              }
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"10/2014-heden"}
+              organisation={"Mijzelf"}
+              description={"Redigeren van masterscripties"}
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"05/2017"}
+              organisation={"Gemeentearchief Zaanstad"}
+              description={
+                "Cursus Zelf geschiedenis schrijven Gemeentearchief Zaanstad o.l.v. Mirjam Janssen"
+              }
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"2006"}
+              organisation={"GroenLinks Zaanstad"}
+              description={`Vrijwilligerswerk: in de periode rondom de gemeenteraadsverkiezingen van 2006 heb ik voor GroenLinks Zaanstad in de ‘Werkgroep Leefbare Wijken’ gezeten. Doel van deze werkgroep was het contact met de burger te leggen om problemen in Zaanse wijken aan te kaarten bij de gemeenteraad`}
+            />
+          </div>
         </div>
         <div className="resume-bottom"></div>
 
@@ -1006,12 +1011,3 @@ export default class Resume extends Component {
     );
   }
 }
-
-// {
-//     jobdate: "09/2009-01/2010",
-//     organisation: "Zaanradio, Koog aan de Zaan",
-//     jobtitle: `Editor/Interviewer`,
-//     description: [
-//       "Editor/Interviewer for a program about local sports in 'the Zaanstreek', called 'Saensport Live'.",
-//     ],
-//   },

@@ -4,13 +4,28 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
 export default class Navbar extends Component {
-  state = { dropDownOpen: false, sportArticlesOpen: false, redirect: false };
+  state = {
+    dropDownOpen: false,
+    sportArticlesOpen: false,
+    redirect: false,
+    dutch: false,
+    english: true,
+  };
 
   expandDropDown = () => {
     this.setState({ dropDownOpen: !this.state.dropDownOpen });
   };
   expandSportArticlesDiv = () => {
     this.setState({ sportArticlesOpen: !this.state.sportArticlesOpen });
+  };
+  switchToDutch = () => {
+    this.setState({ dutch: true, english: false });
+    localStorage.setItem("dutch", false);
+    console.log("switchssitescuh");
+  };
+  switchToEnglish = () => {
+    this.setState({ dutch: false, english: true });
+    console.log("switchssitescuh");
   };
 
   render() {
@@ -92,6 +107,8 @@ export default class Navbar extends Component {
           <li>
             <a href="/contact"> Contact</a>
           </li>
+          <li onClick={this.switchToDutch}>Dutch</li>
+          <li onClick={this.switchToEnglish}>English</li>
 
           {/* <li>
             <a href="about.asp">Blog</a>

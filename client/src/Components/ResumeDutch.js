@@ -18,8 +18,9 @@ import telephone from "../pictures/telephone.jpg";
 import tennis from "../pictures/tennis.jpg";
 import travelling from "../pictures/travelling.png";
 import writing from "../pictures/writing.png";
+import { connect } from "react-redux";
 
-export default class Resume extends Component {
+class ResumeDutch extends Component {
   state = {
     moreExperienceOpen: false,
     studyType: false,
@@ -330,6 +331,11 @@ export default class Resume extends Component {
       },
     ],
   };
+
+  componentDidMount() {
+    this.setState({ english: this.props.languages.english });
+    this.setState({ dutch: this.props.languages.dutch });
+  }
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
   };
@@ -484,17 +490,7 @@ export default class Resume extends Component {
             : "resume-wrapper-small"
         }
       >
-        <div className="resume-top">
-          <div className="resume-english">
-            {/* Hier gebleven */}
-            {/* Hier gebleven */}
-            {/* Hier gebleven */}
-            <a href="http://localhost:3000/resume">Engels</a>
-          </div>
-          <div className="resume-dutch">
-            <a href="http://localhost:3000/resume/dutch">Nederlands</a>
-          </div>
-        </div>
+        <div className="resume-top"></div>
         {/* left side */}
         <div className="resume-left">
           <h1 className="resume-leftside-header">Contact</h1>
@@ -1006,6 +1002,12 @@ export default class Resume extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps, null)(ResumeDutch);
 
 // {
 //     jobdate: "09/2009-01/2010",

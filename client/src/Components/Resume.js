@@ -27,7 +27,7 @@ class Resume extends Component {
     studyType: false,
     languageCoursesOpen: false,
     english: this.props.languages.english,
-    dutch: false,
+    dutch: this.props.languages.dutch,
     contact: [
       {
         image: telephone,
@@ -503,12 +503,12 @@ class Resume extends Component {
           }
         >
           <div className="resume-top">
-            <div className="resume-english">
+            {/* <div className="resume-english">
               <a href="http://localhost:3000/resume">English</a>
             </div>
             <div className="resume-dutch">
               <a href="http://localhost:3000/resume/dutch">Dutch</a>
-            </div>
+            </div> */}
           </div>
           {/* left side */}
           <div className="resume-left">

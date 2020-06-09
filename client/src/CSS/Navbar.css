@@ -1,8 +1,42 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+
+.navbar-position {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.language-switch {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: red;
+    text-decoration: none;
+
+}
+
+.language-switch li {
+    list-style-type: none;
+    color: white;
+    font-size: 125%;
+}
+
+.language-switch li:hover {
+    color: blue;
+
+}
+
+
+
 .navbar li {
     list-style-type: none;
     padding-right: 5%;
-    /* height: 100%; */
+
 }
+
+
+
 
 .navbar ul {
     display: flex;
@@ -12,6 +46,7 @@
 
     color: white;
 }
+
 
 .navbar a {
     font-size: 175%;

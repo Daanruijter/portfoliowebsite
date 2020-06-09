@@ -13,8 +13,11 @@ import TennisNL from "./TennisNL";
 import Ajax from "./Ajax";
 import FCZSW from "./FCZSW";
 import Contact from "./Contact";
+import { connect } from "react-redux";
 
 function App() {
+  let test = localStorage.getItem("english");
+  console.log(test);
   return (
     <div className="App">
       <nav>
@@ -73,4 +76,9 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps)(App);

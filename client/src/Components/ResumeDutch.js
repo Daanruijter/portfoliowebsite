@@ -598,6 +598,18 @@ class ResumeDutch extends Component {
 
           <div className="resume-career-summary-wrapper">
             <ResumeJobinfoTemplate
+              jobdate={"4/2020-heden"}
+              organisation={"Mijzelf"}
+              jobtitle={
+                "Full Stack MERN web developer voor mijzelf, open voor nieuwe mogelijkheden. JavaScript | React.js | Vue.js | Node.js"
+              }
+              description={[
+                "Diverse projecten. Momenteel werk ik aan mijn eigen persoonlijke website in React.js. De vooruitgang is te zien op mijn ",
+                <a href="https://github.com/Daanruijter/">GitHub-pagina</a>,
+              ]}
+            />
+            <br />
+            <ResumeJobinfoTemplate
               jobdate={"12/2019-03/2020"}
               organisation={"Ubiqum Code Academy Amsterdam"}
               jobtitle={"Full Stack MERN web developer:"}

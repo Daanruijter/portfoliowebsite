@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "../CSS/About.css";
-
-export default class About extends Component {
+import { connect } from "react-redux";
+import AboutDutch from "./AboutDutch";
+class About extends Component {
   render() {
-    return (
+    let aboutEnglish = (
       <div className="about-wrapper">
         <div className="about-information">
           <p>
@@ -21,12 +22,10 @@ export default class About extends Component {
             {" "}
             The study was pretty theoretical and therefore I wanted to get more
             experience as a journalist. Among others on the marketing and
-            communication department of BaanStede, at Ajaxshowtime.com and{" "}
-            {/* <a href="#about-rodi-media"> */}
-            Rodi Media {/* </a>  */}I learned the finer points of the editor
-            profession. I worked for Rodi several years as an editor and text
-            writer and the job gave me the opportunity to do many rewarding
-            interviews.
+            communication department of BaanStede, at Ajaxshowtime.com and Rodi
+            Media. I learned the finer points of the editor profession. I worked
+            for Rodi several years as an editor and text writer and the job gave
+            me the opportunity to do many rewarding interviews.
           </p>
           <p>
             Unfortunately the write and editorial market is in decline. This
@@ -83,11 +82,11 @@ export default class About extends Component {
             Since then I started to follow national and international tennis.
             With the rise of Roger Federer at the end of the nineties my
             interest only got bigger. Unfortunately in 2013 Schalken got beaten
-            again at the quarter finals of Wimbledon, but now by an unleashed
-            Swiss maestro. After this match the probably best male tennis player
-            ever went on to win the tournament, his maiden Grand Slam. I had the
-            honour to see him in action at the Rotterdam ATP World Tournament
-            three times.
+            at the quarter finals of Wimbledon, not by a big serving Australian,
+            but by an unleashed Swiss maestro. After this match the probably
+            best male tennis player ever went on to win the tournament, his
+            maiden Grand Slam. I had the honour to see him in action at the
+            Rotterdam ATP World Tournament three times.
             <p>
               In 2004 I picked up a racket and discovered how nice it also is to
               play the game by myself. Ten years later, January 2014, I started
@@ -214,5 +213,27 @@ export default class About extends Component {
         </div>
       </div>
     );
+    let aboutDutch = <AboutDutch />;
+
+    if (
+      this.props.languages.english === "english" ||
+      this.props.languages.english === "nodutch"
+    ) {
+      return aboutEnglish;
+    }
+    if (
+      this.props.languages.dutch === "dutch" ||
+      this.props.languages.english === "noenglish"
+    ) {
+      return aboutDutch;
+    }
+    return <div></div>;
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+
+export default connect(mapStateToProps, null)(About);

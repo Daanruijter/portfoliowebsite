@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import "../CSS/Contact.css";
 import telephone from "../pictures/telephone.jpg";
 import email from "../pictures/email.png";
-import { connect } from "react-redux";
-import ContactDutch from "./ContactDutch";
 
-class Contact extends Component {
+export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -70,17 +68,17 @@ class Contact extends Component {
     });
   }
   render() {
-    let contactEnglish = (
+    return (
       <div className="contact-wrapper">
         <div className="contact-introduction"></div>
         <div className="contact" id="contact-id">
           <div className="contact-form-wrapper">
             <div className="contact-form-header">
-              Contact me using the form below
+              Neem contact op via het onderstaande formulier
             </div>
             <div className="contact-form">
               <form onSubmit={this.handleSubmit}>
-                Name:
+                Naam:
                 <label htmlFor="name">
                   <input
                     required
@@ -90,11 +88,11 @@ class Contact extends Component {
                     value={this.state.name}
                     onChange={(e) => this.handleChange(e)}
                     id="name"
-                    placeholder="name"
+                    placeholder="naam"
                   ></input>
                 </label>
                 <br />
-                Phone number:
+                Telefoonnummer:
                 <label htmlFor="phone">
                   <input
                     required
@@ -104,10 +102,10 @@ class Contact extends Component {
                     type="tel"
                     pattern="[0-9]{10,}"
                     id="hone"
-                    placeholder="phone number without spaces"
+                    placeholder="telefoonnummer zonder spaties"
                   ></input>
                 </label>
-                <br /> Email:
+                <br /> E-mail:
                 <label htmlFor="phone">
                   <input
                     required
@@ -117,11 +115,11 @@ class Contact extends Component {
                     type="email"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
                     id="email"
-                    placeholder="email"
+                    placeholder="e-mail"
                   ></input>
                 </label>
                 <br />
-                Country:
+                Land:
                 <label htmlFor="country">
                   <input
                     required
@@ -130,11 +128,11 @@ class Contact extends Component {
                     onChange={(e) => this.handleChange(e)}
                     type="country"
                     id="country"
-                    placeholder="country"
+                    placeholder="land"
                   ></input>
                 </label>
                 <br />
-                Company:
+                Organisatie:
                 <label htmlFor="company">
                   <input
                     required
@@ -143,11 +141,11 @@ class Contact extends Component {
                     onChange={(e) => this.handleChange(e)}
                     type="company"
                     id="company"
-                    placeholder="company"
+                    placeholder="organisatie"
                   ></input>
                 </label>
                 <br />
-                Message:
+                Bericht:
                 <label htmlFor="message">
                   <textarea
                     required
@@ -156,20 +154,22 @@ class Contact extends Component {
                     onChange={(e) => this.handleChange(e)}
                     type="message"
                     id="message"
-                    placeholder="message"
+                    placeholder="bericht"
                   ></textarea>
                 </label>
                 <br />
                 <input
                   className="contact-submit-button"
                   type="submit"
-                  value="Submit"
+                  value="Verzenden"
                 />
               </form>
             </div>
           </div>
           <div className="contact-direct-wrapper">
-            <div className="contact-direct-header">Contact me directly</div>
+            <div className="contact-direct-header">
+              Neem op directe wijze contact op
+            </div>
             <div className="contact-direct">
               <div className="contact-direct-phone">
                 <div className="contact-direct-phone-width">
@@ -193,31 +193,5 @@ class Contact extends Component {
         <div className="contact-background-below"></div>
       </div>
     );
-
-    let contactDutch = (
-      <div>
-        <ContactDutch />
-      </div>
-    );
-    if (
-      this.props.languages.english === "english" ||
-      this.props.languages.english === "nodutch"
-    ) {
-      return contactEnglish;
-    }
-    if (
-      this.props.languages.dutch === "dutch" ||
-      this.props.languages.english === "noenglish"
-    ) {
-      return contactDutch;
-    }
-    return <div></div>;
   }
 }
-const mapStateToProps = (state) => {
-  return {
-    languages: state.language,
-  };
-};
-
-export default connect(mapStateToProps, null)(Contact);

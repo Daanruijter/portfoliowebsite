@@ -209,7 +209,7 @@ class Navbar extends Component {
                             <div className="local-articles-header">
                               Lokale artikelen
                             </div>
-                            <a href="./localarticles">Rodi Media</a>
+                            <a href="./lokaleartikelen">Rodi Media</a>
                           </div>
                         </div>
                         <br />{" "}
@@ -222,23 +222,23 @@ class Navbar extends Component {
                           </div>
                           <div>
                             {" "}
-                            <a href="./internationaltennis">
+                            <a href="./internationaletennis">
                               Internationale tennis
                             </a>
                           </div>
                           <div>
                             {" "}
-                            <a href="./localtennis">
+                            <a href="./lokaletennis">
                               Lokale tennis - tennisvereniging De Gouw
                             </a>
                           </div>
                           <div>
                             {" "}
-                            <a href="./ajax">Voetbal - Ajax</a>
+                            <a href="./ajaxnl">Voetbal - Ajax</a>
                           </div>
                           <div>
                             {" "}
-                            <a href="./localsoccer">
+                            <a href="./lokalevoetbal">
                               Lokale zaalvoetbal - FCZSW
                             </a>
                           </div>

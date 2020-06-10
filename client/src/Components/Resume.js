@@ -616,6 +616,18 @@ class Resume extends Component {
 
           <div className="resume-career-summary-wrapper">
             <ResumeJobinfoTemplate
+              jobdate={"4/2020-current"}
+              organisation={"Myself"}
+              jobtitle={
+                "Full Stack MERN web developer at Myself, open to new opportunities. JavaScript | React.js | Vue.js | Node.js"
+              }
+              description={[
+                "Various projects. Currently I'm working on my personal website in React.js. The progress is visible on my ",
+                <a href="https://github.com/Daanruijter/">GitHub page</a>,
+              ]}
+            />
+            <br />
+            <ResumeJobinfoTemplate
               jobdate={"12/2019-03/2020"}
               organisation={"Ubiqum Code Academy Amsterdam"}
               jobtitle={"Full Stack MERN web developer:"}
@@ -625,7 +637,7 @@ class Resume extends Component {
                 "I did projects on the base of learning-by-doing.",
               ]}
             />
-            <br />
+            <br />{" "}
             <div className="resume-coding-projects">CODING PROJECTS </div>
             <br />
             <br />

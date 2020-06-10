@@ -2,16 +2,18 @@ import React, { Component } from "react";
 import ITProjects from "./ITProjects";
 import daanfoto from "../pictures/daanfoto.jpeg";
 import "../CSS/Home.css";
+import { connect } from "react-redux";
+import HomeDutch from "./HomeDutch";
 
-export default class Home extends Component {
+class Home extends Component {
   state = { myDivToFocus: React.createRef() };
 
   render() {
-    return (
+    let homeEnglish = (
       <div className="home-wrapper">
         <div className="home-introduction">
           <div className="welcome">
-            Welcome to the website of Full Stack Webdeveloper Daan Ruijter
+            Welcome to the website of Full Stack Web Developer Daan Ruijter
           </div>
           <div className="home-introduction-content">
             <img alt="daan" src={daanfoto} />
@@ -36,5 +38,29 @@ export default class Home extends Component {
         </div>
       </div>
     );
+    let homeDutch = (
+      <div>
+        <HomeDutch />
+      </div>
+    );
+    if (
+      this.props.languages.english === "english" ||
+      this.props.languages.english === "nodutch"
+    ) {
+      return homeEnglish;
+    }
+    if (
+      this.props.languages.dutch === "dutch" ||
+      this.props.languages.english === "noenglish"
+    ) {
+      return homeDutch;
+    }
+    return <div></div>;
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps, null)(Home);

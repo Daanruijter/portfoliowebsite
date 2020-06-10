@@ -164,7 +164,7 @@ export default class TennisNL extends Component {
           />
         </div>
         <div className="DeGouw-other-articles-header">
-          Andere artikele over Tennisvereniging De Gouw
+          Andere artikelen over Tennisvereniging De Gouw
         </div>
         <div className="DeGouw-tennisverenigingDeGouwArticlesOtherDisplay">
           {tennisverenigingDeGouwArticlesOtherDisplay}

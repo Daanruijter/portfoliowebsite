@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "../CSS/Ajax.css";
+import { connect } from "react-redux";
+import AjaxDutch from "./AjaxDutch";
 
-export default class Ajax extends Component {
+class Ajax extends Component {
   state = {
     AjaxArticles: [
       {
@@ -62,7 +64,7 @@ export default class Ajax extends Component {
       );
     });
 
-    return (
+    let ajaxEnglish = (
       <div className="Ajax-wrapper">
         <div className="Ajax-information">
           For several months I worked as an editor at the editorial office of
@@ -78,5 +80,29 @@ export default class Ajax extends Component {
         <div className="Ajax-articles"> {AjaxArticlesDisplay} </div>
       </div>
     );
+    let ajaxDutch = (
+      <div>
+        <AjaxDutch />
+      </div>
+    );
+    if (
+      this.props.languages.english === "english" ||
+      this.props.languages.english === "nodutch"
+    ) {
+      return ajaxEnglish;
+    }
+    if (
+      this.props.languages.dutch === "dutch" ||
+      this.props.languages.english === "noenglish"
+    ) {
+      return ajaxDutch;
+    }
+    return <div></div>;
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps, null)(Ajax);

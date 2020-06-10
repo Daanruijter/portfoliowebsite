@@ -26,8 +26,6 @@ class Resume extends Component {
     moreExperienceOpen: false,
     studyType: false,
     languageCoursesOpen: false,
-    // english: this.props.languages.english,
-    // dutch: this.props.languages.dutch,
     contact: [
       {
         image: telephone,
@@ -339,10 +337,6 @@ class Resume extends Component {
     ],
   };
 
-  // componentDidMount() {
-  //   this.setState({ english: this.props.languages.english });
-  //   this.setState({ dutch: this.props.languages.dutch });
-  // }
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
   };
@@ -363,7 +357,6 @@ class Resume extends Component {
   };
 
   render() {
-    console.log(this.props.languages);
     let contact = this.state.contact.map((contactItem) => {
       return (
         <div key={contactItem.text} className="resume-contact-flexer">
@@ -503,14 +496,7 @@ class Resume extends Component {
             : "resume-wrapper-small"
         }
       >
-        <div className="resume-top">
-          {/* <div className="resume-english">
-        <a href="http://localhost:3000/resume">English</a>
-      </div>
-      <div className="resume-dutch">
-        <a href="http://localhost:3000/resume/dutch">Dutch</a>
-      </div> */}
-        </div>
+        <div className="resume-top"></div>
         {/* left side */}
         <div className="resume-left">
           <h1 className="resume-leftside-header">Contact</h1>
@@ -982,7 +968,6 @@ class Resume extends Component {
               <br />
               CLICK TO SEE MY LANGUAGE COURSES <br /> <br />
             </div>
-            {/* HIER GEBLEVEN */}
             {this.state.languageCoursesOpen ? (
               <div className="resume-language-courses-list">
                 {languageCourses}
@@ -1050,15 +1035,6 @@ class Resume extends Component {
       return resumeDutch;
     }
     return <div></div>;
-
-    // if (this.props.languages.english === "" && this.state.dutch === "") {
-    //   if (localStorage.getItem("english") === "english") {
-    //     return englishNavbar;
-    //   }
-    //   if (localStorage.getItem("dutch") === "dutch") {
-    //     return dutchNavbar;
-    //   }
-    // }
   }
 }
 const mapStateToProps = (state) => {
@@ -1067,19 +1043,3 @@ const mapStateToProps = (state) => {
   };
 };
 export default connect(mapStateToProps, null)(Resume);
-
-// if (this.state.english === "english") {
-//   return englishNavbar;
-// }
-// if (this.state.dutch === "dutch") {
-//   return dutchNavbar;
-// }
-
-// if (this.state.english === "" && this.state.dutch === "") {
-//   if (localStorage.getItem("english") === "english") {
-//     return englishNavbar;
-//   }
-//   if (localStorage.getItem("dutch") === "dutch") {
-//     return dutchNavbar;
-//   }
-// }

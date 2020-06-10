@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "../CSS/TennisNL.css";
+import { connect } from "react-redux";
+import TennisNLDutch from "./TennisNLDutch";
 
-export default class TennisNL extends Component {
+class TennisNL extends Component {
   state = {
     tennisNLArticles: [
       {
@@ -246,3 +248,9 @@ export default class TennisNL extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps, null)(TennisNL);

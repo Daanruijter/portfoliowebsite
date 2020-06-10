@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "../CSS/DeGouw.css";
+import { connect } from "react-redux";
+import DeGouwDutch from "./DeGouwDutch";
 
-export default class TennisNL extends Component {
+class DeGouw extends Component {
   state = {
     tennisverenigingDeGouwArticlesChampionship: [
       {
@@ -127,7 +129,7 @@ export default class TennisNL extends Component {
         );
       }
     );
-    return (
+    let deGouwEnglish = (
       <div className="DeGouw-wrapper">
         <div className="DeGouw-information">
           Since September 2014 I'm a member of Tennis Club De Gouw in Zaandam, a
@@ -177,5 +179,29 @@ export default class TennisNL extends Component {
         </div>
       </div>
     );
+    let deGouwDutch = (
+      <div>
+        <DeGouwDutch />
+      </div>
+    );
+    if (
+      this.props.languages.english === "english" ||
+      this.props.languages.english === "nodutch"
+    ) {
+      return deGouwEnglish;
+    }
+    if (
+      this.props.languages.dutch === "dutch" ||
+      this.props.languages.english === "noenglish"
+    ) {
+      return deGouwDutch;
+    }
+    return <div></div>;
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps, null)(DeGouw);

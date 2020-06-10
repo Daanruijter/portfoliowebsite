@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "../CSS/FCZSW.css";
+import { connect } from "react-redux";
+import FCZSWDutch from "./FCZSWDutch";
 
-export default class FCZSW extends Component {
+class FCZSW extends Component {
   componentDidMount() {
     this.setMagazineCounter();
   }
@@ -127,3 +129,9 @@ export default class FCZSW extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps, null)(FCZSW);

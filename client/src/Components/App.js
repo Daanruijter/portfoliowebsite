@@ -16,8 +16,6 @@ import Contact from "./Contact";
 import { connect } from "react-redux";
 
 function App() {
-  let test = localStorage.getItem("english");
-  console.log(test);
   return (
     <div className="App">
       <nav>
@@ -43,11 +41,11 @@ function App() {
               path="/contact"
               render={(props) => <Contact {...props} />}
             />
-            <Route
+            {/* <Route
               exact
               path="/resume/dutch"
               render={(props) => <ResumeDutch {...props} />}
-            />
+            /> */}
             <Route
               exact
               path="/localarticles"

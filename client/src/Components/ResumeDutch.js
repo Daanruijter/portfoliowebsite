@@ -356,9 +356,9 @@ class ResumeDutch extends Component {
   };
 
   render() {
-    let contact = this.state.contact.map((contactItem) => {
+    let contact = this.state.contact.map((contactItem, index) => {
       return (
-        <div className="resume-contact-flexer">
+        <div key={index} className="resume-contact-flexer">
           <div className="resume-contact-icon">
             <img src={contactItem.image} alt={contactItem.text} />
           </div>
@@ -369,9 +369,9 @@ class ResumeDutch extends Component {
       );
     });
 
-    let technologies = this.state.techSkils.map((technologyItem) => {
+    let technologies = this.state.techSkils.map((technologyItem, index) => {
       return (
-        <div className="resume-tech-flexer">
+        <div key={index} className="resume-tech-flexer">
           <div className="resume-tech">{technologyItem.technologyLeft}</div>
           <div>{technologyItem.technologyRight}</div>
         </div>
@@ -379,9 +379,9 @@ class ResumeDutch extends Component {
     });
 
     let hobbysAndInterests = this.state.hobbysAndInterests.map(
-      (hobbyAndInterestItem) => {
+      (hobbyAndInterestItem, index) => {
         return (
-          <div className="resume-hobbies-interests-flexer">
+          <div key={index} className="resume-hobbies-interests-flexer">
             <div className="resume-hobbies-interests-icon">
               <img
                 src={hobbyAndInterestItem.image}
@@ -397,7 +397,7 @@ class ResumeDutch extends Component {
     let workExperiencePart1 = this.state.workExperience.map(
       (workExperienceItem, index) => {
         return index < 4 ? (
-          <div>
+          <div key={index}>
             {" "}
             <ResumeJobinfoTemplate
               jobdate={workExperienceItem.jobdate}
@@ -413,7 +413,7 @@ class ResumeDutch extends Component {
     let workExperiencePart2 = this.state.workExperience.map(
       (workExperienceItem, index) => {
         return index > 3 ? (
-          <div>
+          <div key={index}>
             {" "}
             <ResumeJobinfoTemplate
               jobdate={workExperienceItem.jobdate}
@@ -427,9 +427,9 @@ class ResumeDutch extends Component {
       }
     );
 
-    let languageCourses = this.state.languageCourses.map((language) => {
+    let languageCourses = this.state.languageCourses.map((language, index) => {
       return (
-        <div>
+        <div key={index}>
           {" "}
           <ResumeJobinfoTemplate
             jobdate={language.jobdate}
@@ -439,32 +439,36 @@ class ResumeDutch extends Component {
       );
     });
 
-    let languageLevelFlag = this.state.languageLevel.map((languageItem) => {
-      return (
-        <div className={languageItem.languageFlagClass}>
-          <img
-            src={languageItem.languageFlag}
-            alt={languageItem.languageFlagClass}
-          />
-        </div>
-      );
-    });
+    let languageLevelFlag = this.state.languageLevel.map(
+      (languageItem, index) => {
+        return (
+          <div key={index} className={languageItem.languageFlagClass}>
+            <img
+              src={languageItem.languageFlag}
+              alt={languageItem.languageFlagClass}
+            />
+          </div>
+        );
+      }
+    );
 
-    let languageLevelStar = this.state.languageLevel.map((languageItem) => {
-      return (
-        <div className={languageItem.languageStarClass}>
-          <img
-            src={languageItem.languageStar}
-            alt={languageItem.languageStarClass}
-          />
-        </div>
-      );
-    });
+    let languageLevelStar = this.state.languageLevel.map(
+      (languageItem, index) => {
+        return (
+          <div key={index} className={languageItem.languageStarClass}>
+            <img
+              src={languageItem.languageStar}
+              alt={languageItem.languageStarClass}
+            />
+          </div>
+        );
+      }
+    );
 
     let otherActivities = this.state.otherActivities.map(
-      (otherActivitiesItem) => {
+      (otherActivitiesItem, index) => {
         return (
-          <div>
+          <div key={index}>
             {" "}
             <ResumeJobinfoTemplate
               jobdate={otherActivitiesItem.jobdate}

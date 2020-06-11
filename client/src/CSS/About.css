@@ -1,120 +1,100 @@
-.about-wrapper {
+@media only screen and (min-width: 400px) {
+  .about-wrapper {
     height: auto;
     background-color: white;
     font-size: 125%;
+  }
 
-}
-
-.about-information {
-
+  .about-information {
     padding: 1%;
     background-color: teal;
-}
+  }
 
-.about-rodi-media {
-
+  .about-rodi-media {
     padding: 1%;
-}
+  }
 
-.about-link {
+  .about-link {
     background-color: teal;
     padding: 1%;
-}
+  }
 
-.about-link a {
+  .about-link a {
     text-decoration: none;
     color: black;
     font-size: 125%;
-}
+  }
 
-.about-tennis-information {
+  .about-tennis-information {
     background-color: white;
 
     padding: 1%;
+  }
 
-
-
-
-}
-
-.about-tennis-Daan-picture img {
+  .about-tennis-Daan-picture img {
     width: 18%;
 
     float: left;
     position: relative;
     margin-right: 2%;
+  }
 
-}
-
-
-
-.about-tennis-text {
-
+  .about-tennis-text {
     display: block;
-}
+  }
 
-.about-soccer-flexer img {
+  .about-soccer-flexer img {
     width: 40%;
-}
+  }
 
-
-
-.about-soccer {
+  .about-soccer {
     padding: 1%;
-}
+  }
 
-.about-soccer-flexer {
+  .about-soccer-flexer {
     display: flex;
     margin-bottom: 2%;
-}
+  }
 
-.about-soccer-picture {
+  .about-soccer-picture {
     width: 20%;
-}
+  }
 
-
-.about-book {
+  .about-book {
     padding: 2%;
     padding-top: 0%;
-}
+  }
 
-.about-book a {
+  .about-book a {
     text-decoration: none;
-}
+  }
 
-.about-book-wrapper {
+  .about-book-wrapper {
     padding: 1%;
-}
+  }
 
-
-.about-book-flexer {
+  .about-book-flexer {
     display: flex;
+  }
 
-
-
-}
-
-.about-book-cover-and-bookpresentation {
+  .about-book-cover-and-bookpresentation {
     width: 150%;
 
     padding: 5%;
     padding-top: 0%;
     padding-left: 1%;
-}
+  }
 
-.about-book-front img {
+  .about-book-front img {
     width: 100%;
     height: 100%;
 
     border-style: solid;
     border-width: 1px;
     border-color: blue;
-}
+  }
 
-
-
-
-.about-book-flip-box {
+  .about-book-flip-box {
     background-color: transparent;
     width: 100%;
     height: 450px;
@@ -122,25 +102,23 @@
     perspective: 1000px;
     /* grid-column-start: 1;
     grid-column-end: 3; */
-}
+  }
 
-
-
-.about-book-flip-box-inner {
+  .about-book-flip-box-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-}
+  }
 
-.about-book-flip-box:hover .about-book-flip-box-inner {
+  .about-book-flip-box:hover .about-book-flip-box-inner {
     transform: rotateY(180deg);
-}
+  }
 
-.about-book-flip-box-front,
-.about-book-flip-box-back {
+  .about-book-flip-box-front,
+  .about-book-flip-box-back {
     position: absolute;
     padding: 2%;
     width: 100%;
@@ -148,35 +126,30 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     text-align: left;
-}
+  }
 
-
-
-.about-book-flip-box-front {
-
+  .about-book-flip-box-front {
     color: black;
-}
+  }
 
-.about-book-flip-box-back {
-
+  .about-book-flip-box-back {
     color: white;
     transform: rotateY(180deg);
-}
+  }
 
-.about-book-more-info {
-
+  .about-book-more-info {
     /* grid-column-start: 3;
     grid-column-end: 4; */
     color: maroon;
     padding: 5%;
     margin-left: 3%;
     margin-top: 2%;
-    background-color: #FFD9B2;
+    background-color: #ffd9b2;
     border-radius: 10%;
     font-size: 90%;
+  }
 
-}
-
-.about-book-more-info a {
+  .about-book-more-info a {
     text-decoration: none;
+  }
 }

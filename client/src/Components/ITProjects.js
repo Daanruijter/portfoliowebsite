@@ -67,18 +67,18 @@ export default class ITProjects extends Component {
             <b>{project.title}</b>
           </div>
           <div className="projects flip-box-front" key={project.id}>
-            <a href={project.url}>
-              <img alt="projectimage" src={project.image} />
-            </a>
+            {/* <a href={project.url}> */}
+            <img alt="projectimage" src={project.image} />
+            {/* </a> */}
           </div>
-          <a href={project.url}>
-            <div className="flip-box-back">
-              {" "}
-              {project.description}
-              <p className="tech-used">Tech used:</p>
-              {project.tech}
-            </div>
-          </a>
+          {/* <a href={project.url}> */}
+          <div className="flip-box-back">
+            {" "}
+            {project.description}
+            <p className="tech-used">Tech used:</p>
+            {project.tech}
+          </div>
+          {/* </a> */}
         </div>
       </div>
     ));

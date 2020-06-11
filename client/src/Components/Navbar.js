@@ -57,118 +57,118 @@ class Navbar extends Component {
   render() {
     console.log(this.state.english);
     let englishNavbar = (
-      <div>
-        {" "}
-        <div className="wrapper">
-          {/* {this.state.english ? ( */}
-          <div>
-            {" "}
-            <div className="navbar-position">
-              <div className="navbar">
-                <ul>
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>
-                    <ul>
-                      <li>
-                        <div className="about-grid">
-                          <div className="about-position">
-                            <a href="/about">About</a>
-                          </div>
-                          {this.state.dropDownOpen ? (
-                            <div
-                              onClick={this.expandDropDown}
-                              className="arrow-position"
-                            >
-                              <ExpandMoreIcon />
-                            </div>
-                          ) : (
-                            <div
-                              onClick={this.expandDropDown}
-                              className="arrow-position"
-                            >
-                              <ExpandLessIcon />
-                            </div>
-                          )}
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="dropdown">
-                      {this.state.dropDownOpen ? (
-                        <div className="dropdown-content">
-                          <div className="local-articles-wrapper">
-                            <div className="local-articles">
-                              <div className="local-articles-header">
-                                Local Articles
-                              </div>
-                              <a href="./localarticles">Rodi Media</a>
-                            </div>
-                          </div>
-                          <br />{" "}
-                          <div
-                            className="sport-articles-wrapper"
-                            onClick={this.expandSportArticlesDiv}
-                          >
-                            <div className="sport-articles-header">
-                              Sport Articles
-                            </div>
-                            <div>
-                              {" "}
-                              <a href="./internationaltennis">
-                                International tennis
-                              </a>
-                            </div>
-                            <div>
-                              {" "}
-                              <a href="./localtennis">
-                                Local tennis - tennis club De Gouw
-                              </a>
-                            </div>
-                            <div>
-                              {" "}
-                              <a href="./ajax">Soccer - Ajax</a>
-                            </div>
-                            <div>
-                              {" "}
-                              <a href="./localsoccer">Local futsal - FCZSW</a>
-                            </div>
-                            <br />
-                          </div>
-                        </div>
-                      ) : null}
-                    </div>
-                  </li>
-                  <li>
-                    <a href="/resume">Resume</a>
-                  </li>
-                  <li>
-                    <a href="/contact"> Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="language-switch">
-            {" "}
-            <div>
+      <div className="wrapper">
+        {/* {this.state.english ? ( */}
+        <div>
+          {" "}
+          <div className="navbar-position">
+            <div className="navbar">
               <ul>
-                <li onClick={this.switchToDutch}>
-                  <img
-                    alt="dutch flag"
-                    src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
-                  ></img>
-                  Dutch
+                <li>
+                  <a href="/">Home</a>
                 </li>
-                <li onClick={this.switchToEnglish}>
-                  <img
-                    alt="british flag"
-                    src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
-                  ></img>
-                  English
+                <li>
+                  <ul>
+                    <li>
+                      <div className="about-grid">
+                        <div className="about-position">
+                          <a href="/about">About</a>
+                        </div>
+                        {this.state.dropDownOpen ? (
+                          <div
+                            onClick={this.expandDropDown}
+                            className="arrow-position"
+                          >
+                            <ExpandMoreIcon />
+                          </div>
+                        ) : (
+                          <div
+                            onClick={this.expandDropDown}
+                            className="arrow-position"
+                          >
+                            <ExpandLessIcon />
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  </ul>
+                  <div className="dropdown">
+                    {this.state.dropDownOpen ? (
+                      <div className="dropdown-content">
+                        <div className="local-articles-wrapper">
+                          <div className="local-articles">
+                            <div className="local-articles-header">
+                              Local Articles
+                            </div>
+                            <a href="./localarticles">Rodi Media</a>
+                          </div>
+                        </div>
+                        <br />{" "}
+                        <div
+                          className="sport-articles-wrapper"
+                          onClick={this.expandSportArticlesDiv}
+                        >
+                          <div className="sport-articles-header">
+                            Sport Articles
+                          </div>
+                          <div>
+                            {" "}
+                            <a href="./internationaltennis">
+                              International tennis
+                            </a>
+                          </div>
+                          <div>
+                            {" "}
+                            <a href="./localtennis">
+                              Local tennis - tennis club De Gouw
+                            </a>
+                          </div>
+                          <div>
+                            {" "}
+                            <a href="./ajax">Soccer - Ajax</a>
+                          </div>
+                          <div>
+                            {" "}
+                            <a href="./localsoccer">Local futsal - FCZSW</a>
+                          </div>
+                          <br />
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
+                </li>
+                <li>
+                  <a href="/resume">Resume</a>
+                </li>
+                <li>
+                  <a className="contact" href="/contact">
+                    {" "}
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+        <div className="language-switch">
+          {" "}
+          <div>
+            <ul>
+              <li onClick={this.switchToDutch}>
+                <img
+                  alt="dutch flag"
+                  src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                ></img>
+                Dutch
+              </li>
+              <li onClick={this.switchToEnglish}>
+                <img
+                  alt="british flag"
+                  src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                ></img>
+                English
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -259,7 +259,10 @@ class Navbar extends Component {
                   <a href="/resume">CV</a>
                 </li>
                 <li>
-                  <a href="/contact"> Contact</a>
+                  <a className="contact" href="/contact">
+                    {" "}
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "../CSS//LocalArticles.css";
+import LocalArticles from "./LocalArticles";
+import { connect } from "react-redux";
 
-export default class LocalArticles extends Component {
+class LocalArticlesDutch extends Component {
   state = {
     localArticles: [
       {
@@ -579,7 +581,8 @@ export default class LocalArticles extends Component {
       );
     }
 
-    return (
+    // return (
+    let localArticlesDutch = (
       <div className="localArticles-wrapper">
         <div className="localArticles-searchbar">
           Zoek een artikel
@@ -609,5 +612,29 @@ export default class LocalArticles extends Component {
         <div className="localArticles-flexer">{localArticlesDisplay}</div>
       </div>
     );
+    let localArticlesEnglish = (
+      <div>
+        <LocalArticles />
+      </div>
+    );
+    if (
+      this.props.languages.english === "english" ||
+      this.props.languages.english === "nodutch"
+    ) {
+      return localArticlesEnglish;
+    }
+    if (
+      this.props.languages.dutch === "dutch" ||
+      this.props.languages.english === "noenglish"
+    ) {
+      return localArticlesDutch;
+    }
+    return <div></div>;
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    languages: state.language,
+  };
+};
+export default connect(mapStateToProps, null)(LocalArticlesDutch);

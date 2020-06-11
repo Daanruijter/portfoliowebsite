@@ -219,7 +219,8 @@ class TennisNL extends Component {
         );
       }
     );
-    return (
+
+    let tennisNLEnglish = (
       <div className="tennisNL-wrapper">
         <div className="tennisNL-information">
           {/* <div className="tennisNL-Daan-picture">
@@ -246,8 +247,27 @@ class TennisNL extends Component {
         </div>
       </div>
     );
+    let tennisNLDutch = (
+      <div>
+        <TennisNLDutch />
+      </div>
+    );
+    if (
+      this.props.languages.english === "english" ||
+      this.props.languages.english === "nodutch"
+    ) {
+      return tennisNLEnglish;
+    }
+    if (
+      this.props.languages.dutch === "dutch" ||
+      this.props.languages.english === "noenglish"
+    ) {
+      return tennisNLDutch;
+    }
+    return <div></div>;
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     languages: state.language,

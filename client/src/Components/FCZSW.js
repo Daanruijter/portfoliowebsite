@@ -99,7 +99,7 @@ class FCZSW extends Component {
       );
     });
 
-    return (
+    let fczswEnglish = (
       <div className="FCZSW-wrapper">
         <div className="FCZSW-information">
           FCZSW is a big indoor soccer club in the Zaanstreek, a region to the
@@ -127,6 +127,24 @@ class FCZSW extends Component {
         <div className="FCZSW-articles">{FCZSWArticlesDisplay} </div>
       </div>
     );
+    let fczswDutch = (
+      <div>
+        <FCZSWDutch />
+      </div>
+    );
+    if (
+      this.props.languages.english === "english" ||
+      this.props.languages.english === "nodutch"
+    ) {
+      return fczswEnglish;
+    }
+    if (
+      this.props.languages.dutch === "dutch" ||
+      this.props.languages.english === "noenglish"
+    ) {
+      return fczswDutch;
+    }
+    return <div></div>;
   }
 }
 const mapStateToProps = (state) => {

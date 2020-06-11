@@ -15,6 +15,13 @@ class Navbar extends Component {
     english: "",
   };
 
+  componentWillMount() {
+    if (localStorage.getItem("english") === null) {
+      localStorage.setItem("dutch", "");
+      localStorage.setItem("english", "english");
+    }
+  }
+
   componentDidMount() {
     let dutch = localStorage.getItem("dutch");
     let english = localStorage.getItem("english");

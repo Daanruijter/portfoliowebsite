@@ -3,7 +3,7 @@ body {
   background-color: lightblue;
 }
 
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 421px) {
   .App {
     grid-template-rows: 80px 97.5%;
     grid-template-columns: 10% 80% 10%;
@@ -75,7 +75,7 @@ body {
   .main {
     grid-row-start: 2;
     grid-row-end: 3;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 3;
     height: 100%;
     width: 100%;

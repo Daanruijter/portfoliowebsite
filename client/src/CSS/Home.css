@@ -65,15 +65,17 @@
     }
 
     .home-introduction img {
-        width: 13%;
+        width: 40%;
         height: 15%;
         padding-right: 2%;
-        display: none;
+
+        position: relative;
+        float: left;
     }
 
     .welcome {
         font-weight: bold;
-        /* text-align: center; */
+
         font-size: 100%;
         margin-left: 5%;
     }
@@ -89,9 +91,10 @@
     }
 
     .home-introduction-content {
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
         padding: 2%;
+
     }
 
 }

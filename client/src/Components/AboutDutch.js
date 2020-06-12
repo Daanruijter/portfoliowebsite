@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../CSS/About.css";
+import { Fragment } from "react";
+import Media from "react-media";
 
 export default class About extends Component {
   render() {
@@ -55,8 +57,34 @@ export default class About extends Component {
         <div className="about-link">
           {" "}
           <a href="http://localhost:3000/localarticles">
-            Klik hierop om Rodi Media-artikelen te lezen
-            <br />
+            <Media
+              queries={{
+                small: "(max-width: 420px)",
+                medium: "(min-width: 421px) and (max-width: 1199px)",
+                large: "(min-width: 1200px)",
+              }}
+            >
+              {(matches) => (
+                <Fragment>
+                  {matches.small && (
+                    <div>
+                      Rodi Media-artikelen
+                      <br />
+                    </div>
+                  )}
+                  {matches.medium && (
+                    <div>
+                      Klik hierop om Rodi Media-artikelen te lezen <br />
+                    </div>
+                  )}
+                  {matches.large && (
+                    <div>
+                      Klik hierop om Rodi Media-artikelen te lezen <br />
+                    </div>
+                  )}
+                </Fragment>
+              )}
+            </Media>
           </a>
         </div>
         <div className="about-tennis-information">
@@ -105,15 +133,55 @@ export default class About extends Component {
         </div>{" "}
         <div className="about-link">
           {" "}
-          <a href="http://localhost:3000/internationaletennis">
-            Klik hierop om enkele internationale en nationale tennisartikelen te
-            lezen <br />
-          </a>
-          <a href="http://localhost:3000/lokaletennis">
-            Klik hierop om een aantal artikelen te lezen die ik voor mijn
-            tennisvereniging publiceerde
-            <br />
-          </a>
+          <Media
+            queries={{
+              small: "(max-width: 420px)",
+              medium: "(min-width: 421px) and (max-width: 1199px)",
+              large: "(min-width: 1200px)",
+            }}
+          >
+            {(matches) => (
+              <Fragment>
+                {matches.small && (
+                  <div>
+                    {" "}
+                    <a href="http://localhost:3000/internationaltennis">
+                      Internationale en nationale tennisartikelen
+                      <br />
+                    </a>
+                    <a href="http://localhost:3000/localtennis">
+                      Artikelen over mijn tennisvereniging <br />
+                    </a>
+                  </div>
+                )}
+                {matches.medium && (
+                  <div>
+                    {" "}
+                    <a href="http://localhost:3000/internationaltennis">
+                      Internationale en nationale tennisartikelen <br />
+                    </a>
+                    <a href="http://localhost:3000/localtennis">
+                      KLik hierop om tennisartikelen over mijn tennisvereniging
+                      te lezen <br />
+                    </a>
+                  </div>
+                )}
+                {matches.large && (
+                  <div>
+                    {" "}
+                    <a href="http://localhost:3000/internationaltennis">
+                      KLik hierop om internationale en nationale tennisartikelen
+                      te lezen <br />
+                    </a>
+                    <a href="http://localhost:3000/localtennis">
+                      KLik hierop om tennisartikelen over mijn tennisvereniging
+                      te lezen <br />
+                    </a>
+                  </div>
+                )}
+              </Fragment>
+            )}
+          </Media>
         </div>
         <div className="about-soccer">
           <h2>Voetbal</h2>
@@ -150,15 +218,49 @@ export default class About extends Component {
           </div>
         </div>
         <div className="about-link">
-          {" "}
-          <a href="http://localhost:3000/ajaxnl">
-            Klik hierop om enkele Ajax-artikelen te lezen.
-            <br />
-          </a>
-          <a href="http://localhost:3000/lokalevoetbal">
-            Klik hierop om enkele FCZSW-artikelen te lezen.
-            <br />
-          </a>
+          <Media
+            queries={{
+              small: "(max-width: 420px)",
+              medium: "(min-width: 421px) and (max-width: 1199px)",
+              large: "(min-width: 1200px)",
+            }}
+          >
+            {(matches) => (
+              <Fragment>
+                {matches.small && (
+                  <div>
+                    <a href="http://localhost:3000/ajax">
+                      Ajax-artikelen <br />
+                    </a>
+                    <a href="http://localhost:3000/localsoccer">
+                      FCZSW-artikelen <br />
+                    </a>
+                    <br />
+                  </div>
+                )}
+                {matches.medium && (
+                  <div>
+                    <a href="http://localhost:3000/ajax">
+                      KLik hierop om enkele Ajax-arikelen te lezen <br />
+                    </a>
+                    <a href="http://localhost:3000/localsoccer">
+                      Klik hierop om enkele FCZSW-artikelen te lezen <br />
+                    </a>
+                  </div>
+                )}
+                {matches.large && (
+                  <div>
+                    <a href="http://localhost:3000/ajax">
+                      KLik hierop om enkele Ajax-arikelen te lezen <br />
+                    </a>
+                    <a href="http://localhost:3000/localsoccer">
+                      Klik hierop om enkele FCZSW-artikelen te lezen <br />
+                    </a>
+                  </div>
+                )}
+              </Fragment>
+            )}
+          </Media>
         </div>
         {/*FLIPPING BOOK */}
         <div className="about-book-wrapper">

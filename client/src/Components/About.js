@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../CSS/About.css";
 import { connect } from "react-redux";
 import AboutDutch from "./AboutDutch";
+import { Fragment } from "react";
+import Media from "react-media";
 class About extends Component {
   render() {
     let aboutEnglish = (
@@ -55,7 +57,34 @@ class About extends Component {
         <div className="about-link">
           {" "}
           <a href="http://localhost:3000/localarticles">
-            Read some articles I wrote <br />
+            <Media
+              queries={{
+                small: "(max-width: 420px)",
+                medium: "(min-width: 421px) and (max-width: 1199px)",
+                large: "(min-width: 1200px)",
+              }}
+            >
+              {(matches) => (
+                <Fragment>
+                  {matches.small && (
+                    <div>
+                      Rodi Media articles
+                      <br />
+                    </div>
+                  )}
+                  {matches.medium && (
+                    <div>
+                      Read some articles I wrote <br />
+                    </div>
+                  )}
+                  {matches.large && (
+                    <div>
+                      Read some articles I wrote <br />
+                    </div>
+                  )}
+                </Fragment>
+              )}
+            </Media>
           </a>
         </div>
         <div className="about-tennis-information">
@@ -97,14 +126,55 @@ class About extends Component {
           </div>
         </div>{" "}
         <div className="about-link">
-          {" "}
-          <a href="http://localhost:3000/internationaltennis">
-            Read some international and national tennis articles I wrote <br />
-          </a>
-          <a href="http://localhost:3000/localtennis">
-            Read some tennis articles I wrote and edited for my tennis club{" "}
-            <br />
-          </a>
+          <Media
+            queries={{
+              small: "(max-width: 420px)",
+              medium: "(min-width: 421px) and (max-width: 1199px)",
+              large: "(min-width: 1200px)",
+            }}
+          >
+            {(matches) => (
+              <Fragment>
+                {matches.small && (
+                  <div>
+                    {" "}
+                    <a href="http://localhost:3000/internationaltennis">
+                      International and national tennis articles <br />
+                    </a>
+                    <a href="http://localhost:3000/localtennis">
+                      Articles about my tennis club <br />
+                    </a>
+                  </div>
+                )}
+                {matches.medium && (
+                  <div>
+                    {" "}
+                    <a href="http://localhost:3000/internationaltennis">
+                      Read some international and national tennis articles I
+                      wrote <br />
+                    </a>
+                    <a href="http://localhost:3000/localtennis">
+                      Read some tennis articles I wrote and edited for my tennis
+                      club <br />
+                    </a>
+                  </div>
+                )}
+                {matches.large && (
+                  <div>
+                    {" "}
+                    <a href="http://localhost:3000/internationaltennis">
+                      Read some international and national tennis articles I
+                      wrote <br />
+                    </a>
+                    <a href="http://localhost:3000/localtennis">
+                      Read some tennis articles I wrote and edited for my tennis
+                      club <br />
+                    </a>
+                  </div>
+                )}
+              </Fragment>
+            )}
+          </Media>
         </div>
         <div className="about-soccer">
           <h2>Soccer</h2>
@@ -141,12 +211,49 @@ class About extends Component {
         </div>
         <div className="about-link">
           {" "}
-          <a href="http://localhost:3000/ajax">
-            Read some Ajax articles I wrote <br />
-          </a>
-          <a href="http://localhost:3000/localsoccer">
-            Read some FCZSW articles I wrote <br />
-          </a>
+          <Media
+            queries={{
+              small: "(max-width: 420px)",
+              medium: "(min-width: 421px) and (max-width: 1199px)",
+              large: "(min-width: 1200px)",
+            }}
+          >
+            {(matches) => (
+              <Fragment>
+                {matches.small && (
+                  <div>
+                    <a href="http://localhost:3000/ajax">
+                      Ajax articles <br />
+                    </a>
+                    <a href="http://localhost:3000/localsoccer">
+                      FCZSW articles <br />
+                    </a>
+                    <br />
+                  </div>
+                )}
+                {matches.medium && (
+                  <div>
+                    <a href="http://localhost:3000/ajax">
+                      Read some Ajax articles I wrote <br />
+                    </a>
+                    <a href="http://localhost:3000/localsoccer">
+                      Read some FCZSW articles I wrote <br />
+                    </a>
+                  </div>
+                )}
+                {matches.large && (
+                  <div>
+                    <a href="http://localhost:3000/ajax">
+                      Read some Ajax articles I wrote <br />
+                    </a>
+                    <a href="http://localhost:3000/localsoccer">
+                      Read some FCZSW articles I wrote <br />
+                    </a>
+                  </div>
+                )}
+              </Fragment>
+            )}
+          </Media>
         </div>
         {/*FLIPPING BOOK */}
         <div className="about-book-wrapper">

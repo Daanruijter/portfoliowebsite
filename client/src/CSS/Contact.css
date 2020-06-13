@@ -166,20 +166,16 @@
 
 
 
-    /* .introduction-content {
+    .introduction-content {
 
-        padding: 2%;
-    } */
+        padding: 0px;
+    }
 
     .contact {
         background-color: black;
         color: white;
-        width: 100%;
 
-        /* padding: 0px; */
-
-        /* width: 100%; */
-
+        margin-left: 0px;
     }
 
 
@@ -188,36 +184,38 @@
 
     }
 
-    /* form {
-        width: 100%;
-        padding: 0px !important;
+    form {
+
+        margin-left: 5%;
         display: flex;
         flex-direction: column;
 
-    } */
+    }
 
-    /* form input {
-        width: 94%;
-    } */
+
+
+    form input {
+        width: 90%;
+
+    }
 
     form textarea {
-        /* width: 94%; */
+        width: 90%;
+
         height: 100px;
 
     }
 
-    /* .submit-button {
-        width: 94%;
-    } */
+    .contact-submit-button {
+
+        width: 92%;
+    }
 
 
     .contact-direct-wrapper {
-        /* padding: 2%; */
+
         background-color: white;
-        /* border-style: solid; */
-        /* border-width: 4px; */
-        /* border-color: black; */
-        /* width: 94%; */
+
         margin-top: 10%;
 
     }
@@ -226,14 +224,14 @@
     .contact-form-header {
         padding-top: 5%;
         padding-bottom: 5%;
-        /* font-size: 125%; */
+        margin-left: 5%;
         font-weight: bold;
     }
 
     .contact-direct-header {
         padding-top: 5%;
         padding-bottom: 5%;
-        /* font-size: 125%; */
+        margin-left: 5%;
         font-weight: bold;
 
         color: black;
@@ -243,7 +241,7 @@
         display: flex;
         justify-content: flex-start;
         color: black;
-
+        margin-left: 5%;
     }
 
     .contact-direct-phone-width {
@@ -253,7 +251,7 @@
 
     .contact-direct-phone-text {
         font-size: 100%;
-        /* padding: 2%; */
+        padding: 2%;
 
     }
 
@@ -267,6 +265,7 @@
         display: flex;
         justify-content: flex-start;
         color: black;
+        margin-left: 5%;
     }
 
     .contact-direct-email-width {
@@ -275,7 +274,7 @@
     }
 
     .contact-direct-email img {
-        width: 90%;
+        width: 100%;
     }
 
     .contact-direct-email div {
@@ -284,7 +283,7 @@
 
     .contact-direct-email-text {
         font-size: 100%;
-        /* padding: 2%; */
+        padding: 2%;
 
     }
 

@@ -5,6 +5,8 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import { sendLanguageEnglish } from "../store/actions/languageActions";
 import { sendLanguageDutch } from "../store/actions/languageActions";
 import { connect } from "react-redux";
+import { Fragment } from "react";
+import Media from "react-media";
 
 class Navbar extends Component {
   state = {
@@ -152,24 +154,78 @@ class Navbar extends Component {
         </div>
         <div className="language-switch">
           {" "}
-          <div>
-            <ul>
-              <li onClick={this.switchToDutch}>
-                <img
-                  alt="dutch flag"
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
-                ></img>
-                Dutch
-              </li>
-              <li onClick={this.switchToEnglish}>
-                <img
-                  alt="british flag"
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
-                ></img>
-                English
-              </li>
-            </ul>
-          </div>
+          <Media
+            queries={{
+              small: "(max-width: 420px)",
+              medium: "(min-width: 421px) and (max-width: 1199px)",
+              large: "(min-width: 1200px)",
+            }}
+          >
+            {(matches) => (
+              <Fragment>
+                {matches.small && (
+                  <div>
+                    <ul>
+                      <li onClick={this.switchToDutch}>
+                        <img
+                          alt="dutch flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                        ></img>
+                        NL
+                      </li>
+                      <li onClick={this.switchToEnglish}>
+                        <img
+                          alt="british flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                        ></img>
+                        ENG
+                      </li>
+                    </ul>
+                  </div>
+                )}
+                {matches.medium && (
+                  <div>
+                    <ul>
+                      <li onClick={this.switchToDutch}>
+                        <img
+                          alt="dutch flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                        ></img>
+                        Dutch
+                      </li>
+                      <li onClick={this.switchToEnglish}>
+                        <img
+                          alt="british flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                        ></img>
+                        English
+                      </li>
+                    </ul>
+                  </div>
+                )}
+                {matches.large && (
+                  <div>
+                    <ul>
+                      <li onClick={this.switchToDutch}>
+                        <img
+                          alt="dutch flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                        ></img>
+                        Dutch
+                      </li>
+                      <li onClick={this.switchToEnglish}>
+                        <img
+                          alt="british flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                        ></img>
+                        English
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </Fragment>
+            )}
+          </Media>
         </div>
       </div>
     );
@@ -236,7 +292,7 @@ class Navbar extends Component {
                           <div>
                             {" "}
                             <a href="./lokaletennis">
-                              Lokale tennis - tennisvereniging De Gouw
+                              Lokale tennis - TV De Gouw
                             </a>
                           </div>
                           <div>
@@ -270,24 +326,78 @@ class Navbar extends Component {
         </div>{" "}
         <div className="language-switch">
           {" "}
-          <div>
-            <ul>
-              <li onClick={this.switchToDutch}>
-                <img
-                  alt="dutch flag"
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
-                ></img>
-                Nederlands
-              </li>
-              <li onClick={this.switchToEnglish}>
-                <img
-                  alt="british flag"
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
-                ></img>
-                Engels
-              </li>
-            </ul>
-          </div>
+          <Media
+            queries={{
+              small: "(max-width: 420px)",
+              medium: "(min-width: 421px) and (max-width: 1199px)",
+              large: "(min-width: 1200px)",
+            }}
+          >
+            {(matches) => (
+              <Fragment>
+                {matches.small && (
+                  <div>
+                    <ul>
+                      <li onClick={this.switchToDutch}>
+                        <img
+                          alt="dutch flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                        ></img>
+                        NL
+                      </li>
+                      <li onClick={this.switchToEnglish}>
+                        <img
+                          alt="british flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                        ></img>
+                        ENG
+                      </li>
+                    </ul>
+                  </div>
+                )}
+                {matches.medium && (
+                  <div>
+                    <ul>
+                      <li onClick={this.switchToDutch}>
+                        <img
+                          alt="dutch flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                        ></img>
+                        Dutch
+                      </li>
+                      <li onClick={this.switchToEnglish}>
+                        <img
+                          alt="british flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                        ></img>
+                        English
+                      </li>
+                    </ul>
+                  </div>
+                )}
+                {matches.large && (
+                  <div>
+                    <ul>
+                      <li onClick={this.switchToDutch}>
+                        <img
+                          alt="dutch flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
+                        ></img>
+                        Dutch
+                      </li>
+                      <li onClick={this.switchToEnglish}>
+                        <img
+                          alt="british flag"
+                          src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
+                        ></img>
+                        English
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </Fragment>
+            )}
+          </Media>
         </div>
       </div>
     );

@@ -1,67 +1,135 @@
- .Ajax-wrapper {
-     display: grid;
-     grid-template-rows: 8% 55% 27% 10%;
-     grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+ @media only screen and (min-width: 421px) {
+     .Ajax-wrapper {
+         display: grid;
+         grid-template-rows: 8% 55% 27% 10%;
+         grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
 
+     }
+
+
+     .Ajax-information {
+
+         font-size: 125%;
+         grid-column-start: 1;
+         grid-column-end: 21;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         background-color: white;
+         padding: 2%;
+     }
+
+     .Ajax-ArenA img {
+         width: 100%;
+
+     }
+
+     .Ajax-ArenA {
+         grid-column-start: 1;
+         grid-column-end: 21;
+         grid-row-start: 2;
+         grid-row-end: 4;
+
+
+     }
+
+     .Ajax-article-cards {
+
+
+         width: 50%;
+         margin-left: 25%;
+         display: flex;
+         justify-content: center;
+         margin-top: 1%;
+
+
+
+
+     }
+
+     .Ajax-articles {
+         grid-column-start: 1;
+         grid-column-end: 21;
+         grid-row-start: 3;
+         grid-row-end: 4;
+
+         background-color: maroon;
+         opacity: 0.8;
+         margin-left: 2%;
+         margin-right: 2%;
+         overflow: hidden;
+
+
+     }
+
+     .Ajax-articles a {
+         color: white;
+         text-decoration: none;
+
+     }
  }
 
+ @media only screen and (max-width: 420px) {
+     .Ajax-wrapper {
+         display: grid;
+         grid-template-rows: 100px 54% 30%;
+         grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
 
- .Ajax-information {
-
-     font-size: 125%;
-     grid-column-start: 1;
-     grid-column-end: 21;
-     grid-row-start: 1;
-     grid-row-end: 2;
-     background-color: white;
-     padding: 2%;
- }
-
- .Ajax-ArenA img {
-     width: 100%;
-
- }
-
- .Ajax-ArenA {
-     grid-column-start: 1;
-     grid-column-end: 21;
-     grid-row-start: 2;
-     grid-row-end: 4;
+     }
 
 
- }
+     .Ajax-information {
 
- .Ajax-article-cards {
+         font-size: 100%;
+         grid-column-start: 1;
+         grid-column-end: 21;
+         grid-row-start: 1;
+         grid-row-end: 2;
+         background-color: white;
+         padding: 2%;
 
+     }
 
-     width: 50%;
-     margin-left: 25%;
-     display: flex;
-     justify-content: center;
-     margin-top: 1%;
+     .Ajax-articles {
+         grid-column-start: 1;
+         grid-column-end: 21;
+         grid-row-start: 2;
+         grid-row-end: 3;
+         background-color: maroon;
+         padding: 2%;
+         padding-top: 10%;
 
-
-
-
- }
-
- .Ajax-articles {
-     grid-column-start: 1;
-     grid-column-end: 21;
-     grid-row-start: 3;
-     grid-row-end: 4;
-
-     background-color: maroon;
-     opacity: 0.8;
-     margin-left: 2%;
-     margin-right: 2%;
-     overflow: hidden;
+         font-size: 70%;
 
 
- }
+     }
 
- .Ajax-articles a {
-     color: white;
-     text-decoration: none;
+     .Ajax-articles a {
+         color: white;
+         text-decoration: none;
+
+     }
+
+     .Ajax-ArenA img {
+         width: 100%;
+
+     }
+
+     .Ajax-ArenA {
+         grid-column-start: 1;
+         grid-column-end: 21;
+         grid-row-start: 3;
+         grid-row-end: 4;
+
+     }
+
+     .Ajax-article-cards {
+
+         margin-bottom: 8%;
+         display: flex;
+         justify-content: center;
+         margin-top: 1%;
+
+     }
+
 
  }

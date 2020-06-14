@@ -166,7 +166,7 @@ class DeGouwDutch extends Component {
           />
         </div>
         <div className="DeGouw-other-articles-header">
-          Andere artikelen over Tennisvereniging De Gouw
+          Andere artikelen over TV De Gouw
         </div>
         <div className="DeGouw-tennisverenigingDeGouwArticlesOtherDisplay">
           {tennisverenigingDeGouwArticlesOtherDisplay}

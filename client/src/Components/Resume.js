@@ -486,15 +486,16 @@ class Resume extends Component {
 
     let resumeEnglish = (
       <div
-        className={
-          this.state.moreExperienceOpen && this.state.languageCoursesOpen
-            ? "resume-wrapper-extralarge"
-            : this.state.moreExperienceOpen
-            ? "resume-wrapper-large"
-            : this.state.languageCoursesOpen
-            ? "resume-wrapper-large"
-            : "resume-wrapper-small"
-        }
+        className="resume-wrapper"
+        // {
+        //   this.state.moreExperienceOpen && this.state.languageCoursesOpen
+        //     ? "resume-wrapper-extralarge"
+        //     : this.state.moreExperienceOpen
+        //     ? "resume-wrapper-large"
+        //     : this.state.languageCoursesOpen
+        //     ? "resume-wrapper-large"
+        //     : "resume-wrapper-small"
+        // }
       >
         <div className="resume-top"></div>
         {/* left side */}
@@ -531,8 +532,7 @@ class Resume extends Component {
             <br />
             <strong>
               {" "}
-              console.log("componentdidmount"); Online self study JavaScript
-              through Code Academy and Scrimba:
+              Online self study JavaScript through Code Academy and Scrimba:
             </strong>
             <ul>
               <li>
@@ -896,59 +896,61 @@ class Resume extends Component {
             />
             <br />
             {/*FLIPPING BOOK */}
-            <div className="resume-book-wrapper">
-              <div className="resume-flip-box">
-                <div className="resume-flip-box-inner">
-                  <div className="resume-book-front resume-flip-box-front">
-                    <img
-                      alt="book-front"
-                      src={
-                        "http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
-                      }
-                    />
-                  </div>
+            <div className="resume-book-and-bookinfo-wrapper">
+              <div className="resume-book-wrapper">
+                <div className="resume-flip-box">
+                  <div className="resume-flip-box-inner">
+                    <div className="resume-book-front resume-flip-box-front">
+                      <img
+                        alt="book-front"
+                        src={
+                          "http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
+                        }
+                      />
+                    </div>
 
-                  <div className="resume-flip-box-back">
-                    {" "}
-                    <iframe
-                      title="book-presentation"
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/SkPVuBUbFeE"
-                      // frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      // allowfullscreen
-                    ></iframe>
+                    <div className="resume-flip-box-back">
+                      {" "}
+                      <iframe
+                        title="book-presentation"
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/SkPVuBUbFeE"
+                        // frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        // allowfullscreen
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="resume-book-more-info">
-                When I was a little child, my parents went to a small campsite
-                'Camping de Duinvoet', which means 'campsite on the foothills of
-                the dunes'. They liked the place, kept coming and got a good
-                friendship with the owners Hans and Ria. I've enjoyed a part of
-                my youth at this nice little campsite. Hans and Ria got older
-                and in 2011 they got the chance to sell Camping de Duinvoet.{" "}
-                <br />
-                <br />
-                They held a big goodbye party in a tent, on one of the fields.
-                Then Hans came to me and to my surprise asked me to write a
-                book. That was a honor and just done with my journalism study, I
-                definitly wanted to do that.
-                <br />
-                <br />I wrote about the big decisions Hans and Ria needed to
-                make to run Camping de Duinvoet, the anecdotes and good times of
-                the campsite and the goodbye. I published the book in 2014.
-                Hover over the book at the left side and click to see the book
-                presentation.
-                <br />
-                <br />
-                You can find pictures, stories and more information on the{" "}
-                <br />
-                <a href="https://www.facebook.com/Heeftunogplek">
-                  Facebook page of the book.
-                </a>
+                <div className="resume-book-more-info">
+                  When I was a little child, my parents went to a small campsite
+                  'Camping de Duinvoet', which means 'campsite on the foothills
+                  of the dunes'. They liked the place, kept coming and got a
+                  good friendship with the owners Hans and Ria. I've enjoyed a
+                  part of my youth at this nice little campsite. Hans and Ria
+                  got older and in 2011 they got the chance to sell Camping de
+                  Duinvoet. <br />
+                  <br />
+                  They held a big goodbye party in a tent, on one of the fields.
+                  Then Hans came to me and to my surprise asked me to write a
+                  book. That was a honor and just done with my journalism study,
+                  I definitly wanted to do that.
+                  <br />
+                  <br />I wrote about the big decisions Hans and Ria needed to
+                  make to run Camping de Duinvoet, the anecdotes and good times
+                  of the campsite and the goodbye. I published the book in 2014.
+                  Hover over the book at the left side and click to see the book
+                  presentation.
+                  <br />
+                  <br />
+                  You can find pictures, stories and more information on the{" "}
+                  <br />
+                  <a href="https://www.facebook.com/Heeftunogplek">
+                    Facebook page of the book.
+                  </a>
+                </div>
               </div>
             </div>
             <br />

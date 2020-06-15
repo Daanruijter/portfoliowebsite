@@ -1,4 +1,4 @@
-@media only screen and (min-width: 421px) {
+@media only screen and (min-width: 768px) {
 
     .tennisNL-wrapper {
         background: url("../pictures/grass.jpg");
@@ -133,7 +133,7 @@
     }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 767px) {
 
     .tennisNL-wrapper {
         width: 100%;

@@ -1,4 +1,4 @@
- @media only screen and (min-width: 421px) {
+ @media only screen and (min-width: 768px) {
      .Ajax-wrapper {
          display: grid;
          grid-template-rows: 8% 55% 27% 10%;
@@ -68,7 +68,7 @@
      }
  }
 
- @media only screen and (max-width: 420px) {
+ @media only screen and (max-width: 767px) {
      .Ajax-wrapper {
          display: grid;
          grid-template-rows: 100px 54% 30%;

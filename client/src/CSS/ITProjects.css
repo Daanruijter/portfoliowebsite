@@ -1,4 +1,4 @@
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 768px) {
 
     .projects-wrapper {
         display: flex;
@@ -99,7 +99,7 @@
 }
 
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 767px) {
 
     .projects-wrapper {
         display: flex;

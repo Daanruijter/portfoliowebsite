@@ -1,4 +1,4 @@
-@media only screen and (min-width: 421px) {
+@media only screen and (min-width: 768px) {
     .contact-introduction {
 
         background-color: white;
@@ -142,7 +142,7 @@
 }
 
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 767px) {
     .contact-introduction {
 
         background-color: white;

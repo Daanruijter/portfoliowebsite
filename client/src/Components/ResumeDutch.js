@@ -484,15 +484,17 @@ class ResumeDutch extends Component {
 
     return (
       <div
-        className={
-          this.state.moreExperienceOpen && this.state.languageCoursesOpen
-            ? "resume-wrapper-extralarge"
-            : this.state.moreExperienceOpen
-            ? "resume-wrapper-large"
-            : this.state.languageCoursesOpen
-            ? "resume-wrapper-large"
-            : "resume-wrapper-small"
-        }
+        className="resume-wrapper"
+
+        // {
+        //   this.state.moreExperienceOpen && this.state.languageCoursesOpen
+        //     ? "resume-wrapper-extralarge"
+        //     : this.state.moreExperienceOpen
+        //     ? "resume-wrapper-large"
+        //     : this.state.languageCoursesOpen
+        //     ? "resume-wrapper-large"
+        //     : "resume-wrapper-small"
+        // }
       >
         <div className="resume-top"></div>
         {/* left side */}

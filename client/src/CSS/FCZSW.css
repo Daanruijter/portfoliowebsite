@@ -1,4 +1,4 @@
-@media only screen and (min-width: 421px) {
+@media only screen and (min-width: 768px) {
     .FCZSW-wrapper img {
         width: 100%;
 
@@ -92,7 +92,7 @@
     }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 767px) {
     .FCZSW-wrapper img {
         width: 100%;
 

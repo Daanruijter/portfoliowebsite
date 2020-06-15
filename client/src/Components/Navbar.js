@@ -60,7 +60,6 @@ class Navbar extends Component {
     console.log(this.state.english);
     let englishNavbar = (
       <div className="wrapper">
-        {/* {this.state.english ? ( */}
         <div>
           {" "}
           <div className="navbar-position">
@@ -156,9 +155,9 @@ class Navbar extends Component {
           {" "}
           <Media
             queries={{
-              small: "(max-width: 420px)",
-              medium: "(min-width: 421px) and (max-width: 1199px)",
-              large: "(min-width: 1200px)",
+              small: "(max-width: 767px)",
+              medium: "(min-width: 768px) and (max-width: 1100px)",
+              large: "(min-width: 1101px)",
             }}
           >
             {(matches) => (
@@ -231,7 +230,7 @@ class Navbar extends Component {
     );
     let dutchNavbar = (
       <div className="wrapper">
-        <div>
+        <div className="test">
           {" "}
           <div className="navbar-position">
             <div className="navbar">
@@ -328,9 +327,9 @@ class Navbar extends Component {
           {" "}
           <Media
             queries={{
-              small: "(max-width: 420px)",
-              medium: "(min-width: 421px) and (max-width: 1199px)",
-              large: "(min-width: 1200px)",
+              small: "(max-width: 767px)",
+              medium: "(min-width: 768px) and (max-width: 1100px)",
+              large: "(min-width: 1101px)",
             }}
           >
             {(matches) => (

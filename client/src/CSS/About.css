@@ -39,7 +39,7 @@
 
     }
 
-    .about-tennis-Daan-picture img {
+    .about-tennis-daan-picture img {
         width: 18%;
 
         float: left;
@@ -223,7 +223,7 @@
 
     }
 
-    .about-tennis-Daan-picture img {
+    .about-tennis-daan-picture img {
         width: 18%;
 
         float: left;
@@ -239,20 +239,18 @@
         display: block;
     }
 
-    .about-soccer-flexer img {
-        width: 40%;
-    }
 
-
-
-    .about-soccer {
+    .about-soccer-information {
         padding: 1%;
     }
 
-    .about-soccer-flexer {
-        display: flex;
-        margin-bottom: 2%;
+    .about-soccer-information img {
+        position: relative;
+        float: right;
+        width: 60%;
+        padding-top: 5%;
     }
+
 
     .about-soccer-picture {
         width: 20%;
@@ -261,7 +259,9 @@
 
     .about-book {
         padding: 2%;
-        padding-top: 0%;
+        padding-top: 10%;
+
+
     }
 
     .about-book a {
@@ -273,26 +273,23 @@
     }
 
 
-    .about-book-flexer {
-        display: flex;
-
-
-
-    }
-
     .about-book-cover-and-bookpresentation {
-        width: 150%;
+        width: 100%;
 
-        padding: 5%;
+        padding: 0%;
         padding-top: 0%;
-        padding-left: 1%;
+        padding-left: 0%;
     }
 
     .about-book-front img {
-        width: 100%;
+        position: relative;
+        float: left;
+        margin-left: 24%;
+        width: 50%;
         height: 100%;
 
         border-style: solid;
+
         border-width: 1px;
         border-color: blue;
     }
@@ -408,7 +405,7 @@
 
     }
 
-    .about-tennis-Daan-picture img {
+    .about-tennis-daan-picture img {
         width: 44%;
         border-radius: 10%;
         float: left;

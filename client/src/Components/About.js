@@ -59,9 +59,9 @@ class About extends Component {
           <a href="http://localhost:3000/localarticles">
             <Media
               queries={{
-                small: "(max-width: 420px)",
-                medium: "(min-width: 421px) and (max-width: 1199px)",
-                large: "(min-width: 1200px)",
+                small: "(max-width: 767px)",
+                medium: "(min-width: 768px) and (max-width: 1100px)",
+                large: "(min-width: 1101px)",
               }}
             >
               {(matches) => (
@@ -89,7 +89,7 @@ class About extends Component {
         </div>
         <div className="about-tennis-information">
           <h2>Tennis</h2>
-          <div className="about-tennis-Daan-picture">
+          <div className="about-tennis-daan-picture">
             <img
               alt="daan"
               src="http://daanruijter.eu/wp-content/uploads/2015/04/Daantennis.jpg"
@@ -128,9 +128,9 @@ class About extends Component {
         <div className="about-link">
           <Media
             queries={{
-              small: "(max-width: 420px)",
-              medium: "(min-width: 421px) and (max-width: 1199px)",
-              large: "(min-width: 1200px)",
+              small: "(max-width: 767px)",
+              medium: "(min-width: 768px) and (max-width: 1100px)",
+              large: "(min-width: 1101px)",
             }}
           >
             {(matches) => (
@@ -176,46 +176,51 @@ class About extends Component {
             )}
           </Media>
         </div>
-        <div className="about-soccer">
+        <div className="about-soccer-information">
           <h2>Soccer</h2>
-          <div className="about-soccer-flexer">
-            <div className="about-soccer-text">
-              My passion for soccer came when I started to practice with the
-              ball at the square in front of my parents' house. That was the
-              start sign for me to go and play more and more. As a coincidence,
-              or maybe not, it was the period when Ajax conquered the soccer
-              world: the nineties. I went to the ancient stadium "De Meer" on a
-              regular base with my father and uncle. My father at the time had
-              an important role in the fan policy of the club and in 1995
-              organized a big congress to work towards a national fan policy. As
-              a little child of 10 years old I had the honour to open it.
-              <p>
-                During my student time I exchanged the play square for the hall.
-                I started to play indoor soccer. Every sunday morning I still
-                play with a nice group in Amsterdam. Besides that, many times I
-                watch the matches of Ajax or the Dutch national team with a
-                group of friends.
-              </p>
-              <p>
-                After finishing my journalism degree I wanted to get extra
-                editorial experience. So I did an internship at the Ajax news
-                platform Ajax Showtime. I also wrote articles for the local
-                indoor soccer club FCZSW, owned by a former colleague.
-              </p>
-            </div>{" "}
+
+          {/* <div className="about-soccer-flexer"> */}
+          <div className="about-soccer-text">
+            My passion for soccer came when I started to practice with the ball
+            at the square in front of my parents' house. That was the start sign
+            for me to go and play more and more. As a coincidence, or maybe not,
+            it was the period when Ajax conquered the soccer world: the
+            nineties. I went to the ancient stadium "De Meer" on a regular base
+            with my father and uncle. My father at the time had an important
+            role in the fan policy of the club and in 1995 organized a big
+            congress to work towards a national fan policy. As a little child of
+            10 years old I had the honour to open it.
             <img
               alt="Daan with Louis van Gaal"
               src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF7251-Large.jpg"
             ></img>
+            <p>
+              During my student time I exchanged the play square for the hall. I
+              started to play indoor soccer. Every sunday morning I still play
+              with a nice group in Amsterdam. Besides that, many times I watch
+              the matches of Ajax or the Dutch national team with a group of
+              friends.
+            </p>{" "}
+            <p>
+              After finishing my journalism degree I wanted to get extra
+              editorial experience. So I did an internship at the Ajax news
+              platform Ajax Showtime. I also wrote articles for the local indoor
+              soccer club FCZSW, owned by a former colleague.
+            </p>
           </div>
+
+          {/* <div className="about-soccer-daan-picture"> */}
+
+          {/* </div>{" "} */}
+          {/* </div> */}
         </div>
         <div className="about-link">
           {" "}
           <Media
             queries={{
-              small: "(max-width: 420px)",
-              medium: "(min-width: 421px) and (max-width: 1199px)",
-              large: "(min-width: 1200px)",
+              small: "(max-width: 767px)",
+              medium: "(min-width: 768px) and (max-width: 1100px)",
+              large: "(min-width: 1101px)",
             }}
           >
             {(matches) => (

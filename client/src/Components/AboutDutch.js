@@ -59,9 +59,9 @@ export default class About extends Component {
           <a href="http://localhost:3000/localarticles">
             <Media
               queries={{
-                small: "(max-width: 420px)",
-                medium: "(min-width: 421px) and (max-width: 1199px)",
-                large: "(min-width: 1200px)",
+                small: "(max-width: 767px)",
+                medium: "(min-width: 768px) and (max-width: 1100px)",
+                large: "(min-width: 1101px)",
               }}
             >
               {(matches) => (
@@ -89,7 +89,7 @@ export default class About extends Component {
         </div>
         <div className="about-tennis-information">
           <h2>Tennis</h2>
-          <div className="about-tennis-Daan-picture">
+          <div className="about-tennis-daan-picture">
             <img
               alt="daan"
               src="http://daanruijter.eu/wp-content/uploads/2015/04/Daantennis.jpg"
@@ -135,9 +135,9 @@ export default class About extends Component {
           {" "}
           <Media
             queries={{
-              small: "(max-width: 420px)",
-              medium: "(min-width: 421px) and (max-width: 1199px)",
-              large: "(min-width: 1200px)",
+              small: "(max-width: 767px)",
+              medium: "(min-width: 768px) and (max-width: 1100px)",
+              large: "(min-width: 1101px)",
             }}
           >
             {(matches) => (
@@ -161,7 +161,7 @@ export default class About extends Component {
                       Internationale en nationale tennisartikelen <br />
                     </a>
                     <a href="http://localhost:3000/localtennis">
-                      KLik hierop om tennisartikelen over mijn tennisvereniging
+                      Klik hierop om tennisartikelen over mijn tennisvereniging
                       te lezen <br />
                     </a>
                   </div>
@@ -170,11 +170,11 @@ export default class About extends Component {
                   <div>
                     {" "}
                     <a href="http://localhost:3000/internationaltennis">
-                      KLik hierop om internationale en nationale tennisartikelen
+                      Klik hierop om internationale en nationale tennisartikelen
                       te lezen <br />
                     </a>
                     <a href="http://localhost:3000/localtennis">
-                      KLik hierop om tennisartikelen over mijn tennisvereniging
+                      Klik hierop om tennisartikelen over mijn tennisvereniging
                       te lezen <br />
                     </a>
                   </div>
@@ -220,9 +220,9 @@ export default class About extends Component {
         <div className="about-link">
           <Media
             queries={{
-              small: "(max-width: 420px)",
-              medium: "(min-width: 421px) and (max-width: 1199px)",
-              large: "(min-width: 1200px)",
+              small: "(max-width: 767px)",
+              medium: "(min-width: 768px) and (max-width: 1100px)",
+              large: "(min-width: 1101px)",
             }}
           >
             {(matches) => (
@@ -241,7 +241,7 @@ export default class About extends Component {
                 {matches.medium && (
                   <div>
                     <a href="http://localhost:3000/ajax">
-                      KLik hierop om enkele Ajax-arikelen te lezen <br />
+                      Klik hierop om enkele Ajax-arikelen te lezen <br />
                     </a>
                     <a href="http://localhost:3000/localsoccer">
                       Klik hierop om enkele FCZSW-artikelen te lezen <br />
@@ -251,7 +251,7 @@ export default class About extends Component {
                 {matches.large && (
                   <div>
                     <a href="http://localhost:3000/ajax">
-                      KLik hierop om enkele Ajax-arikelen te lezen <br />
+                      Klik hierop om enkele Ajax-arikelen te lezen <br />
                     </a>
                     <a href="http://localhost:3000/localsoccer">
                       Klik hierop om enkele FCZSW-artikelen te lezen <br />

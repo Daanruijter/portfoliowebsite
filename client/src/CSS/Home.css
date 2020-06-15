@@ -1,4 +1,53 @@
-@media only screen and (min-width: 768x) {
+@media only screen and (min-width: 1101px) {
+
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-15%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .home-wrapper {
+        background-color: white;
+        height: auto;
+    }
+
+    .home-introduction img {
+        width: 13%;
+        height: 15%;
+        padding-right: 2%;
+    }
+
+    .welcome {
+        font-weight: bold;
+        text-align: center;
+        font-size: 125%;
+
+
+    }
+
+    .home-introduction {
+
+        background-color: teal;
+        padding: 2%;
+        animation: 0.5s ease-in 0s 1 slideInFromLeft;
+        font-size: 125%;
+        color: black;
+
+    }
+
+    .home-introduction-content {
+        display: flex;
+        justify-content: center;
+        padding: 2%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
 
     @keyframes slideInFromLeft {
         0% {

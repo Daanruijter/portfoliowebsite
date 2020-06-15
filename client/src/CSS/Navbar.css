@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1101px) {
     .wrapper {
         display: grid;
         grid-template-columns: 85% 15%;
@@ -39,6 +39,160 @@
         padding-right: 5%;
 
     }
+
+
+
+
+    .navbar ul {
+        display: flex;
+        justify-content: flex-start;
+
+        background-color: black;
+
+        color: white;
+    }
+
+
+    .navbar a {
+        font-size: 175%;
+        color: red;
+
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        color: white;
+    }
+
+    .dropdown a {
+        font-size: 100%;
+        color: black;
+    }
+
+    .dropdown {
+        background-color: black;
+    }
+
+    .dropdown-content {
+        display: flex;
+        margin-top: 16px;
+        position: absolute;
+        background-color: white;
+        font-size: 120%;
+        width: 40%;
+        padding-top: 2%;
+        padding-left: 2%;
+
+        height: auto;
+        color: black;
+        justify-content: left;
+        flex-wrap: wrap;
+        border-style: solid;
+        border-width: 2px;
+        border-color: red;
+    }
+
+
+
+    .dropdown-content a:hover {
+        color: red;
+    }
+
+    .fa {
+        color: white;
+    }
+
+    .about-grid {
+        grid-template-columns: 80% 20%;
+        display: grid;
+    }
+
+    .about-position {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .arrow-position {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        color: red;
+        margin-top: 20%;
+    }
+
+    .local-articles-header,
+    .sport-articles-header {
+        color: chocolate;
+    }
+
+    .local-articles-header:hover,
+    .sport-articles-header:hover {
+        background-color: navajowhite;
+    }
+
+    .sport-articles-wrapper,
+    .local-articles-wrapper {
+        margin-left: 5%;
+    }
+
+    .sport-articles-wrapper {
+        margin-top: 0%;
+    }
+
+    .sport-articles-header div {
+        color: black;
+        text-decoration: solid;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 80% 20%;
+
+
+    }
+
+    .navbar-position {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+
+    .contact {
+        margin-left: 5%;
+    }
+
+    .language-switch {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        color: red;
+        text-decoration: none;
+
+    }
+
+    .language-switch li {
+        list-style-type: none;
+        color: white;
+        font-size: 125%;
+
+    }
+
+    .language-switch li:hover {
+        color: blue;
+
+    }
+
+    .language-switch img {
+        width: 15%;
+        margin-right: 1%;
+    }
+
+    .navbar li {
+        list-style-type: none;
+        padding-right: 3%;
+
+    }
+
 
 
 

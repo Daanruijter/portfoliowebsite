@@ -183,39 +183,37 @@ export default class About extends Component {
             )}
           </Media>
         </div>
-        <div className="about-soccer">
+        <div className="about-soccer-information">
           <h2>Voetbal</h2>
-          <div className="about-soccer-flexer">
-            <div className="about-soccer-text">
-              Mijn passie voor voetbal kwam toen ik met de bal begon te oefenen
-              op het plein voor mijn ouderlijk huis. Dit was voor mij het
-              startsein om almaar meer te gaan voetballen. Toeval of niet was
-              het in de periode waarin Ajax de voetbalwereld veroverde: de jaren
-              negentig. Ik ging regelmatig met mijn oom en vader naar het oude
-              stadion De Meer. Mijn vader had destijds een belangrijke rol had
-              in het supportersbeleid van Ajax en organiseerde in 1995 een groot
-              congres "Naar een nationaal supportersbeleid". Ik had de eer om
-              als tienjarige jongen de bijeenkomst te openen.
-              <p>
-                In mijn studententijd verruilde ik het speelplein voor de zaal
-                om te gaan zaalvoetballen. Nog steeds trap ik elke zondagochtend
-                in Amsterdam een balletje met een fijne groep. Ook kijk ik zo nu
-                en dan met vrienden wedstrijden van Ajax of het Nederlands
-                elftal.
-              </p>
-              <p>
-                Nadat ik mijn master journalistiek heb afgerond wilde ik extra
-                journalistieke ervaring opdoen. Daarom deed ik een stage bij de
-                Ajax-nieuwswebsite Ajaxshowtime.com. Ik schreef ook artikelen
-                voor de zaalvoetbalclub FCZSW, waarvan de eigenaar een
-                ex-collega is.
-              </p>
-            </div>{" "}
+          {/* <div className="about-soccer-flexer"> */}
+          <div className="about-soccer-text">
+            Mijn passie voor voetbal kwam toen ik met de bal begon te oefenen op
+            het plein voor mijn ouderlijk huis. Dit was voor mij het startsein
+            om almaar meer te gaan voetballen. Toeval of niet was het in de
+            periode waarin Ajax de voetbalwereld veroverde: de jaren negentig.
+            Ik ging regelmatig met mijn oom en vader naar het oude stadion De
+            Meer. Mijn vader had destijds een belangrijke rol had in het
+            supportersbeleid van Ajax en organiseerde in 1995 een groot congres
+            "Naar een nationaal supportersbeleid". Ik had de eer om als
+            tienjarige jongen de bijeenkomst te openen.{" "}
             <img
               alt="Daan with Louis van Gaal"
               src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF7251-Large.jpg"
             ></img>
-          </div>
+            <p>
+              In mijn studententijd verruilde ik het speelplein voor de zaal om
+              te gaan zaalvoetballen. Nog steeds trap ik elke zondagochtend in
+              Amsterdam een balletje met een fijne groep. Ook kijk ik zo nu en
+              dan met vrienden wedstrijden van Ajax of het Nederlands elftal.
+            </p>
+            <p>
+              Nadat ik mijn master journalistiek heb afgerond wilde ik extra
+              journalistieke ervaring opdoen. Daarom deed ik een stage bij de
+              Ajax-nieuwswebsite Ajaxshowtime.com. Ik schreef ook artikelen voor
+              de zaalvoetbalclub FCZSW, waarvan de eigenaar een ex-collega is.
+            </p>
+          </div>{" "}
+          {/* </div> */}
         </div>
         <div className="about-link">
           <Media

@@ -584,17 +584,19 @@ class LocalArticlesDutch extends Component {
     // return (
     let localArticlesDutch = (
       <div className="localArticles-wrapper">
-        <div className="localArticles-searchbar">
-          Zoek een artikel
-          <label htmlFor="searchfield">
-            <input
-              onChange={(e) => this.handleChange(e)}
-              name="searchfield"
-              value={this.state.searchInput}
-            />
-          </label>{" "}
+        <div className="searchbar-and-selectbar-wrapper">
+          <div className="localArticles-searchbar">
+            <div>Zoek een artikel</div>
+            <label htmlFor="searchfield">
+              <input
+                onChange={(e) => this.handleChange(e)}
+                name="searchfield"
+                value={this.state.searchInput}
+              />
+            </label>{" "}
+          </div>
           <div className="localArticles-selectbar">
-            Kies een categorie
+            <div>Kies een categorie</div>
             <select
               onChange={this.listenToCategoryChange}
               value={this.state.selectInput}

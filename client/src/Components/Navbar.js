@@ -177,7 +177,7 @@ class Navbar extends Component {
                           alt="british flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
                         ></img>
-                        ENG
+                        EN
                       </li>
                     </ul>
                   </div>
@@ -190,14 +190,14 @@ class Navbar extends Component {
                           alt="dutch flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
                         ></img>
-                        Dutch
+                        NL
                       </li>
                       <li onClick={this.switchToEnglish}>
                         <img
                           alt="british flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
                         ></img>
-                        English
+                        EN
                       </li>
                     </ul>
                   </div>
@@ -349,7 +349,7 @@ class Navbar extends Component {
                           alt="british flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
                         ></img>
-                        ENG
+                        EN
                       </li>
                     </ul>
                   </div>
@@ -362,14 +362,14 @@ class Navbar extends Component {
                           alt="dutch flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
                         ></img>
-                        Dutch
+                        NL
                       </li>
                       <li onClick={this.switchToEnglish}>
                         <img
                           alt="british flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
                         ></img>
-                        English
+                        EN
                       </li>
                     </ul>
                   </div>
@@ -382,14 +382,14 @@ class Navbar extends Component {
                           alt="dutch flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/dutch-flag-large.jpg"
                         ></img>
-                        Dutch
+                        Nederlands
                       </li>
                       <li onClick={this.switchToEnglish}>
                         <img
                           alt="british flag"
                           src="http://daanruijter.eu/wp-content/uploads/2015/04/british-flag-large.jpg"
                         ></img>
-                        English
+                        Engels
                       </li>
                     </ul>
                   </div>

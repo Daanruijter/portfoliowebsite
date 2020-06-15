@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1101px) {
     .FCZSW-wrapper img {
         width: 100%;
 
@@ -91,6 +91,107 @@
 
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width:1100px) {
+    .FCZSW-wrapper img {
+        width: 100%;
+
+    }
+
+    .FCZSW-wrapper {
+        width: 100%;
+    }
+
+    .FCZSW-information {
+
+
+
+        font-size: 125%;
+        background-color: white;
+        padding: 2%;
+
+
+        width: 96%;
+
+
+
+
+    }
+
+    .FCZSW-articles {
+
+
+        margin-bottom: 2%;
+
+
+
+
+
+    }
+
+    .FCZSW-magazines-and-hall-of-fame {
+        display: flex;
+        justify-content: center;
+
+        background-color: wheat;
+
+
+    }
+
+    .FCZSW-magazines {
+        padding: 2%;
+        margin-left: 1%;
+
+        width: 26.5%;
+
+    }
+
+    .FCZSW-hall-of-fame {
+        padding: 2%;
+        margin-left: 1%;
+
+        font-size: 150%;
+        width: 50%;
+
+    }
+
+
+
+    .FCZSW-articles-header {
+        background-color: white;
+        text-align: center;
+        font-size: 150%;
+        font-weight: bold;
+
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 100%;
+    }
+
+    .FCZSW-article-cards {
+        padding: 1%;
+        font-size: 110%;
+        background-color: red;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+
+    }
+
+
+    .FCZSW-article-cards a {
+        color: white;
+        text-decoration: none;
+
+    }
+
+
+    .FCZSW-article-cards i {
+        display: none;
+
+    }
+}
+
 
 @media only screen and (max-width: 767px) {
     .FCZSW-wrapper img {

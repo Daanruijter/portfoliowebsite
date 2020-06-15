@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1101px) {
     .wrapper {
         display: grid;
-        grid-template-columns: 85% 15%;
+        grid-template-columns: 80% 20%;
 
     }
 
@@ -229,10 +229,10 @@
 
     .dropdown-content {
         display: flex;
-        margin-top: 16px;
+        margin-top: 33px;
         position: absolute;
         background-color: white;
-        font-size: 120%;
+        font-size: 90%;
         width: 40%;
         padding-top: 2%;
         padding-left: 2%;
@@ -276,6 +276,8 @@
     .local-articles-header,
     .sport-articles-header {
         color: chocolate;
+
+
     }
 
     .local-articles-header:hover,
@@ -295,6 +297,10 @@
     .sport-articles-header div {
         color: black;
         text-decoration: solid;
+    }
+
+    .sport-articles-header {
+        margin-top: 5px;
     }
 }
 
@@ -386,7 +392,7 @@
         margin-top: 16px;
         position: absolute;
         background-color: white;
-        font-size: 100%;
+        font-size: 80%;
         width: 66%;
         padding-top: 2%;
 
@@ -431,6 +437,7 @@
     .local-articles-header,
     .sport-articles-header {
         color: chocolate;
+
     }
 
     .local-articles-header:hover,

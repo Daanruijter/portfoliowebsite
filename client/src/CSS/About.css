@@ -406,7 +406,7 @@
     }
 
     .about-tennis-daan-picture img {
-        width: 44%;
+        width: 33%;
         border-radius: 10%;
         float: left;
         position: relative;
@@ -423,6 +423,14 @@
 
     .about-soccer-flexer img {
         width: 40%;
+    }
+
+    .about-soccer-information img {
+        position: relative;
+        float: right;
+        width: 60%;
+        padding-top: 5%;
+        padding-right: 2%;
     }
 
 
@@ -463,11 +471,10 @@
     } */
 
     .about-book-cover-and-bookpresentation {
-        width: 100%;
-
-        /* padding: 5%; */
+        width: 52%;
+        margin-left: 24%;
         padding-top: 0%;
-        /* padding-left: 1%; */
+        padding-bottom: 5%;
     }
 
     .about-book-front img {
@@ -488,7 +495,7 @@
     .about-book-flip-box {
         background-color: transparent;
         width: 100%;
-        height: 450px;
+        height: 250px;
         border: 1px solid #f1f1f1;
         perspective: 1000px;
 

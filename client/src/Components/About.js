@@ -60,7 +60,7 @@ class About extends Component {
             href={
               dev
                 ? "http://localhost:3000/localarticles"
-                : "https://daanruijter/herokuapp.com/localarticles"
+                : "https://daanruijter.herokuapp.com/localarticles"
             }
           >
             <Media
@@ -149,7 +149,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/internationaltennis"
-                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                          : "https://daanruijter.herokuapp.com/internationaltennis"
                       }
                     >
                       International and national tennis articles <br />
@@ -158,7 +158,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localtennis"
-                          : "https://daanruijter/herokuapp.com/localtennis"
+                          : "https://daanruijter.herokuapp.com/localtennis"
                       }
                     >
                       Articles about my tennis club <br />
@@ -172,7 +172,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/internationaltennis"
-                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                          : "https://daanruijter.herokuapp.com/internationaltennis"
                       }
                     >
                       Read some international and national tennis articles I
@@ -182,7 +182,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localtennis"
-                          : "https://daanruijter/herokuapp.com/localtennis"
+                          : "https://daanruijter.herokuapp.com/localtennis"
                       }
                     >
                       Read some tennis articles I wrote and edited for my tennis
@@ -197,7 +197,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/internationaltennis"
-                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                          : "https://daanruijter.herokuapp.com/internationaltennis"
                       }
                     >
                       Read some international and national tennis articles I
@@ -207,7 +207,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localtennis"
-                          : "https://daanruijter/herokuapp.com/localtennis"
+                          : "https://daanruijter.herokuapp.com/localtennis"
                       }
                     >
                       Read some tennis articles I wrote and edited for my tennis
@@ -360,7 +360,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/ajax"
-                          : "https://daanruijter/herokuapp.com/ajax"
+                          : "https://daanruijter.herokuapp.com/ajax"
                       }
                     >
                       Ajax articles <br />
@@ -369,7 +369,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localsoccer"
-                          : "https://daanruijter/herokuapp.com/localsoccer"
+                          : "https://daanruijter.herokuapp.com/localsoccer"
                       }
                     >
                       FCZSW articles <br />
@@ -383,7 +383,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/ajax"
-                          : "https://daanruijter/herokuapp.com/ajax"
+                          : "https://daanruijter.herokuapp.com/ajax"
                       }
                     >
                       Read some Ajax articles I wrote <br />
@@ -392,7 +392,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localsoccer"
-                          : "https://daanruijter/herokuapp.com/localsoccer"
+                          : "https://daanruijter.herokuapp.com/localsoccer"
                       }
                     >
                       Read some FCZSW articles I wrote <br />
@@ -405,7 +405,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/ajax"
-                          : "https://daanruijter/herokuapp.com/ajax"
+                          : "https://daanruijter.herokuapp.com/ajax"
                       }
                     >
                       Read some Ajax articles I wrote <br />
@@ -414,7 +414,7 @@ class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localsoccer"
-                          : "https://daanruijter/herokuapp.com/localsoccer"
+                          : "https://daanruijter.herokuapp.com/localsoccer"
                       }
                     >
                       Read some FCZSW articles I wrote <br />

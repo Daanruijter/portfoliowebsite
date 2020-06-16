@@ -39,8 +39,14 @@ class Contact extends Component {
       company: this.state.company,
       message: this.state.message,
     };
-
-    fetch("http://localhost:5000/contactdata", {
+    let url = "";
+    if (process.env.NODE_ENV === "development") {
+      url = "http://localhost:5000/contactdata";
+    }
+    if (process.env.NODE_ENV === "production") {
+      url = "https://daanruijter.herokuapp.com/contactdata";
+    }
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -61,7 +61,7 @@ export default class About extends Component {
             href={
               dev
                 ? "http://localhost:3000/localarticles"
-                : "https://daanruijter/herokuapp.com/localarticles"
+                : "https://daanruijter.herokuapp.com/localarticles"
             }
           >
             <Media
@@ -161,7 +161,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/internationaltennis"
-                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                          : "https://daanruijter.herokuapp.com/internationaltennis"
                       }
                     >
                       Internationale en nationale tennisartikelen
@@ -171,7 +171,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localtennis"
-                          : "https://daanruijter/herokuapp.com/localtennis"
+                          : "https://daanruijter.herokuapp.com/localtennis"
                       }
                     >
                       Artikelen over mijn tennisvereniging <br />
@@ -185,7 +185,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/internationaltennis"
-                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                          : "https://daanruijter.herokuapp.com/internationaltennis"
                       }
                     >
                       Internationale en nationale tennisartikelen <br />
@@ -194,7 +194,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localtennis"
-                          : "https://daanruijter/herokuapp.com/localtennis"
+                          : "https://daanruijter.herokuapp.com/localtennis"
                       }
                     >
                       Klik hierop om tennisartikelen over mijn tennisvereniging
@@ -209,7 +209,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/internationaltennis"
-                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                          : "https://daanruijter.herokuapp.com/internationaltennis"
                       }
                     >
                       Klik hierop om internationale en nationale tennisartikelen
@@ -219,7 +219,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localtennis"
-                          : "https://daanruijter/herokuapp.com/localtennis"
+                          : "https://daanruijter.herokuapp.com/localtennis"
                       }
                     >
                       Klik hierop om tennisartikelen over mijn tennisvereniging
@@ -368,7 +368,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/ajax"
-                          : "https://daanruijter/herokuapp.com/ajax"
+                          : "https://daanruijter.herokuapp.com/ajax"
                       }
                     >
                       Ajax-artikelen <br />
@@ -377,7 +377,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localsoccer"
-                          : "https://daanruijter/herokuapp.com/localsoccer"
+                          : "https://daanruijter.herokuapp.com/localsoccer"
                       }
                     >
                       FCZSW-artikelen <br />
@@ -391,7 +391,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/ajax"
-                          : "https://daanruijter/herokuapp.com/ajax"
+                          : "https://daanruijter.herokuapp.com/ajax"
                       }
                     >
                       Klik hierop om enkele Ajax-arikelen te lezen <br />
@@ -400,7 +400,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localsoccer"
-                          : "https://daanruijter/herokuapp.com/localsoccer"
+                          : "https://daanruijter.herokuapp.com/localsoccer"
                       }
                     >
                       Klik hierop om enkele FCZSW-artikelen te lezen <br />
@@ -413,7 +413,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/ajax"
-                          : "https://daanruijter/herokuapp.com/ajax"
+                          : "https://daanruijter.herokuapp.com/ajax"
                       }
                     >
                       Klik hierop om enkele Ajax-arikelen te lezen <br />
@@ -422,7 +422,7 @@ export default class About extends Component {
                       href={
                         dev
                           ? "http://localhost:3000/localsoccer"
-                          : "https://daanruijter/herokuapp.com/localsoccer"
+                          : "https://daanruijter.herokuapp.com/localsoccer"
                       }
                     >
                       Klik hierop om enkele FCZSW-artikelen te lezen <br />

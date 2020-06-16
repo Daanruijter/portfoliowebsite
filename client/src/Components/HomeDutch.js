@@ -29,8 +29,8 @@ export default class Home extends Component {
             talen.
             <br />
             <br />
-            Hieronder vindt u de projecten waar ik aan gewerkt hebt. Als u er
-            met de muis overheen gaat, krijgt u meer informatie. U kunt op de
+            Hieronder vindt u de projecten waar ik aan gewerkt heb. Als u er met
+            de muis overheen gaat, krijgt u meer informatie. U kunt op de
             projecten klikken om ze te zien.{" "}
           </div>
         </div>

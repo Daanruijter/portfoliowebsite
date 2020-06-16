@@ -5,6 +5,7 @@ import Media from "react-media";
 
 export default class About extends Component {
   render() {
+    let dev = process.env.NODE_ENV === "development";
     return (
       <div className="about-wrapper">
         <div className="about-information">
@@ -56,7 +57,13 @@ export default class About extends Component {
         </div>{" "}
         <div className="about-link">
           {" "}
-          <a href="http://localhost:3000/localarticles">
+          <a
+            href={
+              dev
+                ? "http://localhost:3000/localarticles"
+                : "https://daanruijter/herokuapp.com/localarticles"
+            }
+          >
             <Media
               queries={{
                 small: "(max-width: 767px)",
@@ -89,15 +96,15 @@ export default class About extends Component {
         </div>
         <div className="about-tennis-information">
           <h2>Tennis</h2>
-          <div className="about-tennis-daan-picture">
-            <img
-              alt="daan"
-              src="http://daanruijter.eu/wp-content/uploads/2015/04/Daantennis.jpg"
-            />
-          </div>
 
           <div className="about-tennis-text">
-            <p>
+            <div>
+              <div className="about-tennis-daan-picture">
+                <img
+                  alt="daan"
+                  src="http://daanruijter.eu/wp-content/uploads/2015/04/Daantennis.jpg"
+                />
+              </div>
               Al vele jaren ben ik een groot tennisliefhebber. De sport trok
               voor de eerste keer echt mijn aandacht toen ik in 2000 in een
               marathonpartij van Sjeng Schalken terechtkwam. De Nederlander,
@@ -108,27 +115,32 @@ export default class About extends Component {
               uur en vijf minuten. De laatste set eindigde in 20-18 in het
               voordeel van Philippoussis, die in de kwartfinale tegen de
               Amerikaan Andre Agassi zijn Waterloo vond.
-            </p>
-            Sindsdien ging ik het nationale en internationale tennis meer
-            volgen. Met de opkomst van Roger Federer aan het einde van de
-            negentiger jaren werd mijn interesse almaar groter. In 2013 nam de
-            Zwitserse maestro het op tegen mijn toenmalige Nederlandse favoriet.
-            Ook Schalken maakte toen al kennis met Federers enorme potentie. De
-            Nederlandse nederlaag was dan ook niet zo vreemd, want de met de
-            kennis van nu misschien wel beste tennisser ooit zou uiteindelijk
-            zijn allereerste Grand Slam-titel behalen. Ik heb driemaal de eer
-            gehad om Federer live in actie te zien. Bij het Rotterdam ATP World
-            Tournament zag ik hem in de kwartfinale tweemaal zegevieren (Jarkko
-            Nieminen/2012 en Ruben Bemelmans/2018), maar eenmaal sneuvelen tegen
-            de Fransman Julien Benneteau (2013).
-            <p>
+            </div>
+            <br />
+            <div>
+              Sindsdien ging ik het nationale en internationale tennis meer
+              volgen. Met de opkomst van Roger Federer aan het einde van de
+              negentiger jaren werd mijn interesse almaar groter. In 2013 nam de
+              Zwitserse maestro het op tegen mijn toenmalige Nederlandse
+              favoriet. Ook Schalken maakte toen al kennis met Federers enorme
+              potentie. De Nederlandse nederlaag was dan ook niet zo vreemd,
+              want de met de kennis van nu misschien wel beste tennisser ooit
+              zou uiteindelijk zijn allereerste Grand Slam-titel behalen. Ik heb
+              driemaal de eer gehad om Federer live in actie te zien. Bij het
+              Rotterdam ATP World Tournament zag ik hem in de kwartfinale
+              tweemaal zegevieren (Jarkko Nieminen/2012 en Ruben
+              Bemelmans/2018), maar eenmaal sneuvelen tegen de Fransman Julien
+              Benneteau (2013).
+            </div>
+            <br />
+            <div>
               In 2004 pakte ik zelf een racket op en ontdekte ik hoe leuk het is
               om zelf te tennissen. Tien jaar later, januari 2014, ging ik
               schrijven voor de nationale tenniswebsite www.tennis.nl. Dat bleef
               ik voor anderhalf jaar op vrijwillige basis doen. In 2015 werd ik
               lid van een andere tennisvereniging, waar ik enkele redactionele
               artikelen voor schreef en redigeerde.
-            </p>
+            </div>
           </div>
         </div>{" "}
         <div className="about-link">
@@ -145,11 +157,23 @@ export default class About extends Component {
                 {matches.small && (
                   <div>
                     {" "}
-                    <a href="http://localhost:3000/internationaltennis">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/internationaltennis"
+                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                      }
+                    >
                       Internationale en nationale tennisartikelen
                       <br />
                     </a>
-                    <a href="http://localhost:3000/localtennis">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/localtennis"
+                          : "https://daanruijter/herokuapp.com/localtennis"
+                      }
+                    >
                       Artikelen over mijn tennisvereniging <br />
                     </a>
                   </div>
@@ -157,10 +181,22 @@ export default class About extends Component {
                 {matches.medium && (
                   <div>
                     {" "}
-                    <a href="http://localhost:3000/internationaltennis">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/internationaltennis"
+                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                      }
+                    >
                       Internationale en nationale tennisartikelen <br />
                     </a>
-                    <a href="http://localhost:3000/localtennis">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/localtennis"
+                          : "https://daanruijter/herokuapp.com/localtennis"
+                      }
+                    >
                       Klik hierop om tennisartikelen over mijn tennisvereniging
                       te lezen <br />
                     </a>
@@ -169,11 +205,23 @@ export default class About extends Component {
                 {matches.large && (
                   <div>
                     {" "}
-                    <a href="http://localhost:3000/internationaltennis">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/internationaltennis"
+                          : "https://daanruijter/herokuapp.com/internationaltennis"
+                      }
+                    >
                       Klik hierop om internationale en nationale tennisartikelen
                       te lezen <br />
                     </a>
-                    <a href="http://localhost:3000/localtennis">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/localtennis"
+                          : "https://daanruijter/herokuapp.com/localtennis"
+                      }
+                    >
                       Klik hierop om tennisartikelen over mijn tennisvereniging
                       te lezen <br />
                     </a>
@@ -185,35 +233,124 @@ export default class About extends Component {
         </div>
         <div className="about-soccer-information">
           <h2>Voetbal</h2>
-          {/* <div className="about-soccer-flexer"> */}
-          <div className="about-soccer-text">
-            Mijn passie voor voetbal kwam toen ik met de bal begon te oefenen op
-            het plein voor mijn ouderlijk huis. Dit was voor mij het startsein
-            om almaar meer te gaan voetballen. Toeval of niet was het in de
-            periode waarin Ajax de voetbalwereld veroverde: de jaren negentig.
-            Ik ging regelmatig met mijn oom en vader naar het oude stadion De
-            Meer. Mijn vader had destijds een belangrijke rol had in het
-            supportersbeleid van Ajax en organiseerde in 1995 een groot congres
-            "Naar een nationaal supportersbeleid". Ik had de eer om als
-            tienjarige jongen de bijeenkomst te openen.{" "}
-            <img
-              alt="Daan with Louis van Gaal"
-              src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF7251-Large.jpg"
-            ></img>
-            <p>
-              In mijn studententijd verruilde ik het speelplein voor de zaal om
-              te gaan zaalvoetballen. Nog steeds trap ik elke zondagochtend in
-              Amsterdam een balletje met een fijne groep. Ook kijk ik zo nu en
-              dan met vrienden wedstrijden van Ajax of het Nederlands elftal.
-            </p>
-            <p>
-              Nadat ik mijn master journalistiek heb afgerond wilde ik extra
-              journalistieke ervaring opdoen. Daarom deed ik een stage bij de
-              Ajax-nieuwswebsite Ajaxshowtime.com. Ik schreef ook artikelen voor
-              de zaalvoetbalclub FCZSW, waarvan de eigenaar een ex-collega is.
-            </p>
-          </div>{" "}
-          {/* </div> */}
+          <Media
+            queries={{
+              small: "(max-width: 767px)",
+              medium: "(min-width: 768px) and (max-width: 1100px)",
+              large: "(min-width: 1101px)",
+            }}
+          >
+            {(matches) => (
+              <Fragment>
+                {matches.small && (
+                  <div>
+                    {" "}
+                    <div className="about-soccer-text">
+                      My passion for soccer came when I started to practice with
+                      the ball at the square in front of my parents' house. That
+                      was the start sign for me to go and play more and more. As
+                      a coincidence, or maybe not, it was the period when Ajax
+                      conquered the soccer world: the nineties. I went to the
+                      ancient stadium "De Meer" on a regular base with my father
+                      and uncle. My father at the time had an important role in
+                      the fan policy of the club and in 1995 organized a big
+                      congress to work towards a national fan policy. As a
+                      little child of 10 years old I had the honour to open it.
+                      <img
+                        alt="Daan with Louis van Gaal"
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF7251-Large.jpg"
+                      ></img>
+                      <div>
+                        During my student time I exchanged the play square for
+                        the hall. I started to play indoor soccer. Every sunday
+                        morning I still play with a nice group in Amsterdam.
+                        Besides that, many times I watch the matches of Ajax or
+                        the Dutch national team with a group of friends.
+                      </div>
+                      <div>
+                        After finishing my journalism degree I wanted to get
+                        extra editorial experience. So I did an internship at
+                        the Ajax news platform Ajax Showtime. I also wrote
+                        articles for the local indoor soccer club FCZSW, owned
+                        by a former colleague.
+                      </div>
+                    </div>{" "}
+                  </div>
+                )}
+                {matches.medium && (
+                  <div>
+                    {" "}
+                    <div className="about-soccer-text">
+                      My passion for soccer came when I started to practice with
+                      the ball at the square in front of my parents' house. That
+                      was the start sign for me to go and play more and more. As
+                      a coincidence, or maybe not, it was the period when Ajax
+                      conquered the soccer world: the nineties. I went to the
+                      ancient stadium "De Meer" on a regular base with my father
+                      and uncle. My father at the time had an important role in
+                      the fan policy of the club and in 1995 organized a big
+                      congress to work towards a national fan policy. As a
+                      little child of 10 years old I had the honour to open it.
+                      <img
+                        alt="Daan with Louis van Gaal"
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF7251-Large.jpg"
+                      ></img>
+                      <div>
+                        During my student time I exchanged the play square for
+                        the hall. I started to play indoor soccer. Every sunday
+                        morning I still play with a nice group in Amsterdam.
+                        Besides that, many times I watch the matches of Ajax or
+                        the Dutch national team with a group of friends.
+                      </div>
+                      <div>
+                        After finishing my journalism degree I wanted to get
+                        extra editorial experience. So I did an internship at
+                        the Ajax news platform Ajax Showtime. I also wrote
+                        articles for the local indoor soccer club FCZSW, owned
+                        by a former colleague.
+                      </div>
+                    </div>{" "}
+                  </div>
+                )}
+                {matches.large && (
+                  <div>
+                    {" "}
+                    <div className="about-soccer-text">
+                      {" "}
+                      <img
+                        alt="Daan with Louis van Gaal"
+                        src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF7251-Large.jpg"
+                      />
+                      My passion for soccer came when I started to practice with
+                      the ball at the square in front of my parents' house. That
+                      was the start sign for me to go and play more and more. As
+                      a coincidence, or maybe not, it was the period when Ajax
+                      conquered the soccer world: the nineties. I went to the
+                      ancient stadium "De Meer" on a regular base with my father
+                      and uncle. My father at the time had an important role in
+                      the fan policy of the club and in 1995 organized a big
+                      congress to work towards a national fan policy. As a
+                      little child of 10 years old I had the honour to open it.
+                      <div>
+                        During my student time I exchanged the play square for
+                        the hall. I started to play indoor soccer. Every sunday
+                        morning I still play with a nice group in Amsterdam.
+                        Besides that, many times I watch the matches of Ajax or
+                        the Dutch national team with a group of friends.
+                      </div>
+                      <div>
+                        After finishing my journalism degree I wanted to get
+                        extra editorial experience. So I did an internship at
+                        the Ajax news platform Ajax Showtime. I also wrote
+                        articles for the local indoor soccer club FCZSW, owned
+                        by a former colleague.
+                      </div>{" "}
+                    </div>{" "}
+                  </div>
+                )}
+              </Fragment>
+            )}
+          </Media>
         </div>
         <div className="about-link">
           <Media
@@ -227,10 +364,22 @@ export default class About extends Component {
               <Fragment>
                 {matches.small && (
                   <div>
-                    <a href="http://localhost:3000/ajax">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/ajax"
+                          : "https://daanruijter/herokuapp.com/ajax"
+                      }
+                    >
                       Ajax-artikelen <br />
                     </a>
-                    <a href="http://localhost:3000/localsoccer">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/localsoccer"
+                          : "https://daanruijter/herokuapp.com/localsoccer"
+                      }
+                    >
                       FCZSW-artikelen <br />
                     </a>
                     <br />
@@ -238,20 +387,44 @@ export default class About extends Component {
                 )}
                 {matches.medium && (
                   <div>
-                    <a href="http://localhost:3000/ajax">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/ajax"
+                          : "https://daanruijter/herokuapp.com/ajax"
+                      }
+                    >
                       Klik hierop om enkele Ajax-arikelen te lezen <br />
                     </a>
-                    <a href="http://localhost:3000/localsoccer">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/localsoccer"
+                          : "https://daanruijter/herokuapp.com/localsoccer"
+                      }
+                    >
                       Klik hierop om enkele FCZSW-artikelen te lezen <br />
                     </a>
                   </div>
                 )}
                 {matches.large && (
                   <div>
-                    <a href="http://localhost:3000/ajax">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/ajax"
+                          : "https://daanruijter/herokuapp.com/ajax"
+                      }
+                    >
                       Klik hierop om enkele Ajax-arikelen te lezen <br />
                     </a>
-                    <a href="http://localhost:3000/localsoccer">
+                    <a
+                      href={
+                        dev
+                          ? "http://localhost:3000/localsoccer"
+                          : "https://daanruijter/herokuapp.com/localsoccer"
+                      }
+                    >
                       Klik hierop om enkele FCZSW-artikelen te lezen <br />
                     </a>
                   </div>

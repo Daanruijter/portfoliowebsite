@@ -27,7 +27,6 @@ export default class Contact extends Component {
   }
 
   handleSubmit(event) {
-    // alert("A name was submitted: " + this.state.name);
     event.preventDefault();
     let formData = {
       name: this.state.name,
@@ -37,8 +36,14 @@ export default class Contact extends Component {
       company: this.state.company,
       message: this.state.message,
     };
-
-    fetch("http://localhost:5000/contactdata", {
+    let url = "";
+    if (process.env.NODE_ENV === "development") {
+      url = "http://localhost:5000/contactdata";
+    }
+    if (process.env.NODE_ENV === "production") {
+      url = "https://daanruijter.herokuapp.com/contactdata";
+    }
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,16 +53,12 @@ export default class Contact extends Component {
       .then((response) => {
         return response.json();
       })
-      // .then((data) => {
-      //   const favourites = data;
-      //   console.log(favourites);
-      // })
+
       .catch((error) => {
         const errorMessage = error.message;
         console.log(errorMessage);
       });
 
-    console.log(formData);
     this.setState({
       name: "",
       phoneNumber: "",

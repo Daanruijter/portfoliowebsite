@@ -40,7 +40,7 @@
     }
 
     .about-tennis-daan-picture img {
-        width: 18%;
+        width: 201px;
 
         float: left;
         position: relative;
@@ -52,11 +52,16 @@
 
     .about-tennis-text {
 
+        clear: both;
         display: block;
     }
 
-    .about-soccer-flexer img {
-        width: 40%;
+    .about-soccer-text img {
+        width: 365px;
+        float: right;
+        position: relative;
+        padding: 0% 2% 2% 2%;
+
     }
 
 
@@ -65,14 +70,11 @@
         padding: 1%;
     }
 
-    .about-soccer-flexer {
-        display: flex;
+    .about-soccer-text {
+        /* display: flex; */
         margin-bottom: 2%;
     }
 
-    .about-soccer-picture {
-        width: 20%;
-    }
 
 
     .about-book {

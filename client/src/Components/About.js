@@ -311,31 +311,32 @@ class About extends Component {
                         alt="Daan with Louis van Gaal"
                         src="http://daanruijter.eu/wp-content/uploads/2015/04/DSCF7251-Large.jpg"
                       />
-                      Mijn passie voor voetbal kwam toen ik met de bal begon te
-                      oefenen op het plein voor mijn ouderlijk huis. Dit was
-                      voor mij het startsein om almaar meer te gaan voetballen.
-                      Toeval of niet was het in de periode waarin Ajax de
-                      voetbalwereld veroverde: de jaren negentig. Ik ging
-                      regelmatig met mijn oom en vader naar het oude stadion De
-                      Meer. Mijn vader had destijds een belangrijke rol had in
-                      het supportersbeleid van Ajax en organiseerde in 1995 een
-                      groot congres "Naar een nationaal supportersbeleid". Ik
-                      had de eer om als tienjarige jongen de bijeenkomst te
-                      openen.{" "}
-                      <p>
-                        In mijn studententijd verruilde ik het speelplein voor
-                        de zaal om te gaan zaalvoetballen. Nog steeds trap ik
-                        elke zondagochtend in Amsterdam een balletje met een
-                        fijne groep. Ook kijk ik zo nu en dan met vrienden
-                        wedstrijden van Ajax of het Nederlands elftal.
-                      </p>
-                      <p>
-                        Nadat ik mijn master journalistiek heb afgerond wilde ik
-                        extra journalistieke ervaring opdoen. Daarom deed ik een
-                        stage bij de Ajax-nieuwswebsite Ajaxshowtime.com. Ik
-                        schreef ook artikelen voor de zaalvoetbalclub FCZSW,
-                        waarvan de eigenaar een ex-collega is.{" "}
-                      </p>{" "}
+                      My passion for soccer came when I started to practice with
+                      the ball at the square in front of my parents' house. That
+                      was the start sign for me to go and play more and more. As
+                      a coincidence, or maybe not, it was the period when Ajax
+                      conquered the soccer world: the nineties. I went to the
+                      ancient stadium "De Meer" on a regular base with my father
+                      and uncle. My father at the time had an important role in
+                      the fan policy of the club and in 1995 organized a big
+                      congress to work towards a national fan policy. As a
+                      little child of 10 years old I had the honour to open it.
+                      <div>
+                        <br />
+                        During my student time I exchanged the play square for
+                        the hall. I started to play indoor soccer. Every sunday
+                        morning I still play with a nice group in Amsterdam.
+                        Besides that, many times I watch the matches of Ajax or
+                        the Dutch national team with a group of friends.
+                      </div>
+                      <br />
+                      <div>
+                        After finishing my journalism degree I wanted to get
+                        extra editorial experience. So I did an internship at
+                        the Ajax news platform Ajax Showtime. I also wrote
+                        articles for the local indoor soccer club FCZSW, owned
+                        by a former colleague.
+                      </div>
                     </div>{" "}
                   </div>
                 )}

@@ -64,15 +64,15 @@
 
     }
 
-
-
-    .about-soccer {
-        padding: 1%;
+    .about-soccer-information h2 {
+        padding-left: 1%;
     }
 
+
     .about-soccer-text {
-        /* display: flex; */
+
         margin-bottom: 2%;
+        padding: 1%;
     }
 
 

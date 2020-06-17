@@ -32,12 +32,13 @@ class About extends Component {
             me the opportunity to do many rewarding interviews.
           </p>
           <p>
-            Unfortunately the write and editorial market is in decline. This
-            made me think about my future. I was looking for a promising branche
-            in which I could keep developing myself within a creative
-            profession. A branche in which I can also make use of my knowledge
-            of foreign languages. The IT sector meets al those features, so that
-            I'm currently working hard to launch my career in web development.
+            Nevertheless I wanted to make steps in my career. The write and
+            editorial market however is in decline. This made me think about my
+            future. I was looking for a promising branche in which I could keep
+            developing myself within a creative profession. A branche in which I
+            can also make use of my knowledge of foreign languages. The IT
+            sector meets al those features, so that I'm currently working hard
+            to launch my career in web development.
           </p>
           <p>
             Below you will find some information about my editorial portfolio.

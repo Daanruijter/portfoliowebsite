@@ -609,7 +609,9 @@ class Resume extends Component {
               }
               description={[
                 "Various projects. Currently I'm working on my personal website in React.js. The progress is visible on my ",
-                <a href="https://github.com/Daanruijter/">GitHub page</a>,
+                <a key={Math.random()} href="https://github.com/Daanruijter/">
+                  GitHub page
+                </a>,
               ]}
             />
             <br />

@@ -42,7 +42,6 @@
 
 
 
-
     .navbar ul {
         display: flex;
         justify-content: flex-start;
@@ -64,6 +63,11 @@
         color: white;
     }
 
+
+    .about-menu-ul {
+        padding: 0px !important;
+    }
+
     .dropdown a {
         font-size: 100%;
         color: black;
@@ -75,7 +79,7 @@
 
     .dropdown-content {
         display: flex;
-        margin-top: 16px;
+        margin-top: 43px;
         position: absolute;
         background-color: white;
         font-size: 120%;
@@ -103,9 +107,11 @@
     }
 
     .about-grid {
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 84% 16%;
         display: grid;
     }
+
+
 
     .about-position {
         grid-column-start: 1;
@@ -218,6 +224,10 @@
         color: white;
     }
 
+    .about-menu-ul {
+        padding: 0px !important;
+    }
+
     .dropdown a {
         font-size: 100%;
         color: black;
@@ -229,7 +239,7 @@
 
     .dropdown-content {
         display: flex;
-        margin-top: 33px;
+        margin-top: 30px;
         position: absolute;
         background-color: white;
         font-size: 90%;
@@ -257,8 +267,9 @@
     }
 
     .about-grid {
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 84% 16%;
         display: grid;
+
     }
 
     .about-position {
@@ -393,7 +404,7 @@
         position: absolute;
         background-color: white;
         font-size: 80%;
-        width: 66%;
+        width: 45%;
         padding-top: 2%;
 
 

@@ -129,9 +129,7 @@ class Navbar extends Component {
                           </div>
                           <div>
                             {" "}
-                            <a href="./localtennis">
-                              Local tennis - tennis club De Gouw
-                            </a>
+                            <a href="./localtennis">Local tennis - De Gouw</a>
                           </div>
                           <div>
                             {" "}
@@ -301,7 +299,7 @@ class Navbar extends Component {
                           <div>
                             {" "}
                             <a href="./localtennis">
-                              Lokaal tennis - tennisvereniging De Gouw
+                              Lokaal tennis - TV De Gouw
                             </a>
                           </div>
                           <div>

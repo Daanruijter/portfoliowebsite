@@ -1,3 +1,12 @@
+.about-more-on-editorial-portfolio,
+.about-close-more-on-editorial-portfolio {
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
 @media only screen and (min-width: 1101px) {
 
     .about-wrapper {
@@ -13,28 +22,54 @@
         background-color: teal;
     }
 
-    .about-rodi-media {
+    .about-articles-more {
+        padding: 1%;
+        color: dodgerblue;
+    }
+
+
+
+    .about-rodi-media p {
+        padding-left: 1%;
+        padding-right: 1%
+    }
+
+    .about-rodi-media h2 {
+
 
         padding: 1%;
     }
 
     .about-link {
-        background-color: teal;
-        padding: 1%;
+        text-decoration: none;
+        color: mediumblue;
+        font-weight: bold;
+
     }
 
-    .about-link a {
-        text-decoration: none;
-        color: black;
-        font-size: 125%;
+    hr {
+        border-color: dodgerblue;
+
     }
 
     .about-tennis-information {
         background-color: white;
 
+    }
+
+    .about-tennis-articles-more,
+    .about-soccer-articles-more {
+
+
+        color: dodgerblue;
+    }
+
+
+
+    .about-tennis-information h2 {
+
+
         padding: 1%;
-
-
 
 
     }
@@ -54,6 +89,8 @@
 
         clear: both;
         display: block;
+        padding-left: 1%;
+        padding-right: 1%;
     }
 
     .about-soccer-text img {
@@ -65,14 +102,17 @@
     }
 
     .about-soccer-information h2 {
-        padding-left: 1%;
+
+
+        padding: 1%;
     }
 
 
     .about-soccer-text {
 
         margin-bottom: 2%;
-        padding: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
     }
 
 
@@ -80,13 +120,15 @@
     .about-book {
         padding: 2%;
         padding-top: 0%;
+
     }
 
     .about-book a {
         text-decoration: none;
     }
 
-    .about-book-wrapper {
+    .about-book-wrapper h2 {
+
         padding: 1%;
     }
 

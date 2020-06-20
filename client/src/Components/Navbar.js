@@ -69,11 +69,20 @@ class Navbar extends Component {
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <ul>
+                  <a href="/resume">CV</a>
+                </li>
+                <li>
+                  <a className="contact" href="/contact">
+                    {" "}
+                    Contact
+                  </a>
+                </li>{" "}
+                <li>
+                  <ul className="about-menu-ul">
                     <li>
                       <div className="about-grid">
                         <div className="about-position">
-                          <a href="/about">About</a>
+                          <a href="/about">Publications</a>
                         </div>
                         {this.state.dropDownOpen ? (
                           <div
@@ -137,15 +146,6 @@ class Navbar extends Component {
                       </div>
                     ) : null}
                   </div>
-                </li>
-                <li>
-                  <a href="/resume">Resume</a>
-                </li>
-                <li>
-                  <a className="contact" href="/contact">
-                    {" "}
-                    Contact
-                  </a>
                 </li>
               </ul>
             </div>
@@ -238,12 +238,22 @@ class Navbar extends Component {
                 <li>
                   <a href="/">Home</a>
                 </li>
+
                 <li>
-                  <ul>
+                  <a href="/resume">CV</a>
+                </li>
+                <li>
+                  <a className="contact" href="/contact">
+                    {" "}
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <ul className="about-menu-ul">
                     <li>
                       <div className="about-grid">
                         <div className="about-position">
-                          <a href="/about">Over</a>
+                          <a href="/about">Publicaties</a>
                         </div>
                         {this.state.dropDownOpen ? (
                           <div
@@ -271,7 +281,7 @@ class Navbar extends Component {
                             <div className="local-articles-header">
                               Lokale artikelen
                             </div>
-                            <a href="./lokaleartikelen">Rodi Media</a>
+                            <a href="./localarticles">Rodi Media</a>
                           </div>
                         </div>
                         <br />{" "}
@@ -284,24 +294,24 @@ class Navbar extends Component {
                           </div>
                           <div>
                             {" "}
-                            <a href="./internationaletennis">
-                              Internationale tennis
+                            <a href="./internationaltennis">
+                              Internationaal tennis
                             </a>
                           </div>
                           <div>
                             {" "}
-                            <a href="./lokaletennis">
-                              Lokale tennis - TV De Gouw
+                            <a href="./localtennis">
+                              Lokaal tennis - tennisvereniging De Gouw
                             </a>
                           </div>
                           <div>
                             {" "}
-                            <a href="./ajaxnl">Voetbal - Ajax</a>
+                            <a href="./ajax">Voetbal - Ajax</a>
                           </div>
                           <div>
                             {" "}
-                            <a href="./lokalevoetbal">
-                              Lokale zaalvoetbal - FCZSW
+                            <a href="./localsoccer">
+                              Lokaal zaalvoetbal - FCZSW
                             </a>
                           </div>
                           <br />
@@ -309,15 +319,6 @@ class Navbar extends Component {
                       </div>
                     ) : null}
                   </div>
-                </li>
-                <li>
-                  <a href="/resume">CV</a>
-                </li>
-                <li>
-                  <a className="contact" href="/contact">
-                    {" "}
-                    Contact
-                  </a>
                 </li>
               </ul>
             </div>

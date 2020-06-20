@@ -416,8 +416,12 @@
         color: white;
     }
 
+    .about-menu-ul {
+        padding: 0px !important;
+    }
+
     .about-grid {
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 85% 15%;
         display: grid;
     }
 
@@ -431,7 +435,7 @@
         grid-column-end: 3;
         color: red;
 
-        margin-left: -80%;
+        margin-left: -39%;
     }
 
     .local-articles-header,

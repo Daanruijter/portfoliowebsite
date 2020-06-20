@@ -13,6 +13,7 @@ export default class Home extends Component {
           <div className="welcome">
             Welkom op de website van Full Stack Webdeveloper Daan Ruijter
           </div>
+
           <div className="home-introduction-content">
             <img alt="daan" src={daanfoto} />
             Ik ben een gecertificeerde Full Stack MERN web developer die

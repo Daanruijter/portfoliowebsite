@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "../CSS/About.css";
 import { connect } from "react-redux";
-import AboutCopy from "./AboutCopy";
-// import { Fragment } from "react";
-// import Media from "react-media";
+import AboutDutch from "./AboutDutch";
+
 class About extends Component {
   state = {
     extraInformationOpen: false,
@@ -422,7 +421,7 @@ class About extends Component {
         </div>
       </div>
     );
-    let aboutDutch = <AboutCopy />;
+    let aboutDutch = <AboutDutch />;
 
     if (
       this.props.languages.english === "english" ||

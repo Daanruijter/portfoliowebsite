@@ -701,7 +701,7 @@ class Resume extends Component {
               onClick={this.showMoreExperience}
               className="resume-more-past-experience"
             >
-              CLICK TO SEE MORE PAST EXPERIENCE
+              MORE PAST EXPERIENCE
             </div>{" "}
             <br />
             {this.state.moreExperienceOpen ? (
@@ -712,7 +712,7 @@ class Resume extends Component {
                   onClick={this.closeMoreExperience}
                   className="resume-more-past-experience"
                 >
-                  CLICK TO CLOSE MORE PAST EXPERIENCE
+                  CLOSE
                 </div>
               </div>
             ) : null}
@@ -970,7 +970,7 @@ class Resume extends Component {
               className="resume-language-courses"
             >
               <br />
-              CLICK TO SEE MY LANGUAGE COURSES <br /> <br />
+              CLICK TO SEE LANGUAGE COURSES OVERVIEW <br /> <br />
             </div>
             {this.state.languageCoursesOpen ? (
               <div className="resume-language-courses-list">
@@ -985,7 +985,8 @@ class Resume extends Component {
                   onClick={this.closeLanguageCourses}
                   className="resume-language-courses"
                 >
-                  <br /> CLICK TO CLOSE MY LANGUAGE COURSES
+                  <br />
+                  CLOSE
                 </div>
               </div>
             ) : null}

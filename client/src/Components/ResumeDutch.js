@@ -698,7 +698,7 @@ class ResumeDutch extends Component {
               onClick={this.showMoreExperience}
               className="resume-more-past-experience"
             >
-              KLIK HIER OM MEER EERDERE ERVARINGEN TE ZIEN
+              MEER EERDERE ERVARINGEN
             </div>{" "}
             <br />
             {this.state.moreExperienceOpen ? (
@@ -709,7 +709,7 @@ class ResumeDutch extends Component {
                   onClick={this.closeMoreExperience}
                   className="resume-more-past-experience"
                 >
-                  KLIK HIER OM MEER EERDERE ERVARINGEN TE ZIEN
+                  SLUITEN
                 </div>
               </div>
             ) : null}
@@ -967,7 +967,8 @@ class ResumeDutch extends Component {
               className="resume-language-courses"
             >
               <br />
-              KLIK OM MIJN TAALCURSUSSEN TE ZIEN <br /> <br />
+              KLIK VOOR OVERZICHT TAALCURSUSSEN
+              <br /> <br />
             </div>
             {/* HIER GEBLEVEN */}
             {this.state.languageCoursesOpen ? (
@@ -983,7 +984,7 @@ class ResumeDutch extends Component {
                   onClick={this.closeLanguageCourses}
                   className="resume-language-courses"
                 >
-                  <br /> KLIK OM MIJN TAALCURSSUSEN TE SLUITEN
+                  <br /> SLUITEN
                 </div>
               </div>
             ) : null}

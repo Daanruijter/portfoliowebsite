@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "../CSS/About.css";
 import { connect } from "react-redux";
-import AboutDutch from "./AboutDutch";
-import { Fragment } from "react";
-import Media from "react-media";
+import AboutCopy from "./AboutCopy";
+// import { Fragment } from "react";
+// import Media from "react-media";
 class About extends Component {
   state = {
     extraInformationOpen: false,
@@ -43,19 +43,6 @@ class About extends Component {
       <div className="about-wrapper">
         {this.state.extraInformationOpen ? (
           <div className="about-information">
-            <p>
-              Before switching to webdevelopment I was an editor. I did several
-              editorial internships before working as an editor at Rodi Media, a
-              local editorial house. Like so I wrote various articles and by
-              clicking on the link below you can find out more details about it.
-            </p>
-
-            <div
-              className="about-close-more-on-editorial-portfolio"
-              onClick={this.showExtraInformation}
-            >
-              Close
-            </div>
             <div className="about-information-extra">
               <p>
                 I started working with computers and writing being a child. At
@@ -88,23 +75,34 @@ class About extends Component {
                 languages. The IT sector meets al those features, so that I'm
                 currently working hard to launch my career in web development.
               </p>
+
+              <div
+                className="about-close-more-on-editorial-portfolio"
+                onClick={this.showExtraInformation}
+              >
+                Close
+              </div>
             </div>
           </div>
         ) : (
           <div className="about-information">
             <p>
-              Before switching to webdevelopment I was an editor. I did several
+              In my previous career I worked as an editor. I did several
               editorial internships before working as an editor at Rodi Media, a
-              local editorial house. Like so I wrote various articles.
+              local editorial house. Like so I wrote various articles. Below you
+              can find some of them.
             </p>{" "}
             <div
               className="about-more-on-editorial-portfolio"
               onClick={this.showExtraInformation}
             >
-              More about my editorial portfolio
+              Read about my career
             </div>
           </div>
         )}{" "}
+        {/* <div className="about-editorial-portfolio-header">
+          Editorial portfolio
+        </div> */}
         <div className="about-rodi-media">
           <h2>Rodi Media</h2>{" "}
           {this.state.rodiOpen ? (
@@ -252,7 +250,7 @@ class About extends Component {
                 onClick={this.showTennisExtraInformation}
                 className="about-tennis-articles-more"
               >
-                More about my tennis articles
+                More about my passion for tennis
               </div>
             </div>
           )}
@@ -352,7 +350,7 @@ class About extends Component {
                 onClick={this.showSoccerExtraInformation}
                 className="about-soccer-articles-more"
               >
-                More about my soccer articles
+                More about my passion for soccer
               </div>
             </div>
           )}
@@ -424,7 +422,7 @@ class About extends Component {
         </div>
       </div>
     );
-    let aboutDutch = <AboutDutch />;
+    let aboutDutch = <AboutCopy />;
 
     if (
       this.props.languages.english === "english" ||

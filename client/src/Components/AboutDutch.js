@@ -3,7 +3,7 @@ import "../CSS/About.css";
 import { Fragment } from "react";
 import Media from "react-media";
 
-export default class About extends Component {
+export default class AboutDutch extends Component {
   render() {
     let dev = process.env.NODE_ENV === "development";
     return (

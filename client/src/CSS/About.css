@@ -18,7 +18,7 @@
 
     .about-information {
 
-        padding: 1%;
+        padding: 2%;
         background-color: teal;
     }
 
@@ -39,6 +39,8 @@
 
         padding: 1%;
     }
+
+
 
     .about-link {
         text-decoration: none;
@@ -237,30 +239,26 @@
 
     .about-information {
 
-        padding: 1%;
+        padding: 2%;
         background-color: teal;
     }
 
     .about-rodi-media {
 
-        padding: 1%;
+        padding: 2%;
     }
 
     .about-link {
-        background-color: teal;
-        padding: 1%;
-    }
-
-    .about-link a {
         text-decoration: none;
-        color: black;
-        font-size: 125%;
+        color: mediumblue;
+        font-weight: bold;
+
     }
 
     .about-tennis-information {
         background-color: white;
 
-        padding: 1%;
+        padding: 2%;
 
 
 
@@ -285,7 +283,7 @@
 
 
     .about-soccer-information {
-        padding: 1%;
+        padding: 2%;
     }
 
     .about-soccer-information img {
@@ -316,6 +314,9 @@
         padding: 1%;
     }
 
+    .about-book-wrapper h2 {
+        padding: 1%;
+    }
 
     .about-book-cover-and-bookpresentation {
         width: 100%;
@@ -405,6 +406,21 @@
     .about-book-more-info a {
         text-decoration: none;
     }
+
+    .about-articles-more {
+
+        color: dodgerblue;
+    }
+
+    .about-tennis-articles-more {
+
+        color: dodgerblue;
+    }
+
+    .about-soccer-articles-more {
+
+        color: dodgerblue;
+    }
 }
 
 
@@ -419,30 +435,32 @@
 
     .about-information {
 
-        padding: 1%;
+        padding: 2%;
         background-color: teal;
+    }
+
+
+
+    .about-link {
+        text-decoration: none;
+        color: mediumblue;
+        font-weight: bold;
+
+    }
+
+    hr {
+        border-color: dodgerblue;
+
     }
 
     .about-rodi-media {
-
-        padding: 1%;
-    }
-
-    .about-link {
-        background-color: teal;
-        padding: 1%;
-    }
-
-    .about-link a {
-        text-decoration: none;
-        color: black;
-        font-size: 100%;
+        padding: 2%;
     }
 
     .about-tennis-information {
         background-color: white;
 
-        padding: 1%;
+        padding: 2%;
 
 
 
@@ -469,6 +487,10 @@
         width: 40%;
     }
 
+    .about-soccer-information {
+        padding: 2%;
+    }
+
     .about-soccer-information img {
         position: relative;
         float: right;
@@ -492,6 +514,11 @@
         width: 20%;
     }
 
+    .about-book-wrapper h2 {
+
+
+        padding: 2%;
+    }
 
     .about-book {
         padding: 2%;
@@ -502,9 +529,10 @@
         text-decoration: none;
     }
 
+    /* 
     .about-book-wrapper {
         padding: 1%;
-    }
+    } */
 
 
     /* .about-book-flexer {
@@ -599,5 +627,20 @@
 
     .about-book-more-info a {
         text-decoration: none;
+    }
+
+    .about-articles-more {
+        /* padding: 1%; */
+        color: dodgerblue;
+    }
+
+    .about-tennis-articles-more {
+        /* padding: 1%; */
+        color: dodgerblue;
+    }
+
+    .about-soccer-articles-more {
+        /* padding: 1%; */
+        color: dodgerblue;
     }
 }

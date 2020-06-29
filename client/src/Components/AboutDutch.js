@@ -125,9 +125,9 @@ class AboutDutch extends Component {
                 >
                   artikelen
                 </a>
-                . artikelen. De onderwerpen varieerden van muziek en concerten
-                tot politiek, kunst/cultuur, lokale activiteiten en sport.
-                Daarnaast schreef ik veel artikelen voor adverterende klanten.
+                . De onderwerpen varieerden van muziek en concerten tot
+                politiek, kunst/cultuur, lokale activiteiten en sport. Daarnaast
+                schreef ik veel artikelen voor adverterende klanten.
               </p>{" "}
               <div
                 onClick={this.showRodiExtraInformation}
@@ -278,7 +278,7 @@ class AboutDutch extends Component {
         <div className="about-soccer-information">
           {" "}
           <hr />
-          <h2>Soccer</h2>{" "}
+          <h2>Voetbal</h2>{" "}
           {this.state.soccerOpen ? (
             <div className="about-soccer-text">
               Mijn passie voor voetbal kwam toen ik met de bal begon te oefenen
@@ -313,9 +313,9 @@ class AboutDutch extends Component {
                       : "https://daanruijter.herokuapp.com/ajax"
                   }
                 >
-                  artikelen
+                  artikelen{" "}
                 </a>
-                publiceerde. Ik schref ook{" "}
+                publiceerde. Ik schreef ook{" "}
                 <a
                   className="about-link"
                   href={

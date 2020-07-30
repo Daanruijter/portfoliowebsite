@@ -151,7 +151,7 @@ class AboutDutch extends Component {
                   artikelen
                 </a>{" "}
                 als redacteur bij Rodi Media, een bedrijf dat ongeveer 23
-                wekelijkse lokale kranten in Noord-Holland publiceert,
+                wekelijkse lokale kranten in Noord-Holland publiceert.
               </p>
               <div className="about-link"></div>
               <div

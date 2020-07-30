@@ -147,7 +147,7 @@ class About extends Component {
                   articles
                 </a>{" "}
                 as an editor at Rodi Media, a company that publishes around 23
-                weekly local newspapers in the province of Noord-Holland,
+                weekly local newspapers in the province of Noord-Holland.
               </p>
               <div className="about-link"></div>
               <div

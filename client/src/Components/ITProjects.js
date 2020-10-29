@@ -11,7 +11,7 @@ export default class ITProjects extends Component {
   state = {
     projects: [
       {
-        title: "Worldnews app",
+        title: "World news app",
         url: "https://worldnews-app.herokuapp.com",
         id: "worldnewsapp",
         image: worldnewsapp,

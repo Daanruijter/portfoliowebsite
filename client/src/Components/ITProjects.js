@@ -4,11 +4,21 @@ import mytinerery from "../pictures/mytinerary.jpeg";
 import nysl from "../pictures/nysl.jpeg";
 import tgif from "../pictures/tgif.jpeg";
 import weatherapp from "../pictures/weatherapp.jpeg";
+import worldnewsapp from "../pictures/worldnewsapp.jpeg";
 import "../CSS/ITProjects.css";
 
 export default class ITProjects extends Component {
   state = {
     projects: [
+      {
+        title: "Worldnews app",
+        url: "https://worldnews-app.herokuapp.com",
+        id: "worldnewsapp",
+        image: worldnewsapp,
+        description:
+          "App in Vue.js and TypeScript that displays diverse most recent news articles. The app has a functionality enabling users to get news data from an API to get their preferred news. They can search on countries, categories and randomly",
+        tech: "Vue.js, TypeScript, Express.js, Node.js, CSS, HTML",
+      },
       {
         title: "Mytineraries travel app",
         url: "https://myitinerariestravelapp.herokuapp.com",
@@ -16,7 +26,7 @@ export default class ITProjects extends Component {
         image: mytinerery,
         description: "Travel application that shows favourite touristy cities.",
         tech:
-          "Node, Express, MongoDB, Redux, React,js, Redux, CSS, Materialize, HTML",
+          "Node.js, Express.js, MongoDB, Redux, React,js, Redux, CSS, Materialize, HTML",
       },
       {
         title: "Weather app",

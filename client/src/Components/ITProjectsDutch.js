@@ -4,11 +4,21 @@ import mytinerery from "../pictures/mytinerary.jpeg";
 import nysl from "../pictures/nysl.jpeg";
 import tgif from "../pictures/tgif.jpeg";
 import weatherapp from "../pictures/weatherapp.jpeg";
+import worldnewsapp from "../pictures/worldnewsapp.jpeg";
 import "../CSS/ITProjects.css";
 
 export default class ITProjects extends Component {
   state = {
     projects: [
+      {
+        title: "Wereldnieuwsapp",
+        url: "https://worldnews-app.herokuapp.com",
+        id: "wereldnieuwsapp",
+        image: worldnewsapp,
+        description:
+          "App in Vue.js en TypeScript die het meest recente nieuws vertoont op basis van wat de gebruiker selecteert. Zij kunnen nieuws van een land of een bepaalde nieuwscategorie opvragen, maar ook op een willekeurig onderwerp zoeken. Wanneer zij dat doen, wordt het meest recente nieuws opgehaald bij een API en getoond in de app",
+        tech: "Vue.js, TypeScript, Express.js, Node.js, CSS, HTML",
+      },
       {
         title: "Mytineraries reisapp",
         url: "https://myitinerariestravelapp.herokuapp.com",

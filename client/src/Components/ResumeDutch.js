@@ -25,6 +25,7 @@ class ResumeDutch extends Component {
     moreExperienceOpen: false,
     studyType: false,
     languageCoursesOpen: false,
+    closeOrOpenArray: [],
     contact: [
       {
         image: telephone,
@@ -417,27 +418,42 @@ class ResumeDutch extends Component {
     ]
   };
 
+
   componentDidMount() {
     this.setState({ english: this.props.languages.english });
     this.setState({ dutch: this.props.languages.dutch });
   }
-  showMoreExperience = () => {
-    this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
+
+  open = (itemToOpen) => {
+    if (!this.state.closeOrOpenArray.includes(itemToOpen)) {
+      this.setState({ closeOrOpenArray: [...this.state.closeOrOpenArray, itemToOpen] });
+    }
+
+    const arrayCopy = [...this.state.closeOrOpenArray]
+    const index = arrayCopy.indexOf(itemToOpen)
+
+    if (index !== -1) {
+      arrayCopy.splice(index, 1);
+      this.setState({ closeOrOpenArray: arrayCopy });
+    }
   };
-  closeMoreExperience = () => {
-    this.setState({ moreExperienceOpen: false });
+
+  close = (itemToClose) => {
+
+    const arrayCopy = [...this.state.closeOrOpenArray]
+    const index = arrayCopy.indexOf(itemToClose)
+
+    if (index !== -1) {
+      arrayCopy.splice(index, 1);
+      this.setState({ closeOrOpenArray: arrayCopy });
+    }
   };
+
   setStudyType = (studyType) => {
     this.setState({ studyType: studyType });
   };
   clearStudyType = () => {
     this.setState({ studyType: false });
-  };
-  showLanguageCourses = () => {
-    this.setState({ languageCoursesOpen: !this.state.languageCoursesOpen });
-  };
-  closeLanguageCourses = () => {
-    this.setState({ languageCoursesOpen: false });
   };
 
   render() {
@@ -571,16 +587,18 @@ class ResumeDutch extends Component {
       (project) => {
         return (
           <div key={project.title}>
-           <a
+            <a
               className="resume-project-links"
               href={project.url}
             >
               {project.title}
             </a>
             <br />
+            {project.techStack}
+            <br /><br />
             {project.description}
             <br />
-            <br />
+            <br /><br />
           </div>
         );
       }
@@ -590,15 +608,6 @@ class ResumeDutch extends Component {
       <div
         className="resume-wrapper"
 
-        // {
-        //   this.state.moreExperienceOpen && this.state.languageCoursesOpen
-        //     ? "resume-wrapper-extralarge"
-        //     : this.state.moreExperienceOpen
-        //     ? "resume-wrapper-large"
-        //     : this.state.languageCoursesOpen
-        //     ? "resume-wrapper-large"
-        //     : "resume-wrapper-small"
-        // }
       >
         <div className="resume-top"></div>
         {/* left side */}
@@ -731,32 +740,54 @@ class ResumeDutch extends Component {
             <br />
 
             <div>{projects}</div>
-         
-            <br />
-            {/* RESUME JOB  */}
-            {workExperiencePart1}
+
+
+
             <div
-              onClick={this.showMoreExperience}
+              onClick={() => this.open("previousWorkExperience")}
               className="resume-more-past-experience"
             >
-              MEER EERDERE ERVARINGEN
+              EERDERE WERKERVARING
             </div>{" "}
             <br />
-            {this.state.moreExperienceOpen ? (
+            {this.state.closeOrOpenArray.includes("previousWorkExperience") ? (
               <div>
+                {/* RESUME JOB  */}
+                {workExperiencePart1}
                 {workExperiencePart2}
                 <br /> {}
                 <div
-                  onClick={this.closeMoreExperience}
+
+                  onClick={() => this.close("previousWorkExperience")}
                   className="resume-more-past-experience"
                 >
-                  SLUITEN
+                  EERDERE WERKERVARING SLUITEN
                 </div>
               </div>
             ) : null}
-            <br /> <br />
-            <div className="resume-green-header">OPLEIDING</div>
             <br />
+
+
+            {/* ///sdsdsd */}
+            {/* onClick={() => this.open("previousWorkExperience")}
+              className="resume-more-past-experience"
+            >
+              EERDERE WERKERVARING
+            </div>{" "}
+            <br />
+            {this.state.closeOrOpenArray.includes("previousWorkExperience") ? (
+              <div>
+         
+        
+
+                  onClick={() => this.close("previousWorkExperience")} */}
+                    <div onClick={() => this.open("education")} className="resume-green-header">OPLEIDING</div>
+ {this.state.closeOrOpenArray.includes("education") ? (<div>
+
+
+          
+            <br />
+                  
             <ResumeJobinfoTemplate
               jobdate={"12/2019-03/2020 "}
               organisation={
@@ -923,7 +954,8 @@ class ResumeDutch extends Component {
                 "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
               }
             />
-            <br />{" "}
+            <div className="resume-more-past-experience" onClick={() => this.close("education")} ><br/>OPLEIDING SLUITEN</div>
+            <br />{" "}</div>):null}
             <div className="resume-green-header">BIJZONDERE PRESTATIES</div>
             <br />
             {/* BOOK INFO PART */}
@@ -958,7 +990,7 @@ class ResumeDutch extends Component {
                       src="https://www.youtube.com/embed/SkPVuBUbFeE"
                       // frameborder="0"
                       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      // allowfullscreen
+                    // allowfullscreen
                     ></iframe>
                   </div>
                 </div>
@@ -1004,7 +1036,7 @@ class ResumeDutch extends Component {
             internationaal georiënteerd, dus ik denk dat deze vaardigheden en
             mijn interesse in andere culturen van waarde kunnen zijn.
             <div
-              onClick={this.showLanguageCourses}
+              onClick={() => this.open("languageCourses")}
               className="resume-language-courses"
             >
               <br />
@@ -1012,7 +1044,7 @@ class ResumeDutch extends Component {
               <br /> <br />
             </div>
             {/* HIER GEBLEVEN */}
-            {this.state.languageCoursesOpen ? (
+            {this.state.closeOrOpenArray.includes("languageCourses") ? (
               <div className="resume-language-courses-list">
                 {languageCourses}
 
@@ -1022,10 +1054,10 @@ class ResumeDutch extends Component {
                   {languageLevelStar}
                 </div>
                 <div
-                  onClick={this.closeLanguageCourses}
+                  onClick={() => this.close("languageCourses")}
                   className="resume-language-courses"
                 >
-                  <br /> SLUITEN
+                  <br /> SLUIT OVERZICHT TAALCURSUSSEN
                 </div>
               </div>
             ) : null}

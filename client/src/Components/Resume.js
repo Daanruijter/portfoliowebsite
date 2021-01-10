@@ -568,8 +568,11 @@ class Resume extends Component {
             >
               {project.title}
             </a>
-            <br />
+            <br/>
+            {project.techStack}
+            <br /><br/>
             {project.description}
+            <br />
             <br />
             <br />
           </div>
@@ -749,7 +752,7 @@ class Resume extends Component {
                 </div>
               </div>
             ) : null}
-            <br /> 
+            <br />
             <div className="resume-green-header">EDUCATION</div>
             <br />
             <ResumeJobinfoTemplate

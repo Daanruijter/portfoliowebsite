@@ -50,13 +50,15 @@ class Resume extends Component {
       },
     ],
     techSkils: [
-      { technologyLeft: "HTML 5", technologyRight: "Vue.js" },
+      { technologyLeft: "HTML 5", technologyRight: "Redux" },
       { technologyLeft: "CSS 3", technologyRight: "Chart.js" },
       { technologyLeft: "Bootstrap", technologyRight: "MongoDB" },
       { technologyLeft: "Materialize", technologyRight: "Git & GitHub" },
       { technologyLeft: "JavaScript", technologyRight: "Express" },
       { technologyLeft: "React.js", technologyRight: "Node" },
-      { technologyLeft: "Redux", technologyRight: null },
+      { technologyLeft: "Vue.js", technologyRight: "FireBase" },
+      { technologyLeft: "Angular.js", technologyRight: "RESTful APIs" },
+      { technologyLeft: "TypeScript", technologyRight: "Agile/Scrum" },
     ],
     hobbysAndInterests: [
       { image: tennis, text: "Tennis" },
@@ -335,7 +337,79 @@ class Resume extends Component {
       and to report them to the council.`,
       },
     ],
+    projectInformation: [{
+      title: "World News App",
+      techStack: "Vue.js | TypeScript | Express.js | Node.js | RESTful APIs | HTML5 | CSS3",
+      description: `This app presents the world news to a user. The app has a functionality enabling users to
+      get news data from an API to get their preferred news. They can search on countries, categories and randomly. The data come from the NewsAPI.`,
+      url: "https://worldnews-app.herokuapp.com/"
+    },
+    {
+      title: "Mytinerary app",
+      techStack: "React.js | Node.js | Express | MongoDB | Redux | RESTful APIs | HTML5 | CSS3 | Materialize",
+      description: `Travel application that shows touristy cities, itineraries and activities in those cities. Users
+      can add the itineraries to their favourites. The app is secured with authentication through
+      Json Web Tokens (JWT). Therefore users can use certain functionalities only when they
+      are logged in. It concerns the option to add itineraries to their favourites and the possibility to comment on activities at itineraries`,
+      url: "https://myitinerariestravelapp.herokuapp.com"
+    }, {
+      title: "Weather app",
+      techStack: "Vue.js | Chart.js | RESTful APIs | HTML5 | CSS3",
+      description: `Weather app, making use of the library Chart.js and a weather API to display weather
+      information. Users can look for a specific city. The app then displays the current weather
+      for that particular location. Users can also select different weather data to generate forecast charts.`,
+      url: "https://daanruijter.github.io/WeatherApp/"
+    }, {
+      title: "Ganzenbord",
+      techStack: "Java",
+      description: `Commandline version of the Dutch board game Ganzenbord. Players can enter their
+      names and then play this game through the terminal, throwing their digital dice.`,
+      url: "https://github.com/Daanruijter/GanzenbordJava"
+    }, {
+      title: "TGIF: Transparent Government In Fact",
+      techStack: "Vue.js | RESTful APIs | HTML5 | CSS3 | Bootstrap4",
+      description: `Web app that dynamically shows API data of the US Congress and Senate. The data
+      come from the ProPublica Congress API and are processed to display them dynamically.
+      The project helped to improve my capacities to refactor code and to adhere to industry
+      convention. An important technique behind this app was to generate tables dynamically.`,
+      url: "https://daanruijter.github.io/tgifVUEtodeploy/index.html"
+    }, {
+      title: "Personal website",
+      techStack: "React.js | Node.js | Express | MongoDB | Redux | RESTful APIs | HTML5 | CSS3",
+      description: `Personal website with my projects, a digital resume and several articles of my
+      previous career as an editor.`,
+      url: "http://daanruijter.herokuapp.com"
+    }, {
+      title: "Todo app ",
+      techStack: "Angular.js | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
+      description: `App created with an Angular.js tutorial. A user can create a todo list by adding items and
+      also has the opportunity to remove them. The data come from JSON placeholder, a fake
+      online RESTful API for testing and prototyping.`,
+      url: "https://github.com/Daanruijter/todoAppAngular"
+    }, {
+      title: "Grocery store list",
+      techStack: `TypeScript | React.js | Node.js | Express | MongoDB | Redux | RESTful APIs |
+      HTML5 | CSS3`,
+      description: `Digital grocery store list. With a user interface users can add grocery items, modify, remove them and indicate whether they have picked an item.`,
+      url: "https://github.com/Daanruijter/groceryList"
+    }, {
+      title: "Book store app",
+      techStack: "Vue.js | Node.js | Express.js | MongoDB | RESTful APIs | HTML5 | CSS3 | Bootstrap4",
+      description: `Upp that displays information about multiple books with my own RESTful UPI and a
+      book dataset in the database MongoDB. The app also has a search function that filters out
+      books on the base of a user’s input.`,
+      url: "https://ruijterbookstoreapp.herokuapp.com"
+    }, {
+      title: "NYSL: North Youth League Soccer website",
+      techStack: "HTML5 | CSS3",
+      description: `Website with information about the fictional US youth soccer competition NYSL, created with HTML and CSS. To position elements on several pages, CSS FlexBox and
+      Grid are used. CSS media queries are applied for responsiveness.`,
+      url: "daanruijter.github.io/soccerproject"
+    }
+
+    ]
   };
+
 
   showMoreExperience = () => {
     this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
@@ -484,18 +558,37 @@ class Resume extends Component {
       }
     );
 
+    let projects = this.state.projectInformation.map(
+      (project) => {
+        return (
+          <div key={project.title}>
+            <a
+              className="resume-project-links"
+              href={project.url}
+            >
+              {project.title}
+            </a>
+            <br />
+            {project.description}
+            <br />
+            <br />
+          </div>
+        );
+      }
+    );
+
     let resumeEnglish = (
       <div
         className="resume-wrapper"
-        // {
-        //   this.state.moreExperienceOpen && this.state.languageCoursesOpen
-        //     ? "resume-wrapper-extralarge"
-        //     : this.state.moreExperienceOpen
-        //     ? "resume-wrapper-large"
-        //     : this.state.languageCoursesOpen
-        //     ? "resume-wrapper-large"
-        //     : "resume-wrapper-small"
-        // }
+      // {
+      //   this.state.moreExperienceOpen && this.state.languageCoursesOpen
+      //     ? "resume-wrapper-extralarge"
+      //     : this.state.moreExperienceOpen
+      //     ? "resume-wrapper-large"
+      //     : this.state.languageCoursesOpen
+      //     ? "resume-wrapper-large"
+      //     : "resume-wrapper-small"
+      // }
       >
         <div className="resume-top"></div>
         {/* left side */}
@@ -629,83 +722,23 @@ class Resume extends Component {
             <div className="resume-coding-projects">CODING PROJECTS </div>
             <br />
             <br />
-            <a
-              className="resume-project-links"
-              href="https://myitinerariestravelapp.herokuapp.com/"
-            >
-              Mytinerary app (best viewed on a mobile device){" "}
-            </a>
-            <br />
-            Travel application that shows touristy cities, itineraries and
-            activities in those cities. Users can add the itineraries to their
-            favourites. I set up the backend for this app with Node, Express and
-            for the data MongoDB. For the frontend I used React,js, Redux,
-            combining plain CSS and Materialize.
-            <br />
-            <a
-              className="resume-project-links"
-              href="       https://daanruijter.github.io/WeatherApp/"
-            >
-              <br />
-              Weather app
-            </a>
-            <br />
-            Weather app in Vue.js using the library Chart.js and a weather API.
-            Users can look for a specific city. The app then displays the
-            current weather for that particular location. Users can also select
-            different weather data to generate forecast charts.
-            <br />
-            <br />
-            <a
-              className="resume-project-links"
-              href="https://ruijterbookstoreapp.herokuapp.com/"
-            >
-              Bookstore app
-            </a>
-            <br />
-            App that displays information about multiple books with my own
-            RESTful API and a book dataset in the database MongoDB. The app has
-            a search filter function.
-            <br />
-            <a
-              className="resume-project-links"
-              href="https://daanruijter.github.io/tgifVUEtodeploy/index.html"
-            >
-              <br />
-              TGIF: Transparent Government In Fact
-            </a>
-            <br />
-            Created a website using Vanilla JavaScript that dynamically shows
-            API data of the US Congress and Senate. The data come from an API
-            and are processed to display them dy- namically. The project helped
-            to improve my capacities to refactor code and to adhere to industry
-            convention.
-            <br />
-            <a
-              className="resume-project-links"
-              href="https://daanruijter.github.io/soccerproject"
-            >
-              <br />
-              NYSL: North Youth League Soccer website
-            </a>
-            <br />
-            Website with information about the youth soccer competition NYSL,
-            created with HTML and CSS. I used CSS FlexBox and Grid to position
-            elements on several pages. I also applied CSS media queries for
-            responsiveness.
-            <br />
+            {/* PROJECT DESCRIPTIONS */}
+            <div>{projects}</div>
+
+
             <br />
             {/* RESUME JOB  */}
-            {workExperiencePart1}
+
             <div
               onClick={this.showMoreExperience}
               className="resume-more-past-experience"
             >
-              MORE PAST EXPERIENCE
+              OTHER EXPERIENCES
             </div>{" "}
             <br />
             {this.state.moreExperienceOpen ? (
               <div>
+                {workExperiencePart1}
                 {workExperiencePart2}
                 <br /> {}
                 <div
@@ -716,7 +749,7 @@ class Resume extends Component {
                 </div>
               </div>
             ) : null}
-            <br /> <br />
+            <br /> 
             <div className="resume-green-header">EDUCATION</div>
             <br />
             <ResumeJobinfoTemplate
@@ -735,7 +768,7 @@ class Resume extends Component {
               <div
                 style={
                   this.state.studyType === "masterJournalism"
-                    ? { backgroundColor: "khaki" }
+                    ? { color: "coral" }
                     : null
                 }
               >
@@ -785,7 +818,7 @@ class Resume extends Component {
               <div
                 style={
                   this.state.studyType === "masterEconomics"
-                    ? { backgroundColor: "khaki" }
+                    ? { color: "coral" }
                     : null
                 }
               >
@@ -833,7 +866,7 @@ class Resume extends Component {
             <div
               style={
                 this.state.studyType === "bachelorEconomics"
-                  ? { backgroundColor: "khaki" }
+                  ? { color: "coral" }
                   : null
               }
             >
@@ -885,7 +918,7 @@ class Resume extends Component {
                 "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
               }
             />
-            <br /> <div className="resume-green-header">ACHIEVEMENTS</div>
+            <br />       <br /> <div className="resume-green-header">ACHIEVEMENTS</div>
             <br />
             {/* BOOK INFO PART */}
             <ResumeJobinfoTemplate
@@ -920,7 +953,7 @@ class Resume extends Component {
                         src="https://www.youtube.com/embed/SkPVuBUbFeE"
                         // frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        // allowfullscreen
+                      // allowfullscreen
                       ></iframe>
                     </div>
                   </div>
@@ -955,7 +988,7 @@ class Resume extends Component {
                 </div>
               </div>
             </div>
-            <br />
+            <br />       <br />
             <div className="resume-green-header">LANGUAGE COURSES</div>
             <br />
             From 2009 I followed Spanish language courses in Barcelona, Valencia
@@ -991,7 +1024,7 @@ class Resume extends Component {
               </div>
             ) : null}
             {/* OTHER COURSES */}
-            <br /> <br />{" "}
+            <br />{" "}
             <div className="resume-green-header">OTHER COURSES</div>
             <br />
             <ResumeJobinfoTemplate

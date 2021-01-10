@@ -49,13 +49,15 @@ class ResumeDutch extends Component {
       },
     ],
     techSkils: [
-      { technologyLeft: "HTML 5", technologyRight: "Vue.js" },
+      { technologyLeft: "HTML 5", technologyRight: "Redux" },
       { technologyLeft: "CSS 3", technologyRight: "Chart.js" },
       { technologyLeft: "Bootstrap", technologyRight: "MongoDB" },
       { technologyLeft: "Materialize", technologyRight: "Git & GitHub" },
       { technologyLeft: "JavaScript", technologyRight: "Express" },
       { technologyLeft: "React.js", technologyRight: "Node" },
-      { technologyLeft: "Redux", technologyRight: null },
+      { technologyLeft: "Vue.js", technologyRight: "FireBase" },
+      { technologyLeft: "Angular.js", technologyRight: "RESTful APIs" },
+      { technologyLeft: "TypeScript", technologyRight: "Agile/Scrum" },
     ],
     hobbysAndInterests: [
       { image: tennis, text: "Tennis" },
@@ -330,6 +332,89 @@ class ResumeDutch extends Component {
         `,
       },
     ],
+
+    projectInformation: [{
+      title: "Wereldnieuwsapp",
+      techStack: "Vue.js | TypeScript | Express.js | Node.js | RESTful APIs | HTML5 | CSS3",
+      description: `Deze app presenteert het wereldnieuws aan een gebruiker. Kern van de app is dat deze via
+      een gebruikersinterface de meest recente artikelen uit het wereldnieuws kan opvragen op
+      basis van land of nieuwsrubriek. Ook kan hij zelf op een onderwerp zoeken. Voor de app
+      is de newsAPI gebruikt.`,
+      url: "https://worldnews-app.herokuapp.com/"
+    },
+    {
+      title: "Mytinerary app",
+      techStack: "React.js | Node.js | Express | MongoDB | Redux | RESTful APIs | HTML5 | CSS3 | Materialize",
+      description: `Reisapplicatie die toeristische steden, alsook bezienswaardigheden en activiteiten in die
+      steden toont. Gebruikers kunnen de bezienswaardigheden toevoegen aan hun favorieten.
+      De app is met authenticatie beveiligd via Json Web Tokens (JWT). Gebruikers kunnen
+      daardoor bepaalde functionaliteiten alleen gebruiken als ze zijn ingelogd. Daarbij gaat het
+      om de opties om een bezienswaardigheid tot favoriet te maken en om commentaar te
+      geven op bij een activiteit bij een bezienswaardigheid.`,
+      url: "https://myitinerariestravelapp.herokuapp.com"
+    }, {
+      title: "Weerapp ",
+      techStack: "Vue.js | Chart.js | RESTful APIs | HTML5 | CSS3 ",
+      description: `Weerapplicatie waarbij gebruik gemaakt wordt van een weer-API en de JavaScript-
+      bibliotheek Chart.js. Daarmee kun je grafieken maken. Gebruikers kunnen zoeken op een
+      bepaalde stad. De app vertoont dan het actuele weer voor deze locatie door de gegevens
+      via de API op te vragen. Gebruikers kunnen ook verschillende weergegevens selecteren
+      om met behulp van Chart.js grafieken met voorspellingen te genereren.`,
+      url: "https://daanruijter.github.io/WeatherApp/"
+
+    }, {
+      title: "Ganzenbord",
+      techStack: "Java",
+      description: `Commandlineversie van het spel Ganzenbord. Spelers kunnen hun namen invoeren en dit
+      spel via de terminal spelen door met een digitale dobbelsteen te gooien.`,
+      url: "https://github.com/Daanruijter/GanzenbordJava"
+    }, {
+      title: "TGIF: Transparent Government In Fact",
+      techStack: "Vue.js | RESTful APIs | HTML5 | CSS3 | Bootstrap4",
+      description: `Webapplicatie in Vue.js die data rond vertegenwoordigers van het Amerikaanse parle-
+      ment en de senaat vertoont. Deze gegevens komen van de ProPublica Congress API. Dit
+      project hielp mij om mijn code efficiënter en volgens de standaard van de sector te schri-
+      jven. Een belangrijke techniek achter deze app is het dynamisch genereren
+      van tabellen.`,
+      url: "https://daanruijter.github.io/tgifVUEtodeploy/index.html"
+    }, {
+      title: "Persoonlijke website ",
+      techStack: "React.js | Node.js | Express | MongoDB | Redux | RESTful APIs | HTML5 | CSS3",
+      description: `Persoonlijke website met mijn projecten, een digitaal cv en een aantal artikelen van mijn
+      vorige carrière als redacteur. De tekst is in het Nederlands en Engels.`,
+      url: "http://daanruijter.herokuapp.com"
+    }, {
+      title: "Todo app ",
+      techStack: "Angular.js | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
+      description: `App aan de hand van een Angular-tutorial. Een gebruiker kan een todo-lijstje maken door
+      items toe te voegen en kan deze ook verwijderen. De data komen van JSON placeholder,
+      een nep online RESTful API voor testen en prototyperen.`,
+      url: "https://github.com/Daanruijter/todoAppAngular"
+    }, {
+      title: "Digitaal boodschappenlijstje",
+      techStack: `TypeScript | React.js | Node.js | Express | MongoDB | Redux | RESTful APIs |
+      HTML5 | CSS3`,
+      description: `Digitaal boodschappenlijstje. Met een gebruikersinterface kan de gebruiker boodschap-
+      pen toevoegen, wijzigen, verwijderen en aangeven dat een item is gepakt.`,
+      url: "https://github.com/Daanruijter/groceryList"
+    }, {
+      title: "Boekenwinkelapp",
+      techStack: "Vue.js | Node.js | Express.js | MongoDB | RESTful APIs | HTML5 | CSS3 | Bootstrap4",
+      description: `App die informatie over een aantal boeken vertoont met behulp van mijn eigen RESTful
+      API en een boekendataset in de database MongoDB. De app heeft ook een zoekfunctie
+      die de boeken filtert op basis van een zoekactie van een gebruiker.`,
+      url: "https://ruijterbookstoreapp.herokuapp.com"
+    }, {
+      title: "NYSL: North Youth League Soccer website",
+      techStack: "HTML5 | CSS3 ",
+      description: `Website met informatie over de fictieve Amerikaanse jeugdvoetbalcompetitie NYSL,
+      gecreëerd met HTML5 en CSS3. Op een aantal pagina’s worden CSS3 FlexBox en Grid
+      gebruikt om elementen te positioneren. Ook is de website responsive gemaakt met behulp
+      van CSS3-mediaregels.`,
+      url: "daanruijter.github.io/soccerproject"
+    }
+
+    ]
   };
 
   componentDidMount() {
@@ -482,6 +567,25 @@ class ResumeDutch extends Component {
       }
     );
 
+    let projects = this.state.projectInformation.map(
+      (project) => {
+        return (
+          <div key={project.title}>
+           <a
+              className="resume-project-links"
+              href={project.url}
+            >
+              {project.title}
+            </a>
+            <br />
+            {project.description}
+            <br />
+            <br />
+          </div>
+        );
+      }
+    );
+
     return (
       <div
         className="resume-wrapper"
@@ -625,72 +729,9 @@ class ResumeDutch extends Component {
             <div className="resume-coding-projects">PROGRAMMEERPROJECTEN </div>
             <br />
             <br />
-            <a
-              className="resume-project-links"
-              href="https://myitinerariestravelapp.herokuapp.com/"
-            >
-              Mytinerary app (voor de mobiele telefoon){" "}
-            </a>
-            <br />
-            Reisapplicatie die toeristische steden, reisroutes en activiteiten
-            in die steden toont. Ge- bruikers kunnen de reisroutes toevoegen aan
-            hun favorieten. De backend voor deze app zette ik op met Node,
-            Express en voor de data MongoDB. Voor de frontend gebruikte ik
-            React,js, Redux en een combinatie van CSS en Materialize.
-            <br />
-            <a
-              className="resume-project-links"
-              href="       https://daanruijter.github.io/WeatherApp/"
-            >
-              <br />
-              Weerapp
-            </a>
-            <br />
-            Weerapplicatie in Vue.js, gebruikmakend van de bibliotheek Chart.js
-            en een weer-API. Gebruikers kunnen zoeken op een bepaalde stad. De
-            app vertoont dan het actuele weer voor deze locatie. Gebruikers
-            kunnen ook verschillende weergegevens selecteren om grafieken met
-            voorspellingen te genereren.
-            <br />
-            <br />
-            <a
-              className="resume-project-links"
-              href="https://ruijterbookstoreapp.herokuapp.com/"
-            >
-              Boekenwinkelapp
-            </a>
-            <br />
-            App die informatie over meerdere boeken vertoont met behulp van mijn
-            eigen RESTful API en een boekendataset in de database MongoDB. De
-            app heeft een zoekfunctie die de boeken filtert.
-            <br />
-            <a
-              className="resume-project-links"
-              href="https://daanruijter.github.io/tgifVUEtodeploy/index.html"
-            >
-              <br />
-              TGIF: Transparent Government In Fact
-            </a>
-            <br />
-            Created a website using Vanilla JavaScript that dynamically shows
-            API data of the US Congress and Senate. The data come from an API
-            and are processed to display them dy- namically. The project helped
-            to improve my capacities to refactor code and to adhere to industry
-            convention.
-            <br />
-            <a
-              className="resume-project-links"
-              href="https://daanruijter.github.io/soccerproject"
-            >
-              <br />
-              NYSL: North Youth League Soccer website
-            </a>
-            <br />
-            Website met informatie over de jeugdvoetbalcompetitie NYSL,
-            gecreëerd met HTML en CSS. Daarbij gebruikte ik op een aantal
-            pagina’s CSS FlexBox en Grid om elementen te positioneren. Ook paste
-            ik CSS-mediaregels toe om de website responsive te maken.
-            <br />
+
+            <div>{projects}</div>
+         
             <br />
             {/* RESUME JOB  */}
             {workExperiencePart1}

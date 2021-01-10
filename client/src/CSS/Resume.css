@@ -1,3 +1,32 @@
+.resume-top {
+    background-color: #00008B;
+}
+
+.resume-contact-wrapper a {
+    color:white;
+    text-decoration: none;
+}
+
+.resume-project-links {
+    color: coral;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-more-past-experience,
+.resume-language-courses {
+    color:#00008B;;
+}
+
+.resume-more-past-experience:hover,
+.resume-language-courses:hover {
+    color:coral;
+}
+
+.resume-project-links:hover{
+    color: #00008B;
+}
+
 @media only screen and (min-width: 1101px) {
 
 
@@ -20,7 +49,7 @@
 
 
     .resume-top {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 1;
         grid-row-end: 2;
         grid-column-start: 1;
@@ -52,7 +81,7 @@
     }
 
     .resume-left {
-        background-color: green;
+        background-color: #00008B;
         color: white;
 
         padding-left: 5%;
@@ -76,10 +105,13 @@
     }
 
 
+
     .resume-contact-icon {
         width: 6%;
         margin-right: 5%;
     }
+
+ 
 
     .resume-contact-wrapper img {
         width: 100%;
@@ -145,7 +177,7 @@
     }
 
     .resume-bottom {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 3;
         grid-row-end: 4;
         grid-column-start: 1;
@@ -154,7 +186,7 @@
     }
 
     .resume-right-line {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 1;
         grid-row-end: 4;
         grid-column-start: 3;
@@ -166,14 +198,14 @@
 
         font-size: 2em;
         text-align: center;
-        color: green;
+        color: #00008B;
         font-weight: bold;
     }
 
     .resume-profession {
         font-size: 1.5em;
         text-align: center;
-        color: green;
+        color: #00008B;
     }
 
     .resume-daanfoto-wrapper {
@@ -198,7 +230,7 @@
 
     .resume-career-summary-heading {
         font-size: 1.5em;
-        color: green;
+        color: #00008B;
         font-weight: bold;
         text-decoration: underline;
         text-align: center;
@@ -241,9 +273,7 @@
     }
 
 
-    .resume-project-links {
-        color: coral;
-    }
+
 
     .resume-career-summary-wrapper {
         color: navy;
@@ -252,7 +282,7 @@
     }
 
     .resume-green-header {
-        color: green;
+        color: #00008B;
         font-size: 125%;
         text-align: center;
         font-weight: bold;
@@ -263,7 +293,6 @@
     .resume-language-courses {
         text-align: center;
         font-size: 125%;
-        color: red;
         font-weight: bold;
     }
 
@@ -273,7 +302,7 @@
     .resume-master-journalism-more-info,
     .resume-bachelor-economics-more-info {
         display: flex;
-        background-color: red;
+        background-color: coral;
         width: 100%;
         margin-bottom: 2.5%;
 
@@ -290,7 +319,7 @@
     .resume-master-economics-thesis,
     .resume-master-journalism-thesis,
     .resume-bachelor-economics-thesis {
-        background-color: darkred;
+        /* background-color: pink; */
         color: white;
         width: 100%;
         padding: 2%;
@@ -563,7 +592,7 @@
 
 
     .resume-top {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 1;
         grid-row-end: 2;
         grid-column-start: 1;
@@ -595,7 +624,7 @@
     }
 
     .resume-left {
-        background-color: green;
+        background-color: #00008B;
         color: white;
 
         padding-left: 5%;
@@ -689,7 +718,7 @@
     }
 
     .resume-bottom {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 3;
         grid-row-end: 4;
         grid-column-start: 1;
@@ -698,7 +727,7 @@
     }
 
     .resume-right-line {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 1;
         grid-row-end: 4;
         grid-column-start: 3;
@@ -710,14 +739,14 @@
 
         font-size: 2em;
         text-align: center;
-        color: green;
+        color: #00008B;
         font-weight: bold;
     }
 
     .resume-profession {
         font-size: 1.5em;
         text-align: center;
-        color: green;
+        color: #00008B;
     }
 
     .resume-daanfoto-wrapper {
@@ -742,7 +771,7 @@
 
     .resume-career-summary-heading {
         font-size: 1.5em;
-        color: green;
+        color: #00008B;
         font-weight: bold;
         text-decoration: underline;
         text-align: center;
@@ -786,9 +815,6 @@
     }
 
 
-    .resume-project-links {
-        color: coral;
-    }
 
     .resume-career-summary-wrapper {
         color: navy;
@@ -797,7 +823,7 @@
     }
 
     .resume-green-header {
-        color: green;
+        color: #00008B;
         font-size: 125%;
         text-align: center;
         font-weight: bold;
@@ -808,8 +834,7 @@
     .resume-language-courses {
         text-align: center;
         font-size: 125%;
-        color: red;
-        font-weight: bold;
+      font-weight: bold;
     }
 
 
@@ -818,7 +843,7 @@
     .resume-master-journalism-more-info,
     .resume-bachelor-economics-more-info {
         display: flex;
-        background-color: red;
+        background-color: coral;
         width: 100%;
         margin-bottom: 2.5%;
 
@@ -835,7 +860,7 @@
     .resume-master-economics-thesis,
     .resume-master-journalism-thesis,
     .resume-bachelor-economics-thesis {
-        background-color: darkred;
+        /* background-color: darkred; */
         color: white;
         width: 100%;
         padding: 2%;
@@ -1100,7 +1125,7 @@
     }
 
     .resume-top {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 1;
         grid-row-end: 2;
         grid-column-start: 1;
@@ -1132,7 +1157,7 @@
     }
 
     .resume-left {
-        background-color: green;
+        background-color: #00008B;
         color: white;
 
         padding-left: 5%;
@@ -1227,7 +1252,7 @@
     }
 
     .resume-bottom {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 3;
         grid-row-end: 4;
         grid-column-start: 1;
@@ -1236,7 +1261,7 @@
     }
 
     .resume-right-line {
-        background-color: green;
+        background-color: #00008B;
         grid-row-start: 1;
         grid-row-end: 4;
         grid-column-start: 3;
@@ -1248,14 +1273,14 @@
 
         font-size: 2em;
         text-align: center;
-        color: green;
+        color: #00008B;
         font-weight: bold;
     }
 
     .resume-profession {
         font-size: 1.5em;
         text-align: center;
-        color: green;
+        color: #00008B;
     }
 
     .resume-daanfoto-wrapper {
@@ -1280,7 +1305,7 @@
 
     .resume-career-summary-heading {
         font-size: 1.2em;
-        color: green;
+        color: #00008B;
         font-weight: bold;
         text-decoration: underline;
         text-align: center;
@@ -1323,11 +1348,6 @@
         font-size: 1.4em;
     }
 
-
-    .resume-project-links {
-        color: coral;
-    }
-
     .resume-career-summary-wrapper {
         color: navy;
 
@@ -1335,7 +1355,7 @@
     }
 
     .resume-green-header {
-        color: green;
+        color: #00008B;
         font-size: 100%;
         text-align: center;
         font-weight: bold;
@@ -1346,7 +1366,6 @@
     .resume-language-courses {
         text-align: center;
         font-size: 100%;
-        color: red;
         font-weight: bold;
     }
 
@@ -1356,7 +1375,7 @@
     .resume-master-journalism-more-info,
     .resume-bachelor-economics-more-info {
         display: flex;
-        background-color: red;
+        background-color: coral;
         width: 100%;
         margin-bottom: 2.5%;
 
@@ -1373,7 +1392,7 @@
     .resume-master-economics-thesis,
     .resume-master-journalism-thesis,
     .resume-bachelor-economics-thesis {
-        background-color: darkred;
+        background-color: pink;
         color: white;
         width: 100%;
         padding: 2%;

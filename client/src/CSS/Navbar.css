@@ -1,3 +1,21 @@
+.arrow-position {
+    color: white;
+}
+
+.arrow-position:hover {
+    color: #00008B;
+}
+
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: #00008B;
+}
+
+
 @media only screen and (min-width: 1101px) {
     .wrapper {
         display: grid;
@@ -54,17 +72,10 @@
 
     .navbar a {
         font-size: 175%;
-        color: red;
-
         text-decoration: none;
     }
 
-    .navbar a:hover {
-        color: white;
-    }
-
-
-    .about-menu-ul {
+   .about-menu-ul {
         padding: 0px !important;
     }
 
@@ -121,7 +132,7 @@
     .arrow-position {
         grid-column-start: 2;
         grid-column-end: 3;
-        color: red;
+        color: white;
         margin-top: 20%;
     }
 
@@ -215,13 +226,7 @@
 
     .navbar a {
         font-size: 175%;
-        color: red;
-
         text-decoration: none;
-    }
-
-    .navbar a:hover {
-        color: white;
     }
 
     .about-menu-ul {
@@ -280,7 +285,6 @@
     .arrow-position {
         grid-column-start: 2;
         grid-column-end: 3;
-        color: red;
         margin-top: 20%;
     }
 
@@ -380,13 +384,7 @@
 
     .navbar a {
         font-size: 100%;
-        color: red;
-
         text-decoration: none;
-    }
-
-    .navbar a:hover {
-        color: white;
     }
 
     .dropdown a {
@@ -444,8 +442,6 @@
     .arrow-position {
         grid-column-start: 2;
         grid-column-end: 3;
-        color: red;
-
         margin-left: -39%;
     }
 

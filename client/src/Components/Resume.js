@@ -1080,7 +1080,7 @@ class Resume extends Component {
     ) {
       return resumeDutch;
     }
-    return <div></div>;
+    return <div>test</div>;
   }
 }
 const mapStateToProps = (state) => {

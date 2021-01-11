@@ -414,7 +414,7 @@ class Navbar extends Component {
       if (localStorage.getItem("dutch") === "dutch") {
         return dutchNavbar;
       }
-    }
+    } return null
   }
 }
 

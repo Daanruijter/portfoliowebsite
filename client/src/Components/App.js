@@ -24,10 +24,10 @@ function App() {
   return (
     <div className="App">
     
-       <nav>
+   <nav>
         <Navbar />
       </nav>
-{/*
+
       <main className="main">
         <BrowserRouter>
           <Switch>
@@ -95,7 +95,7 @@ function App() {
             />
           </Switch>
         </BrowserRouter>
-      </main> */}
+      </main> 
     </div>
   );
 }

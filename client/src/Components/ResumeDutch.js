@@ -698,8 +698,8 @@ class ResumeDutch extends Component {
               bovendien de mogelijkheid om me continu te ontwikkelen. Gezien
               mijn achtergrond als (web)redacteur en interesse in de structuur
               van vreemde talen is het een logische ontwikkeling in mijn
-              carrière om me nu toe te leg- gen op programmeren. Ik begin dan
-              ook graag aan een func- tie in een motiverende omgeving waar ik
+              carrière om me nu toe te leggen op programmeren. Ik begin dan
+              ook graag aan een functie in een motiverende omgeving waar ik
               veel kan leren om zo bij te dragen aan waardevolle webapplicaties.
             </div>
           </div>
@@ -723,6 +723,8 @@ class ResumeDutch extends Component {
                 <a href="https://github.com/Daanruijter/">GitHub-pagina</a>,
               ]}
             />
+            {/* key={Math.random()} */}
+
             <br />
             <ResumeJobinfoTemplate
               jobdate={"12/2019-03/2020"}
@@ -730,7 +732,7 @@ class ResumeDutch extends Component {
               jobtitle={"Full Stack MERN web developer:"}
               description={[
                 "Fulltime op locatie volgens de Agile-werkmethode.",
-                <br key={Math.random()} />,
+                <br />,
                 "Werken aan projecten op basis van leren door te doen.",
               ]}
             />
@@ -739,92 +741,78 @@ class ResumeDutch extends Component {
             <br />
             <br />
 
-            <div>{projects}</div>
+            <div >{projects}</div>
 
 
 
             <div
               onClick={() => this.open("previousWorkExperience")}
-              className="resume-more-past-experience"
+              className="resume-open"
             >
               EERDERE WERKERVARING
-            </div>{" "}
-            <br />
+                          </div>{" "}
+            
             {this.state.closeOrOpenArray.includes("previousWorkExperience") ? (
-              <div>
+                            <div>
+                              <br/>
                 {/* RESUME JOB  */}
                 {workExperiencePart1}
                 {workExperiencePart2}
-                <br /> {}
-                <div
+                                <div
 
                   onClick={() => this.close("previousWorkExperience")}
-                  className="resume-more-past-experience"
+                  className="resume-close"
                 >
-                  EERDERE WERKERVARING SLUITEN
+                  eerdere werkervaring sluiten
                 </div>
               </div>
             ) : null}
             <br />
 
-
-            {/* ///sdsdsd */}
-            {/* onClick={() => this.open("previousWorkExperience")}
-              className="resume-more-past-experience"
-            >
-              EERDERE WERKERVARING
-            </div>{" "}
-            <br />
-            {this.state.closeOrOpenArray.includes("previousWorkExperience") ? (
-              <div>
-         
-        
-
-                  onClick={() => this.close("previousWorkExperience")} */}
-                    <div onClick={() => this.open("education")} className="resume-green-header">OPLEIDING</div>
- {this.state.closeOrOpenArray.includes("education") ? (<div>
+            <div onClick={() => this.open("education")} className="resume-open">OPLEIDING</div>
+            {this.state.closeOrOpenArray.includes("education") ? (<div>
 
 
-          
-            <br />
-                  
-            <ResumeJobinfoTemplate
-              jobdate={"12/2019-03/2020 "}
-              organisation={
-                "Full Stack MERN Web development bij Ubiqum Code Academy"
-              }
-            />
-            <br />
-            {/* MASTER OF JOURNALISM PART */}
-            <div
-              className="resume-master-journalism"
-              onMouseEnter={() => this.setStudyType("masterJournalism")}
-              onMouseLeave={this.clearStudyType}
-            >
-              <div
-                style={
-                  this.state.studyType === "masterJournalism"
-                    ? { backgroundColor: "khaki" }
-                    : null
+
+              <br />
+
+              <ResumeJobinfoTemplate
+                jobdate={"12/2019-03/2020 "}
+                organisation={
+                  "Full Stack MERN Web development bij Ubiqum Code Academy"
                 }
-              >
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2008-11/2011"}
-                  organisation={
-                    "Master Journalism aan de Vrije Universiteit in Amsterdam"
-                  }
-                />
-                <br />
-              </div>
-            </div>
-            {/* MASTER OF JOURNALISM MORE INFO PART */}
-            {this.state.studyType === "masterJournalism" ? (
+              />
+              <br />
+              {/* MASTER OF JOURNALISM PART */}
               <div
+                className="resume-master-journalism"
                 onMouseEnter={() => this.setStudyType("masterJournalism")}
-                className="resume-master-economics-more-info "
+                onMouseLeave={this.clearStudyType}
               >
-                <div className="resume-master-journalism-thesis">
-                  <h3>Masterscriptie</h3>
+                <div
+                  style={
+                    this.state.studyType === "masterJournalism"
+                      ? { backgroundColor: "khaki" }
+                      : null
+                  }
+                >
+                  <ResumeJobinfoTemplate
+                    jobdate={"09/2008-11/2011"}
+                    organisation={
+                      "Master Journalism aan de Vrije Universiteit in Amsterdam"
+                    }
+                  />
+                  <br />
+                </div>
+              </div>
+              {/* MASTER OF JOURNALISM MORE INFO PART */}
+              {this.state.studyType === "masterJournalism" ? (
+                <div
+                  onMouseEnter={() => this.setStudyType("masterJournalism")}
+                  className="resume-master-economics-more-info "
+                >
+                  <div className="resume-master-journalism-thesis">
+                    <h3>Masterscriptie</h3>
                   Voor mijn Master Journalistiek schreef ik de masterscriptie
                   ‘Maar beantwoordt u nou eens de vraag…!’-een
                   conversatieanalytisch onderzoek met betrekking tot
@@ -832,221 +820,231 @@ class ResumeDutch extends Component {
                   minister-presidenten Ruud Lubbers, Wim Kok, Jan-Peter
                   Balkenende en Mark Rutte'
                   <br />
-                  <br />
+                    <br />
                   De scriptie is te openen door{" "}
-                  <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Maar-beantwoordt-u-nu-toch-eens-de-vraag-Masterscriptie-Journalistiek-Daan-Ruijter.pdf">
-                    hier
+                    <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Maar-beantwoordt-u-nu-toch-eens-de-vraag-Masterscriptie-Journalistiek-Daan-Ruijter.pdf">
+                      hier
                   </a>
                   te klikken
                 </div>
-                <br />{" "}
-                <img
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/VoorkantMasterscriptiejournalistiek.jpg"
-                  alt="front-master-thesis-journalism"
-                ></img>
-              </div>
-            ) : null}
-            <div
-              className="resume-master-journalism"
-              onMouseEnter={() => this.setStudyType("masterEconomics")}
-            >
-              {/* MASTER OF ECONOMICS PART */}
+                  <br />{" "}
+                  <img
+                    src="http://daanruijter.eu/wp-content/uploads/2015/04/VoorkantMasterscriptiejournalistiek.jpg"
+                    alt="front-master-thesis-journalism"
+                  ></img>
+                </div>
+              ) : null}
               <div
-                style={
-                  this.state.studyType === "masterEconomics"
-                    ? { backgroundColor: "khaki" }
-                    : null
-                }
-              >
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2005-07/2007"}
-                  organisation={
-                    "Master Algemene Economie aan de Universiteit van Amsterdam"
-                  }
-                />
-
-                <br />
-              </div>
-              {/* MASTER OF ECONOMICS MORE INFO PART */}
-            </div>
-            {this.state.studyType === "masterEconomics" ? (
-              <div
+                className="resume-master-journalism"
                 onMouseEnter={() => this.setStudyType("masterEconomics")}
-                className="resume-master-economics-more-info"
               >
-                <img
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/Daanontvangtmasterbuleconomie.jpg"
-                  alt="receiving-economics-masters-degree"
-                ></img>
-                <div className="resume-master-economics-thesis">
-                  <h3>Masterscriptie</h3>
+                {/* MASTER OF ECONOMICS PART */}
+                <div
+                  style={
+                    this.state.studyType === "masterEconomics"
+                      ? { backgroundColor: "khaki" }
+                      : null
+                  }
+                >
+                  <ResumeJobinfoTemplate
+                    jobdate={"09/2005-07/2007"}
+                    organisation={
+                      "Master Algemene Economie aan de Universiteit van Amsterdam"
+                    }
+                  />
+
+                  <br />
+                </div>
+                {/* MASTER OF ECONOMICS MORE INFO PART */}
+              </div>
+              {this.state.studyType === "masterEconomics" ? (
+                <div
+                  onMouseEnter={() => this.setStudyType("masterEconomics")}
+                  className="resume-master-economics-more-info"
+                >
+                  <img
+                    src="http://daanruijter.eu/wp-content/uploads/2015/04/Daanontvangtmasterbuleconomie.jpg"
+                    alt="receiving-economics-masters-degree"
+                  ></img>
+                  <div className="resume-master-economics-thesis">
+                    <h3>Masterscriptie</h3>
                   Voor mijn Master Algemene Economie schreef ik een scriptie
                   over de onderzoeksvraag: ‘Is het Verenigd Koninkrijk klaar om
                   de Euro in te voeren?’ Ter beantwoording van deze vraag
                   gebruikte ik de{" "}
-                  <a href="https://en.wikipedia.org/wiki/Optimum_currency_area">
-                    theorie van het optimale valutagebied.
+                    <a href="https://en.wikipedia.org/wiki/Optimum_currency_area">
+                      theorie van het optimale valutagebied.
                   </a>{" "}
-                  <br />
-                  <br />
+                    <br />
+                    <br />
                   De scriptie is te openen door{" "}
-                  <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Is-het-Verenigd-Koninkrijk-klaar-om-de-Euro-te-introduceren-Masterscriptie-Algemene-Economie-Daan-Ruijter.pdf">
-                    hier
+                    <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Is-het-Verenigd-Koninkrijk-klaar-om-de-Euro-te-introduceren-Masterscriptie-Algemene-Economie-Daan-Ruijter.pdf">
+                      hier
                   </a>
                   te klikken
                 </div>
-                <br />{" "}
-              </div>
-            ) : null}
-            {/* BACHELOR OF ECONOMICS PART */}
-            <div
-              style={
-                this.state.studyType === "bachelorEconomics"
-                  ? { backgroundColor: "khaki" }
-                  : null
-              }
-            >
+                  <br />{" "}
+                </div>
+              ) : null}
+              {/* BACHELOR OF ECONOMICS PART */}
               <div
-                className="resume-bachelor-economics"
-                onMouseEnter={() => this.setStudyType("bachelorEconomics")}
-                onMouseLeave={this.clearStudyType}
+                style={
+                  this.state.studyType === "bachelorEconomics"
+                    ? { backgroundColor: "khaki" }
+                    : null
+                }
               >
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2002-09/2005"}
-                  organisation={
-                    "Bachelor Algemene Economie aan de Universiteit van Amsterdam"
-                  }
-                />
-                <br />
+                <div
+                  className="resume-bachelor-economics"
+                  onMouseEnter={() => this.setStudyType("bachelorEconomics")}
+                  onMouseLeave={this.clearStudyType}
+                >
+                  <ResumeJobinfoTemplate
+                    jobdate={"09/2002-09/2005"}
+                    organisation={
+                      "Bachelor Algemene Economie aan de Universiteit van Amsterdam"
+                    }
+                  />
+                  <br />
+                </div>
               </div>
-            </div>
-            {/* BACHELOR OF ECONOMICS MORE INFO PART */}
-            {this.state.studyType === "bachelorEconomics" ? (
-              <div
-                onMouseEnter={() => this.setStudyType("bachelorEconomics")}
-                onMouseLeave={() => this.clearStudyType()}
-                className="resume-bachelor-economics-more-info"
-              >
-                <div className="resume-bachelor-economics-thesis">
-                  <h3>Bachelorscriptie</h3>
+              {/* BACHELOR OF ECONOMICS MORE INFO PART */}
+              {this.state.studyType === "bachelorEconomics" ? (
+                <div
+                  onMouseEnter={() => this.setStudyType("bachelorEconomics")}
+                  onMouseLeave={() => this.clearStudyType()}
+                  className="resume-bachelor-economics-more-info"
+                >
+                  <div className="resume-bachelor-economics-thesis">
+                    <h3>Bachelorscriptie</h3>
                   Voor mijn Bachelor Algemene Economie schreef ik een scriptie
                   over de economische groei in China. De onderzoeksvraag was:
                   ‘Hoe is het mogelijk dat China de afgelopen decennia
                   economisch zo sterk is gegroeid?’
                   <br />
-                  <br />
+                    <br />
                   De scriptie is te openen door{" "}
-                  <a href="http://daanruijter.eu/wp-content/uploads/2020/05/China’s-economische-groei-Bachelorscriptie-Algemene-Economie-Daan-Ruijter.pdf">
-                    hier
+                    <a href="http://daanruijter.eu/wp-content/uploads/2020/05/China’s-economische-groei-Bachelorscriptie-Algemene-Economie-Daan-Ruijter.pdf">
+                      hier
                   </a>
                   te klikken
                 </div>
-                <img
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/Hoge-gebouwen-China.jpg"
-                  alt="receiving-economics-masters-degree"
-                ></img>
-                <br />{" "}
-              </div>
-            ) : null}
-            <ResumeJobinfoTemplate
-              jobdate={"08/1996-06/2002"}
-              organisation={
-                "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
-              }
-            />
-            <div className="resume-more-past-experience" onClick={() => this.close("education")} ><br/>OPLEIDING SLUITEN</div>
-            <br />{" "}</div>):null}
-            <div className="resume-green-header">BIJZONDERE PRESTATIES</div>
+                  <img
+                    src="http://daanruijter.eu/wp-content/uploads/2015/04/Hoge-gebouwen-China.jpg"
+                    alt="receiving-economics-masters-degree"
+                  ></img>
+                  <br />{" "}
+                </div>
+              ) : null}
+              <ResumeJobinfoTemplate
+                jobdate={"08/1996-06/2002"}
+                organisation={
+                  "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
+                }
+              />
+              <div className="resume-close" onClick={() => this.close("education")} ><br />opleiding sluiten</div>
+              {" "}</div>) : null}<br/>
+            <div className = "resume-open" onClick={() => this.open("achievements")}>BIJZONDERE PRESTATIES</div>
             <br />
-            {/* BOOK INFO PART */}
-            <ResumeJobinfoTemplate
-              jobdate={"11/2011-03/2014"}
-              organisation={"Camping de Duinvoet, Schoorl "}
-              jobtitle={`Auteur`}
-              description={[
-                "Schrijven van een boek over Camping de Duinvoet, een kleine camping aan de voet van de Schoorlse duinen",
-              ]}
-            />
-            <br />
-            {/*FLIPPING BOOK */}
-            <div className="resume-book-wrapper">
-              <div className="resume-flip-box">
-                <div className="resume-flip-box-inner">
-                  <div className="resume-book-front resume-flip-box-front">
-                    <img
-                      alt="book-front"
-                      src={
-                        "http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
-                      }
-                    />
-                  </div>
+            {this.state.closeOrOpenArray.includes("achievements") ? (<div>
+              {/* BOOK INFO PART */}
+              <ResumeJobinfoTemplate
+                jobdate={"11/2011-03/2014"}
+                organisation={"Camping de Duinvoet, Schoorl "}
+                jobtitle={`Auteur`}
+                description={[
+                  "Schrijven van een boek over Camping de Duinvoet, een kleine camping aan de voet van de Schoorlse duinen",
+                ]}
+              />
+              <br />
+              {/*FLIPPING BOOK */}
+              <div className="resume-book-wrapper">
+                <div className="resume-flip-box">
+                  <div className="resume-flip-box-inner">
+                    <div className="resume-book-front resume-flip-box-front">
+                      <img
+                        alt="book-front"
+                        src={
+                          "http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
+                        }
+                      />
+                    </div>
 
-                  <div className="resume-flip-box-back">
-                    {" "}
-                    <iframe
-                      title="book-presentation"
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/SkPVuBUbFeE"
-                      // frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    // allowfullscreen
-                    ></iframe>
+                    <div className="resume-flip-box-back">
+                      {" "}
+                      <iframe
+                        title="book-presentation"
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/SkPVuBUbFeE"
+                        // frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      // allowfullscreen
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="resume-book-more-info">
-                Toen ik klein was, gingen mijn ouders naar 'Camping de
-                Duinvoet', Ze genoten er, bleven komen en bouwden een goede
-                vriendschap op met de eigenaars Hans en Ria. Ik bracht een deel
-                van mijn jeugd op de kleine, gezellige camping door. Hans en Ria
-                werden ouder en in 2011 kregen ze de kans om Camping de Duinvoet
+                <div className="resume-book-more-info">
+                  Toen ik klein was, gingen mijn ouders naar 'Camping de
+                  Duinvoet', Ze genoten er, bleven komen en bouwden een goede
+                  vriendschap op met de eigenaars Hans en Ria. Ik bracht een deel
+                  van mijn jeugd op de kleine, gezellige camping door. Hans en Ria
+                  werden ouder en in 2011 kregen ze de kans om Camping de Duinvoet
                 te verkopen. <br />
-                <br />
+                  <br />
                 Ze hielden een groot afscheidsfeest in een tent op een van de
                 terreinen van de camping. Ineens kwam Hans naar me toe met een
                 bijzondere vraag. Of ik een boek wilde schrijven. Dat was
                 natuurlijk een grote eer. Ik was net klaar met mijn
                 journalistiekstudie en had hier erg veel zin in.
                 <br />
-                <br />
+                  <br />
                 Ik schreef over de pittige beslissingen die Hans en Ria moesten
                 nemen om de camping te kunnen starten en bestieren. Over de
                 anekdotes en de goede tijden op Camping de Duinvoet, maar ook
                 over het afscheid. Het boek is in 2014 gepubliceerd. Zie de
                 boekpresentatie door met de muis over het boek te gaan.
                 <br />
-                <br />
+                  <br />
                 Plaatjes, verhalen en meer informatie over het boek op de <br />
-                <a href="https://www.facebook.com/Heeftunogplek">
-                  Facebook-pagina.
+                  <a href="https://www.facebook.com/Heeftunogplek">
+                    Facebook-pagina.
                 </a>
+                </div>
+                <br />
+
               </div>
-            </div>
-            <br />
-            <div className="resume-green-header">TAALCURSUSSEN</div>
-            <br />
-            Vanaf 2009 volgde ik diverse talencursussen: Spaans in Barcelona,
-            Valencia en Málaga en Italiaans in Amsterdam. Daarbij bezoek ik
-            regelmatig taalmeetups om mijn talen te oefenen en nieuwe mensen te
-            ontmoeten. Kunnen communiceren met mensen en in staat zijn om te
-            lezen, schrijven en luisteren in andere talen motiveert mij enorm om
-            te blijven schaven aan mijn talenkennis. De IT-wereld is
-            internationaal georiënteerd, dus ik denk dat deze vaardigheden en
-            mijn interesse in andere culturen van waarde kunnen zijn.
-            <div
+              <div onClick={() => this.close("achievements")} className="resume-close">bijzondere prestaties sluiten</div><br/></div>) : null}
+
+
+
+            
+
+            
+
+            <div className = "resume-open"
               onClick={() => this.open("languageCourses")}
-              className="resume-language-courses"
+
             >
-              <br />
-              KLIK VOOR OVERZICHT TAALCURSUSSEN
-              <br /> <br />
+              
+              TAALCURSUSSEN
+              <br /><br/>
             </div>
             {/* HIER GEBLEVEN */}
             {this.state.closeOrOpenArray.includes("languageCourses") ? (
+
               <div className="resume-language-courses-list">
-                {languageCourses}
+                Vanaf 2009 volgde ik diverse talencursussen: Spaans in Barcelona,
+                Valencia en Málaga en Italiaans in Amsterdam. Daarbij bezoek ik
+                regelmatig taalmeetups om mijn talen te oefenen en nieuwe mensen te
+                ontmoeten. Kunnen communiceren met mensen en in staat zijn om te
+                lezen, schrijven en luisteren in andere talen motiveert mij enorm om
+                te blijven schaven aan mijn talenkennis. De IT-wereld is
+                internationaal georiënteerd, dus ik denk dat deze vaardigheden en
+                mijn interesse in andere culturen van waarde kunnen zijn.<br/><br/>
+                
+              <div>{languageCourses}</div><br/>
 
                 <div className="resume-language-level-wrapper">
                   {" "}
@@ -1055,16 +1053,18 @@ class ResumeDutch extends Component {
                 </div>
                 <div
                   onClick={() => this.close("languageCourses")}
-                  className="resume-language-courses"
+                  className="resume-close"
                 >
-                  <br /> SLUIT OVERZICHT TAALCURSUSSEN
-                </div>
+                  <br /> taalcursussen sluiten
+                </div><br/>
               </div>
             ) : null}
             {/* OTHER COURSES */}
-            <br /> <br />{" "}
-            <div className="resume-green-header">ANDERE CURSUSSEN</div>
+            {" "}
+            <div className="resume-open"
+              onClick={() => this.open("otherCourses")}>ANDERE CURSUSSEN</div>
             <br />
+            {this.state.closeOrOpenArray.includes("otherCourses") ? (<div>
             <ResumeJobinfoTemplate
               jobdate={"01/2017-04/2017"}
               organisation={"Judith Koelemeijer, Amsterdam"}
@@ -1079,13 +1079,17 @@ class ResumeDutch extends Component {
               description={"Fotografiecursus Speer Fotografie Amsterdam"}
             />
             <br />
-            <br />
-          </div>
+            
+            <div className = "resume-close" onClick={() => this.close("otherCourses")}>andere cursussen sluiten</div><br/>
+          </div>):null}</div>
 
           {/* OTHER ACTIVITIES PART */}
 
-          <div className="resume-green-header">ANDERE ACTIVITEITEN</div>
-          <div className="resume-other-activities">{otherActivities}</div>
+          <div onClick = {() => this.open("otherActivities")} className="resume-open">ANDERE ACTIVITEITEN</div><br/>
+
+          {this.state.closeOrOpenArray.includes("otherActivities")? <div className="resume-other-activities">{otherActivities}
+          <div className ="resume-close" onClick ={() => this.close("otherActivities")}>andere activiteiten sluiten</div>
+          </div>:null}
         </div>
         <div className="resume-bottom"></div>
 

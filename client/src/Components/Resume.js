@@ -726,7 +726,7 @@ class Resume extends Component {
             <br />
             <br />
             {/* PROJECT DESCRIPTIONS */}
-            <div>{projects}</div>
+            <div key={"projectss"}>{projects}</div>
 
 
             <br />
@@ -753,7 +753,7 @@ class Resume extends Component {
               </div>
             ) : null}
             <br />
-            <div className="resume-green-header">EDUCATION</div>
+            <div className="resume-more-past-experience">EDUCATION</div>
             <br />
             <ResumeJobinfoTemplate
               jobdate={"12/2019-03/2020 "}
@@ -1060,7 +1060,7 @@ class Resume extends Component {
 
     let resumeDutch = (
       <div>
-        <ResumeDutch />
+        <ResumeDutch  />
       </div>
     );
     if (

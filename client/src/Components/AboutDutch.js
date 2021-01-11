@@ -443,21 +443,7 @@ class AboutDutch extends Component {
         </div>
       </div>
     );
-    // let aboutDutch = <About />;
-
-    // if (
-    //   this.props.languages.english === "english" ||
-    //   this.props.languages.english === "nodutch"
-    // ) {
-    //   return aboutEnglish;
-    // }
-    // if (
-    //   this.props.languages.dutch === "dutch" ||
-    //   this.props.languages.english === "noenglish"
-    // ) {
-    //   return aboutDutch;
-    // }
-    return <div></div>;
+  
   }
 }
 const mapStateToProps = (state) => {

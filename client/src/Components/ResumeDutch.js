@@ -22,9 +22,7 @@ import { connect } from "react-redux";
 
 class ResumeDutch extends Component {
   state = {
-    moreExperienceOpen: false,
     studyType: false,
-    languageCoursesOpen: false,
     closeOrOpenArray: [],
     contact: [
       {
@@ -105,7 +103,7 @@ class ResumeDutch extends Component {
         jobtitle: `Tutor/Taalcoach:`,
         description: [
           `Met expats, immigranten, studenten en toeristen de Nederlandse taal oefenen tijdens verschillende typen oefensessies, bijvoorbeeld in een café;`,
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           `Ontwikkelen van de speciale sessie ‘Met Daan naar de Zaan’:Nederlands oefenen tijdens een bezoek op de Zaanse Schans (Zaandam)`,
         ],
       },
@@ -115,13 +113,13 @@ class ResumeDutch extends Component {
         jobtitle: `Projectassistent`,
         description: [
           "Redigeren en aanvullen van het personeelshandboek;",
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           "Schrijven van procedures en werkvoorschriften op het gebied van veiligheid en Arbo;",
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           "Schrijven filmscript over veiligheid en hygiëne voor nieuwkomers op het werk;",
           <br key={Math.random()} />,
           "Verwerken van gegevens met het database-/gegevensverwerkingsprogramma Ultimo;",
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           "Adviseren van collega’s over hun scripties voor hun cursus Middelbaar Veiligheidskundige en redigeren van deze scripties",
         ],
       },
@@ -139,16 +137,16 @@ class ResumeDutch extends Component {
           <br key={Math.random()} />,
           `Plan voor continu aanleveren van content maken;
           ;`,
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           `Plan voor herindelen en verbetering intranet maken
           ;`,
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           `Instructiemap schrijven voor het project Alfacheque (=hulp bij Huishouden);
           ;`,
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           `Artikelen schrijven en redigeren voor interne blad ‘De BaanStedeling’;
           ;`,
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           `Betrokken bij introductie sociale media voor BaanStede;
           ;`,
         ],
@@ -183,7 +181,7 @@ class ResumeDutch extends Component {
         `,
         description: [
           "Kassawerkzaamheden",
-          <br key={Math.random()}/>,
+          <br key={Math.random()} />,
           "Aanvullen van de schappen",
         ],
       },
@@ -711,19 +709,21 @@ class ResumeDutch extends Component {
             <br />
           </div>
 
-          <div  className="resume-career-summary-wrapper">
+          <div className="resume-career-summary-wrapper">
             <ResumeJobinfoTemplate
               jobdate={"4/2020-heden"}
               organisation={"Mijzelf"}
               jobtitle={
-                "Full Stack MERN web developer voor mijzelf, open voor nieuwe mogelijkheden. JavaScript | React.js | Vue.js | Node.js"
+                "Full Stack MERN web developer voor mijzelf, open voor nieuwe mogelijkheden. JavaScript | React.js | Vue.js | Angular.js | Node.js"
               }
               description={[
-                "Diverse projecten. Momenteel werk ik aan mijn eigen persoonlijke website in React.js. De vooruitgang is te zien op mijn ",
-                <a key={Math.random()} href="https://github.com/Daanruijter/">GitHub-pagina</a>,
+                `Diverse projecten, zoals mijn persoonlijke website,
+                een wereldnieuwsapp, commandline Ganzenbordspel,
+                todo app en een digitale boodschappenlijst.`, <br/>, `Alles is te zien op mijn `,
+                <a key={Math.random()} href="https://github.com/Daanruijter/">GitHub-pagina.</a>,
               ]}
             />
-          
+
 
             <br />
             <ResumeJobinfoTemplate
@@ -732,7 +732,7 @@ class ResumeDutch extends Component {
               jobtitle={"Full Stack MERN web developer:"}
               description={[
                 "Fulltime op locatie volgens de Agile-werkmethode.",
-                <br key={Math.random()}/>,
+                <br key={Math.random()} />,
                 "Werken aan projecten op basis van leren door te doen.",
               ]}
             />
@@ -751,20 +751,20 @@ class ResumeDutch extends Component {
             >
               EERDERE WERKERVARING
                           </div>{" "}
-            
+
             {this.state.closeOrOpenArray.includes("previousWorkExperience") ? (
-                            <div>
-                              <br/>
+              <div>
+                <br />
                 {/* RESUME JOB  */}
                 {workExperiencePart1}
                 {workExperiencePart2}
-                                <div
+                <div
 
                   onClick={() => this.close("previousWorkExperience")}
                   className="resume-close"
                 >
                   eerdere werkervaring sluiten
-                </div>
+                </div><hr />
               </div>
             ) : null}
             <br />
@@ -942,9 +942,9 @@ class ResumeDutch extends Component {
                   "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
                 }
               />
-              <div className="resume-close" onClick={() => this.close("education")} ><br />opleiding sluiten</div>
-              {" "}</div>) : null}<br/>
-            <div className = "resume-open" onClick={() => this.open("achievements")}>BIJZONDERE PRESTATIES</div>
+              <div className="resume-close" onClick={() => this.close("education")} ><br />opleiding sluiten <hr /></div>
+              {" "}</div>) : null}<br />
+            <div className="resume-open" onClick={() => this.open("achievements")}>BIJZONDERE PRESTATIES</div>
             <br />
             {this.state.closeOrOpenArray.includes("achievements") ? (<div>
               {/* BOOK INFO PART */}
@@ -985,32 +985,33 @@ class ResumeDutch extends Component {
                   </div>
                 </div>
 
-                <div className="resume-book-more-info">
-            
-                  <br />
-                Plaatjes, verhalen en meer informatie over het boek op de <br />
-                  <a href="https://www.facebook.com/Heeftunogplek">
-                    Facebook-pagina.
-                </a>
-                </div>
+
                 <br />
 
-              </div><br/>
-              <div onClick={() => this.close("achievements")} className="resume-close">bijzondere prestaties sluiten</div><br/></div>) : null}
+              </div><br />
+              <div className="resume-book-know-more">
+
+                <br />
+          Plaatjes, verhalen en meer informatie over het boek op de {" "}
+                <a href="https://www.facebook.com/Heeftunogplek">
+                  Facebook-pagina.
+          </a>
+              </div><br />
+              <div onClick={() => this.close("achievements")} className="resume-close">bijzondere prestaties sluiten</div><hr /><br /></div>) : null}
 
 
 
-            
 
-            
 
-            <div className = "resume-open"
+
+
+            <div className="resume-open"
               onClick={() => this.open("languageCourses")}
 
             >
-              
+
               TAALCURSUSSEN
-              <br /><br/>
+              <br /><br />
             </div>
             {/* HIER GEBLEVEN */}
             {this.state.closeOrOpenArray.includes("languageCourses") ? (
@@ -1023,9 +1024,9 @@ class ResumeDutch extends Component {
                 lezen, schrijven en luisteren in andere talen motiveert mij enorm om
                 te blijven schaven aan mijn talenkennis. De IT-wereld is
                 internationaal georiënteerd, dus ik denk dat deze vaardigheden en
-                mijn interesse in andere culturen van waarde kunnen zijn.<br/><br/>
-                
-              <div>{languageCourses}</div><br/>
+                mijn interesse in andere culturen van waarde kunnen zijn.<br /><br />
+
+                <div>{languageCourses}</div><br />
 
                 <div className="resume-language-level-wrapper">
                   {" "}
@@ -1037,40 +1038,41 @@ class ResumeDutch extends Component {
                   className="resume-close"
                 >
                   <br /> taalcursussen sluiten
-                </div><br/>
+                </div><hr /><br />
               </div>
             ) : null}
+
             {/* OTHER COURSES */}
             {" "}
             <div className="resume-open"
               onClick={() => this.open("otherCourses")}>ANDERE CURSUSSEN</div>
             <br />
             {this.state.closeOrOpenArray.includes("otherCourses") ? (<div>
-            <ResumeJobinfoTemplate
-              jobdate={"01/2017-04/2017"}
-              organisation={"Judith Koelemeijer, Amsterdam"}
-              description={
-                "Cursus Literaire non-fictie o.l.v. schrijfster Judith Koelemeijer"
-              }
-            />
-            <br />
-            <ResumeJobinfoTemplate
-              jobdate={"04/2018-07/2018"}
-              organisation={"Speer Fotografie, Amsterdam"}
-              description={"Fotografiecursus Speer Fotografie Amsterdam"}
-            />
-            <br />
-            
-            <div className = "resume-close" onClick={() => this.close("otherCourses")}>andere cursussen sluiten</div><br/>
-          </div>):null}</div>
+              <ResumeJobinfoTemplate
+                jobdate={"01/2017-04/2017"}
+                organisation={"Judith Koelemeijer, Amsterdam"}
+                description={
+                  "Cursus Literaire non-fictie o.l.v. schrijfster Judith Koelemeijer"
+                }
+              />
+              <br />
+              <ResumeJobinfoTemplate
+                jobdate={"04/2018-07/2018"}
+                organisation={"Speer Fotografie, Amsterdam"}
+                description={"Fotografiecursus Speer Fotografie Amsterdam"}
+              />
+              <br />
+
+              <div className="resume-close" onClick={() => this.close("otherCourses")}>andere cursussen sluiten<hr /></div><br />
+            </div>) : null}</div>
 
           {/* OTHER ACTIVITIES PART */}
 
-          <div onClick = {() => this.open("otherActivities")} className="resume-open">ANDERE ACTIVITEITEN</div><br/>
+          <div onClick={() => this.open("otherActivities")} className="resume-open">ANDERE ACTIVITEITEN</div><br />
 
-          {this.state.closeOrOpenArray.includes("otherActivities")? <div className="resume-other-activities">{otherActivities}
-          <div className ="resume-close" onClick ={() => this.close("otherActivities")}>andere activiteiten sluiten</div>
-          </div>:null}
+          {this.state.closeOrOpenArray.includes("otherActivities") ? <div className="resume-other-activities">{otherActivities}
+            <div className="resume-close" onClick={() => this.close("otherActivities")}>andere activiteiten sluiten<hr /></div>
+          </div> : null}
         </div>
         <div className="resume-bottom"></div>
 

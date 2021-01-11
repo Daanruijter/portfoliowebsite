@@ -23,9 +23,8 @@ import ResumeDutch from "./ResumeDutch";
 
 class Resume extends Component {
   state = {
-    moreExperienceOpen: false,
+    closeOrOpenArray: [],
     studyType: false,
-    languageCoursesOpen: false,
     contact: [
       {
         image: telephone,
@@ -113,7 +112,7 @@ class Resume extends Component {
         jobtitle: `Tutor/Language coach:`,
         description: [
           "Practiced the Dutch language with expats, immigrants, students and tourists.",
-          <br />,
+          <br key={Math.random()} />,
           "Developed a special practice session: practicing Dutch during a visit to the Zaanse Schans (Zaandam).",
         ],
       },
@@ -123,13 +122,13 @@ class Resume extends Component {
         jobtitle: `Project assistent`,
         description: [
           "Checked manuals and protocols on content and language errors;",
-          <br />,
+          <br key={Math.random()} />,
           "Introduced protocols regarding health and safety at work;",
-          <br />,
+          <br key={Math.random()} />,
           "   Produced a new scene for the Hilton Safety Film which is made for new personnel;",
-          <br />,
+          <br key={Math.random()} />,
           "Processed data with the database/data processing program Ultimo;",
-          <br />,
+          <br key={Math.random()} />,
           "  Advised colleagues about their theses for their ‘Middelbaar Veiligheidskundige’(a safety class) course and edited those theses",
         ],
       },
@@ -139,17 +138,17 @@ class Resume extends Component {
         jobtitle: `Internship Communication & Marketing department BaanStede, Purmerend`,
         description: [
           "Activities concerning communication and marketing of BaanStede.;",
-          <br />,
+          <br key={Math.random()} />,
           "Edited the new website (correcting textual, language and layout errors, finding dead links and looking for missing content);",
-          <br />,
+          <br key={Math.random()} />,
           "Made a plan for a continuous delivery of (missing) content;",
-          <br />,
+          <br key={Math.random()} />,
           "Made a plan to reclassify and improve the intranet environment;",
-          <br />,
+          <br key={Math.random()} />,
           "Wrote an instruction for the project ‘Alfacheque’ (help in housekeeping);",
-          <br />,
+          <br key={Math.random()} />,
           "Did interviews and wrote articles for the internal magazine BaanStedeling;",
-          <br />,
+          <br key={Math.random()} />,
           "With the team and the external internet company User.nl assisted in setting up Social Media for BaanStede;",
         ],
       },
@@ -186,7 +185,7 @@ class Resume extends Component {
         jobdate: "02/2002-12/2002",
         organisation: "Kaasboerderij Catharina Hoeve, Zaandam",
         jobtitle: `Shop assistant`,
-        description: ["Worked the register", <br />, "Restocked the shelves"],
+        description: ["Worked the register", <br key={Math.random()} />, "Restocked the shelves"],
       },
     ],
     languageCourses: [
@@ -411,23 +410,35 @@ class Resume extends Component {
   };
 
 
-  showMoreExperience = () => {
-    this.setState({ moreExperienceOpen: !this.state.moreExperienceOpen });
+  open = (itemToOpen) => {
+    if (!this.state.closeOrOpenArray.includes(itemToOpen)) {
+      this.setState({ closeOrOpenArray: [...this.state.closeOrOpenArray, itemToOpen] });
+    }
+
+    const arrayCopy = [...this.state.closeOrOpenArray]
+    const index = arrayCopy.indexOf(itemToOpen)
+
+    if (index !== -1) {
+      arrayCopy.splice(index, 1);
+      this.setState({ closeOrOpenArray: arrayCopy });
+    }
   };
-  closeMoreExperience = () => {
-    this.setState({ moreExperienceOpen: false });
+
+  close = (itemToClose) => {
+
+    const arrayCopy = [...this.state.closeOrOpenArray]
+    const index = arrayCopy.indexOf(itemToClose)
+
+    if (index !== -1) {
+      arrayCopy.splice(index, 1);
+      this.setState({ closeOrOpenArray: arrayCopy });
+    }
   };
   setStudyType = (studyType) => {
     this.setState({ studyType: studyType });
   };
   clearStudyType = () => {
     this.setState({ studyType: false });
-  };
-  showLanguageCourses = () => {
-    this.setState({ languageCoursesOpen: !this.state.languageCoursesOpen });
-  };
-  closeLanguageCourses = () => {
-    this.setState({ languageCoursesOpen: false });
   };
 
   render() {
@@ -568,9 +579,9 @@ class Resume extends Component {
             >
               {project.title}
             </a>
-            <br/>
+            <br />
             {project.techStack}
-            <br /><br/>
+            <br /><br />
             {project.description}
             <br />
             <br />
@@ -701,12 +712,14 @@ class Resume extends Component {
               jobdate={"4/2020-current"}
               organisation={"Myself"}
               jobtitle={
-                "Full Stack MERN web developer at Myself, open to new opportunities. JavaScript | React.js | Vue.js | Node.js"
+                "Full Stack MERN web developer at Myself, open to new opportunities. JavaScript | React.js | Vue.js | Angular.js | Node.js"
               }
               description={[
-                "Various projects. Currently I'm working on my personal website in React.js. The progress is visible on my ",
+                `Working on various projects, among other things my personal
+                website, a world news app, commandline game, digital grocery
+                list and a todo app`, <br/>, `Everything is visible on my `,
                 <a key={Math.random()} href="https://github.com/Daanruijter/">
-                  GitHub page
+                  GitHub page.
                 </a>,
               ]}
             />
@@ -726,72 +739,73 @@ class Resume extends Component {
             <br />
             <br />
             {/* PROJECT DESCRIPTIONS */}
-            <div key={"projectss"}>{projects}</div>
+            <div>{projects}</div>
 
 
-            <br />
-            {/* RESUME JOB  */}
 
             <div
-              onClick={this.showMoreExperience}
-              className="resume-more-past-experience"
+              onClick={() => this.open("previousWorkExperience")}
+              className="resume-open"
             >
               OTHER EXPERIENCES
             </div>{" "}
-            <br />
-            {this.state.moreExperienceOpen ? (
+            {this.state.closeOrOpenArray.includes("previousWorkExperience") ? (
               <div>
+                <br />
+                {/* RESUME JOB  */}
                 {workExperiencePart1}
                 {workExperiencePart2}
-                <br /> {}
                 <div
-                  onClick={this.closeMoreExperience}
-                  className="resume-more-past-experience"
+
+                  onClick={() => this.close("previousWorkExperience")}
+                  className="resume-close"
                 >
-                  CLOSE
-                </div>
+                  close previous work experience
+                </div><hr />
               </div>
             ) : null}
             <br />
-            <div className="resume-more-past-experience">EDUCATION</div>
-            <br />
-            <ResumeJobinfoTemplate 
-              jobdate={"12/2019-03/2020 "}
-              organisation={
-                "Full Stack MERN Web development at Ubiqum Code Academy"
-              }
-            />
-            <br />
-            {/* MASTER OF JOURNALISM PART */}
-            <div
-              className="resume-master-journalism"
-              onMouseEnter={() => this.setStudyType("masterJournalism")}
-              onMouseLeave={this.clearStudyType}
-            >
-              <div
-                style={
-                  this.state.studyType === "masterJournalism"
-                    ? { color: "coral" }
-                    : null
+
+            <div onClick={() => this.open("education")} className="resume-open">EDUCATION</div>
+            {this.state.closeOrOpenArray.includes("education") ? (<div>
+              <br />
+              <ResumeJobinfoTemplate
+                jobdate={"12/2019-03/2020 "}
+                organisation={
+                  "Full Stack MERN Web development at Ubiqum Code Academy"
                 }
-              >
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2008-11/2011"}
-                  organisation={
-                    "Master of Journalism at the Vrije Universiteit in Amsterdam"
-                  }
-                />
-                <br />
-              </div>
-            </div>
-            {/* MASTER OF JOURNALISM MORE INFO PART */}
-            {this.state.studyType === "masterJournalism" ? (
+              />
+              <br />
+              {/* MASTER OF JOURNALISM PART */}
               <div
+                className="resume-master-journalism"
                 onMouseEnter={() => this.setStudyType("masterJournalism")}
-                className="resume-master-economics-more-info "
+                onMouseLeave={this.clearStudyType}
               >
-                <div className="resume-master-journalism-thesis">
-                  <h3>Master Thesis</h3>
+                <div
+                  style={
+                    this.state.studyType === "masterJournalism"
+                      ? { color: "coral" }
+                      : null
+                  }
+                >
+                  <ResumeJobinfoTemplate
+                    jobdate={"09/2008-11/2011"}
+                    organisation={
+                      "Master of Journalism at the Vrije Universiteit in Amsterdam"
+                    }
+                  />
+                  <br />
+                </div>
+              </div>
+              {/* MASTER OF JOURNALISM MORE INFO PART */}
+              {this.state.studyType === "masterJournalism" ? (
+                <div
+                  onMouseEnter={() => this.setStudyType("masterJournalism")}
+                  className="resume-master-economics-more-info "
+                >
+                  <div className="resume-master-journalism-thesis">
+                    <h3>Master Thesis</h3>
                   For my journalism master I wrote a master thesis ‘But just
                   answer the question…!’ -a conversation analytical study
                   concerning question evasion tactics of the Dutch Prime
@@ -800,200 +814,193 @@ class Resume extends Component {
                   <br />
                   If you can read Dutch, feel free to see my thesis.
                   <br />
-                  <br />
+                    <br />
                   You can open the thesis by clicking{" "}
-                  <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Maar-beantwoordt-u-nu-toch-eens-de-vraag-Masterscriptie-Journalistiek-Daan-Ruijter.pdf">
-                    here
+                    <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Maar-beantwoordt-u-nu-toch-eens-de-vraag-Masterscriptie-Journalistiek-Daan-Ruijter.pdf">
+                      here
                   </a>
+                  </div>
+                  <br />{" "}
+                  <img
+                    src="http://daanruijter.eu/wp-content/uploads/2015/04/VoorkantMasterscriptiejournalistiek.jpg"
+                    alt="front-master-thesis-journalism"
+                  ></img>
                 </div>
-                <br />{" "}
-                <img
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/VoorkantMasterscriptiejournalistiek.jpg"
-                  alt="front-master-thesis-journalism"
-                ></img>
+              ) : null}
+              <div
+                className="resume-master-journalism"
+                onMouseEnter={() => this.setStudyType("masterEconomics")}
+              >
+                {/* MASTER OF ECONOMICS PART */}
+                <div
+                  style={
+                    this.state.studyType === "masterEconomics"
+                      ? { color: "coral" }
+                      : null
+                  }
+                >
+                  <ResumeJobinfoTemplate
+                    jobdate={"09/2005-07/2007"}
+                    organisation={
+                      "Master of Economics at the Universiteit van Amsterdam"
+                    }
+                  />
+
+                  <br />
+                </div>
+                {/* MASTER OF ECONOMICS MORE INFO PART */}
               </div>
-            ) : null}
-            <div
-              className="resume-master-journalism"
-              onMouseEnter={() => this.setStudyType("masterEconomics")}
-            >
-              {/* MASTER OF ECONOMICS PART */}
+              {this.state.studyType === "masterEconomics" ? (
+                <div
+                  onMouseEnter={() => this.setStudyType("masterEconomics")}
+                  className="resume-master-economics-more-info"
+                >
+                  <img
+                    src="http://daanruijter.eu/wp-content/uploads/2015/04/Daanontvangtmasterbuleconomie.jpg"
+                    alt="receiving-economics-masters-degree"
+                  ></img>
+                  <div className="resume-master-economics-thesis">
+                    <h3>Master Thesis</h3>
+                  For my economics master I wrote a thesis about the research
+                  question: ‘Is the United Kingdom ready to introduce the Euro?’
+                  To answer that question I used the{" "}
+                    <a href="https://en.wikipedia.org/wiki/Optimum_currency_area">
+                      optimum currency area theory.
+                  </a>{" "}
+                    <br />
+                  If you can read Dutch, feel free to see my thesis.
+                  <br />
+                    <br />
+                  You can open the thesis by clicking{" "}
+                    <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Is-het-Verenigd-Koninkrijk-klaar-om-de-Euro-te-introduceren-Masterscriptie-Algemene-Economie-Daan-Ruijter.pdf">
+                      here
+                  </a>
+                  </div>
+                  <br />{" "}
+                </div>
+              ) : null}
+              {/* BACHELOR OF ECONOMICS PART */}
               <div
                 style={
-                  this.state.studyType === "masterEconomics"
+                  this.state.studyType === "bachelorEconomics"
                     ? { color: "coral" }
                     : null
                 }
               >
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2005-07/2007"}
-                  organisation={
-                    "Master of Economics at the Universiteit van Amsterdam"
-                  }
-                />
-
-                <br />
-              </div>
-              {/* MASTER OF ECONOMICS MORE INFO PART */}
-            </div>
-            {this.state.studyType === "masterEconomics" ? (
-              <div
-                onMouseEnter={() => this.setStudyType("masterEconomics")}
-                className="resume-master-economics-more-info"
-              >
-                <img
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/Daanontvangtmasterbuleconomie.jpg"
-                  alt="receiving-economics-masters-degree"
-                ></img>
-                <div className="resume-master-economics-thesis">
-                  <h3>Master Thesis</h3>
-                  For my economics master I wrote a thesis about the research
-                  question: ‘Is the United Kingdom ready to introduce the Euro?’
-                  To answer that question I used the{" "}
-                  <a href="https://en.wikipedia.org/wiki/Optimum_currency_area">
-                    optimum currency area theory.
-                  </a>{" "}
+                <div
+                  className="resume-bachelor-economics"
+                  onMouseEnter={() => this.setStudyType("bachelorEconomics")}
+                  onMouseLeave={this.clearStudyType}
+                >
+                  <ResumeJobinfoTemplate
+                    jobdate={"09/2002-09/2005"}
+                    organisation={
+                      "Bachelor of Economics at the Universiteit van Amsterdam"
+                    }
+                  />
                   <br />
-                  If you can read Dutch, feel free to see my thesis.
-                  <br />
-                  <br />
-                  You can open the thesis by clicking{" "}
-                  <a href="http://daanruijter.eu/wp-content/uploads/2015/03/Is-het-Verenigd-Koninkrijk-klaar-om-de-Euro-te-introduceren-Masterscriptie-Algemene-Economie-Daan-Ruijter.pdf">
-                    here
-                  </a>
                 </div>
-                <br />{" "}
               </div>
-            ) : null}
-            {/* BACHELOR OF ECONOMICS PART */}
-            <div
-              style={
-                this.state.studyType === "bachelorEconomics"
-                  ? { color: "coral" }
-                  : null
-              }
-            >
-              <div
-                className="resume-bachelor-economics"
-                onMouseEnter={() => this.setStudyType("bachelorEconomics")}
-                onMouseLeave={this.clearStudyType}
-              >
-                <ResumeJobinfoTemplate
-                  jobdate={"09/2002-09/2005"}
-                  organisation={
-                    "Bachelor of Economics at the Universiteit van Amsterdam"
-                  }
-                />
-                <br />
-              </div>
-            </div>
-            {/* BACHELOR OF ECONOMICS MORE INFO PART */}
-            {this.state.studyType === "bachelorEconomics" ? (
-              <div
-                onMouseEnter={() => this.setStudyType("bachelorEconomics")}
-                onMouseLeave={() => this.clearStudyType()}
-                className="resume-bachelor-economics-more-info"
-              >
-                <div className="resume-bachelor-economics-thesis">
-                  <h3>Bachelor Thesis</h3>
+              {/* BACHELOR OF ECONOMICS MORE INFO PART */}
+              {this.state.studyType === "bachelorEconomics" ? (
+                <div
+                  onMouseEnter={() => this.setStudyType("bachelorEconomics")}
+                  onMouseLeave={() => this.clearStudyType()}
+                  className="resume-bachelor-economics-more-info"
+                >
+                  <div className="resume-bachelor-economics-thesis">
+                    <h3>Bachelor Thesis</h3>
                   For my economics bachelor I wrote a thesis about the economic
                   growth in China. The main question was: ‘What made it possible
                   that China’s economy grew so rapidly over the last decades?’
                   <br />
                   If you can read Dutch, feel free to see my thesis.
                   <br />
-                  <br />
+                    <br />
                   You can open the thesis by clicking{" "}
-                  <a href="http://daanruijter.eu/wp-content/uploads/2020/05/China’s-economische-groei-Bachelorscriptie-Algemene-Economie-Daan-Ruijter.pdf">
-                    here
+                    <a href="http://daanruijter.eu/wp-content/uploads/2020/05/China’s-economische-groei-Bachelorscriptie-Algemene-Economie-Daan-Ruijter.pdf">
+                      here
                   </a>
+                  </div>
+                  <img
+                    src="http://daanruijter.eu/wp-content/uploads/2015/04/Hoge-gebouwen-China.jpg"
+                    alt="receiving-economics-masters-degree"
+                  ></img>
+                  <br />{" "}
                 </div>
-                <img
-                  src="http://daanruijter.eu/wp-content/uploads/2015/04/Hoge-gebouwen-China.jpg"
-                  alt="receiving-economics-masters-degree"
-                ></img>
-                <br />{" "}
-              </div>
-            ) : null}
-            <ResumeJobinfoTemplate
-              jobdate={"08/1996-06/2002"}
-              organisation={
-                "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
-              }
-            />
-            <br />       <br /> <div className="resume-green-header">ACHIEVEMENTS</div>
+              ) : null}
+              <ResumeJobinfoTemplate
+                jobdate={"08/1996-06/2002"}
+                organisation={
+                  "Gymnasium with Latin and Greek at Het Zaanlands Lyceum"
+                }
+              />
+              <div className="resume-close" onClick={() => this.close("education")} ><br />close education <hr /></div>
+              {" "}</div>) : null}<br />
+            <div className="resume-open" onClick={() => this.open("achievements")}>ACHIEVEMENTS</div>
             <br />
-            {/* BOOK INFO PART */}
-            <ResumeJobinfoTemplate
-              jobdate={"11/2011-03/2014"}
-              organisation={"Camping de Duinvoet, Schoorl "}
-              jobtitle={`Author`}
-              description={[
-                "Wrote a book about Camping de Duinvoet, a small campsite on the foothills of the Schoorl dunes",
-              ]}
-            />
-            <br />
-            {/*FLIPPING BOOK */}
-            <div className="resume-book-and-bookinfo-wrapper">
-              <div className="resume-book-wrapper">
-                <div className="resume-flip-box">
-                  <div className="resume-flip-box-inner">
-                    <div className="resume-book-front resume-flip-box-front">
-                      <img
-                        alt="book-front"
-                        src={
-                          "http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
-                        }
-                      />
-                    </div>
+            {this.state.closeOrOpenArray.includes("achievements") ? (<div>
+              {/* BOOK INFO PART */}
+              <ResumeJobinfoTemplate
+                jobdate={"11/2011-03/2014"}
+                organisation={"Camping de Duinvoet, Schoorl "}
+                jobtitle={`Author`}
+                description={[
+                  "Wrote a book about Camping de Duinvoet, a small campsite on the foothills of the Schoorl dunes",
+                ]}
+              />
+              <br />
+              {/*FLIPPING BOOK */}
+              <div className="resume-book-and-bookinfo-wrapper">
+                <div className="resume-book-wrapper">
+                  <div className="resume-flip-box">
+                    <div className="resume-flip-box-inner">
+                      <div className="resume-book-front resume-flip-box-front">
+                        <img
+                          alt="book-front"
+                          src={
+                            "http://daanruijter.eu/wp-content/uploads/2015/04/Heeft-u-nog-plek.jpg"
+                          }
+                        />
+                      </div>
 
-                    <div className="resume-flip-box-back">
-                      {" "}
-                      <iframe
-                        title="book-presentation"
-                        width="100%"
-                        height="100%"
-                        src="https://www.youtube.com/embed/SkPVuBUbFeE"
-                        // frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      // allowfullscreen
-                      ></iframe>
+                      <div className="resume-flip-box-back">
+                        {" "}
+                        <iframe
+                          title="book-presentation"
+                          width="100%"
+                          height="100%"
+                          src="https://www.youtube.com/embed/SkPVuBUbFeE"
+                          // frameborder="0"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        // allowfullscreen
+                        ></iframe>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="resume-book-more-info">
-                  When I was a little child, my parents went to a small campsite
-                  'Camping de Duinvoet', which means 'campsite on the foothills
-                  of the dunes'. They liked the place, kept coming and got a
-                  good friendship with the owners Hans and Ria. I've enjoyed a
-                  part of my youth at this nice little campsite. Hans and Ria
-                  got older and in 2011 they got the chance to sell Camping de
-                  Duinvoet. <br />
+
                   <br />
-                  They held a big goodbye party in a tent, on one of the fields.
-                  Then Hans came to me and to my surprise asked me to write a
-                  book. That was a honor and just done with my journalism study,
-                  I definitly wanted to do that.
+
+                </div><br />
+                <div className="resume-book-know-more">
+
                   <br />
-                  <br />I wrote about the big decisions Hans and Ria needed to
-                  make to run Camping de Duinvoet, the anecdotes and good times
-                  of the campsite and the goodbye. I published the book in 2014.
-                  Hover over the book at the left side and click to see the book
-                  presentation.
-                  <br />
-                  <br />
-                  You can find pictures, stories and more information on the{" "}
-                  <br />
+          Pictures, stories and more information on the book on the {" "}
                   <a href="https://www.facebook.com/Heeftunogplek">
-                    Facebook page of the book.
-                  </a>
-                </div>
-              </div>
+                    Facebook page.
+          </a>
+                </div><br />
+                <div onClick={() => this.close("achievements")} className="resume-close">close achievements</div><hr /><br /></div></div>) : null}
+
+                <div className="resume-open"
+              onClick={() => this.open("languageCourses")}
+
+            >
+           LANGUAGE COURSES    <br /><br />
             </div>
-            <br />       <br />
-            <div className="resume-green-header">LANGUAGE COURSES</div>
-            <br />
+            {this.state.closeOrOpenArray.includes("languageCourses") ? (
+           <div className="resume-language-courses-list">
             From 2009 I followed Spanish language courses in Barcelona, Valencia
             and Málaga and Italian courses in Amsterdam. In addition I often
             visit language meetups to practice languages and to meet new people.
@@ -1001,35 +1008,29 @@ class Resume extends Component {
             other languages is very stimulating for me. The IT world is
             internationally oriented, so I think my knowledge of foreign
             languages and interest in other cultures could be valuable.
-            <div
-              onClick={this.showLanguageCourses}
-              className="resume-language-courses"
-            >
-              <br />
-              CLICK TO SEE LANGUAGE COURSES OVERVIEW <br /> <br />
-            </div>
-            {this.state.languageCoursesOpen ? (
-              <div className="resume-language-courses-list">
-                {languageCourses}
+            <br /><br />
 
-                <div className="resume-language-level-wrapper">
-                  {" "}
-                  {languageLevelFlag}
-                  {languageLevelStar}
+<div>{languageCourses}</div><br />
+
+<div className="resume-language-level-wrapper">
+  {" "}
+  {languageLevelFlag}
+  {languageLevelStar}
                 </div>
                 <div
-                  onClick={this.closeLanguageCourses}
-                  className="resume-language-courses"
+                  onClick={() => this.close("languageCourses")}
+                  className="resume-close"
                 >
-                  <br />
-                  CLOSE
-                </div>
+                  <br /> close language courses
+                </div><hr /><br />
               </div>
             ) : null}
             {/* OTHER COURSES */}
-            <br />{" "}
-            <div className="resume-green-header">OTHER COURSES</div>
+            {" "}
+            <div className="resume-open"
+              onClick={() => this.open("otherCourses")}>OTHER COURSES</div>
             <br />
+            {this.state.closeOrOpenArray.includes("otherCourses") ? (<div>
             <ResumeJobinfoTemplate
               jobdate={"01/2017-04/2017"}
               organisation={"Judith Koelemeijer, Amsterdam"}
@@ -1043,15 +1044,19 @@ class Resume extends Component {
               organisation={"Speer Fotografie, Amsterdam"}
               description={"Photography course Speer Fotografie Amsterdam"}
             />
-            <br />
-            <br />
-          </div>
+               <br />
+
+<div className="resume-close" onClick={() => this.close("otherCourses")}>close other courses<hr /></div><br />
+</div>) : null}</div>
 
           {/* OTHER ACTIVITIES PART */}
 
-          <div className="resume-green-header">OTHER ACTIVITIES</div>
-          <div className="resume-other-activities">{otherActivities}</div>
-        </div>
+       
+          <div onClick={() => this.open("otherActivities")} className="resume-open">OTHER ACTIVITIES</div><br />
+
+          {this.state.closeOrOpenArray.includes("otherActivities") ? <div className="resume-other-activities">{otherActivities}
+            <div className="resume-close" onClick={() => this.close("otherActivities")}>close other activities<hr /></div>
+          </div> : null}</div>
         <div className="resume-bottom"></div>
 
         <div className="resume-right-line"></div>
@@ -1060,7 +1065,7 @@ class Resume extends Component {
 
     let resumeDutch = (
       <div>
-        <ResumeDutch  />
+        <ResumeDutch />
       </div>
     );
     if (

@@ -3,6 +3,8 @@ import "../CSS/About.css";
 import { connect } from "react-redux";
 import AboutDutch from "./AboutDutch";
 
+// test
+
 class About extends Component {
   state = {
     extraInformationOpen: false,

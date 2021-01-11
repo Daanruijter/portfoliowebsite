@@ -1,5 +1,5 @@
 import React from "react";
-// import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "../CSS/App.css";
 import Home from "./Home";
@@ -24,9 +24,9 @@ function App() {
   return (
     <div className="App">
     
-   <nav>
+   {/* <nav>
         <Navbar />
-      </nav>
+      </nav> */}
 
       <main className="main">
         <BrowserRouter>

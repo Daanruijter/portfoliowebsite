@@ -104,13 +104,13 @@
         flex-wrap: wrap;
         border-style: solid;
         border-width: 2px;
-        border-color: red;
+        border-color: #00008B;
     }
 
 
 
     .dropdown-content a:hover {
-        color: red;
+        background-color: lightblue;
     }
 
     .fa {
@@ -138,12 +138,13 @@
 
     .local-articles-header,
     .sport-articles-header {
-        color: chocolate;
+        color: black;
+        font-weight:bold;
     }
 
     .local-articles-header:hover,
     .sport-articles-header:hover {
-        background-color: navajowhite;
+        background-color: lightblue;
     }
 
     .sport-articles-wrapper,
@@ -248,7 +249,7 @@
         position: absolute;
         background-color: white;
         font-size: 90%;
-        width: 40%;
+        /* width: 40%; */
         padding-top: 2%;
         padding-left: 2%;
 
@@ -258,13 +259,13 @@
         flex-wrap: wrap;
         border-style: solid;
         border-width: 2px;
-        border-color: red;
+        border-color: #00008B;
     }
 
 
 
     .dropdown-content a:hover {
-        color: red;
+        color: lightblue;
     }
 
     .fa {
@@ -290,14 +291,15 @@
 
     .local-articles-header,
     .sport-articles-header {
-        color: chocolate;
+        color: black;
+        font-weight:bold;
 
 
     }
 
     .local-articles-header:hover,
     .sport-articles-header:hover {
-        background-color: navajowhite;
+        background-color: lightblue;
     }
 
     .sport-articles-wrapper,
@@ -412,13 +414,13 @@
         flex-wrap: wrap;
         border-style: solid;
         border-width: 2px;
-        border-color: red;
+        border-color: #00008B;
     }
 
 
 
     .dropdown-content a:hover {
-        color: red;
+        color: lightblue;
     }
 
     .fa {
@@ -447,7 +449,8 @@
 
     .local-articles-header,
     .sport-articles-header {
-        color: chocolate;
+        color: black;
+        font-weight: bold;
 
     }
 

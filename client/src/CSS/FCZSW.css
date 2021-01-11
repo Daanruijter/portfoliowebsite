@@ -1,3 +1,8 @@
+.FCZSW-article-cards a:hover{
+     color:black;
+
+}
+
 @media only screen and (min-width: 1101px) {
     .FCZSW-wrapper img {
         width: 100%;

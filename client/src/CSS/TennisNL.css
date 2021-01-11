@@ -1,3 +1,8 @@
+.tennisNL-header:hover {
+    color:#00008B;
+    
+}   
+
 @media only screen and (min-width: 1101px) {
 
     .tennisNL-wrapper {
@@ -295,6 +300,8 @@
         font-weight: bold;
 
     }
+
+
 
     .tennisNL-chapeau {
         width: 100%;

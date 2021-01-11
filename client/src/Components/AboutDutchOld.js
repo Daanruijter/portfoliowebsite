@@ -5,7 +5,7 @@ import Media from "react-media";
 
 export default class AboutDutchOld extends Component {
   render() {
-    let dev = process.env.NODE_ENV === "development";
+    // let dev = process.env.NODE_ENV === "development";
     return (
       <div className="about-wrapper">
         <div className="about-information">

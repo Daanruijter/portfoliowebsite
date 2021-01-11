@@ -755,7 +755,7 @@ class Resume extends Component {
             <br />
             <div className="resume-more-past-experience">EDUCATION</div>
             <br />
-            <ResumeJobinfoTemplate
+            <ResumeJobinfoTemplate 
               jobdate={"12/2019-03/2020 "}
               organisation={
                 "Full Stack MERN Web development at Ubiqum Code Academy"

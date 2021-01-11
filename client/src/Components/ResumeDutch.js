@@ -105,7 +105,7 @@ class ResumeDutch extends Component {
         jobtitle: `Tutor/Taalcoach:`,
         description: [
           `Met expats, immigranten, studenten en toeristen de Nederlandse taal oefenen tijdens verschillende typen oefensessies, bijvoorbeeld in een café;`,
-          <br />,
+          <br key={Math.random()}/>,
           `Ontwikkelen van de speciale sessie ‘Met Daan naar de Zaan’:Nederlands oefenen tijdens een bezoek op de Zaanse Schans (Zaandam)`,
         ],
       },
@@ -115,13 +115,13 @@ class ResumeDutch extends Component {
         jobtitle: `Projectassistent`,
         description: [
           "Redigeren en aanvullen van het personeelshandboek;",
-          <br />,
+          <br key={Math.random()}/>,
           "Schrijven van procedures en werkvoorschriften op het gebied van veiligheid en Arbo;",
-          <br />,
+          <br key={Math.random()}/>,
           "Schrijven filmscript over veiligheid en hygiëne voor nieuwkomers op het werk;",
-          <br />,
+          <br key={Math.random()} />,
           "Verwerken van gegevens met het database-/gegevensverwerkingsprogramma Ultimo;",
-          <br />,
+          <br key={Math.random()}/>,
           "Adviseren van collega’s over hun scripties voor hun cursus Middelbaar Veiligheidskundige en redigeren van deze scripties",
         ],
       },
@@ -133,22 +133,22 @@ class ResumeDutch extends Component {
         description: [
           `Allerlei zaken die te maken hebben met de marketing en communicatie:
           ;`,
-          <br />,
+          <br key={Math.random()} />,
           `Redigeren van de nieuwe website en (missende) content documenteren en aanvragen bij bedrijfsleiders;
           ;`,
-          <br />,
+          <br key={Math.random()} />,
           `Plan voor continu aanleveren van content maken;
           ;`,
-          <br />,
+          <br key={Math.random()}/>,
           `Plan voor herindelen en verbetering intranet maken
           ;`,
-          <br />,
+          <br key={Math.random()}/>,
           `Instructiemap schrijven voor het project Alfacheque (=hulp bij Huishouden);
           ;`,
-          <br />,
+          <br key={Math.random()}/>,
           `Artikelen schrijven en redigeren voor interne blad ‘De BaanStedeling’;
           ;`,
-          <br />,
+          <br key={Math.random()}/>,
           `Betrokken bij introductie sociale media voor BaanStede;
           ;`,
         ],
@@ -183,7 +183,7 @@ class ResumeDutch extends Component {
         `,
         description: [
           "Kassawerkzaamheden",
-          <br />,
+          <br key={Math.random()}/>,
           "Aanvullen van de schappen",
         ],
       },
@@ -711,7 +711,7 @@ class ResumeDutch extends Component {
             <br />
           </div>
 
-          <div className="resume-career-summary-wrapper">
+          <div  className="resume-career-summary-wrapper">
             <ResumeJobinfoTemplate
               jobdate={"4/2020-heden"}
               organisation={"Mijzelf"}
@@ -720,10 +720,10 @@ class ResumeDutch extends Component {
               }
               description={[
                 "Diverse projecten. Momenteel werk ik aan mijn eigen persoonlijke website in React.js. De vooruitgang is te zien op mijn ",
-                <a href="https://github.com/Daanruijter/">GitHub-pagina</a>,
+                <a key={Math.random()} href="https://github.com/Daanruijter/">GitHub-pagina</a>,
               ]}
             />
-            {/* key={Math.random()} */}
+          
 
             <br />
             <ResumeJobinfoTemplate
@@ -732,7 +732,7 @@ class ResumeDutch extends Component {
               jobtitle={"Full Stack MERN web developer:"}
               description={[
                 "Fulltime op locatie volgens de Agile-werkmethode.",
-                <br />,
+                <br key={Math.random()}/>,
                 "Werken aan projecten op basis van leren door te doen.",
               ]}
             />
@@ -986,26 +986,7 @@ class ResumeDutch extends Component {
                 </div>
 
                 <div className="resume-book-more-info">
-                  Toen ik klein was, gingen mijn ouders naar 'Camping de
-                  Duinvoet', Ze genoten er, bleven komen en bouwden een goede
-                  vriendschap op met de eigenaars Hans en Ria. Ik bracht een deel
-                  van mijn jeugd op de kleine, gezellige camping door. Hans en Ria
-                  werden ouder en in 2011 kregen ze de kans om Camping de Duinvoet
-                te verkopen. <br />
-                  <br />
-                Ze hielden een groot afscheidsfeest in een tent op een van de
-                terreinen van de camping. Ineens kwam Hans naar me toe met een
-                bijzondere vraag. Of ik een boek wilde schrijven. Dat was
-                natuurlijk een grote eer. Ik was net klaar met mijn
-                journalistiekstudie en had hier erg veel zin in.
-                <br />
-                  <br />
-                Ik schreef over de pittige beslissingen die Hans en Ria moesten
-                nemen om de camping te kunnen starten en bestieren. Over de
-                anekdotes en de goede tijden op Camping de Duinvoet, maar ook
-                over het afscheid. Het boek is in 2014 gepubliceerd. Zie de
-                boekpresentatie door met de muis over het boek te gaan.
-                <br />
+            
                   <br />
                 Plaatjes, verhalen en meer informatie over het boek op de <br />
                   <a href="https://www.facebook.com/Heeftunogplek">
@@ -1014,7 +995,7 @@ class ResumeDutch extends Component {
                 </div>
                 <br />
 
-              </div>
+              </div><br/>
               <div onClick={() => this.close("achievements")} className="resume-close">bijzondere prestaties sluiten</div><br/></div>) : null}
 
 

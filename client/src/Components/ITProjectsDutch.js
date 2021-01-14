@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import bookstore from "../pictures/bookstoreapp-large.jpeg";
-import mytinerery from "../pictures/mytinerary.jpeg";
-import nysl from "../pictures/nysl.jpeg";
-import tgif from "../pictures/tgif.jpeg";
-import weatherapp from "../pictures/weatherapp.jpeg";
-import worldnewsapp from "../pictures/worldnewsapp.jpeg";
+import bookstore from "../pictures/bookapp1.png";
+import mytinerery from "../pictures/myitineraryapp1.png";
+import nysl from "../pictures/soccerapp1.png";
+import tgif from "../pictures/tgif1.png";
+import weatherapp from "../pictures/weatherapp1.png";
+import worldnewsapp from "../pictures/worldnewsapp1.png";
+import todoapp from "../pictures/todoapp1.png";
+import ganzenbord from "../pictures/ganzenbord1.png";
+import groceryapp from "../pictures/groceryapp1.png";
 import "../CSS/ITProjects.css";
 
 export default class ITProjects extends Component {
@@ -12,7 +15,7 @@ export default class ITProjects extends Component {
     projects: [
       {
         title: "Wereldnieuwsapp",
-        url: "https://worldnews-app.herokuapp.com",
+        url: "http://worldnews-app.herokuapp.com",
         id: "wereldnieuwsapp",
         image: worldnewsapp,
         description:
@@ -21,7 +24,7 @@ export default class ITProjects extends Component {
       },
       {
         title: "Mytineraries reisapp",
-        url: "https://myitinerariestravelapp.herokuapp.com",
+        url: "http://myitinerariestravelapp.herokuapp.com",
         id: "mytineraries",
         image: mytinerery,
         description: "Reisapplication die favoriete toeristische steden toont.",
@@ -30,7 +33,7 @@ export default class ITProjects extends Component {
       },
       {
         title: "Weerapp",
-        url: "https://daanruijter.github.io/WeatherApp",
+        url: "http://daanruijter.github.io/WeatherApp",
         id: "weatherapp",
         image: weatherapp,
         description:
@@ -39,7 +42,7 @@ export default class ITProjects extends Component {
       },
       {
         title: "Transparent Government in Fact-app",
-        url: "https://daanruijter.github.io/tgifVUEtodeploy/index.html",
+        url: "http://daanruijter.github.io/tgifVUEtodeploy/index.html",
         image: tgif,
         id: "tgif",
         description:
@@ -49,7 +52,7 @@ export default class ITProjects extends Component {
 
       {
         title: "Voetbalproject",
-        url: "https://daanruijter.github.io/soccerproject",
+        url: "http://daanruijter.github.io/soccerproject",
         image: nysl,
         id: "nysl",
         description:
@@ -58,12 +61,43 @@ export default class ITProjects extends Component {
       },
       {
         title: "Boekenwinkelapp",
-        url: "https://ruijterbookstoreapp.herokuapp.com",
+        url: "http://ruijterbookstoreapp.herokuapp.com",
         id: "bookstore",
         image: bookstore,
         description:
           "Om op dynamische wijze een reeks boeken te tonen gebruikte ik een API-dataset. Door met de muis over de boeken te gaan is meer informatie te verkrijgen en wordt ook een link naar een plaatjesgalerij zichtbaar. De app is gebouwd in Vue.js.",
         tech: "Vue.js, FancyBox, CSS, HTML",
+      },
+      {
+        title: "Grocery app",
+        url: "https://github.com/Daanruijter/grocerylist",
+        id: "Groceryapp",
+        image: groceryapp,
+        description:
+          `Digitaal boodschappenlijstje. Met een gebruikersinterface kan de gebruiker boodschap-
+          pen toevoegen, wijzigen, verwijderen en aangeven dat een item is gepakt.`,
+        tech: "HTML | CSS | JavaScript | React.js | Node.js | Express | MongoDB | Redux",
+      },
+      {
+        title: "Ganzenbord",
+        url: "https://github.com/Daanruijter/GanzenbordJava",
+        id: "Ganzenbord",
+        image: ganzenbord,
+        description:
+          `Commandlineversie van het spel Ganzenbord. Spelers kunnen hun namen invoeren en dit
+          spel via de terminal spelen door met een digitale dobbelsteen te gooien.`,
+        tech: "Java",
+      },
+      {
+        title: "Todo app",
+        url: "https://github.com/Daanruijter/todoAppAngular",
+        id: "Todoapp",
+        image: todoapp,
+        description:
+          `App aan de hand van een Angular-tutorial. Een gebruiker kan een todo-lijstje maken door
+          items toe te voegen en kan deze ook verwijderen. De data komen van JSON placeholder,
+          een nep online RESTful API voor testen en prototyperen.`,
+        tech: "Angular.js | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
       },
     ],
   };

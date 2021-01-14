@@ -15,7 +15,7 @@ export default class ITProjects extends Component {
     projects: [
       {
         title: "World news app",
-        url: "https://worldnews-app.herokuapp.com",
+        url: "http://worldnews-app.herokuapp.com",
         id: "worldnewsapp",
         image: worldnewsapp,
         description:
@@ -24,7 +24,7 @@ export default class ITProjects extends Component {
       },
       {
         title: "Mytineraries travel app",
-        url: "https://myitinerariestravelapp.herokuapp.com",
+        url: "http://myitinerariestravelapp.herokuapp.com",
         id: "mytineraries",
         image: mytinerery,
         description: "Travel application that shows favourite touristy cities.",
@@ -33,7 +33,7 @@ export default class ITProjects extends Component {
       },
       {
         title: "Weather app",
-        url: "https://daanruijter.github.io/WeatherApp",
+        url: "http://daanruijter.github.io/WeatherApp",
         id: "weatherapp",
         image: weatherapp,
         description:
@@ -42,7 +42,7 @@ export default class ITProjects extends Component {
       },
       {
         title: "Transparent Government in Fact app",
-        url: "https://daanruijter.github.io/tgifVUEtodeploy/index.html",
+        url: "http://daanruijter.github.io/tgifVUEtodeploy/index.html",
         image: tgif,
         id: "tgif",
         description:
@@ -52,7 +52,7 @@ export default class ITProjects extends Component {
 
       {
         title: "Soccer project",
-        url: "https://daanruijter.github.io/soccerproject",
+        url: "http://daanruijter.github.io/soccerproject",
         image: nysl,
         id: "nysl",
         description:
@@ -61,7 +61,7 @@ export default class ITProjects extends Component {
       },
       {
         title: "Bookstore app",
-        url: "https://ruijterbookstoreapp.herokuapp.com",
+        url: "http://ruijterbookstoreapp.herokuapp.com",
         id: "bookstore",
         image: bookstore,
         description:

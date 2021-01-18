@@ -62,6 +62,7 @@ export default class ITProjects extends Component {
         description:
           "Youth soccer information website with HTML and CSS, using FlexBox and Grid to position elements. Also applied CSS media queries for responsiveness.",
         tech: "CSS | HTML",
+        photoCredit: "Picture by Vetsikas on Pixabay",
       },
       {
         title: "Bookstore app",
@@ -71,6 +72,7 @@ export default class ITProjects extends Component {
         description:
           "Used an API to dynamically display an array of books with additional information and an image gallery using Vue.js.",
         tech: "Vue.js | FancyBox | CSS | HTML",
+        photoCredit: "",
       },
       {
         title: "Digital grocery list",
@@ -92,6 +94,7 @@ export default class ITProjects extends Component {
           `Commandline version of the Dutch board game Ganzenbord. Players can enter their
           names and then play this game through the terminal, throwing their digital dice.`,
         tech: "Java",
+        photoCredit: "",
       },
       {
         title: "Todo app",
@@ -103,6 +106,7 @@ export default class ITProjects extends Component {
           also has the opportunity to remove them. The data come from JSON placeholder, a fake
           online RESTful API for testing and prototyping.`,
         tech: "Angular.js | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
+        photoCredit: "",
       },
     ],
   };
@@ -126,6 +130,7 @@ export default class ITProjects extends Component {
               {project.description}
               <p className="tech-used">Tech used:</p>
               {project.tech}
+              {project.photoCredit?(<div><p className="tech-used">Credit</p><i>{project.photoCredit}</i></div>):null}
             </div>
           </a>
         </div>

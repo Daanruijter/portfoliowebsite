@@ -1,3 +1,8 @@
+
+.projects img {
+border-color:teal; 
+}
+
 @media only screen and (min-width: 1101px) {
 
     .projects-wrapper {
@@ -23,7 +28,7 @@
         /* border-radius: 10%; */
         border-style: solid;
         border-width: 1px;
-        border-color: blue;
+     
     }
 
 
@@ -122,10 +127,9 @@
     .projects img {
 
         width: 100%;
-        border-radius: 10%;
         border-style: solid;
         border-width: 1px;
-        border-color: blue;
+   
     }
 
 
@@ -223,10 +227,9 @@
 
     .projects img {
         width: 100%;
-        border-radius: 10%;
         border-style: solid;
         border-width: 1px;
-        border-color: blue;
+   
 
 
     }

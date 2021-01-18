@@ -28,7 +28,7 @@ export default class ITProjects extends Component {
         url: "http://myitinerariestravelapp.herokuapp.com",
         id: "mytineraries",
         image: mytinerary,
-        description: "Reisapplication die favoriete toeristische steden toont.",
+        description: "Reisapplicatie die favoriete toeristische steden toont.",
         tech:
           "Node | Express | MongoDB | Redux | React,js | Redux | CSS | Materialize | HTML",
           photoCredit: "Afbeelding van postcardtrip via Pixabay ",
@@ -114,12 +114,12 @@ export default class ITProjects extends Component {
     let projects = this.state.projects;
     console.log(projects);
     let projectsToDisplay = projects.map((project) => (
-      <div key={project.description} className="flip-box">
+      <div key={project.description} className="flip-box">   <div className="project-title">
+      <b>{project.title}</b>
+    </div>
       <div className="flip-box-inner">
         <div className="flip-box-inner-desktop-configuration">
-          <div className="project-title">
-            <b>{project.title}</b>
-          </div>
+       
           <div className="projects flip-box-front" key={project.id}>
             <a href={project.url}>
               <img alt="projectimage" src={project.image} />

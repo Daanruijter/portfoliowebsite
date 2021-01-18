@@ -1,3 +1,7 @@
+.project-contents-wrapper{
+    padding:2%;
+}
+
 
 .projects img {
 border-color:teal; 
@@ -23,9 +27,9 @@ border-color:teal;
 
 
     .projects img {
-        min-height: 286px;
+        min-height: 300px;
         width: 100%;
-        /* border-radius: 10%; */
+     
         border-style: solid;
         border-width: 1px;
      
@@ -34,15 +38,9 @@ border-color:teal;
         display:none;
     }
 
-    .flip-box {
-        height: 100%;
-        width: 30%;
-        padding: 2%
-    }
-
     .flip-box:hover {
         background-color: cadetblue;
-        border-radius: 10%;
+     
 
     }
 
@@ -62,13 +60,13 @@ border-color:teal;
         height: 300px;
         border: 1px solid #f1f1f1;
         perspective: 1000px;
-        margin-bottom: 5%;
+       
     }
 
     .flip-box-inner {
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 300px;
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
@@ -82,7 +80,7 @@ border-color:teal;
     .flip-box-front,
     .flip-box-back {
         position: absolute;
-        padding: 2%;
+      
         width: 100%;
         height: 100%;
         -webkit-backface-visibility: hidden;
@@ -90,6 +88,10 @@ border-color:teal;
         text-align: left;
     }
 
+    .flip-box-back-contents {
+        padding:2%;
+
+    }
 
 
     .tech-used {
@@ -220,11 +222,15 @@ border-color:teal;
 
 @media only screen and (max-width: 767px) {
 
+    .project-contents-wrapper{
+        width:100%;
+    }
+
     .projects-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        /* display: flex;
+        flex-direction: row; */
+        /* justify-content: center;
+        flex-wrap: wrap; */
         height: auto;
         padding-top: 2%;
         border-style: solid;
@@ -238,7 +244,8 @@ border-color:teal;
 
 
     .projects img {
-        width: 100%;
+        max-width: 100%;
+        height:300px;
         border-style: solid;
         border-width: 1px;
    
@@ -252,15 +259,14 @@ border-color:teal;
 
     .flip-box {
         height: 100%;
-        width: 30%;
-        padding: 2%;
+        width: 100%;
+        /* padding: 2%; */
 
     }
 
     .flip-box:hover {
         background-color: cadetblue;
-        border-radius: 10%;
-
+      
     }
 
     .project-title {
@@ -278,8 +284,8 @@ border-color:teal;
 
     .flip-box {
         background-color: transparent;
-        width: 300px;
-        height: 250px;
+        /* width: 400px; */
+        height: 300px;
         border: 1px solid #f1f1f1;
         perspective: 1000px;
     }
@@ -312,12 +318,7 @@ border-color:teal;
 
 
     .flip-box-back {
-        padding: 4%;
-        width: 96%;
-        height: 96%;
-        margin-left: -2%;
-        margin-top: -2%;
-        border-radius: 10%;
+            
         font-size:85%;
 
     }

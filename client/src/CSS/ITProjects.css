@@ -281,7 +281,7 @@ border-color:teal;
     .flip-box-front,
     .flip-box-back {
         position: absolute;
-
+        
         width: 100%;
         height: 100%;
         -webkit-backface-visibility: hidden;
@@ -298,7 +298,7 @@ border-color:teal;
         margin-left: -2%;
         margin-top: -2%;
         border-radius: 10%;
-
+        font-size:85%;
 
     }
 

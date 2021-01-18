@@ -128,7 +128,7 @@ export default class ITProjects extends Component {
             <div className="flip-box-back">
               {" "}
               {project.description}
-              <p className="tech-used">Tech used:</p>
+              <p className="tech-used">Technologies used</p>
               {project.tech}
               {project.photoCredit?(<div><p className="tech-used">Credit</p><i>{project.photoCredit}</i></div>):null}
             </div>

@@ -115,7 +115,8 @@ export default class ITProjects extends Component {
     console.log(projects);
     let projectsToDisplay = projects.map((project) => (
       <div key={project.description} className="flip-box">
-        <div className="flip-box-inner">
+      <div className="flip-box-inner">
+        <div className="flip-box-inner-desktop-configuration">
           <div className="project-title">
             <b>{project.title}</b>
           </div>
@@ -124,17 +125,39 @@ export default class ITProjects extends Component {
               <img alt="projectimage" src={project.image} />
             </a>
           </div>
-          <a href={project.url}>
-            <div className="flip-box-back">
-              {" "}
-              {project.description}
-              <div className="tech-used"><br/>Gebruikte technologieën</div>
-              {project.tech}
-              {project.photoCredit?(<div><div className="tech-used"><br/>Credit</div><i>{project.photoCredit}</i></div>):null}
-            </div>
-          </a>
+
         </div>
+        <div className="flip-box-inner-mobile-configuration">
+          <div className="project-title">
+          <a href={project.url}>   <b>{project.title}</b>  </a>
+          </div>
+          <div className="projects flip-box-front" key={project.id}>
+    
+              <img alt="projectimage" src={project.image} />
+          
+          </div>
+
+        </div>
+        
+        <a className = "flip-box-inner-desktop-configuration" href={project.url}>
+          <div className="flip-box-back">
+            {" "}
+            {project.description}
+            <div className="tech-used"><br />Gebruikte technologiëen</div>
+            {project.tech}
+            {project.photoCredit ? (<div><div className="tech-used"><br />Foto-credit</div><i>{project.photoCredit}</i></div>) : null}
+          </div>
+        </a>
+        <div className="flip-box-back flip-box-inner-mobile-configuration" >
+            {" "}
+            {project.description}
+            <div className="tech-used"><br />Gebruikte technologiëen</div>
+            {project.tech}
+            {project.photoCredit ? (<div><div className="tech-used"><br />Foto-credit</div><i>{project.photoCredit}</i></div>) : null}
+          </div>
+        
       </div>
+    </div>
     ));
 
     return <div className="projects-wrapper">{projectsToDisplay}</div>;

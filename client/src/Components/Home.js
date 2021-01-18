@@ -13,6 +13,9 @@ class Home extends Component {
   render() {
     let homeEnglish = (
       <div className="home-wrapper">
+
+
+        
         <div className="home-introduction">
           <div className="welcome">
             Welcome to the website of Full Stack Web Developer Daan Ruijter

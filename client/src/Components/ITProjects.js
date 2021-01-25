@@ -112,60 +112,6 @@ export default class ITProjects extends Component {
   };
   render() {
     let projects = this.state.projects;
- 
-  //   let projectsToDisplay = projects.map((project) => (
-  //   <div className="project-contents-wrapper">   
-  //   <div className="project-title">
-  //   <b>{project.title}</b>
-  // </div>
-  //     <div key={project.description} className="flip-box">
-  //       <div className="flip-box-inner">
-  //         <div className="flip-box-inner-desktop-configuration">
-  //           {/* <div className="project-title">
-  //             <b>{project.title}</b>
-  //           </div> */}
-  //           <div className="projects flip-box-front" key={project.id}>
-  //             <a href={project.url}>
-  //               <img alt="projectimage" src={project.image} />
-  //             </a>
-  //           </div>
-
-  //         </div>
-  //         <div className="flip-box-inner-mobile-configuration">
-  //           {/* <div className="project-title">
-  //           <a href={project.url}>   <b>{project.title}</b>  </a>
-  //           </div> */}
-  //           <div className="projects flip-box-front" key={project.id}>
-      
-  //               <img alt="projectimage" src={project.image} />
-            
-  //           </div>
-
-  //         </div>
-          
-  //         <a className = "flip-box-inner-desktop-configuration" href={project.url}>
-  //           <div className="flip-box-back">
-  //             {" "}<div className = "flip-box-back-contents">
-  //             {project.description}
-  //             <div className="tech-used"><br />Technologies used</div>
-  //             {project.tech}
-  //             {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
-  //           </div>
-  //           </div>
-  //         </a>
-          
-  //         <div className="flip-box-back flip-box-inner-mobile-configuration" >
-  //             {" "}
-  //             {project.description}
-  //             <div className="tech-used"><br />Technologies used</div>
-  //             {project.tech}
-  //             {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
-  //           </div>
-          
-  //       </div>
-  //     </div>
-  //     </div>
-  //   ));
 
     let projectsToDisplay = projects.map((project) => (
       <div className="project-contents-wrapper">
@@ -183,17 +129,17 @@ export default class ITProjects extends Component {
                 </div>
               </div>
 
-               
-            <div className="flip-box-back flip-box-inner-mobile-configuration" >
-              {" "}
-              <div className="flip-box-back-text-div">
-                {project.description}
-                <div className="tech-used"><br />Technologies used</div>
-                {project.tech}
-                {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
-              </div>
-            </div></div>
-</div>
+
+              <div className="flip-box-back flip-box-inner-mobile-configuration" >
+                {" "}
+                <div className="flip-box-back-text-div">
+                  {project.description}
+                  <div className="tech-used"><br />Technologies used</div>
+                  {project.tech}
+                  {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
+                </div>
+              </div></div>
+          </div>
         </div>
 
 

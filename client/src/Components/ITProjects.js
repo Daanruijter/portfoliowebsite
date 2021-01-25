@@ -105,65 +105,125 @@ export default class ITProjects extends Component {
           `App created with an Angular.js tutorial. A user can create a todo list by adding items and
           also has the opportunity to remove them. The data come from JSON placeholder, a fake
           online RESTful API for testing and prototyping.`,
-        tech: "Angular.js | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
+        tech: "Angular 2.0 | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
         photoCredit: "",
       },
     ],
   };
   render() {
     let projects = this.state.projects;
-    console.log(projects);
+ 
+  //   let projectsToDisplay = projects.map((project) => (
+  //   <div className="project-contents-wrapper">   
+  //   <div className="project-title">
+  //   <b>{project.title}</b>
+  // </div>
+  //     <div key={project.description} className="flip-box">
+  //       <div className="flip-box-inner">
+  //         <div className="flip-box-inner-desktop-configuration">
+  //           {/* <div className="project-title">
+  //             <b>{project.title}</b>
+  //           </div> */}
+  //           <div className="projects flip-box-front" key={project.id}>
+  //             <a href={project.url}>
+  //               <img alt="projectimage" src={project.image} />
+  //             </a>
+  //           </div>
+
+  //         </div>
+  //         <div className="flip-box-inner-mobile-configuration">
+  //           {/* <div className="project-title">
+  //           <a href={project.url}>   <b>{project.title}</b>  </a>
+  //           </div> */}
+  //           <div className="projects flip-box-front" key={project.id}>
+      
+  //               <img alt="projectimage" src={project.image} />
+            
+  //           </div>
+
+  //         </div>
+          
+  //         <a className = "flip-box-inner-desktop-configuration" href={project.url}>
+  //           <div className="flip-box-back">
+  //             {" "}<div className = "flip-box-back-contents">
+  //             {project.description}
+  //             <div className="tech-used"><br />Technologies used</div>
+  //             {project.tech}
+  //             {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
+  //           </div>
+  //           </div>
+  //         </a>
+          
+  //         <div className="flip-box-back flip-box-inner-mobile-configuration" >
+  //             {" "}
+  //             {project.description}
+  //             <div className="tech-used"><br />Technologies used</div>
+  //             {project.tech}
+  //             {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
+  //           </div>
+          
+  //       </div>
+  //     </div>
+  //     </div>
+  //   ));
+
     let projectsToDisplay = projects.map((project) => (
-    <div className="project-contents-wrapper">   
-    <div className="project-title">
-    <b>{project.title}</b>
-  </div>
-      <div key={project.description} className="flip-box">
-        <div className="flip-box-inner">
-          <div className="flip-box-inner-desktop-configuration">
-            {/* <div className="project-title">
-              <b>{project.title}</b>
-            </div> */}
-            <div className="projects flip-box-front" key={project.id}>
-              <a href={project.url}>
-                <img alt="projectimage" src={project.image} />
+      <div className="project-contents-wrapper">
+        <div className="small-devices">
+          <div className="project-title mobile-configuration">
+            <a href={project.url}>   <b>{project.title}</b>  </a>
+          </div>
+          <div key={project.description} className="flip-box">
+            <div className="flip-box-inner">
+              <div className="flip-box-inner-mobile-configuration">
+                <div className="projects flip-box-front" key={project.id}>
+                  <div>
+                    <img alt="projectimage" src={project.image} />
+                  </div>
+                </div>
+              </div>
+
+               
+            <div className="flip-box-back flip-box-inner-mobile-configuration" >
+              {" "}
+              <div className="flip-box-back-text-div">
+                {project.description}
+                <div className="tech-used"><br />Technologies used</div>
+                {project.tech}
+                {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
+              </div>
+            </div></div>
+</div>
+        </div>
+
+
+        <div className="big-devices">
+          <div className="project-title desktop-configuration">
+            <b>{project.title}</b>
+          </div>
+          <div key={project.description} className="flip-box">
+            <div className="flip-box-inner">
+              <div className="flip-box-inner-desktop-configuration">
+                <div className="projects flip-box-front" key={project.id}>
+                  <a href={project.url}>
+                    <img alt="projectimage" src={project.image} />
+                  </a>
+                </div>
+              </div>
+
+              <a className="flip-box-inner-desktop-configuration" href={project.url}>
+                <div className="flip-box-back">
+                  {" "}<div className="flip-box-back-contents">
+                    {project.description}
+                    <div className="tech-used"><br />Technologies used</div>
+                    {project.tech}
+                    {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
+                  </div>
+                </div>
               </a>
             </div>
-
           </div>
-          <div className="flip-box-inner-mobile-configuration">
-            {/* <div className="project-title">
-            <a href={project.url}>   <b>{project.title}</b>  </a>
-            </div> */}
-            <div className="projects flip-box-front" key={project.id}>
-      
-                <img alt="projectimage" src={project.image} />
-            
-            </div>
-
-          </div>
-          
-          <a className = "flip-box-inner-desktop-configuration" href={project.url}>
-            <div className="flip-box-back">
-              {" "}<div className = "flip-box-back-contents">
-              {project.description}
-              <div className="tech-used"><br />Technologies used</div>
-              {project.tech}
-              {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
-            </div>
-            </div>
-          </a>
-          
-          <div className="flip-box-back flip-box-inner-mobile-configuration" >
-              {" "}
-              {project.description}
-              <div className="tech-used"><br />Technologies used</div>
-              {project.tech}
-              {project.photoCredit ? (<div><div className="tech-used"><br />Credit</div><i>{project.photoCredit}</i></div>) : null}
-            </div>
-          
         </div>
-      </div>
       </div>
     ));
 

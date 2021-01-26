@@ -55,7 +55,7 @@ class ResumeDutch extends Component {
       { technologyLeft: "JavaScript", technologyRight: "Express" },
       { technologyLeft: "React.js", technologyRight: "Node" },
       { technologyLeft: "Vue.js", technologyRight: "FireBase" },
-      { technologyLeft: "Angular.js", technologyRight: "RESTful APIs" },
+      { technologyLeft: "Angular 2+", technologyRight: "RESTful APIs" },
       { technologyLeft: "TypeScript", technologyRight: "Agile/Scrum" },
     ],
     hobbysAndInterests: [
@@ -384,7 +384,7 @@ class ResumeDutch extends Component {
       url: "http://daanruijter.herokuapp.com"
     }, {
       title: "Todo app ",
-      techStack: "Angular.js | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
+      techStack: "Angular 2+ | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
       description: `App aan de hand van een Angular-tutorial. Een gebruiker kan een todo-lijstje maken door
       items toe te voegen en kan deze ook verwijderen. De data komen van JSON placeholder,
       een nep online RESTful API voor testen en prototyperen.`,
@@ -714,7 +714,7 @@ class ResumeDutch extends Component {
               jobdate={"4/2020-heden"}
               organisation={"Mijzelf"}
               jobtitle={
-                "Full Stack MERN web developer voor mijzelf, open voor nieuwe mogelijkheden. JavaScript | React.js | Vue.js | Angular.js | Node.js"
+                "Full Stack MERN web developer voor mijzelf, open voor nieuwe mogelijkheden. JavaScript | React.js | Vue.js | Angular 2+ | Node.js"
               }
               description={[
                 `Diverse projecten, zoals mijn persoonlijke website,
@@ -723,8 +723,28 @@ class ResumeDutch extends Component {
                 <a key={Math.random()} href="https://github.com/Daanruijter/">GitHub-pagina.</a>,
               ]}
             />
-
-
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"11/2020-12/2020"}
+              organisation={"Intrical AI Amsterdam"}
+              jobtitle={[
+                `Full Stack webdeveloper (stage)`, <br/>,
+                `App tech stack: Angular 2+ | TypeScript | RESTful APIs 
+                | PostgreSQL | Python | Django | Chart.js`]
+              }
+              description={[
+                `Meewerken aan een grote app die een uitgebreide set aan
+                financiële nieuwsartikelen analyseert op basis van kunstmatige
+                intelligentie. Dit om junior analisten van banken te helpen een
+                indicatie te krijgen of een bedrijf een fusie of overname gaat doen.`, <br/>, <br/>, `*Opzetten van een eigen lokale PostgreSQL-database om met de app
+                te kunnen werken;`, <br/>,
+                `*Met een RESTful API data van ondernemingen via Python/Django
+                uit de PostgreSQL-database halen en in de app tonen met Angular;`, <br/>,
+                `*Chart.js-grafieken updaten en combineren om sensitiviteitsdata te
+                tonen. Verder ook een gebruikersinterface maken om de tijdseenheid
+                te veranderen (bijvoorbeeld van week- naar maandgegevens).`, <br/>, 
+                              ]}
+            />
             <br />
             <ResumeJobinfoTemplate
               jobdate={"12/2019-03/2020"}

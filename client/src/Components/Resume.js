@@ -56,7 +56,7 @@ class Resume extends Component {
       { technologyLeft: "JavaScript", technologyRight: "Express" },
       { technologyLeft: "React.js", technologyRight: "Node" },
       { technologyLeft: "Vue.js", technologyRight: "FireBase" },
-      { technologyLeft: "Angular.js", technologyRight: "RESTful APIs" },
+      { technologyLeft: "Angular 2+", technologyRight: "RESTful APIs" },
       { technologyLeft: "TypeScript", technologyRight: "Agile/Scrum" },
     ],
     hobbysAndInterests: [
@@ -380,8 +380,8 @@ class Resume extends Component {
       url: "http://daanruijter.herokuapp.com"
     }, {
       title: "Todo app ",
-      techStack: "Angular.js | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
-      description: `App created with an Angular.js tutorial. A user can create a todo list by adding items and
+      techStack: "Angular 2+ | TypeScript | RESTful APIs | HTML5 | CSS3 | SASS",
+      description: `App created with an Angular 2+ tutorial. A user can create a todo list by adding items and
       also has the opportunity to remove them. The data come from JSON placeholder, a fake
       online RESTful API for testing and prototyping.`,
       url: "https://github.com/Daanruijter/todoAppAngular"
@@ -712,7 +712,7 @@ class Resume extends Component {
               jobdate={"4/2020-current"}
               organisation={"Myself"}
               jobtitle={
-                "Full Stack MERN web developer at Myself, open to new opportunities. JavaScript | React.js | Vue.js | Angular.js | Node.js"
+                "Full Stack MERN web developer at Myself, open to new opportunities. JavaScript | React.js | Vue.js | Angular 2+ | Node.js"
               }
               description={[
                 `Working on various projects, among other things my personal
@@ -721,6 +721,29 @@ class Resume extends Component {
                 <a key={Math.random()} href="https://github.com/Daanruijter/">
                   GitHub page.
                 </a>,
+              ]}
+            />
+            <br />
+            <ResumeJobinfoTemplate
+              jobdate={"11/2020-12/2020"}
+              organisation={"Intrical AI Amsterdam"}
+              jobtitle={[
+                `Full Stack web developer (internship)`, <br/>,
+                `App tech stack: Angular 2+ | TypeScript | RESTful APIs 
+                | PostgreSQL | Python | Django | Chart.js`]
+              }
+              description={[
+                `Contribute to a large app that analyzes an extensive set of financial
+                news articles on the basis of artificial intelligence. This is to help
+                junior analysts of banks to get an indication whether a company
+                will do a merger or acquisition.`, <br/>, <br/>, `*Set up my own local PostgreSQL database to work with the app;`, <br/>,
+                `*Got company data out of the PostgreSQL database with a
+                RESTful API through Python/Django and displayed that in the app
+                with Angular;`, <br/>,
+                `*Updated Chart.js graphs and combined them to show sensitivity
+                data;`, <br/>, 
+                `*Created a user interface to change the graph timeframe
+                (For example from weekly to monthly data)`,
               ]}
             />
             <br />
